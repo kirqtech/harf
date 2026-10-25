@@ -83,10 +83,46 @@
   function unique(list) {
     var seen = Object.create(null);
     return list.filter(function (item) {
-      if (!item || seen[item]) return false;
+      if (item == null || seen[item]) return false;
       seen[item] = true;
       return true;
     });
+  }
+
+  /**
+   * Words can be plain Arabic strings or dataset entries shaped like:
+   * `{ arabic: 'حبيبي', solutions: ['7abeebi', '7abibi'] }`.
+   * Always normalize so callers do not have to care which form they received.
+   */
+  function normalizeEntry(entry) {
+    var arabic = '';
+    var rawSolutions = [];
+
+    if (typeof entry === 'string') {
+      arabic = entry;
+    } else if (entry && typeof entry === 'object') {
+      arabic = entry.arabic || entry.word || '';
+      rawSolutions = entry.solutions || entry.solution || [];
+    }
+
+    if (!Array.isArray(rawSolutions)) {
+      rawSolutions = rawSolutions ? [rawSolutions] : [];
+    }
+
+    var solutions = unique(rawSolutions.map(function (solution) {
+      return String(solution == null ? '' : solution).trim();
+    }).filter(function (solution) {
+      return solution.length > 0;
+    }));
+
+    return {
+      arabic: String(arabic || ''),
+      solutions: solutions
+    };
+  }
+
+  function entryArabic(entry) {
+    return normalizeEntry(entry).arabic;
   }
 
   function makeToken(variants, canonical, source) {
@@ -263,14 +299,23 @@
           continue;
         }
 
-        tokens.push(makeToken([SHORT_VOWELS[ch]], SHORT_VOWELS[ch], ch));
+        var vowel = SHORT_VOWELS[ch];
+        // Levantine Arabizi often writes kasra as "e" and damma as "o"
+        // (Taleb / Talib, ktub / ktob). Keep the standard Latin vowel first.
+        var vowelVariants = [vowel];
+        if (ch === '\u0650') vowelVariants.push('e');
+        if (ch === '\u064F') vowelVariants.push('o');
+
+        tokens.push(makeToken(vowelVariants, vowel, ch));
         continue;
       }
 
       if (ch === SUKUN || ch === TATWEEL) continue;
 
       if (ch === '\u0621' || ch === '\u0623' || ch === '\u0625' || ch === '\u0624' || ch === '\u0626') {
-        pushLetter(makeToken(['2'], '2', ch));
+        // Hamza is often written as 2, left as a plain alif-like "a", or
+        // dropped entirely in casual texting (e.g. "2ana" / "ana" / "na").
+        pushLetter(makeToken(['2', 'a', ''], '2', ch));
         continue;
       }
 
@@ -298,19 +343,21 @@
       }
 
       if (ch === '\u0629') { // ة
-        pushLetter(makeToken(['a', 'h'], 'a', ch));
+        // Taa marbuta is pronounced "a" in formal reading, but Levantine
+        // speakers commonly write it as "eh" / "e" (and sometimes "h").
+        pushLetter(makeToken(['a', 'eh', 'e', 'h'], 'a', ch));
         continue;
       }
 
       if (ch === '\u0648') { // و
         var waw = canonicalWaw(chars, i, raw);
-        pushLetter(makeToken([waw, 'oo', 'uu', 'w'], waw, ch));
+        pushLetter(makeToken([waw, 'oo', 'uu', 'u', 'w'], waw, ch));
         continue;
       }
 
       if (ch === '\u064A' || ch === '\u06CC') { // ي / ی
         var yaa = canonicalYaa(chars, i, raw);
-        pushLetter(makeToken([yaa, 'ee', 'ii', 'y'], yaa, ch));
+        pushLetter(makeToken([yaa, 'ee', 'ii', 'i', 'y'], yaa, ch));
         continue;
       }
 
@@ -360,10 +407,228 @@
   }
 
   /**
+   * Expand the token alternatives into complete Latin spellings. This is what
+   * makes long vowels, taa marbuta, hamza, and emphatic aliases behave
+   * flexibly without needing every combination to be hand-written in data.js.
+   */
+  function generateTokenSolutions(tokens, limit) {
+    var max = limit || 800;
+    var out = [];
+
+    function walk(index, current) {
+      if (out.length >= max) return;
+      if (index >= tokens.length) {
+        out.push(current);
+        return;
+      }
+
+      var variants = tokens[index].variants;
+      for (var i = 0; i < variants.length; i += 1) {
+        walk(index + 1, current + variants[i]);
+        if (out.length >= max) return;
+      }
+    }
+
+    walk(0, '');
+    return unique(out);
+  }
+
+  /**
+   * Expand a single hand-written solution into its common Arabizi variants.
+   * Token-based expansion covers vocalized Arabic precisely; this layer keeps
+   * the same flexibility when a dataset entry provides only one spelling.
+   */
+  function expandSolution(solution, limit) {
+    var max = limit || 600;
+    var out = [];
+    var groups = [
+      { text: 'ee', options: ['ee', 'i', 'ii'] },
+      { text: 'ii', options: ['ii', 'i', 'ee'] },
+      { text: 'oo', options: ['oo', 'u', 'uu', 'w'] },
+      { text: 'uu', options: ['uu', 'u', 'oo', 'w'] },
+      { text: 'aa', options: ['aa', 'a'] }
+    ];
+    var singles = {
+      a: ['a', 'aa'],
+      i: ['i', 'e', 'ee', 'ii'],
+      u: ['u', 'o', 'oo', 'uu'],
+      w: ['w', 'oo', 'u', 'uu'],
+      y: ['y', 'ee', 'i', 'ii'],
+      H: ['H', '7'],
+      '7': ['7', 'H'],
+      '2': ['2', 'a', '']
+    };
+
+    function addTaaEndings(value) {
+      var endings = [];
+      if (/eh$/.test(value)) {
+        endings = ['eh', 'e', 'a', 'h'];
+      } else if (/e$/.test(value)) {
+        endings = ['e', 'eh', 'a', 'h'];
+      } else if (/a$/.test(value)) {
+        endings = ['a', 'eh', 'e', 'h'];
+      } else if (/h$/.test(value)) {
+        endings = ['h', 'a', 'eh', 'e'];
+      }
+
+      if (!endings.length) {
+        out.push(value);
+        return;
+      }
+
+      var stem = value.slice(0, -endings[0].length);
+      endings.forEach(function (ending) {
+        if (out.length < max) out.push(stem + ending);
+      });
+    }
+
+    function walk(index, current) {
+      if (out.length >= max) return;
+      if (index >= solution.length) {
+        addTaaEndings(current);
+        return;
+      }
+
+      var rest = solution.slice(index);
+      for (var g = 0; g < groups.length; g += 1) {
+        if (rest.indexOf(groups[g].text) === 0) {
+          groups[g].options.forEach(function (option) {
+            walk(index + groups[g].text.length, current + option);
+          });
+          return;
+        }
+      }
+
+      var ch = solution.charAt(index);
+      var options = singles[ch] || [ch];
+      options.forEach(function (option) {
+        walk(index + 1, current + option);
+      });
+    }
+
+    walk(0, '');
+    return unique(out);
+  }
+
+  /**
+   * Build everything the UI needs for one word:
+   * - `arabic` keeps the original vocalized text for display,
+   * - `tokens` is retained for the existing letter-level rendering helpers,
+   * - `solutions` starts with the dataset's preferred answers in order,
+   *   followed by every flexibly valid spelling the tokenizer can derive.
+   */
+  function buildWord(entry, settings) {
+    var normalized = normalizeEntry(entry);
+    var tokens = buildTokens(normalized.arabic, settings);
+    var generated = generateTokenSolutions(tokens);
+    var canonical = tokens.map(function (token) {
+      return token.canonical;
+    }).join('');
+    var expanded = [];
+
+    normalized.solutions.forEach(function (solution) {
+      expanded = expanded.concat(expandSolution(solution));
+    });
+
+    var solutions = unique(normalized.solutions.concat(expanded, generated));
+
+    if (!solutions.length && canonical) solutions = [canonical];
+
+    return {
+      arabic: normalized.arabic,
+      tokens: tokens,
+      solutions: solutions,
+      canonical: solutions[0] || canonical,
+      generatedSolutions: generated
+    };
+  }
+
+  function commonPrefixLength(a, b) {
+    var length = Math.min(a.length, b.length);
+    var i = 0;
+    while (i < length && a.charAt(i) === b.charAt(i)) i += 1;
+    return i;
+  }
+
+  /**
+   * Match one typed string against the full solutions array. The typed string
+   * is a valid prefix while it prefixes at least one accepted spelling.
+   */
+  function matchSolutions(solutions, input) {
+    var list = Array.isArray(solutions) ? solutions.filter(Boolean) : [];
+    var typed = input == null ? '' : String(input);
+    var exact = null;
+    var prefixMatches = [];
+    var best = null;
+
+    list.forEach(function (solution, index) {
+      if (solution === typed) exact = exact || solution;
+
+      if (solution.indexOf(typed) === 0) {
+        prefixMatches.push(solution);
+      }
+
+      var matched = commonPrefixLength(solution, typed);
+      var candidate = {
+        solution: solution,
+        index: index,
+        matched: matched
+      };
+
+      if (!best ||
+          candidate.matched > best.matched ||
+          (candidate.matched === best.matched && candidate.index < best.index)) {
+        best = candidate;
+      }
+    });
+
+    var target = exact || prefixMatches[0] || (best && best.solution) || list[0] || '';
+    var isPrefix = typed === '' || prefixMatches.length > 0;
+    var matchedLength = isPrefix ? typed.length : commonPrefixLength(target, typed);
+
+    return {
+      input: typed,
+      target: target,
+      expected: target,
+      solution: target,
+      solutions: list,
+      complete: !!exact,
+      validPrefix: isPrefix,
+      prefixMatches: prefixMatches,
+      matched: matchedLength,
+      leftover: isPrefix ? '' : typed.slice(matchedLength),
+      remaining: isPrefix ? target.slice(typed.length) : target.slice(matchedLength)
+    };
+  }
+
+  function isAccepted(solutions, input) {
+    var typed = input == null ? '' : String(input);
+    return (Array.isArray(solutions) ? solutions : []).some(function (solution) {
+      return solution === typed;
+    });
+  }
+
+  function preferredSolution(solutions) {
+    return (Array.isArray(solutions) && solutions.length) ? solutions[0] : '';
+  }
+
+  /**
+   * Parse typed input against a word. When a `solutions` array is supplied it
+   * is authoritative; otherwise fall back to the token-level parser for
+   * ad-hoc text (letters and custom drills).
+   */
+  function parseInput(tokens, input, solutions) {
+    if (Array.isArray(solutions) && solutions.length) {
+      return matchSolutions(solutions, input);
+    }
+    return parseTokenInput(tokens, input);
+  }
+
+  /**
    * Parse typed input against a word's tokens. Alternatives and partial aliases
    * are supported. The returned candidate describes the closest valid prefix.
    */
-  function parseInput(tokens, input) {
+  function parseTokenInput(tokens, input) {
     input = input == null ? '' : String(input);
     var best = null;
 
@@ -460,7 +725,14 @@
   global.HarfTranslit = {
     DEFAULT_SETTINGS: DEFAULT_SETTINGS,
     normalizeSettings: normalizeSettings,
+    normalizeEntry: normalizeEntry,
+    entryArabic: entryArabic,
     buildTokens: buildTokens,
+    buildWord: buildWord,
+    generateTokenSolutions: generateTokenSolutions,
+    matchSolutions: matchSolutions,
+    isAccepted: isAccepted,
+    preferredSolution: preferredSolution,
     transliterate: transliterate,
     parseInput: parseInput,
     stripDiacritics: stripDiacritics,

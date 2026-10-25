@@ -145,15 +145,17 @@
      Test construction
      ------------------------------------------------------------------------ */
 
-  function makeWord(raw, mode) {
-    var tokens = T.buildTokens(raw, state.settings);
-    if (!tokens.length) return null;
+  function makeWord(entry, mode) {
+    var built = T.buildWord(entry, state.settings);
+    if (!built.tokens.length) return null;
 
     return {
-      raw: raw,
-      display: displayForMode(raw, mode),
-      tokens: tokens,
-      canonical: tokens.map(function (token) { return token.canonical; }).join(''),
+      entry: entry,
+      raw: built.arabic,
+      display: displayForMode(built.arabic, mode),
+      tokens: built.tokens,
+      solutions: built.solutions,
+      canonical: built.canonical,
       input: '',
       committed: false,
       correct: null
@@ -194,7 +196,9 @@
 
     if (mode === 'words' || mode === 'reading') {
       var picked = D.pickWords(state.count);
-      return makeTest(mode, picked, picked.join(' '));
+      return makeTest(mode, picked, picked.map(function (entry) {
+        return T.entryArabic(entry);
+      }).join(' '));
     }
 
     if (mode === 'phrases') {
@@ -285,52 +289,21 @@
     var word = currentWord();
     if (!test || !word || test.status === 'finished') return;
 
-    var parse = T.parseInput(word.tokens, word.input);
+    var parse = T.parseInput(word.tokens, word.input, word.solutions);
     var fragment = document.createDocumentFragment();
-    var caretPlaced = false;
-    var partial = parse.partial;
-    var segments = parse.segments;
-    var leftover = parse.leftover;
+    var target = parse.target || word.canonical || '';
+    var typedPart = parse.validPrefix ? word.input : target.slice(0, parse.matched);
+    var errorPart = parse.validPrefix ? '' : parse.leftover;
 
     setText(els.promptArabic, word.display);
     setText(els.promptCounter, (test.index + 1) + ' / ' + test.words.length);
     setText(els.promptModeTag, MODE_TAGS[test.mode] || MODE_TAGS.words);
 
-    function placeCaret() {
-      if (caretPlaced) return;
-      appendCaret(fragment);
-      caretPlaced = true;
-    }
+    appendLatinPart(fragment, typedPart, 'latin-typed');
+    appendLatinPart(fragment, errorPart, 'latin-error');
+    appendCaret(fragment);
+    appendPlaceholders(fragment, Math.max(0, target.length - typedPart.length - errorPart.length));
 
-    for (var i = 0; i < word.tokens.length; i += 1) {
-      if (i < segments.length) {
-        appendLatinPart(fragment, segments[i].typed, 'latin-typed');
-        continue;
-      }
-
-      if (partial && i === partial.tokenIndex) {
-        appendLatinPart(fragment, partial.typed, 'latin-typed');
-        placeCaret();
-        appendPlaceholders(fragment, Math.max(0, partial.variant.length - partial.typed.length));
-        continue;
-      }
-
-      if (leftover && i === parse.ti) {
-        appendLatinPart(fragment, leftover, 'latin-error');
-        placeCaret();
-        appendPlaceholders(fragment, word.tokens[i].canonical.length);
-        continue;
-      }
-
-      placeCaret();
-      appendPlaceholders(fragment, word.tokens[i].canonical.length);
-    }
-
-    if (!caretPlaced && leftover) {
-      appendLatinPart(fragment, leftover, 'latin-error');
-    }
-
-    placeCaret();
     els.promptLatin.replaceChildren(fragment);
     updateInstruction(parse);
   }
@@ -474,7 +447,7 @@
       return;
     }
 
-    var rawWords = test.words.map(function (word) { return word.raw; });
+    var rawWords = test.words.map(function (word) { return word.entry; });
     var repeated = makeTest(test.mode, rawWords, test.sourceText);
     if (!repeated) {
       startNewTest({ mode: test.mode });
@@ -619,32 +592,22 @@
      Typing
      ------------------------------------------------------------------------ */
 
-  function hintTokenFor(word) {
-    if (!word) return null;
-    var parse = T.parseInput(word.tokens, word.input);
-    if (parse.complete) return null;
-
-    var index = parse.partial
-      ? parse.partial.tokenIndex
-      : (parse.leftover.length ? parse.ti : parse.segments.length);
-
-    if (index < 0 || index >= word.tokens.length) return null;
-
-    return {
-      index: index,
-      canonical: word.tokens[index].canonical
-    };
+  function hintTextFor(word) {
+    if (!word) return '';
+    var parse = T.parseInput(word.tokens, word.input, word.solutions);
+    if (parse.complete) return '';
+    return T.preferredSolution(word.solutions) || word.canonical;
   }
 
   function showHint(auto) {
     if (!els.promptHint) return;
-    var token = hintTokenFor(currentWord());
-    if (!token) return;
+    var hint = hintTextFor(currentWord());
+    if (!hint) return;
 
     window.clearTimeout(state.hintTimer);
     window.clearTimeout(state.hintHideTimer);
     els.promptHint.hidden = false;
-    els.promptHint.textContent = 'hint · ' + token.canonical;
+    els.promptHint.textContent = 'hint · ' + hint;
     els.promptHint.classList.toggle('is-auto', !!auto);
 
     positionHint();
@@ -713,7 +676,7 @@
     arabic.textContent = word.display;
 
     var note = document.createElement('span');
-    note.textContent = 'correct spelling';
+    note.textContent = 'standard spelling';
 
     var code = document.createElement('code');
     code.dir = 'ltr';
@@ -745,11 +708,11 @@
     if (test.status === 'ready') beginClock(test);
 
     word.input += character;
-    var parse = T.parseInput(word.tokens, word.input);
+    var parse = T.parseInput(word.tokens, word.input, word.solutions);
 
     test.totalKeystrokes += 1;
     var autoHint = false;
-    if (parse.leftover.length === 0) {
+    if (parse.validPrefix) {
       test.correctKeystrokes += 1;
       test.streak += 1;
       test.maxStreak = Math.max(test.maxStreak, test.streak);
@@ -758,7 +721,7 @@
       hideHint();
     } else {
       test.streak = 0;
-      var failToken = parse.ti;
+      var failToken = test.index;
       if (state.errorToken === failToken) {
         state.errorCount += 1;
       } else {
@@ -819,8 +782,8 @@
       return;
     }
 
-    var parse = T.parseInput(word.tokens, word.input);
-    var correct = parse.complete;
+    var parse = T.parseInput(word.tokens, word.input, word.solutions);
+    var correct = T.isAccepted(word.solutions, word.input) || parse.complete;
 
     word.committed = true;
     word.correct = correct;

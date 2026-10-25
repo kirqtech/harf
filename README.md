@@ -26,12 +26,12 @@ You can also open `index.html` directly in a modern browser. The app is entirely
 - **Reading** — the same common vocabulary shown without harakat for unvocalized reading practice.
 - **Phrases** — a random common Arabic expression or short sentence.
 - **Custom** — paste any Arabic text and practice it word by word.
-- **Active recall** — the Latin solution is hidden until you ask for it or miss three times.
+- **Active recall** — the standard Latin solution is hidden until you ask for it or miss three times.
 - **Live stats** — WPM, accuracy, streak, elapsed time, and progress.
 - **Results screen** — WPM, accuracy, best streak, time, correct words, a review of missed words, repeat, and new-test actions.
-- **Case-sensitive feedback** — every accepted letter is validated as you type.
+- **Case-sensitive feedback** — every accepted letter is validated as you type; input is accepted while it prefixes at least one valid solution.
 - **Cheat sheet drawer** — all mappings, emphatic pairs, vowels, and aliases, available from the `?` button or `F1`.
-- **Mapping settings** — choose the preferred hint for غ، خ، ق، ح. Common alternate spellings remain accepted.
+- **Mapping settings** — choose the preferred generated spelling for غ، خ، ق، ح. Common alternate spellings remain accepted.
 - **Local persistence** — mapping preferences and custom text are kept in `localStorage`.
 
 ---
@@ -41,7 +41,7 @@ You can also open `index.html` directly in a modern browser. The app is entirely
 | Key | Action |
 | --- | --- |
 | Type | Enter the active transliteration |
-| `?` | Flash the expected key for the current letter (does not fail the word) |
+| `?` | Show the word's standard transliteration (does not fail the word) |
 | `Space` | Commit the current word and move on |
 | `Backspace` | Fix the current word |
 | `F1` | Toggle the cheat sheet |
@@ -51,7 +51,7 @@ You can also open `index.html` directly in a modern browser. The app is entirely
 
 Press `Shift+Tab` to move focus out of the typing capture if you need to reach the header controls with the keyboard.
 
-A correct intermediate word still needs `Space` to advance. Space on an incomplete word marks it incorrect, shows the correct spelling briefly, and skips it. After three consecutive wrong keys on the same token, the expected key appears automatically above the input.
+A correct intermediate word still needs `Space` to advance. Space on an incomplete word marks it incorrect, shows the standard spelling briefly, and skips it. After three consecutive wrong keys on the same word, the standard solution appears automatically above the input.
 
 ---
 
@@ -61,7 +61,7 @@ Mappings are case-sensitive.
 
 | Arabic | Accepted input |
 | --- | --- |
-| ء أ إ ؤ ئ | `2` |
+| ء أ إ ؤ ئ | `2`, plain `a`, or omitted where natural |
 | ع | `3` |
 | غ | `gh` or `3'` |
 | خ | `kh`, `7'`, or `5` |
@@ -76,16 +76,16 @@ Mappings are case-sensitive.
 | ك / ق | `k` / `q` or `9` |
 | ث / ش / ج | `th` / `sh` / `j` |
 | ا | `aa` or `a` |
-| و | `oo`, `uu`, or `w` |
-| ي | `ee`, `ii`, or `y` |
-| ة | `a` or `h` |
+| و | `oo`, `uu`, `u`, or `w` |
+| ي | `ee`, `ii`, `i`, or `y` |
+| ة | `a`, `eh`, `e`, or `h` |
 | ى | `aa` or `a` |
-| Short vowels | fatha `a`, kasra `i`, damma `u` |
+| Short vowels | fatha `a`, kasra `i` / `e`, damma `u` / `o` |
 | Tanween | `an`, `in`, `un` |
 | Sukun | no character |
 | Shadda | double the consonant |
 
-The hint shown when you press `?`, or after three misses, is the preferred spelling from Settings. Alternative spellings are accepted automatically. Lowercase `h` never matches ح, and case distinguishes s/S, d/D, t/T, z/Z.
+The hint shown when you press `?`, or after three misses, is the first (most common standard) spelling in the word's `solutions` list. Alternative spellings are accepted automatically. Lowercase `h` never matches ح, and case distinguishes s/S, d/D, t/T, z/Z.
 
 ---
 
@@ -111,12 +111,18 @@ No package manager or transpiler is required. Scripts are loaded in dependency o
 
 ## Adding words or phrases
 
-Edit the arrays in `js/data.js`:
+Edit the arrays in `js/data.js`. Word entries pair the Arabic with every accepted Latin answer. The first solution is the standard hint; the engine adds flexible dialect variants on top:
 
 ```js
 var WORDS = [
-  'كِتَاب',
-  'مَدْرَسَة'
+  {
+    arabic: 'حبيبي',
+    solutions: ['7abeebi', '7abibi', 'Habeebi', 'Habibi']
+  },
+  {
+    arabic: 'مَدِينَة',
+    solutions: ['madineh', 'madiineh', 'madina', 'madiina']
+  }
 ];
 
 var PHRASES = [
@@ -124,15 +130,15 @@ var PHRASES = [
 ];
 ```
 
-Use Arabic with harakat where possible. The engine derives the Latin target from the Arabic, so vocalized source text produces more precise transliterations. Reading and Phrase modes automatically hide the harakat in the Arabic display while retaining the phonetic target used for validation. Letters are generated from the consonant/vowel pools in the same file.
+Use Arabic with harakat where possible. The engine derives additional Latin targets from the Arabic (long-vowel aliases, taa marbuta endings, hamza forms, emphatic pairs), so vocalized source text produces more precise transliterations. Reading and Phrase modes automatically hide the harakat in the Arabic display while retaining the phonetic targets used for validation. Letters are generated from the consonant/vowel pools in the same file.
 
 ---
 
 ## Customizing mappings
 
-The mapping engine lives in `js/translit.js`. Aliases are defined per letter in `buildTokens`; the preferred spelling for the four configurable letters is stored in `DEFAULT_SETTINGS` and can be changed at runtime from the Settings drawer.
+The mapping engine lives in `js/translit.js`. Dataset `solutions` are authoritative and ordered (the first is the hint); the tokenizer expands each word into additional flexible spellings. Aliases are defined per letter in `buildTokens`; the preferred spelling for the four configurable letters is stored in `DEFAULT_SETTINGS` and can be changed at runtime from the Settings drawer.
 
-The parser is token-based rather than character-position-based, which is why aliases of different lengths (`gh` vs `3'`) work correctly with partial input and Backspace.
+The parser validates the typed string against the full solutions array, so aliases of different lengths (`gh` vs `3'`) work correctly with partial input and Backspace.
 
 ---
 
