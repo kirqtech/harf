@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17181c">
+  <meta name="description" content="Harf is a lightweight Arabic typing trainer for practicing Arabizi and Latin transliteration.">
+  <title>Harf — Arabic typing trainer</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#testStage">Skip to typing test</a>
+
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="brand" aria-label="Harf, Arabic typing trainer">
+        <span class="brand-arabic" lang="ar" dir="rtl">حرف</span>
+        <span class="brand-text">
+          <span class="brand-name">harf</span>
+          <span class="brand-subtitle">arabic typing</span>
+        </span>
+      </div>
+
+      <div class="header-actions">
+        <button class="icon-button icon-button--help" id="legendButton" type="button" title="Cheat sheet (F1)" aria-label="Open the transliteration cheat sheet" aria-haspopup="dialog" aria-controls="sheetDialog">
+          <span class="hint-mark" aria-hidden="true">?</span>
+        </button>
+        <button class="icon-button" id="settingsButton" type="button" title="Settings" aria-label="Open settings" aria-haspopup="dialog" aria-controls="sheetDialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path>
+            <circle cx="16" cy="7" r="2"></circle>
+            <circle cx="8" cy="17" r="2"></circle>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="control-bar" aria-label="Test options">
+        <div class="mode-tabs" role="group" aria-label="Practice mode">
+          <button class="mode-tab" type="button" data-mode="letters" aria-pressed="false">Letters</button>
+          <button class="mode-tab is-active" type="button" data-mode="words" aria-pressed="true">Words</button>
+          <button class="mode-tab" type="button" data-mode="reading" aria-pressed="false">Reading</button>
+          <button class="mode-tab" type="button" data-mode="phrases" aria-pressed="false">Phrases</button>
+          <button class="mode-tab" type="button" data-mode="custom" id="customModeButton" aria-pressed="false" aria-haspopup="dialog" aria-controls="customDialog">Custom</button>
+        </div>
+
+        <div class="test-options">
+          <div class="count-control" id="countControl" role="group" aria-label="Number of words">
+            <button class="count-button is-active" type="button" data-count="20" aria-pressed="true">20</button>
+            <button class="count-button" type="button" data-count="50" aria-pressed="false">50</button>
+          </div>
+
+          <button class="icon-button icon-button--compact" id="restartButton" type="button" title="New test (Esc)" aria-label="Start a new test">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20 11a8 8 0 1 0-2.34 5.66"></path>
+              <path d="M20 4v7h-7"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="stats-bar" aria-label="Live test statistics">
+        <div class="stat-cell">
+          <span class="stat-value" id="statWpm">—</span>
+          <span class="stat-label">wpm</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-value" id="statAccuracy">—</span>
+          <span class="stat-label">accuracy</span>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-value" id="statStreak">—</span>
+          <span class="stat-label">streak</span>
+        </div>
+        <div class="stat-cell stat-cell--time">
+          <span class="stat-value" id="statTime">—</span>
+          <span class="stat-label">time</span>
+        </div>
+        <div class="stat-progress">
+          <div class="progress-meta">
+            <span id="statProgress">0 / 20</span>
+            <span class="stat-label">progress</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-label="Test progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack">
+            <span class="progress-fill" id="progressFill"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="test-stage" id="testStage" aria-label="Arabic typing test">
+        <div class="prompt" id="prompt">
+          <div class="prompt-head">
+            <span class="prompt-counter" id="promptCounter">1 / 20</span>
+            <span class="prompt-mode" id="promptModeTag">vocalized</span>
+            <button class="hint-button" id="hintButton" type="button" aria-label="Reveal the transliteration for the next letter">
+              hint <kbd>?</kbd>
+            </button>
+          </div>
+
+          <div class="prompt-arabic" id="promptArabic" lang="ar" dir="rtl"></div>
+
+          <div class="prompt-input-wrap">
+            <div class="prompt-hint" id="promptHint" role="status" aria-live="polite" hidden></div>
+            <div class="prompt-latin" id="promptLatin" dir="ltr" aria-label="Your transliteration input"></div>
+          </div>
+
+          <p class="prompt-help">type the Latin transliteration · <kbd>?</kbd> reveals one hint · <kbd>space</kbd> submits</p>
+        </div>
+
+        <div class="queue-wrap" id="queueWrap" hidden>
+          <span class="queue-label">up next</span>
+          <div class="words" id="words" dir="rtl" aria-label="Upcoming Arabic words"></div>
+        </div>
+
+        <div class="review-line" id="reviewLine" hidden aria-live="polite"></div>
+
+        <div class="results" id="results" hidden aria-live="polite">
+          <p class="results-kicker">test complete</p>
+          <div class="results-hero">
+            <span class="results-wpm" id="resultWpm">0</span>
+            <span class="results-unit">wpm</span>
+          </div>
+          <div class="results-grid">
+            <div>
+              <span class="result-label">accuracy</span>
+              <strong id="resultAccuracy">0%</strong>
+            </div>
+            <div>
+              <span class="result-label">best streak</span>
+              <strong id="resultStreak">0</strong>
+            </div>
+            <div>
+              <span class="result-label">time</span>
+              <strong id="resultTime">0s</strong>
+            </div>
+            <div>
+              <span class="result-label">correct words</span>
+              <strong id="resultWords">0 / 0</strong>
+            </div>
+          </div>
+          <div class="results-review" id="resultsReview" hidden>
+            <h3>worth another look</h3>
+            <ul id="resultsReviewList"></ul>
+          </div>
+          <div class="results-actions">
+            <button class="button button--primary" id="nextTestButton" type="button">next test <kbd>enter</kbd></button>
+            <button class="button button--ghost" id="repeatButton" type="button">repeat text</button>
+          </div>
+          <p class="results-hint"><kbd>esc</kbd> for a fresh test</p>
+        </div>
+
+        <div class="focus-badge" id="focusBadge" hidden>
+          <span class="focus-dot" aria-hidden="true"></span>
+          click or press any key to focus
+        </div>
+      </section>
+
+      <p class="instruction-line" id="instructionLine">
+        Read the Arabic, then type the Latin transliteration. Press <kbd>?</kbd> for one hint.
+      </p>
+
+      <footer class="test-footer">
+        <div class="shortcuts" aria-label="Keyboard shortcuts">
+          <span><kbd>?</kbd> hint</span>
+          <span><kbd>f1</kbd> cheat sheet</span>
+          <span><kbd>space</kbd> next word</span>
+          <span><kbd>esc</kbd> new test</span>
+        </div>
+        <button class="text-button" id="openLegendButton" type="button">mapping guide</button>
+      </footer>
+    </main>
+  </div>
+
+  <input
+    class="typing-input"
+    id="typingInput"
+    type="text"
+    inputmode="text"
+    autocomplete="off"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+    aria-label="Type the Latin transliteration"
+    aria-describedby="instructionLine"
+    tabindex="0"
+  >
+
+  <dialog class="modal-dialog" id="customDialog" aria-labelledby="customTitle">
+    <form class="modal-card" id="customForm" novalidate>
+      <div class="modal-heading">
+        <div>
+          <p class="eyebrow">your own text</p>
+          <h2 id="customTitle">Custom Arabic list</h2>
+        </div>
+        <button class="icon-button" type="button" id="closeCustomButton" aria-label="Close custom text dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <label class="field-label" for="customText">Paste Arabic words, sentences, or a paragraph</label>
+      <textarea
+        class="custom-textarea"
+        id="customText"
+        name="customText"
+        rows="8"
+        dir="rtl"
+        lang="ar"
+        placeholder="الصق النص العربي هنا..."
+        aria-describedby="customTextHelp"
+      ></textarea>
+      <p class="field-help" id="customTextHelp">Every Arabic word becomes a prompt. Adding harakat makes the transliteration target more precise. Punctuation is not typed.</p>
+      <p class="form-error" id="customError" role="alert" hidden></p>
+
+      <div class="modal-actions">
+        <button class="button button--ghost" type="button" id="cancelCustomButton">Cancel</button>
+        <button class="button button--primary" type="submit">start practice</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="sheet-dialog" id="sheetDialog" aria-labelledby="sheetTitle">
+    <div class="sheet-shell">
+      <header class="sheet-header">
+        <div class="sheet-tabs" role="tablist" aria-label="Reference panels">
+          <button class="sheet-tab is-active" id="legendTab" type="button" role="tab" aria-selected="true" aria-controls="legendPanel" data-sheet-tab="legend">Cheat sheet</button>
+          <button class="sheet-tab" id="settingsTab" type="button" role="tab" aria-selected="false" aria-controls="settingsPanel" data-sheet-tab="settings">Settings</button>
+        </div>
+        <button class="icon-button" type="button" id="closeSheetButton" aria-label="Close reference panel">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </header>
+      <h2 class="sr-only" id="sheetTitle">Transliteration reference and settings</h2>
+
+      <div class="sheet-body">
+        <section class="sheet-panel" id="legendPanel" role="tabpanel" aria-labelledby="legendTab">
+          <p class="sheet-intro">The Latin solution stays hidden during practice. Type the transliteration you decode from the Arabic; press <kbd>?</kbd> or use the hint button when you need a rescue. Alternate spellings listed here are also accepted.</p>
+
+          <div class="legend-block">
+            <h3>Numbers &amp; gutturals</h3>
+            <div class="mapping-table">
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ء أ إ ؤ ئ</span><span class="mapping-keys"><kbd>2</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ع</span><span class="mapping-keys"><kbd>3</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">غ</span><span class="mapping-keys"><kbd>gh</kbd><kbd>3'</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">خ</span><span class="mapping-keys"><kbd>kh</kbd><kbd>7'</kbd><kbd>5</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ح</span><span class="mapping-keys"><kbd>H</kbd><kbd>7</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ق</span><span class="mapping-keys"><kbd>q</kbd><kbd>9</kbd></span></div>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <h3>Case-sensitive pairs</h3>
+            <div class="mapping-table">
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">س / ص</span><span class="mapping-keys"><kbd>s</kbd><span class="key-separator">/</span><kbd>S</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">د / ض</span><span class="mapping-keys"><kbd>d</kbd><span class="key-separator">/</span><kbd>D</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ت / ط</span><span class="mapping-keys"><kbd>t</kbd><span class="key-separator">/</span><kbd>T</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ذ / ظ</span><span class="mapping-keys"><kbd>dh</kbd><span class="key-separator">/</span><kbd>Z</kbd><kbd>DH</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ه / ح</span><span class="mapping-keys"><kbd>h</kbd><span class="key-separator">/</span><kbd>H</kbd><kbd>7</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ز / ظ</span><span class="mapping-keys"><kbd>z</kbd><span class="key-separator">/</span><kbd>Z</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ك / ق</span><span class="mapping-keys"><kbd>k</kbd><span class="key-separator">/</span><kbd>q</kbd><kbd>9</kbd></span></div>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <h3>Letters &amp; digraphs</h3>
+            <div class="mapping-table mapping-table--two">
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ب ت د ر ف ك ل م ن</span><span class="mapping-keys"><kbd>b t d r f k l m n</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ج</span><span class="mapping-keys"><kbd>j</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ث</span><span class="mapping-keys"><kbd>th</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ش</span><span class="mapping-keys"><kbd>sh</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ه</span><span class="mapping-keys"><kbd>h</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ة / ى</span><span class="mapping-keys"><kbd>a</kbd><kbd>h</kbd><span class="key-separator">/</span><kbd>aa</kbd><kbd>a</kbd></span></div>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <h3>Vowels &amp; marks</h3>
+            <div class="mapping-table">
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">فَ / فِ / فُ</span><span class="mapping-keys"><kbd>a</kbd><kbd>i</kbd><kbd>u</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ا / و / ي</span><span class="mapping-keys"><kbd>aa</kbd><kbd>oo</kbd><kbd>ee</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">و / ي consonantal</span><span class="mapping-keys"><kbd>w</kbd><kbd>y</kbd></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ـْ</span><span class="mapping-keys"><span class="mapping-note">sukun — no key</span></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ـّ</span><span class="mapping-keys"><span class="mapping-note">double the consonant</span></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ـً ـٍ ـٌ</span><span class="mapping-keys"><kbd>an</kbd><kbd>in</kbd><kbd>un</kbd></span></div>
+            </div>
+          </div>
+
+          <div class="tip-card">
+            <strong>Case is part of the mapping.</strong>
+            <p><kbd>s</kbd> is س while <kbd>S</kbd> is ص. The same applies to d/D, t/T and z/Z. Lowercase <kbd>h</kbd> is only ه; use <kbd>H</kbd> or <kbd>7</kbd> for ح.</p>
+          </div>
+        </section>
+
+        <section class="sheet-panel" id="settingsPanel" role="tabpanel" aria-labelledby="settingsTab" hidden>
+          <p class="sheet-intro">Choose the spelling shown in the hints. Common alternates stay accepted, so you can type the form that feels natural.</p>
+
+          <form class="settings-form" id="settingsForm">
+            <div class="setting-row">
+              <label for="settingGhayn">Ghayn <span lang="ar" dir="rtl">غ</span></label>
+              <select id="settingGhayn" name="gh">
+                <option value="gh">gh</option>
+                <option value="3'">3'</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="settingKha">Kha <span lang="ar" dir="rtl">خ</span></label>
+              <select id="settingKha" name="kh">
+                <option value="kh">kh</option>
+                <option value="7'">7'</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="settingQaf">Qaf <span lang="ar" dir="rtl">ق</span></label>
+              <select id="settingQaf" name="qaf">
+                <option value="q">q</option>
+                <option value="9">9</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="settingHaa">Haa <span lang="ar" dir="rtl">ح</span></label>
+              <select id="settingHaa" name="haa">
+                <option value="7">7</option>
+                <option value="H">H</option>
+              </select>
+            </div>
+
+            <p class="field-help">Settings apply to the next test. Your preference is saved in this browser.</p>
+            <button class="button button--ghost button--small" type="button" id="resetSettingsButton">reset defaults</button>
+          </form>
+
+          <div class="tip-card">
+            <strong>How scoring works</strong>
+            <p>WPM counts correct keystrokes (5 characters = 1 word) against elapsed time. Backspace fixes typos, but the original keypress still counts toward accuracy.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/translit.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
