@@ -54,6 +54,7 @@ html {
 body {
   min-height: 100svh;
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(900px 500px at 50% -15%, rgba(230, 185, 103, 0.07), transparent 65%),
     radial-gradient(600px 400px at 100% 100%, rgba(116, 143, 173, 0.035), transparent 70%),
@@ -506,11 +507,17 @@ kbd {
   text-transform: uppercase;
 }
 
+.prompt-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+  margin-left: auto;
+}
+
 .hint-button {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-left: auto;
   padding: 0.24rem 0.55rem;
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -522,7 +529,8 @@ kbd {
   transition:
     border-color 150ms ease,
     color 150ms ease,
-    background-color 150ms ease;
+    background-color 150ms ease,
+    opacity 150ms ease;
 }
 
 .hint-button:hover {
@@ -533,6 +541,27 @@ kbd {
 
 .hint-button kbd {
   font-size: 0.68rem;
+}
+
+.hint-button--clear {
+  color: rgba(239, 116, 132, 0.72);
+}
+
+.hint-button--clear:hover {
+  border-color: rgba(239, 116, 132, 0.3);
+  background: rgba(239, 116, 132, 0.06);
+  color: var(--error);
+}
+
+.hint-button:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.hint-button:disabled:hover {
+  border-color: var(--border);
+  background: transparent;
+  color: rgba(239, 116, 132, 0.72);
 }
 
 .prompt-arabic {
@@ -813,11 +842,34 @@ kbd {
    -------------------------------------------------------------------------- */
 
 .results {
-  width: min(100%, 44rem);
-  margin-inline: auto;
-  padding: 1.2rem 0 0.6rem;
+  width: 100%;
+  max-height: min(92svh, 52rem);
+  margin: 0;
+  padding: clamp(1.25rem, 4vw, 1.9rem);
+  overflow-y: auto;
   text-align: center;
+  scrollbar-width: thin;
   animation: fade-up 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.results-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(92vw, 46rem);
+  max-width: min(92vw, 46rem);
+  height: fit-content;
+  max-height: min(92svh, 52rem);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-soft);
+}
+
+.results-dialog[open] {
+  animation: modal-in 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .results-kicker {
@@ -927,10 +979,9 @@ kbd {
 
 .results-review li {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.8rem;
-  padding-bottom: 0.35rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.55rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -939,20 +990,63 @@ kbd {
   border-bottom: 0;
 }
 
+.review-flow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+}
+
 .results-review .review-arabic {
   color: var(--text-soft);
   font-family: var(--font-arabic);
-  font-size: 1.2rem;
+  font-size: 1.24rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   line-height: 1.6;
 }
 
-.results-review code {
+.review-arrow {
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.review-typed {
+  padding: 0.08rem 0.4rem;
+  border-radius: 0.28rem;
+  background: rgba(239, 116, 132, 0.09);
+  color: var(--error);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  text-decoration-color: rgba(239, 116, 132, 0.55);
+}
+
+.review-accepted {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.review-label {
+  color: var(--faint);
+  font-size: 0.56rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.results-review .review-accepted code {
+  padding: 0.06rem 0.34rem;
+  border: 1px solid rgba(139, 201, 160, 0.18);
+  border-radius: 0.28rem;
+  background: rgba(139, 201, 160, 0.06);
   color: var(--correct);
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  text-align: right;
+  font-size: 0.76rem;
+  text-align: left;
 }
 
 .results-hint {
@@ -1731,6 +1825,116 @@ dialog::backdrop {
 
   .test-footer {
     gap: 0.4rem;
+  }
+}
+
+/* Phones and small tablets: keep long Arabic prompts and preview queues
+   inside the viewport, and make the active input area easy to tap. */
+@media (max-width: 768px) {
+  .prompt-head {
+    flex-wrap: wrap;
+    row-gap: 0.45rem;
+  }
+
+  .prompt-tools {
+    margin-left: auto;
+  }
+
+  .hint-button {
+    min-height: 2.2rem;
+    padding: 0.42rem 0.72rem;
+    font-size: 0.7rem;
+    touch-action: manipulation;
+  }
+
+  .hint-button kbd {
+    display: none;
+  }
+
+  .prompt-arabic {
+    max-width: 100%;
+    margin-top: 0.8rem;
+    font-size: clamp(2rem, 8.4vw, 2.75rem);
+    letter-spacing: 0.03em;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .prompt-input-wrap {
+    min-height: 3.35rem;
+    margin-top: 0.2rem;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.028);
+    cursor: text;
+    touch-action: manipulation;
+  }
+
+  .prompt-input-wrap:focus-within {
+    border-color: var(--accent-line);
+    background: rgba(230, 185, 103, 0.035);
+  }
+
+  .prompt-latin {
+    font-size: clamp(1.12rem, 4.3vw, 1.4rem);
+    letter-spacing: 0.08em;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .queue-wrap {
+    gap: 0.45rem;
+    overflow: hidden;
+  }
+
+  .queue-ar {
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .words {
+    gap: 0.2rem 0.55rem;
+  }
+
+  .typing-input {
+    font-size: 16px;
+  }
+
+  .results-dialog {
+    width: calc(100vw - 1.25rem);
+    max-width: calc(100vw - 1.25rem);
+    max-height: 94svh;
+  }
+
+  .results {
+    max-height: 94svh;
+    padding: 1.15rem 1rem 1.3rem;
+  }
+
+  .results-wpm {
+    font-size: clamp(3.2rem, 18vw, 4.6rem);
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem 0.5rem;
+  }
+
+  .results-review {
+    padding: 0.8rem;
+  }
+
+  .results-review ul {
+    max-height: 12rem;
+  }
+
+  .review-typed,
+  .results-review .review-accepted code {
+    font-size: 0.72rem;
   }
 }
 

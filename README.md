@@ -22,13 +22,14 @@ You can also open `index.html` directly in a modern browser. The app is entirely
 ## What is included
 
 - **Letters** — 20 randomized single letters, short syllables, and long-vowel drills.
-- **Words** — 20 or 50 vocalized Arabic words for practicing harakat.
+- **Words** — 260+ common Levantine / MSA words (greetings, people and family, everyday nouns, essential adjectives and verbs) with multiple accepted Arabizi spellings each.
 - **Reading** — the same common vocabulary shown without harakat for unvocalized reading practice.
-- **Phrases** — a random common Arabic expression or short sentence.
+- **Phrases** — a random common Arabic expression or short sentence, including everyday Levantine greetings.
 - **Custom** — paste any Arabic text and practice it word by word.
 - **Active recall** — the standard Latin solution is hidden until you ask for it or miss three times.
 - **Live stats** — WPM, accuracy, streak, elapsed time, and progress.
-- **Results screen** — WPM, accuracy, best streak, time, correct words, a review of missed words, repeat, and new-test actions.
+- **Results overlay** — WPM, accuracy, total time, best streak, correct words, and a mistake review that shows the Arabic word, what you typed, and the accepted solutions. Press `Enter` or `Space` to start a new round immediately.
+- **Mobile friendly** — larger tap targets, a tap-friendly input area, on-screen hint and clear buttons, no input zoom, and scaled-down Arabic prompts so long words and preview queues stay inside the viewport.
 - **Case-sensitive feedback** — every accepted letter is validated as you type; input is accepted while it prefixes at least one valid solution.
 - **Cheat sheet drawer** — all mappings, emphatic pairs, vowels, and aliases, available from the `?` button or `F1`.
 - **Mapping settings** — choose the preferred generated spelling for غ، خ، ق، ح. Common alternate spellings remain accepted.
@@ -47,7 +48,7 @@ You can also open `index.html` directly in a modern browser. The app is entirely
 | `F1` | Toggle the cheat sheet |
 | `Escape` | Start a fresh test |
 | `Tab`, then `Enter` | Start a fresh test |
-| `Enter` after results | Start another test |
+| `Enter` or `Space` in results | Start another round immediately |
 
 Press `Shift+Tab` to move focus out of the typing capture if you need to reach the header controls with the keyboard.
 
@@ -130,7 +131,9 @@ var PHRASES = [
 ];
 ```
 
-Use Arabic with harakat where possible. The engine derives additional Latin targets from the Arabic (long-vowel aliases, taa marbuta endings, hamza forms, emphatic pairs), so vocalized source text produces more precise transliterations. Reading and Phrase modes automatically hide the harakat in the Arabic display while retaining the phonetic targets used for validation. Letters are generated from the consonant/vowel pools in the same file.
+Use Arabic with harakat where possible. Each entry should list at least two hand-written solutions; the first is the hint and every other spelling is accepted. The engine also derives additional Latin targets from the Arabic (long-vowel aliases, taa marbuta endings, hamza forms, emphatic pairs), so vocalized source text produces more precise transliterations. Reading and Phrase modes automatically hide the harakat in the Arabic display while retaining the phonetic targets used for validation. Letters are generated from the consonant/vowel pools in the same file.
+
+The word pool is grouped by category in `js/data.js`: greetings and social words, people and family, common nouns, adjectives, everyday verbs, and time expressions. Entries deliberately mix MSA and Levantine forms (for example `kbeer`, `mnee7`, `sa7eb`, and `sadee2`).
 
 ---
 

@@ -98,9 +98,14 @@
           <div class="prompt-head">
             <span class="prompt-counter" id="promptCounter">1 / 20</span>
             <span class="prompt-mode" id="promptModeTag">vocalized</span>
-            <button class="hint-button" id="hintButton" type="button" aria-label="Reveal the standard transliteration for this word">
-              hint <kbd>?</kbd>
-            </button>
+            <div class="prompt-tools">
+              <button class="hint-button" id="hintButton" type="button" aria-label="Reveal the standard transliteration for this word">
+                hint <kbd>?</kbd>
+              </button>
+              <button class="hint-button hint-button--clear" id="clearButton" type="button" aria-label="Clear the current transliteration">
+                clear <kbd>⌫</kbd>
+              </button>
+            </div>
           </div>
 
           <div class="prompt-arabic" id="promptArabic" lang="ar" dir="rtl"></div>
@@ -119,41 +124,6 @@
         </div>
 
         <div class="review-line" id="reviewLine" hidden aria-live="polite"></div>
-
-        <div class="results" id="results" hidden aria-live="polite">
-          <p class="results-kicker">test complete</p>
-          <div class="results-hero">
-            <span class="results-wpm" id="resultWpm">0</span>
-            <span class="results-unit">wpm</span>
-          </div>
-          <div class="results-grid">
-            <div>
-              <span class="result-label">accuracy</span>
-              <strong id="resultAccuracy">0%</strong>
-            </div>
-            <div>
-              <span class="result-label">best streak</span>
-              <strong id="resultStreak">0</strong>
-            </div>
-            <div>
-              <span class="result-label">time</span>
-              <strong id="resultTime">0s</strong>
-            </div>
-            <div>
-              <span class="result-label">correct words</span>
-              <strong id="resultWords">0 / 0</strong>
-            </div>
-          </div>
-          <div class="results-review" id="resultsReview" hidden>
-            <h3>worth another look</h3>
-            <ul id="resultsReviewList"></ul>
-          </div>
-          <div class="results-actions">
-            <button class="button button--primary" id="nextTestButton" type="button">next test <kbd>enter</kbd></button>
-            <button class="button button--ghost" id="repeatButton" type="button">repeat text</button>
-          </div>
-          <p class="results-hint"><kbd>esc</kbd> for a fresh test</p>
-        </div>
 
         <div class="focus-badge" id="focusBadge" hidden>
           <span class="focus-dot" aria-hidden="true"></span>
@@ -186,10 +156,49 @@
     autocorrect="off"
     autocapitalize="off"
     spellcheck="false"
+    aria-autocomplete="none"
+    enterkeyhint="go"
     aria-label="Type the Latin transliteration"
     aria-describedby="instructionLine"
     tabindex="0"
   >
+
+  <dialog class="results-dialog" id="resultsDialog" aria-labelledby="resultsTitle">
+    <div class="results" id="results">
+      <p class="results-kicker" id="resultsTitle">round complete</p>
+      <div class="results-hero">
+        <span class="results-wpm" id="resultWpm">0</span>
+        <span class="results-unit">wpm</span>
+      </div>
+      <div class="results-grid">
+        <div>
+          <span class="result-label">accuracy</span>
+          <strong id="resultAccuracy">0%</strong>
+        </div>
+        <div>
+          <span class="result-label">total time</span>
+          <strong id="resultTime">0s</strong>
+        </div>
+        <div>
+          <span class="result-label">best streak</span>
+          <strong id="resultStreak">0</strong>
+        </div>
+        <div>
+          <span class="result-label">correct words</span>
+          <strong id="resultWords">0 / 0</strong>
+        </div>
+      </div>
+      <div class="results-review" id="resultsReview" hidden>
+        <h3>mistake review</h3>
+        <ul id="resultsReviewList"></ul>
+      </div>
+      <div class="results-actions">
+        <button class="button button--primary" id="nextTestButton" type="button">new round <kbd>enter</kbd></button>
+        <button class="button button--ghost" id="repeatButton" type="button">repeat words</button>
+      </div>
+      <p class="results-hint"><kbd>enter</kbd> or <kbd>space</kbd> starts a new round</p>
+    </div>
+  </dialog>
 
   <dialog class="modal-dialog" id="customDialog" aria-labelledby="customTitle">
     <form class="modal-card" id="customForm" novalidate>

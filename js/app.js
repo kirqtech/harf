@@ -305,6 +305,7 @@
     appendPlaceholders(fragment, Math.max(0, target.length - typedPart.length - errorPart.length));
 
     els.promptLatin.replaceChildren(fragment);
+    if (els.clearButton) els.clearButton.disabled = !word.input.length;
     updateInstruction(parse);
   }
 
@@ -400,7 +401,7 @@
     state.errorCount = 0;
 
     els.typingInput.value = '';
-    els.results.hidden = true;
+    closeResultsDialog();
     els.prompt.hidden = false;
     els.words.hidden = false;
     els.testStage.classList.remove('is-paused');
@@ -527,8 +528,8 @@
     els.queueWrap.hidden = true;
     els.words.hidden = true;
     els.results.hidden = false;
+    showResultsDialog();
     syncFocusUI();
-    focusTyping();
   }
 
   function showResults(test) {
@@ -543,13 +544,40 @@
     setText(els.resultWords, test.correctWords + ' / ' + test.words.length);
 
     renderResultsReview(test);
+  }
+
+  function showResultsDialog() {
+    if (!els.resultsDialog) return;
+
+    if (!els.resultsDialog.open) {
+      els.resultsDialog.showModal();
+    }
+
+    if (els.resultsDialog.scrollTop) els.resultsDialog.scrollTop = 0;
+    if (els.results) els.results.scrollTop = 0;
 
     window.requestAnimationFrame(function () {
-      els.results.scrollIntoView({
-        block: 'nearest',
-        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
-      });
+      if (els.nextTestButton) els.nextTestButton.focus();
     });
+  }
+
+  function closeResultsDialog() {
+    if (els.resultsDialog && els.resultsDialog.open) {
+      els.resultsDialog.close();
+    }
+  }
+
+  function reviewSolutions(word, limit) {
+    var seen = Object.create(null);
+    var out = [];
+
+    (word.solutions || []).forEach(function (solution) {
+      if (!solution || seen[solution]) return;
+      seen[solution] = true;
+      out.push(solution);
+    });
+
+    return out.slice(0, limit || 4);
   }
 
   function renderResultsReview(test) {
@@ -568,6 +596,10 @@
     var fragment = document.createDocumentFragment();
     missed.forEach(function (word) {
       var item = document.createElement('li');
+      item.className = 'review-item';
+
+      var flow = document.createElement('div');
+      flow.className = 'review-flow';
 
       var arabic = document.createElement('span');
       arabic.className = 'review-arabic';
@@ -575,12 +607,38 @@
       arabic.dir = 'rtl';
       arabic.textContent = word.display;
 
-      var translit = document.createElement('code');
-      translit.dir = 'ltr';
-      translit.textContent = word.canonical;
+      var arrow = document.createElement('span');
+      arrow.className = 'review-arrow';
+      arrow.setAttribute('aria-hidden', 'true');
+      arrow.textContent = '→';
 
-      item.appendChild(arabic);
-      item.appendChild(translit);
+      var typed = document.createElement('code');
+      typed.className = 'review-typed';
+      typed.dir = 'ltr';
+      typed.textContent = word.input || '—';
+
+      flow.append(arabic, arrow, typed);
+
+      var accepted = document.createElement('div');
+      accepted.className = 'review-accepted';
+
+      var label = document.createElement('span');
+      label.className = 'review-label';
+      label.textContent = 'accepted';
+      accepted.appendChild(label);
+
+      reviewSolutions(word, 4).forEach(function (solution) {
+        var code = document.createElement('code');
+        code.dir = 'ltr';
+        code.textContent = solution;
+        accepted.appendChild(code);
+      });
+
+      var note = document.createElement('span');
+      note.className = 'sr-only';
+      note.textContent = 'You typed ' + (word.input || 'nothing') + '. Accepted solutions: ' + reviewSolutions(word, 4).join(', ') + '.';
+
+      item.append(flow, accepted, note);
       fragment.appendChild(item);
     });
 
@@ -748,6 +806,26 @@
     }
   }
 
+  function clearCurrentInput() {
+    var test = state.test;
+    if (!test || test.status === 'finished' || test.finishing) return;
+
+    var word = currentWord();
+    if (!word) return;
+
+    if (!word.input.length) {
+      flashActiveError();
+      return;
+    }
+
+    word.input = '';
+    state.errorToken = -1;
+    state.errorCount = 0;
+    hideHint();
+    renderActiveWord();
+    updateStats();
+  }
+
   function handleBackspace() {
     var test = state.test;
     if (!test || test.status === 'finished' || test.finishing) return;
@@ -858,6 +936,16 @@
 
   function handleEscape() {
     state.tabPressedAt = 0;
+    hideToast();
+    startNewTest({ mode: state.mode });
+  }
+
+  function onResultsKeyDown(event) {
+    if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'Spacebar') return;
+    if (!state.test || state.test.status !== 'finished') return;
+
+    event.preventDefault();
+    event.stopPropagation();
     hideToast();
     startNewTest({ mode: state.mode });
   }
@@ -1065,9 +1153,11 @@
     els.promptCounter = $('promptCounter');
     els.promptModeTag = $('promptModeTag');
     els.hintButton = $('hintButton');
+    els.clearButton = $('clearButton');
     els.reviewLine = $('reviewLine');
     els.testStage = $('testStage');
     els.results = $('results');
+    els.resultsDialog = $('resultsDialog');
     els.focusBadge = $('focusBadge');
     els.instructionLine = $('instructionLine');
     els.typingInput = $('typingInput');
@@ -1162,6 +1252,19 @@
     els.hintButton.addEventListener('click', function () {
       handleHintRequest();
       focusTyping();
+    });
+
+    els.clearButton.addEventListener('click', function () {
+      clearCurrentInput();
+      focusTyping();
+    });
+
+    els.resultsDialog.addEventListener('keydown', onResultsKeyDown);
+    els.resultsDialog.addEventListener('cancel', function (event) {
+      event.preventDefault();
+      if (!state.test || state.test.status !== 'finished') return;
+      hideToast();
+      startNewTest({ mode: state.mode });
     });
 
     els.settingsButton.addEventListener('click', function () {
