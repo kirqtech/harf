@@ -442,11 +442,40 @@
     return source[Math.floor(Math.random() * source.length)];
   }
 
+  /**
+   * Arabic-script letter drill: the same single letters, short-vowel
+   * syllables and long-vowel drills, but written so the learner retypes the
+   * letters on an Arabic keyboard. Harakat are shown as hints and are never
+   * part of the typed target.
+   */
+  function arabicDrills(count) {
+    var pool = shuffle(buildLetterPool());
+
+    // Drop near-duplicates such as "ب بَ" and keep one form per base letter.
+    var seen = Object.create(null);
+    var selected = [];
+
+    for (var i = 0; i < pool.length && selected.length < count; i += 1) {
+      var base = pool[i].charAt(0);
+      if (seen[base]) continue;
+      seen[base] = true;
+      selected.push(pool[i]);
+    }
+
+    var index = 0;
+    while (selected.length < count && pool.length) {
+      selected.push(pool[(index += 1) % pool.length]);
+    }
+
+    return selected;
+  }
+
   global.HarfData = {
     WORDS: WORDS.slice(),
     PHRASES: PHRASES.slice(),
     CONSONANTS: CONSONANTS.slice(),
     letterDrills: letterDrills,
+    arabicDrills: arabicDrills,
     pickWords: pickWords,
     pickPhrase: pickPhrase,
     shuffle: shuffle

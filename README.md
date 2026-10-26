@@ -1,6 +1,11 @@
 # Harf — Arabic typing trainer
 
-Harf is a small, dependency-free Arabic typing trainer inspired by Monkeytype. Read an Arabic word, phrase, or syllable and type its Latin transliteration (Arabizi / chat-Arabic) in real time. No backend, no build step, no account.
+Harf is a small, dependency-free Arabic typing trainer inspired by Monkeytype. It has two practice scripts:
+
+- **Latin transliteration** — read an Arabic word, phrase, or syllable and type its Arabizi / chat-Arabic spelling (`kataba`, `7abeebi`) in real time.
+- **Arabic letters** — read the Arabic word and retype it on an Arabic keyboard (Arabic 101/102, Mac, or phone keyboard). Harakat and punctuation are displayed but never typed.
+
+No backend, no build step, no account.
 
 ---
 
@@ -19,21 +24,35 @@ You can also open `index.html` directly in a modern browser. The app is entirely
 
 ---
 
+## Choosing a script
+
+Use the **abc / عربي** switch in the control bar, or **Settings → Script**. The choice is saved in `localStorage` and applies to every mode, hint, and mistake review.
+
+- **abc** — type the Latin transliteration. Case matters (see the mapping rules below).
+- **عربي** — type the displayed Arabic word again. Matching is letter by letter:
+  - Harakat, tanween, sukun, shadda and tatweel are not typed. A shadda turns the letter into two keystrokes: `كَلّ` → `ك ل ل`.
+  - The silent alif of `ـًا` is not typed: `كِتَابًا` → `ك ت ا ب`.
+  - Equivalent spellings are accepted, so your keyboard's version of a letter always works: `أ إ آ` = `ا`, `ؤ` = `و`, `ئ` = `ي`, `ة` = `ه`, `ى` = `ي`, and `ک` = `ك`.
+  - Correct letters light up, the caret sits on the next letter, and extra letters turn red.
+  - `?` reveals the remaining letters instead of a transliteration.
+
+
 ## What is included
 
 - **Letters** — 20 randomized single letters, short syllables, and long-vowel drills.
-- **Words** — 260+ common Levantine / MSA words (greetings, people and family, everyday nouns, essential adjectives and verbs) with multiple accepted Arabizi spellings each.
+- **Words** — 260+ common Levantine / MSA words (greetings, people and family, everyday nouns, essential adjectives and verbs) with multiple accepted Arabizi spellings each. In Arabic script mode the same vocabulary is retyped letter by letter.
 - **Reading** — the same common vocabulary shown without harakat for unvocalized reading practice.
 - **Phrases** — a random common Arabic expression or short sentence, including everyday Levantine greetings.
 - **Custom** — paste any Arabic text and practice it word by word.
-- **Active recall** — the standard Latin solution is hidden until you ask for it or miss three times.
+- **Two scripts** — Arabizi transliteration or Arabic keyboard input, switchable from the control bar or Settings.
+- **Active recall** — the standard answer is hidden until you ask for it or miss three times.
 - **Live stats** — WPM, accuracy, streak, elapsed time, and progress.
 - **Results overlay** — WPM, accuracy, total time, best streak, correct words, and a mistake review that shows the Arabic word, what you typed, and the accepted solutions. Press `Enter` or `Space` to start a new round immediately.
 - **Mobile friendly** — larger tap targets, a tap-friendly input area, on-screen hint and clear buttons, no input zoom, and scaled-down Arabic prompts so long words and preview queues stay inside the viewport.
 - **Case-sensitive feedback** — every accepted letter is validated as you type; input is accepted while it prefixes at least one valid solution.
-- **Cheat sheet drawer** — all mappings, emphatic pairs, vowels, and aliases, available from the `?` button or `F1`.
-- **Mapping settings** — choose the preferred generated spelling for غ، خ، ق، ح. Common alternate spellings remain accepted.
-- **Local persistence** — mapping preferences and custom text are kept in `localStorage`.
+- **Cheat sheet drawer** — all transliteration mappings, emphatic pairs, vowels, and aliases, available from the `?` button or `F1`.
+- **Mapping settings** — choose the preferred generated spelling for غ، خ، ق، ح. Common alternate spellings remain accepted. These apply to Latin mode only.
+- **Local persistence** — active script, mapping preferences, and custom text are kept in `localStorage`.
 
 ---
 
@@ -57,6 +76,8 @@ A correct intermediate word still needs `Space` to advance. Space on an incomple
 ---
 
 ## Transliteration rules in this build
+
+These rules describe the Latin transliteration script (`abc`). In Arabic script mode only the letters are compared; see [Choosing a script](#choosing-a-script).
 
 Mappings are case-sensitive.
 
@@ -98,9 +119,9 @@ The hint shown when you press `?`, or after three misses, is the first (most com
 ├── css/
 │   └── styles.css      # Dark theme, responsive layout, animations
 ├── js/
-│   ├── translit.js     # Arabic tokenizer, aliases, input parser
-│   ├── data.js         # Words, phrases, and letter-drill generator
-│   └── app.js          # Typing lifecycle, stats, settings, dialogs
+│   ├── translit.js     # Arabic tokenizer, aliases, Latin + Arabic-letter matchers
+│   ├── data.js         # Words, phrases, and letter-drill generators
+│   └── app.js          # Typing lifecycle, script switching, stats, settings, dialogs
 ├── assets/
 │   └── favicon.svg
 └── README.md
@@ -148,8 +169,10 @@ The parser validates the typed string against the full solutions array, so alias
 ## Notes and limitations
 
 - Transliteration is automatic. Custom unvocalized text can produce approximate vowels; adding harakat improves hints.
-- Arabic punctuation is displayed but is not required in the Latin typing target.
-- Statistics count Latin keystrokes (5 correct characters = 1 word) over elapsed time. Backspace does not erase an accuracy penalty.
+- Arabic punctuation is displayed but is not required in the typing target.
+- Statistics count correct characters (5 characters = 1 word) over elapsed time. Backspace does not erase an accuracy penalty.
+- In Arabic script mode a word is accepted only when every letter matches; a missing or extra letter is marked red and counted as a mistake. `Space` on an incomplete word shows the correct letters briefly and skips it.
+- Arabic script mode expects an Arabic keyboard layout, so add Arabic in your OS keyboard settings if it is not enabled. Any standard layout (Arabic 101/102, Mac) works because letters are compared as characters, not by key position. Harakat keys (Shift + letter) are ignored.
 - The app is a static site. Only browser `localStorage` is used; no text is sent anywhere.
 - Designed for current Chromium-based browsers and Firefox. Native `<dialog>` support is required.
 

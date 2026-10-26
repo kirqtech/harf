@@ -712,6 +712,152 @@
     return String(text || '').replace(STRIP_DIACRITICS_RE, '');
   }
 
+  /* ------------------------------------------------------------------------
+     Arabic script mode
+     Harakat are not part of the target. Letters are compared by grapheme
+     cluster so the shadda carries over to the doubled letter: the prompt
+     shows جَمِيل but كلّ needs ك ل ل, not ك ل شَدّة.
+     ------------------------------------------------------------------------ */
+
+  var SEGMENTER = typeof Intl !== 'undefined' && Intl.Segmenter
+    ? new Intl.Segmenter('ar', { granularity: 'grapheme' })
+    : null;
+
+  // Keyboard layouts write the same letter with different code points.
+  // Compare them under one form so kaf/yaa/hamza variants all match.
+  var LETTER_FOLD = {
+    '\u0622': '\u0627', // آ
+    '\u0623': '\u0627', // أ
+    '\u0625': '\u0627', // إ
+    '\u0671': '\u0627', // ٱ
+    '\u0624': '\u0648', // ؤ
+    '\u0626': '\u064A', // ئ
+    '\u0649': '\u064A', // ى
+    '\u0629': '\u0647', // ة
+    '\u06CC': '\u064A', // ی
+    '\u06A9': '\u0643'  // ک -> ك (both keyboards write kaf differently)
+  };
+
+  function foldLetter(letter) {
+    var folded = Object.prototype.hasOwnProperty.call(LETTER_FOLD, letter)
+      ? LETTER_FOLD[letter]
+      : letter;
+    return folded.normalize('NFC');
+  }
+
+  function graphemes(text) {
+    var value = String(text || '');
+    if (!SEGMENTER) return Array.from(value);
+    return Array.from(SEGMENTER.segment(value), function (part) {
+      return part.segment;
+    });
+  }
+
+  /**
+   * Split one written Arabic word into the letters that must be typed:
+   * harakat and tatweel are dropped, a shadda repeats the letter it sits on,
+   * and punctuation is ignored. Each item is the display letter plus the
+   * comparison key.
+   */
+  function arabicLetterUnits(text) {
+    var clusters = graphemes(text || '');
+    var units = [];
+    var previous = null;
+
+    clusters.forEach(function (cluster) {
+      var letters = Array.from(cluster).filter(function (ch) {
+        return isArabic(ch);
+      });
+      if (!letters.length) {
+        previous = { key: '', letters: '' };
+        return;
+      }
+
+      var doubled = cluster.indexOf(SHADDA) !== -1;
+      letters.forEach(function (letter) {
+        // In the tanween spelling (كِتَابًا) the final alif is silent.
+        if (letter === '\u0627' && previous && previous.letters.indexOf('\u064B') !== -1) return;
+
+        var unit = { letter: letter, key: foldLetter(letter) };
+        units.push(unit);
+        if (doubled) units.push({ letter: letter, key: unit.key });
+      });
+
+      previous = { key: letters[0], letters: cluster };
+    });
+
+    return units;
+  }
+
+  function normalizeArabicKey(piece) {
+    var letters = Array.from(String(piece || '')).filter(function (ch) {
+      return isArabic(ch);
+    });
+    if (!letters.length) return '';
+    return foldLetter(letters[0]);
+  }
+
+  function isArabicTypable(text) {
+    return isArabic(text);
+  }
+
+  /** Harakat, tatweel and other combining marks: never typed in Arabic mode. */
+  function isArabicMark(piece) {
+    return !!piece && (DIACRITIC_RE.test(piece) || piece === TATWEEL);
+  }
+
+  /**
+   * Parse typed Arabic against the target letters. The caret sits on the first
+   * mismatching letter, and a valid prefix means every typed letter so far
+   * matches the target.
+   */
+  function matchArabic(units, input) {
+    var list = units || [];
+    var typed = graphemes(input);
+    var keys = typed.map(normalizeArabicKey);
+    var matched = 0;
+
+    while (matched < keys.length && matched < list.length && keys[matched] === list[matched].key) {
+      matched += 1;
+    }
+
+    var hasExtra = keys.length > list.length;
+    var complete = keys.length === list.length && matched === keys.length;
+
+    return {
+      mode: 'arabic',
+      units: list,
+      input: input == null ? '' : String(input),
+      typed: typed,
+      keys: keys,
+      matched: matched,
+      targetLength: list.length,
+      complete: complete,
+      validPrefix: matched === keys.length,
+      extra: matched < keys.length,
+      target: list.map(function (unit) { return unit.letter; }).join('')
+    };
+  }
+
+  function splitPhraseWords(text) {
+    return splitWordsForMode(text, 'arabic');
+  }
+
+  function splitPhraseWords(text) {
+    return splitWordsForMode(text, 'arabic');
+  }
+
+  function splitPhraseWords(text) {
+    return splitWordsForMode(text, 'arabic');
+  }
+
+  function splitWordsForMode(text, mode) {
+    if (mode !== 'arabic') return splitWords(text);
+    return String(text || '').trim().split(/\s+/).filter(function (word) {
+      return word && hasArabic(word);
+    });
+  }
+
   function hasArabic(text) {
     return ARABIC_RE.test(String(text || ''));
   }
@@ -737,6 +883,11 @@
     parseInput: parseInput,
     stripDiacritics: stripDiacritics,
     hasArabic: hasArabic,
-    splitWords: splitWords
+    splitWords: splitWords,
+    splitWordsForMode: splitWordsForMode,
+    arabicLetterUnits: arabicLetterUnits,
+    matchArabic: matchArabic,
+    isArabicTypable: isArabicTypable,
+    isArabicMark: isArabicMark
   };
 })(window);

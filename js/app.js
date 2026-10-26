@@ -10,19 +10,52 @@
 
   var STORAGE_SETTINGS = 'harf.settings.v1';
   var STORAGE_CUSTOM = 'harf.custom.v1';
+  var STORAGE_SCRIPT = 'harf.script.v1';
   var MAX_CUSTOM_WORDS = 400;
   var TAB_CHORD_MS = 1200;
 
-  var MODE_COPY = {
-    letters: 'Decode the drill, then type its Latin sound. Press ? for one rescue hint.',
-    words: 'Decode the Arabic word, then type its Latin transliteration. Space submits.',
-    reading: 'Read the unvocalized word and type its phonetic spelling. ? reveals a key.',
-    phrases: 'One phrase at a time. Decode each word, then press space. Punctuation is not typed.',
-    custom: 'Your custom text. Type each transliteration; punctuation is not typed.'
+  // `latin` is the Arabizi transliteration drill; `arabic` retypes the
+  // displayed Arabic letters on an Arabic keyboard (harakat are ignored).
+  var SCRIPT_COPY = {
+    latin: {
+      testLabel: 'Arabic typing test',
+      inputLabel: 'Your transliteration input',
+      hintAria: 'Reveal the standard transliteration for this word',
+      clearAria: 'Clear the current transliteration',
+      typingAria: 'Type the Latin transliteration',
+      subtitle: 'arabic · latin',
+      letters: 'Decode the drill, then type its Latin sound. Press ? for one rescue hint.',
+      words: 'Decode the Arabic word, then type its Latin transliteration. Space submits.',
+      reading: 'Read the unvocalized word and type its phonetic spelling. ? reveals a key.',
+      phrases: 'One phrase at a time. Decode each word, then press space. Punctuation is not typed.',
+      custom: 'Your custom text. Type each transliteration; punctuation is not typed.',
+      instruction: 'Read the Arabic, then type the Latin transliteration. Press ? for one hint.',
+      wrong: 'Not quite — backspace to erase the red character, or space to submit and review.',
+      complete: 'Word complete — press space for the next one.',
+      reviewLabel: 'standard spelling'
+    },
+    arabic: {
+      testLabel: 'Arabic script typing test',
+      inputLabel: 'Your Arabic input',
+      hintAria: 'Reveal the remaining Arabic letters for this word',
+      clearAria: 'Clear what you typed',
+      typingAria: 'Type the Arabic word again',
+      subtitle: 'arabic · script',
+      letters: 'Look at the letter, then type it on an Arabic keyboard. Harakat are not typed.',
+      words: 'Read the word, then type it again in Arabic. Harakat are not typed. Space submits.',
+      reading: 'Read the word without harakat, then type its letters. ? reveals the rest.',
+      phrases: 'One phrase at a time. Type each Arabic word letter by letter, then press space.',
+      custom: 'Your custom text. Type each Arabic word again; punctuation is not typed.',
+      instruction: 'Read the Arabic, then type its letters again in Arabic. Harakat are not typed. Press ? for a hint.',
+      wrong: 'Not quite — backspace to erase the red letter, or space to submit and review.',
+      complete: 'Word complete — press space for the next one.',
+      reviewLabel: 'correct letters'
+    }
   };
 
   var state = {
     mode: 'words',
+    script: 'latin',
     count: 20,
     settings: T.normalizeSettings(T.DEFAULT_SETTINGS),
     customText: '',
@@ -115,7 +148,40 @@
   }
 
   function isTypable(character) {
+    if (state.script === 'arabic') return T.isArabicTypable(character);
     return /^[A-Za-z0-9']$/.test(character);
+  }
+
+  function copy() {
+    return SCRIPT_COPY[state.script] || SCRIPT_COPY.latin;
+  }
+
+  function isArabicScript() {
+    return state.script === 'arabic';
+  }
+
+  /**
+   * Arabic script mode compares letters, not solutions; Latin mode keeps the
+   * existing solution parser with its flexible spellings.
+   */
+  function parseWord(word) {
+    if (!word) return null;
+    if (isArabicScript()) return T.matchArabic(word.units, word.input);
+    return T.parseInput(word.tokens, word.input, word.solutions);
+  }
+
+  function hintTextFor(word) {
+    if (!word) return '';
+    if (isArabicScript()) {
+      var parse = T.matchArabic(word.units, word.input);
+      if (parse.complete) return '';
+      return word.units.slice(parse.typed.length).map(function (unit) {
+        return unit.letter;
+      }).join('');
+    }
+    var latin = T.parseInput(word.tokens, word.input, word.solutions);
+    if (latin.complete) return '';
+    return T.preferredSolution(word.solutions) || word.canonical;
   }
 
   function displayForMode(raw, mode) {
@@ -153,6 +219,7 @@
       entry: entry,
       raw: built.arabic,
       display: displayForMode(built.arabic, mode),
+      units: isArabicScript() ? T.arabicLetterUnits(built.arabic) : [],
       tokens: built.tokens,
       solutions: built.solutions,
       canonical: built.canonical,
@@ -165,7 +232,10 @@
   function makeTest(mode, rawWords, sourceText) {
     var words = rawWords.map(function (raw) {
       return makeWord(raw, mode);
-    }).filter(Boolean);
+    }).filter(function (word) {
+      // Arabic script mode still needs something typeable after harakat.
+      return word && (!isArabicScript() || word.units.length > 0);
+    });
 
     if (!words.length) return null;
 
@@ -190,7 +260,7 @@
 
   function newTestForMode(mode) {
     if (mode === 'letters') {
-      var drills = D.letterDrills(20);
+      var drills = isArabicScript() ? D.arabicDrills(20) : D.letterDrills(20);
       return makeTest('letters', drills, drills.join(' '));
     }
 
@@ -289,15 +359,26 @@
     var word = currentWord();
     if (!test || !word || test.status === 'finished') return;
 
+    setText(els.promptArabic, word.display);
+    setText(els.promptCounter, (test.index + 1) + ' / ' + test.words.length);
+    setText(els.promptModeTag, MODE_TAGS[test.mode] || MODE_TAGS.words);
+
+    if (isArabicScript()) {
+      renderArabicInput(word);
+    } else {
+      renderLatinInput(word);
+    }
+
+    if (els.clearButton) els.clearButton.disabled = !word.input.length;
+    updateInstruction(parseWord(word));
+  }
+
+  function renderLatinInput(word) {
     var parse = T.parseInput(word.tokens, word.input, word.solutions);
     var fragment = document.createDocumentFragment();
     var target = parse.target || word.canonical || '';
     var typedPart = parse.validPrefix ? word.input : target.slice(0, parse.matched);
     var errorPart = parse.validPrefix ? '' : parse.leftover;
-
-    setText(els.promptArabic, word.display);
-    setText(els.promptCounter, (test.index + 1) + ' / ' + test.words.length);
-    setText(els.promptModeTag, MODE_TAGS[test.mode] || MODE_TAGS.words);
 
     appendLatinPart(fragment, typedPart, 'latin-typed');
     appendLatinPart(fragment, errorPart, 'latin-error');
@@ -305,12 +386,46 @@
     appendPlaceholders(fragment, Math.max(0, target.length - typedPart.length - errorPart.length));
 
     els.promptLatin.replaceChildren(fragment);
-    if (els.clearButton) els.clearButton.disabled = !word.input.length;
-    updateInstruction(parse);
+  }
+
+  /**
+   * Arabic script mode: every target letter is rendered in the base colour,
+   * typed letters light up, the caret sits on the next letter, and extra
+   * letters past the end of the word are flagged in red.
+   */
+  function renderArabicInput(word) {
+    var parse = T.matchArabic(word.units, word.input);
+    var fragment = document.createDocumentFragment();
+    var extra = parse.typed.slice(parse.matched);
+    var isLong = word.units.length > 8;
+
+    word.units.forEach(function (unit, index) {
+      if (index === parse.matched) appendCaret(fragment);
+
+      var span = document.createElement('span');
+      span.className = index < parse.matched ? 'arabic-letter is-typed' : 'arabic-letter';
+      span.lang = 'ar';
+      span.textContent = unit.letter;
+      fragment.appendChild(span);
+    });
+
+    if (parse.matched >= word.units.length) appendCaret(fragment);
+
+    extra.forEach(function (piece) {
+      var span = document.createElement('span');
+      span.className = 'arabic-letter is-extra';
+      span.lang = 'ar';
+      span.textContent = piece;
+      fragment.appendChild(span);
+    });
+
+    els.promptLatin.replaceChildren(fragment);
+    els.promptLatin.classList.toggle('is-long', isLong);
   }
 
   function updateInstruction(parse) {
     var test = state.test;
+    var c = copy();
     if (!test) return;
 
     if (test.finishing) {
@@ -323,14 +438,14 @@
       return;
     }
 
-    var base = MODE_COPY[test.mode] || MODE_COPY.words;
-    if (parse && parse.leftover) {
-      setText(els.instructionLine, 'Not quite — backspace to erase the red character, or space to submit and review.');
+    var base = c[test.mode] || c.words;
+    if (parse && (parse.leftover || parse.extra)) {
+      setText(els.instructionLine, c.wrong);
       return;
     }
 
     if (parse && parse.complete && test.index < test.words.length - 1) {
-      setText(els.instructionLine, 'Word complete — press space for the next one.');
+      setText(els.instructionLine, c.complete);
       return;
     }
 
@@ -614,31 +729,50 @@
 
       var typed = document.createElement('code');
       typed.className = 'review-typed';
-      typed.dir = 'ltr';
+      typed.dir = isArabicScript() ? 'rtl' : 'ltr';
+      if (isArabicScript()) typed.lang = 'ar';
       typed.textContent = word.input || '—';
 
       flow.append(arabic, arrow, typed);
 
-      var accepted = document.createElement('div');
-      accepted.className = 'review-accepted';
+      var expected = document.createElement('div');
+      expected.className = 'review-accepted';
 
       var label = document.createElement('span');
       label.className = 'review-label';
-      label.textContent = 'accepted';
-      accepted.appendChild(label);
-
-      reviewSolutions(word, 4).forEach(function (solution) {
-        var code = document.createElement('code');
-        code.dir = 'ltr';
-        code.textContent = solution;
-        accepted.appendChild(code);
-      });
 
       var note = document.createElement('span');
       note.className = 'sr-only';
-      note.textContent = 'You typed ' + (word.input || 'nothing') + '. Accepted solutions: ' + reviewSolutions(word, 4).join(', ') + '.';
 
-      item.append(flow, accepted, note);
+      if (isArabicScript()) {
+        // Arabic mode: show the letters that were expected.
+        label.textContent = 'correct letters';
+
+        var answer = document.createElement('code');
+        answer.className = 'review-arabic-answer';
+        answer.lang = 'ar';
+        answer.dir = 'rtl';
+        answer.textContent = word.units.map(function (unit) {
+          return unit.letter;
+        }).join('');
+        expected.append(label, answer);
+
+        note.textContent = 'You typed ' + (word.input || 'nothing') + '. Correct letters: ' + answer.textContent + '.';
+      } else {
+        label.textContent = 'accepted';
+        expected.appendChild(label);
+
+        reviewSolutions(word, 4).forEach(function (solution) {
+          var code = document.createElement('code');
+          code.dir = 'ltr';
+          code.textContent = solution;
+          expected.appendChild(code);
+        });
+
+        note.textContent = 'You typed ' + (word.input || 'nothing') + '. Accepted solutions: ' + reviewSolutions(word, 4).join(', ') + '.';
+      }
+
+      item.append(flow, expected, note);
       fragment.appendChild(item);
     });
 
@@ -650,13 +784,6 @@
      Typing
      ------------------------------------------------------------------------ */
 
-  function hintTextFor(word) {
-    if (!word) return '';
-    var parse = T.parseInput(word.tokens, word.input, word.solutions);
-    if (parse.complete) return '';
-    return T.preferredSolution(word.solutions) || word.canonical;
-  }
-
   function showHint(auto) {
     if (!els.promptHint) return;
     var hint = hintTextFor(currentWord());
@@ -665,7 +792,10 @@
     window.clearTimeout(state.hintTimer);
     window.clearTimeout(state.hintHideTimer);
     els.promptHint.hidden = false;
-    els.promptHint.textContent = 'hint · ' + hint;
+    els.promptHint.textContent = isArabicScript() ? hint : 'hint · ' + hint;
+    els.promptHint.lang = isArabicScript() ? 'ar' : 'en';
+    els.promptHint.dir = isArabicScript() ? 'rtl' : 'ltr';
+    els.promptHint.classList.toggle('is-arabic', isArabicScript());
     els.promptHint.classList.toggle('is-auto', !!auto);
 
     positionHint();
@@ -734,13 +864,22 @@
     arabic.textContent = word.display;
 
     var note = document.createElement('span');
-    note.textContent = 'standard spelling';
+    note.textContent = copy().reviewLabel;
 
-    var code = document.createElement('code');
-    code.dir = 'ltr';
-    code.textContent = word.canonical;
+    var answer = document.createElement('code');
+    if (isArabicScript()) {
+      answer.lang = 'ar';
+      answer.dir = 'rtl';
+      answer.className = 'review-arabic-answer';
+      answer.textContent = word.units.map(function (unit) {
+        return unit.letter;
+      }).join('');
+    } else {
+      answer.dir = 'ltr';
+      answer.textContent = word.canonical;
+    }
 
-    els.reviewLine.replaceChildren(arabic, note, code);
+    els.reviewLine.replaceChildren(arabic, note, answer);
     els.reviewLine.hidden = false;
     window.clearTimeout(state.reviewTimer);
     state.reviewTimer = window.setTimeout(hideReview, 3200);
@@ -766,11 +905,12 @@
     if (test.status === 'ready') beginClock(test);
 
     word.input += character;
-    var parse = T.parseInput(word.tokens, word.input, word.solutions);
+    var parse = parseWord(word);
 
     test.totalKeystrokes += 1;
     var autoHint = false;
-    if (parse.validPrefix) {
+    var valid = parse.validPrefix;
+    if (valid) {
       test.correctKeystrokes += 1;
       test.streak += 1;
       test.maxStreak = Math.max(test.maxStreak, test.streak);
@@ -839,12 +979,23 @@
       return;
     }
 
-    word.input = word.input.slice(0, -1);
+    trimInput(word);
     state.errorToken = -1;
     state.errorCount = 0;
     hideHint();
     renderActiveWord();
     updateStats();
+  }
+
+  /** Remove one typed character; in Arabic mode remove a whole letter piece. */
+  function trimInput(word) {
+    if (isArabicScript()) {
+      var pieces = Array.from(word.input);
+      pieces.pop();
+      word.input = pieces.join('');
+    } else {
+      word.input = word.input.slice(0, -1);
+    }
   }
 
   function handleSpace() {
@@ -860,9 +1011,10 @@
       return;
     }
 
-    var parse = T.parseInput(word.tokens, word.input, word.solutions);
-    var correct = T.isAccepted(word.solutions, word.input) || parse.complete;
-
+    var parse = parseWord(word);
+    var correct = isArabicScript()
+      ? !!parse.complete
+      : (T.isAccepted(word.solutions, word.input) || parse.complete);
     word.committed = true;
     word.correct = correct;
 
@@ -1039,6 +1191,15 @@
       return;
     }
 
+    // Arabic layouts (Arabic 101/102, Mac) emit base letters with the
+    // "Dead"/"Process" key value while composing a harakat. The vowel is not
+    // typed, but the letter that carries it was already handled.
+    if (isArabicScript() && isDeadKey(event.key)) {
+      event.preventDefault();
+      focusTyping();
+      return;
+    }
+
     if (event.key.length === 1) {
       var character = event.key === '\u2019' ? "'" : event.key;
       event.preventDefault();
@@ -1052,6 +1213,11 @@
     }
   }
 
+  function isDeadKey(key) {
+    return key === 'Dead' || key === 'Process' ||
+      key === '\u02D9' || key === '\u02C7' || key === '\u02CB';
+  }
+
   /* ------------------------------------------------------------------------
      UI state
      ------------------------------------------------------------------------ */
@@ -1062,6 +1228,56 @@
       tab.classList.toggle('is-active', active);
       tab.setAttribute('aria-pressed', String(active));
     });
+  }
+
+  /** Re-label every piece of static UI that depends on the active script. */
+  function applyScriptCopy() {
+    var c = copy();
+    document.documentElement.dataset.script = state.script;
+
+    if (els.countControl) {
+      els.countControl.setAttribute('aria-label', state.script === 'arabic' ? 'Number of letters' : 'Number of words');
+    }
+    if (els.testStage) els.testStage.setAttribute('aria-label', c.testLabel);
+    if (els.promptLatin) {
+      els.promptLatin.setAttribute('aria-label', c.inputLabel);
+      els.promptLatin.dir = state.script === 'arabic' ? 'rtl' : 'ltr';
+    }
+    if (els.hintButton) els.hintButton.setAttribute('aria-label', c.hintAria);
+    if (els.clearButton) els.clearButton.setAttribute('aria-label', c.clearAria);
+    if (els.typingInput) {
+      els.typingInput.setAttribute('aria-label', c.typingAria);
+      els.typingInput.lang = state.script === 'arabic' ? 'ar' : 'en';
+      els.typingInput.dir = state.script === 'arabic' ? 'rtl' : 'ltr';
+    }
+    if (els.brandSubtitle) els.brandSubtitle.textContent = c.subtitle;
+    if (els.promptHelp) els.promptHelp.textContent = c.instruction;
+    if (els.instructionLine) els.instructionLine.textContent = c.instruction;
+
+    if (els.scriptTabs) {
+      els.scriptTabs.forEach(function (button) {
+        var active = button.dataset.script === state.script;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+    }
+
+    if (els.settingsHintPanel) els.settingsHintPanel.hidden = state.script === 'arabic';
+  }
+
+  function setScript(script, options) {
+    var next = script === 'arabic' ? 'arabic' : 'latin';
+    if (next === state.script) return;
+
+    state.script = next;
+    writeStorage(STORAGE_SCRIPT, next);
+    applyScriptCopy();
+    updateCountUI();
+    if (state.test) renderActiveWord();
+
+    if (options && options.restart === false) return;
+    // The word list, hints and accepted answers all differ per script.
+    startNewTest({ mode: state.mode, focus: true });
   }
 
   function updateCountUI() {
@@ -1120,6 +1336,7 @@
     els.settingKha.value = state.settings.kh;
     els.settingQaf.value = state.settings.qaf;
     els.settingHaa.value = state.settings.haa;
+    if (els.settingScript) els.settingScript.value = state.script;
   }
 
   function saveSettings() {
@@ -1183,6 +1400,12 @@
     els.countControl = $('countControl');
     els.countButtons = Array.from(document.querySelectorAll('.count-button'));
 
+    els.scriptControl = $('scriptControl');
+    els.scriptTabs = Array.from(document.querySelectorAll('.script-tab'));
+    els.brandSubtitle = document.querySelector('.brand-subtitle');
+    els.promptHelp = document.querySelector('.prompt-help');
+    els.settingsHintPanel = $('settingsHintPanel');
+
     els.legendButton = $('legendButton');
     els.settingsButton = $('settingsButton');
     els.restartButton = $('restartButton');
@@ -1208,6 +1431,7 @@
     els.settingKha = $('settingKha');
     els.settingQaf = $('settingQaf');
     els.settingHaa = $('settingHaa');
+    els.settingScript = $('settingScript');
     els.resetSettingsButton = $('resetSettingsButton');
   }
 
@@ -1228,6 +1452,16 @@
         state.count = Number(button.dataset.count);
         updateCountUI();
         startNewTest({ mode: state.mode, focus: true });
+      });
+    });
+
+    els.scriptTabs.forEach(function (button) {
+      button.addEventListener('click', function () {
+        if (button.dataset.script === state.script) {
+          focusTyping();
+          return;
+        }
+        setScript(button.dataset.script, { restart: true });
       });
     });
 
@@ -1335,6 +1569,15 @@
       select.addEventListener('change', onSettingsChanged);
     });
 
+    if (els.settingScript) {
+      els.settingScript.addEventListener('change', function () {
+        var next = els.settingScript.value;
+        if (next === state.script) return;
+        closeSheet();
+        setScript(next, { restart: true });
+      });
+    }
+
     els.resetSettingsButton.addEventListener('click', function () {
       state.settings = T.normalizeSettings(T.DEFAULT_SETTINGS);
       updateSettingsForm();
@@ -1348,22 +1591,47 @@
     });
 
     els.typingInput.addEventListener('input', function (event) {
-      if (isDialogOpen() || event.isComposing) return;
+      if (isDialogOpen()) return;
 
       var value = els.typingInput.value;
       els.typingInput.value = '';
+
+      // While composing an Arabic vowel the input holds a partial sequence.
+      // Waiting for compositionend keeps the base letter from being counted
+      // before the harakat arrive.
+      if (event.isComposing) return;
       if (!value) return;
 
       Array.from(value).forEach(function (character) {
         if (character === '\n' || character === '\r') return;
-        if (character === '\u2019') character = "'";
-        if (character === ' ') {
+        if (character === ' ' || character === '\u00A0') {
           handleSpace();
-        } else if (character === '?') {
+          return;
+        }
+
+        if (isArabicScript()) {
+          // Harakat and tatweel are never part of the target.
+          if (T.isArabicMark(character)) return;
+          if (!T.isArabicTypable(character)) return;
+          handleCharacter(character);
+          return;
+        }
+
+        if (character === '\u2019') character = "'";
+        if (character === '?') {
           handleHintRequest();
         } else if (isTypable(character)) {
           handleCharacter(character);
         }
+      });
+    });
+
+    els.typingInput.addEventListener('compositionend', function () {
+      var value = els.typingInput.value;
+      els.typingInput.value = '';
+      if (!value) return;
+      Array.from(value).forEach(function (character) {
+        if (T.isArabicTypable(character)) handleCharacter(character);
       });
     });
 
@@ -1392,12 +1660,16 @@
     }
 
     state.customText = readStorage(STORAGE_CUSTOM, '');
+
+    var storedScript = readStorage(STORAGE_SCRIPT, '');
+    state.script = storedScript === 'arabic' ? 'arabic' : 'latin';
   }
 
   function init() {
     cacheElements();
     loadPreferences();
     updateSettingsForm();
+    applyScriptCopy();
     bindEvents();
 
     state.mode = 'words';

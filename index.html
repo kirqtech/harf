@@ -51,6 +51,11 @@
         </div>
 
         <div class="test-options">
+          <div class="script-control" id="scriptControl" role="group" aria-label="Typing script" title="Latin transliteration or Arabic keyboard">
+            <button class="script-tab is-active" type="button" data-script="latin" aria-pressed="true" title="Type the Arabizi transliteration">abc</button>
+            <button class="script-tab script-tab--arabic" type="button" data-script="arabic" aria-pressed="false" lang="ar" title="Type the Arabic letters on an Arabic keyboard">عربي</button>
+          </div>
+
           <div class="count-control" id="countControl" role="group" aria-label="Number of words">
             <button class="count-button is-active" type="button" data-count="20" aria-pressed="true">20</button>
             <button class="count-button" type="button" data-count="50" aria-pressed="false">50</button>
@@ -310,17 +315,34 @@
         </section>
 
         <section class="sheet-panel" id="settingsPanel" role="tabpanel" aria-labelledby="settingsTab" hidden>
-          <p class="sheet-intro">Choose the spelling shown in the hints. Common alternates stay accepted, so you can type the form that feels natural.</p>
+          <p class="sheet-intro">Pick the script you practice in. <strong>Latin transliteration</strong> types Arabizi; <strong>Arabic letters</strong> retypes the displayed word on an Arabic keyboard. Hints follow the same choice.</p>
 
-          <form class="settings-form" id="settingsForm">
+          <form class="settings-form" id="settingsForm" aria-labelledby="typographyHeading">
+            <h3 class="settings-heading" id="typographyHeading">typing</h3>
+
             <div class="setting-row">
+              <label for="settingScript">Script</label>
+              <select id="settingScript" name="script">
+                <option value="latin">Latin transliteration</option>
+                <option value="arabic">Arabic letters</option>
+              </select>
+            </div>
+
+            <p class="field-help">Arabic letters retypes the displayed word on an Arabic keyboard. Harakat and punctuation are not typed.</p>
+
+            <div class="settings-hint-panel" id="settingsHintPanel">
+              <h3 class="settings-heading">transliteration spelling</h3>
+              <p class="field-help">Choose the spelling shown in the hints. Common alternates stay accepted, so you can type the form that feels natural.</p>
+            </div>
+
+            <div class="setting-row setting-row--latin">
               <label for="settingGhayn">Ghayn <span lang="ar" dir="rtl">غ</span></label>
               <select id="settingGhayn" name="gh">
                 <option value="gh">gh</option>
                 <option value="3'">3'</option>
               </select>
             </div>
-            <div class="setting-row">
+            <div class="setting-row setting-row--latin">
               <label for="settingKha">Kha <span lang="ar" dir="rtl">خ</span></label>
               <select id="settingKha" name="kh">
                 <option value="kh">kh</option>
@@ -328,14 +350,14 @@
                 <option value="5">5</option>
               </select>
             </div>
-            <div class="setting-row">
+            <div class="setting-row setting-row--latin">
               <label for="settingQaf">Qaf <span lang="ar" dir="rtl">ق</span></label>
               <select id="settingQaf" name="qaf">
                 <option value="q">q</option>
                 <option value="9">9</option>
               </select>
             </div>
-            <div class="setting-row">
+            <div class="setting-row setting-row--latin">
               <label for="settingHaa">Haa <span lang="ar" dir="rtl">ح</span></label>
               <select id="settingHaa" name="haa">
                 <option value="7">7</option>
