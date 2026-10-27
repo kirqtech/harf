@@ -1037,6 +1037,11 @@
       test.streak += 1;
       test.maxStreak = Math.max(test.maxStreak, test.streak);
       hideReview();
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        try {
+          navigator.vibrate(10);
+        } catch (e) {}
+      }
     } else {
       test.incorrectWords += 1;
       test.streak = 0;
@@ -1069,6 +1074,13 @@
     state.errorTimer = window.setTimeout(function () {
       if (els.promptLatin) els.promptLatin.classList.remove('is-error');
     }, 190);
+
+    // Subtle tactile error feedback on mobile devices
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+      try {
+        navigator.vibrate(25);
+      } catch (e) {}
+    }
   }
 
   function handleTab() {
@@ -1134,6 +1146,15 @@
     els.testStage.classList.toggle('is-paused', !inputFocused && !dialogOpen);
     if (els.focusBadge) {
       els.focusBadge.hidden = inputFocused || dialogOpen || finished || !state.test;
+    }
+
+    var isMobile = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
+    if (isMobile) {
+      if (inputFocused && !dialogOpen && !finished) {
+        document.body.classList.add('keyboard-open');
+      } else {
+        document.body.classList.remove('keyboard-open');
+      }
     }
   }
 
@@ -1655,6 +1676,51 @@
     window.addEventListener('resize', function () {
       if (els.promptHint && !els.promptHint.hidden) positionHint();
     });
+
+    // Mobile Dynamic Viewport & Virtual Keyboard Handler
+    function initMobileViewport() {
+      if (typeof window === 'undefined') return;
+
+      function updateViewport() {
+        var isMobile = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
+        if (!isMobile) {
+          document.documentElement.style.removeProperty('--vvh');
+          document.documentElement.style.removeProperty('--keyboard-inset');
+          document.body.classList.remove('keyboard-open');
+          return;
+        }
+
+        if (window.visualViewport) {
+          var vv = window.visualViewport;
+          var height = vv.height;
+          var fullHeight = window.innerHeight;
+          var keyboardInset = Math.max(0, fullHeight - height - vv.offsetTop);
+
+          document.documentElement.style.setProperty('--vvh', height + 'px');
+          document.documentElement.style.setProperty('--keyboard-inset', keyboardInset + 'px');
+
+          var isTyping = (document.activeElement === els.typingInput) || (state.focused && !isDialogOpen());
+          if (keyboardInset > 120 || (isTyping && keyboardInset > 60)) {
+            document.body.classList.add('keyboard-open');
+          } else if (!isTyping) {
+            document.body.classList.remove('keyboard-open');
+          }
+        }
+      }
+
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', updateViewport);
+        window.visualViewport.addEventListener('scroll', updateViewport);
+      }
+      window.addEventListener('resize', updateViewport);
+      window.addEventListener('orientationchange', function () {
+        setTimeout(updateViewport, 150);
+      });
+
+      updateViewport();
+    }
+
+    initMobileViewport();
   }
 
   function loadPreferences() {
