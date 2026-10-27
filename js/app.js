@@ -66,6 +66,9 @@
     hintTimer: null,
     hintHideTimer: null,
     reviewTimer: null,
+    feedbackTimer: null,
+    reviewTab: 'mistakes',
+    reviewExplanationsExpanded: false,
     errorToken: -1,
     errorCount: 0,
     toastTimer: null,
@@ -207,6 +210,54 @@
     els.toast.classList.remove('is-visible');
   }
 
+  function showWordFeedback(word) {
+    if (!els.wordFeedback || !els.wordFeedbackContent || !word) return;
+
+    var translation = word.translation_en || '';
+    var dialect = word.dialect || '';
+    var notes = word.notes || '';
+
+    if (!translation && !notes) {
+      clearWordFeedback();
+      return;
+    }
+
+    if (els.wordFeedbackDialect) {
+      if (dialect) {
+        els.wordFeedbackDialect.textContent = dialect;
+        els.wordFeedbackDialect.className = 'word-feedback-dialect is-' + dialect.toLowerCase();
+        els.wordFeedbackDialect.hidden = false;
+      } else {
+        els.wordFeedbackDialect.hidden = true;
+        els.wordFeedbackDialect.textContent = '';
+      }
+    }
+
+    if (els.wordFeedbackTranslation) {
+      els.wordFeedbackTranslation.textContent = translation;
+    }
+
+    if (els.wordFeedbackNotes) {
+      if (notes) {
+        els.wordFeedbackNotes.textContent = notes;
+        els.wordFeedbackNotes.title = notes;
+        els.wordFeedbackNotes.hidden = false;
+      } else {
+        els.wordFeedbackNotes.hidden = true;
+        els.wordFeedbackNotes.textContent = '';
+      }
+    }
+
+    els.wordFeedback.classList.add('is-visible');
+  }
+
+  function clearWordFeedback() {
+    if (!els.wordFeedback) return;
+    els.wordFeedback.classList.remove('is-visible');
+    window.clearTimeout(state.feedbackTimer);
+    state.feedbackTimer = null;
+  }
+
   /* ------------------------------------------------------------------------
      Test construction
      ------------------------------------------------------------------------ */
@@ -222,7 +273,11 @@
       units: isArabicScript() ? T.arabicLetterUnits(built.arabic) : [],
       tokens: built.tokens,
       solutions: built.solutions,
+      translit: built.translit || built.solutions,
       canonical: built.canonical,
+      translation_en: built.translation_en || (entry && entry.translation_en) || '',
+      dialect: built.dialect || (entry && entry.dialect) || '',
+      notes: built.notes || (entry && entry.notes) || '',
       input: '',
       committed: false,
       correct: null
@@ -609,6 +664,7 @@
     state.hintHideTimer = null;
     window.clearTimeout(state.reviewTimer);
     state.reviewTimer = null;
+    clearWordFeedback();
   }
 
   function finishTest(options) {
@@ -702,23 +758,79 @@
     return out.slice(0, limit || 4);
   }
 
-  function renderResultsReview(test) {
-    if (!els.resultsReview || !els.resultsReviewList) return;
+  function updateReviewTabsUI() {
+    if (els.reviewTabMistakes) {
+      els.reviewTabMistakes.classList.toggle('is-active', state.reviewTab === 'mistakes');
+      els.reviewTabMistakes.setAttribute('aria-selected', String(state.reviewTab === 'mistakes'));
+    }
+    if (els.reviewTabAll) {
+      els.reviewTabAll.classList.toggle('is-active', state.reviewTab === 'all');
+      els.reviewTabAll.setAttribute('aria-selected', String(state.reviewTab === 'all'));
+    }
+  }
+
+  function setReviewTab(tab) {
+    state.reviewTab = tab;
+    updateReviewTabsUI();
+    if (state.test) {
+      renderResultsList(state.test);
+    }
+  }
+
+  function toggleAllExplanations() {
+    state.reviewExplanationsExpanded = !state.reviewExplanationsExpanded;
+    updateToggleExplanationsButtonUI();
+    if (state.test) {
+      renderResultsList(state.test);
+    }
+  }
+
+  function updateToggleExplanationsButtonUI() {
+    if (els.reviewToggleNotesButton) {
+      els.reviewToggleNotesButton.classList.toggle('is-active', state.reviewExplanationsExpanded);
+      els.reviewToggleNotesButton.setAttribute('aria-pressed', String(state.reviewExplanationsExpanded));
+    }
+    if (els.reviewToggleNotesLabel) {
+      els.reviewToggleNotesLabel.textContent = state.reviewExplanationsExpanded
+        ? 'Hide explanations'
+        : 'Explanations';
+    }
+  }
+
+  function renderResultsList(test) {
+    if (!els.resultsReviewList) return;
 
     var missed = test.words.filter(function (word) {
       return word.committed && word.correct === false;
     });
 
-    if (!missed.length) {
-      els.resultsReview.hidden = true;
-      els.resultsReviewList.replaceChildren();
+    var committedWords = test.words.filter(function (word) {
+      return word.committed;
+    });
+    var all = committedWords.length ? committedWords : test.words;
+
+    var listToShow = state.reviewTab === 'mistakes' ? missed : all;
+
+    if (!listToShow.length) {
+      var empty = document.createElement('li');
+      empty.className = 'review-empty-state';
+      empty.textContent = state.reviewTab === 'mistakes'
+        ? 'No mistakes this round! Clean typing.'
+        : 'No words completed.';
+      els.resultsReviewList.replaceChildren(empty);
       return;
     }
 
     var fragment = document.createDocumentFragment();
-    missed.forEach(function (word) {
+
+    listToShow.forEach(function (word) {
       var item = document.createElement('li');
-      item.className = 'review-item';
+      var isMistake = word.committed && word.correct === false;
+      item.className = 'review-item' + (isMistake ? ' is-missed' : ' is-correct');
+
+      // Top row: Arabic spelling with harakat + Arabizi transliteration / input
+      var rowMain = document.createElement('div');
+      rowMain.className = 'review-row-main';
 
       var flow = document.createElement('div');
       flow.className = 'review-flow';
@@ -727,34 +839,33 @@
       arabic.className = 'review-arabic';
       arabic.lang = 'ar';
       arabic.dir = 'rtl';
-      arabic.textContent = word.display;
+      // Render Arabic spelling with harakat (word.raw retains vocalization)
+      arabic.textContent = word.raw || word.display;
+      flow.appendChild(arabic);
 
-      var arrow = document.createElement('span');
-      arrow.className = 'review-arrow';
-      arrow.setAttribute('aria-hidden', 'true');
-      arrow.textContent = '→';
+      if (isMistake) {
+        var arrow = document.createElement('span');
+        arrow.className = 'review-arrow';
+        arrow.setAttribute('aria-hidden', 'true');
+        arrow.textContent = '→';
 
-      var typed = document.createElement('code');
-      typed.className = 'review-typed';
-      typed.dir = isArabicScript() ? 'rtl' : 'ltr';
-      if (isArabicScript()) typed.lang = 'ar';
-      typed.textContent = word.input || '-';
+        var typed = document.createElement('code');
+        typed.className = 'review-typed';
+        typed.dir = isArabicScript() ? 'rtl' : 'ltr';
+        if (isArabicScript()) typed.lang = 'ar';
+        typed.textContent = word.input || '-';
 
-      flow.append(arabic, arrow, typed);
+        flow.append(arrow, typed);
+      }
 
-      var expected = document.createElement('div');
-      expected.className = 'review-accepted';
+      var arrowTarget = document.createElement('span');
+      arrowTarget.className = 'review-arrow';
+      arrowTarget.setAttribute('aria-hidden', 'true');
+      arrowTarget.textContent = isMistake ? '→' : ':';
+      flow.appendChild(arrowTarget);
 
-      var label = document.createElement('span');
-      label.className = 'review-label';
-
-      var note = document.createElement('span');
-      note.className = 'sr-only';
-
+      // Target Arabizi transliteration
       if (isArabicScript()) {
-        // Arabic mode: show the letters that were expected.
-        label.textContent = 'correct letters';
-
         var answer = document.createElement('code');
         answer.className = 'review-arabic-answer';
         answer.lang = 'ar';
@@ -762,28 +873,108 @@
         answer.textContent = word.units.map(function (unit) {
           return unit.letter;
         }).join('');
-        expected.append(label, answer);
-
-        note.textContent = 'You typed ' + (word.input || 'nothing') + '. Correct letters: ' + answer.textContent + '.';
+        flow.appendChild(answer);
       } else {
-        label.textContent = 'accepted';
-        expected.appendChild(label);
-
-        reviewSolutions(word, 4).forEach(function (solution) {
-          var code = document.createElement('code');
-          code.dir = 'ltr';
-          code.textContent = solution;
-          expected.appendChild(code);
-        });
-
-        note.textContent = 'You typed ' + (word.input || 'nothing') + '. Accepted solutions: ' + reviewSolutions(word, 4).join(', ') + '.';
+        var targetCode = document.createElement('code');
+        targetCode.className = 'review-target-translit';
+        targetCode.dir = 'ltr';
+        targetCode.textContent = word.canonical || (word.solutions && word.solutions[0]) || '';
+        flow.appendChild(targetCode);
       }
 
-      item.append(flow, expected, note);
+      rowMain.appendChild(flow);
+
+      // Meta line: Dialect tag + English meaning + Explanation toggle
+      var metaLine = document.createElement('div');
+      metaLine.className = 'review-meta-line';
+
+      var meaningWrap = document.createElement('div');
+      meaningWrap.className = 'review-meaning-wrap';
+
+      // English meaning and dialect tag (e.g. "[Levantine] I want")
+      if (word.dialect) {
+        var dialectTag = document.createElement('span');
+        dialectTag.className = 'review-dialect-tag is-' + word.dialect.toLowerCase();
+        dialectTag.textContent = '[' + word.dialect + ']';
+        meaningWrap.appendChild(dialectTag);
+      }
+
+      if (word.translation_en) {
+        var meaning = document.createElement('span');
+        meaning.className = 'review-meaning-text';
+        meaning.textContent = word.translation_en;
+        meaningWrap.appendChild(meaning);
+      }
+
+      metaLine.appendChild(meaningWrap);
+
+      // Option to toggle/view word explanation
+      var drawer = null;
+      if (word.notes) {
+        var noteBtn = document.createElement('button');
+        noteBtn.type = 'button';
+        noteBtn.className = 'review-note-toggle-btn';
+        noteBtn.innerHTML = '<span aria-hidden="true">ℹ</span> explanation';
+        noteBtn.setAttribute('aria-expanded', String(state.reviewExplanationsExpanded));
+
+        drawer = document.createElement('div');
+        drawer.className = 'review-note-drawer';
+        drawer.textContent = word.notes;
+        drawer.hidden = !state.reviewExplanationsExpanded;
+        if (state.reviewExplanationsExpanded) {
+          noteBtn.classList.add('is-open');
+        }
+
+        noteBtn.addEventListener('click', function () {
+          var isExpanded = noteBtn.getAttribute('aria-expanded') === 'true';
+          var nextState = !isExpanded;
+          noteBtn.setAttribute('aria-expanded', String(nextState));
+          noteBtn.classList.toggle('is-open', nextState);
+          drawer.hidden = !nextState;
+        });
+
+        metaLine.appendChild(noteBtn);
+      }
+
+      item.appendChild(rowMain);
+      item.appendChild(metaLine);
+      if (drawer) {
+        item.appendChild(drawer);
+      }
+
       fragment.appendChild(item);
     });
 
     els.resultsReviewList.replaceChildren(fragment);
+  }
+
+  function renderResultsReview(test) {
+    if (!els.resultsReview || !els.resultsReviewList) return;
+
+    var missed = test.words.filter(function (word) {
+      return word.committed && word.correct === false;
+    });
+
+    var committed = test.words.filter(function (word) {
+      return word.committed;
+    });
+
+    if (els.reviewMistakesCount) {
+      els.reviewMistakesCount.textContent = String(missed.length);
+    }
+    if (els.reviewAllCount) {
+      els.reviewAllCount.textContent = String(committed.length || test.words.length);
+    }
+
+    if (missed.length > 0) {
+      state.reviewTab = 'mistakes';
+    } else {
+      state.reviewTab = 'all';
+    }
+
+    updateReviewTabsUI();
+    updateToggleExplanationsButtonUI();
+    renderResultsList(test);
     els.resultsReview.hidden = false;
   }
 
@@ -886,7 +1077,17 @@
       answer.textContent = word.canonical;
     }
 
-    els.reviewLine.replaceChildren(arabic, note, answer);
+    var elements = [arabic, note, answer];
+
+    if (word.translation_en) {
+      var meaning = document.createElement('span');
+      meaning.className = 'review-meaning-text';
+      var tag = word.dialect ? '[' + word.dialect + '] ' : '';
+      meaning.textContent = '· ' + tag + word.translation_en;
+      elements.push(meaning);
+    }
+
+    els.reviewLine.replaceChildren.apply(els.reviewLine, elements);
     els.reviewLine.hidden = false;
     window.clearTimeout(state.reviewTimer);
     state.reviewTimer = window.setTimeout(hideReview, 3200);
@@ -945,10 +1146,12 @@
     if (parse.complete && test.index === test.words.length - 1) {
       test.finishing = true;
       updateInstruction(parse);
+      showWordFeedback(word);
       state.finishTimer = window.setTimeout(function () {
         finishTest({ autoLastWord: true });
       }, 340);
     } else if (parse.complete) {
+      showWordFeedback(word);
       ensureActiveVisible();
     }
   }
@@ -1030,6 +1233,7 @@
     state.errorToken = -1;
     state.errorCount = 0;
     hideHint();
+    showWordFeedback(word);
 
     if (correct) {
       test.correctWords += 1;
@@ -1425,6 +1629,19 @@
     els.resultsReview = $('resultsReview');
     els.resultsReviewList = $('resultsReviewList');
 
+    els.wordFeedback = $('wordFeedback');
+    els.wordFeedbackContent = $('wordFeedbackContent');
+    els.wordFeedbackDialect = $('wordFeedbackDialect');
+    els.wordFeedbackTranslation = $('wordFeedbackTranslation');
+    els.wordFeedbackNotes = $('wordFeedbackNotes');
+
+    els.reviewTabMistakes = $('reviewTabMistakes');
+    els.reviewTabAll = $('reviewTabAll');
+    els.reviewMistakesCount = $('reviewMistakesCount');
+    els.reviewAllCount = $('reviewAllCount');
+    els.reviewToggleNotesButton = $('reviewToggleNotesButton');
+    els.reviewToggleNotesLabel = $('reviewToggleNotesLabel');
+
     els.modeTabs = Array.from(document.querySelectorAll('.mode-tab'));
     els.countControl = $('countControl');
     els.countButtons = Array.from(document.querySelectorAll('.count-button'));
@@ -1529,6 +1746,24 @@
       hideToast();
       startNewTest({ mode: state.mode });
     });
+
+    if (els.reviewTabMistakes) {
+      els.reviewTabMistakes.addEventListener('click', function () {
+        setReviewTab('mistakes');
+      });
+    }
+
+    if (els.reviewTabAll) {
+      els.reviewTabAll.addEventListener('click', function () {
+        setReviewTab('all');
+      });
+    }
+
+    if (els.reviewToggleNotesButton) {
+      els.reviewToggleNotesButton.addEventListener('click', function () {
+        toggleAllExplanations();
+      });
+    }
 
     els.settingsButton.addEventListener('click', function () {
       openSheet('settings');

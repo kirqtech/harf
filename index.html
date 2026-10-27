@@ -125,6 +125,14 @@
             <div class="prompt-latin" id="promptLatin" dir="ltr" aria-label="Your transliteration input"></div>
           </div>
 
+          <div class="word-feedback" id="wordFeedback" aria-live="polite" aria-atomic="true">
+            <div class="word-feedback-content" id="wordFeedbackContent">
+              <span class="word-feedback-dialect" id="wordFeedbackDialect" hidden></span>
+              <span class="word-feedback-translation" id="wordFeedbackTranslation"></span>
+              <span class="word-feedback-notes" id="wordFeedbackNotes" hidden></span>
+            </div>
+          </div>
+
           <p class="prompt-help">type the Latin transliteration · <kbd>?</kbd> hint · <kbd>space</kbd> next word</p>
         </div>
 
@@ -199,7 +207,20 @@
         </div>
       </div>
       <div class="results-review" id="resultsReview" hidden>
-        <h3>mistake review</h3>
+        <div class="results-review-header">
+          <div class="results-review-tabs" role="tablist" aria-label="Review filter">
+            <button class="review-tab is-active" id="reviewTabMistakes" type="button" role="tab" aria-selected="true">
+              Mistakes (<span id="reviewMistakesCount">0</span>)
+            </button>
+            <button class="review-tab" id="reviewTabAll" type="button" role="tab" aria-selected="false">
+              All Words (<span id="reviewAllCount">0</span>)
+            </button>
+          </div>
+          <button class="review-toggle-all-button" id="reviewToggleNotesButton" type="button" aria-pressed="false" title="Toggle all word explanations">
+            <span class="toggle-icon" aria-hidden="true">💡</span>
+            <span id="reviewToggleNotesLabel">Explanations</span>
+          </button>
+        </div>
         <ul id="resultsReviewList"></ul>
       </div>
       <div class="results-actions">

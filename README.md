@@ -106,17 +106,23 @@ These rules apply to the Latin transliteration script (`abc`). Mappings are case
 
 ## Adding words or phrases
 
-Edit `js/data.js`. Word entries pair the Arabic string with accepted Latin solutions (the first solution is used as the hint):
+Edit `js/data.js`. Word entries support transliterations, English translations, dialect tags (`Levantine`, `MSA`, `Both`), and linguistic notes:
 
 ```js
 var WORDS = [
   {
-    arabic: 'حبيبي',
-    solutions: ['7abeebi', '7abibi', 'Habeebi', 'Habibi']
+    arabic: 'بدي',
+    translit: ['baddi', 'beddi'],
+    translation_en: 'I want / I need',
+    dialect: 'Levantine',
+    notes: 'Spoken Levantine staple, equivalent to MSA أريد'
   },
   {
-    arabic: 'مَدِينَة',
-    solutions: ['madineh', 'madiineh', 'madina', 'madiina']
+    arabic: 'حبيبي',
+    translit: ['7abeebi', '7abibi', 'Habeebi', 'Habibi'],
+    translation_en: 'my love / darling',
+    dialect: 'Both',
+    notes: 'Universal term of affection used among friends and family.'
   }
 ];
 
@@ -124,3 +130,5 @@ var PHRASES = [
   'كَيْفَ حَالُكَ؟'
 ];
 ```
+
+Entries are backwards-compatible with plain strings (`'كتاب'`) and legacy `{ arabic, solutions }` objects.

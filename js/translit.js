@@ -97,12 +97,39 @@
   function normalizeEntry(entry) {
     var arabic = '';
     var rawSolutions = [];
+    var translationEn = '';
+    var dialect = '';
+    var notes = '';
 
     if (typeof entry === 'string') {
       arabic = entry;
+      if (global && global.HarfData && typeof global.HarfData.lookupWord === 'function') {
+        var found = global.HarfData.lookupWord(arabic);
+        if (found) {
+          rawSolutions = found.translit || found.solutions || [];
+          translationEn = found.translation_en || '';
+          dialect = found.dialect || '';
+          notes = found.notes || '';
+        }
+      }
     } else if (entry && typeof entry === 'object') {
       arabic = entry.arabic || entry.word || '';
-      rawSolutions = entry.solutions || entry.solution || [];
+      rawSolutions = entry.translit || entry.solutions || entry.solution || [];
+      translationEn = entry.translation_en || entry.translation || '';
+      dialect = entry.dialect || '';
+      notes = entry.notes || '';
+
+      if (!translationEn && global && global.HarfData && typeof global.HarfData.lookupWord === 'function') {
+        var meta = global.HarfData.lookupWord(arabic);
+        if (meta) {
+          if (!rawSolutions.length) {
+            rawSolutions = meta.translit || meta.solutions || [];
+          }
+          translationEn = meta.translation_en || '';
+          dialect = dialect || meta.dialect || '';
+          notes = notes || meta.notes || '';
+        }
+      }
     }
 
     if (!Array.isArray(rawSolutions)) {
@@ -117,7 +144,11 @@
 
     return {
       arabic: String(arabic || ''),
-      solutions: solutions
+      solutions: solutions,
+      translit: solutions,
+      translation_en: translationEn,
+      dialect: dialect,
+      notes: notes
     };
   }
 
@@ -538,8 +569,12 @@
       arabic: normalized.arabic,
       tokens: tokens,
       solutions: solutions,
+      translit: solutions,
       canonical: solutions[0] || canonical,
-      generatedSolutions: generated
+      generatedSolutions: generated,
+      translation_en: normalized.translation_en,
+      dialect: normalized.dialect,
+      notes: normalized.notes
     };
   }
 
