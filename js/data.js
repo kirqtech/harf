@@ -1,5 +1,5 @@
 /*!
- * Harf — practice content
+ * Harf - practice content
  * Each word pairs vocalized Arabic with one or more accepted Arabizi
  * spellings. The transliteration engine expands additional dialect variants
  * (long vowels, taa marbuta, hamza, and emphatic aliases) at runtime.
@@ -173,7 +173,7 @@
     { arabic: 'حبيبي', solutions: ['7abeebi', '7abibi', 'Habeebi', 'Habibi'] },
 
     /* ------------------------------------------------------------------
-     * Greetings & social — everyday Levantine / MSA expressions.
+     * Greetings & social: everyday Levantine / MSA expressions.
      * The first solution is the hint; every alternate is accepted too.
      * ------------------------------------------------------------------ */
     { arabic: 'مَرْحَبًا', solutions: ['mar7aba', 'marhaba', 'marHaba', 'marhabaa', 'mar7abaa', 'marhaban'] },
@@ -220,7 +220,7 @@
     { arabic: 'بَابَا', solutions: ['baba', 'babba', 'baaba', 'babaa'] },
 
     /* ------------------------------------------------------------------
-     * Common nouns — home, food, everyday objects
+     * Common nouns: home, food, everyday objects
      * ------------------------------------------------------------------ */
     { arabic: 'شُبَّاك', solutions: ['shubbaak', 'shubbak', 'shobbaak', 'shobbak', 'shubaak', 'shobak'] },
     { arabic: 'أَكْل', solutions: ['akl', 'akel', 'akal'] },

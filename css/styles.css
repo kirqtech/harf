@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Harf — Arabic typing trainer
+   Harf - Arabic typing trainer
    ========================================================================== */
 
 :root {
@@ -189,7 +189,7 @@ kbd {
   font-family: var(--font-arabic);
   font-size: 2rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   line-height: 1;
   transform: translateY(-1px);
 }
@@ -371,7 +371,7 @@ kbd {
 .script-tab--arabic {
   font-family: var(--font-arabic);
   font-size: 0.82rem;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
 }
 
 .script-tab:hover {
@@ -616,7 +616,7 @@ kbd {
   font-family: var(--font-arabic);
   font-size: clamp(2.5rem, 1.55rem + 3.1vw, 3.5rem);
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   line-height: 1.7;
   overflow-wrap: anywhere;
   text-align: center;
@@ -781,7 +781,7 @@ kbd {
   font-family: var(--font-arabic);
   font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   line-height: 1.75;
   white-space: nowrap;
 }
@@ -815,7 +815,7 @@ kbd {
   font-family: var(--font-arabic);
   font-size: 1.02rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 
 .review-line code {
@@ -828,28 +828,36 @@ kbd {
   color: #ffffff;
 }
 
-/* Arabic script mode: the typed word is rebuilt letter by letter. Direction
-   comes from the content, so the caret sits on the next Arabic letter. */
+/* Arabic script mode: the typed word stays connected across spans via ZWJ. */
 .prompt-latin[lang="ar"] {
-  gap: 0.04em;
+  display: inline-block;
+  gap: 0;
   font-family: var(--font-arabic);
-  font-size: clamp(1.5rem, 1.15rem + 1.1vw, 2rem);
+  font-size: clamp(1.75rem, 1.35rem + 1.2vw, 2.3rem);
+  font-variant-ligatures: normal;
+  font-feature-settings: "liga" 1, "calt" 1;
   font-weight: 600;
   letter-spacing: 0;
 }
 
 .prompt-latin[lang="ar"].is-long {
-  font-size: clamp(1.25rem, 1rem + 0.9vw, 1.65rem);
+  font-size: clamp(1.4rem, 1.1rem + 0.95vw, 1.85rem);
 }
 
 .arabic-letter {
-  display: inline-block;
+  display: inline;
   color: var(--faint);
   transition: color 120ms ease;
 }
 
 .arabic-letter.is-typed {
   color: #ffffff;
+}
+
+.arabic-letter.is-wrong {
+  color: var(--error);
+  text-decoration: underline wavy rgba(239, 116, 132, 0.55);
+  text-underline-offset: 0.2em;
 }
 
 .arabic-letter.is-extra {
@@ -859,14 +867,17 @@ kbd {
 }
 
 .prompt-latin[lang="ar"] .caret {
-  margin: 0 0.06em;
+  width: 0;
+  border-left: 2px solid var(--accent-strong);
+  background: transparent;
+  margin: -0.16em -1px 0;
 }
 
 .prompt-hint.is-arabic {
   font-family: var(--font-arabic);
   font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 
 .review-line .review-arabic-answer,
@@ -875,7 +886,7 @@ kbd {
   font-family: var(--font-arabic);
   font-size: 1.05rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0;
 }
 
 .results-review .review-arabic-answer {
@@ -1109,7 +1120,7 @@ kbd {
   font-family: var(--font-arabic);
   font-size: 1.24rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   line-height: 1.6;
 }
 
@@ -1381,7 +1392,7 @@ dialog::backdrop {
   font-family: var(--font-arabic);
   font-size: 1.22rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   line-height: 2;
   transition:
     border-color 150ms ease,
@@ -1529,7 +1540,7 @@ dialog::backdrop {
   font-family: var(--font-arabic);
   font-size: 1.16rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   line-height: 1.8;
 }
 
@@ -1984,7 +1995,7 @@ dialog::backdrop {
     max-width: 100%;
     margin-top: 0.8rem;
     font-size: clamp(2rem, 8.4vw, 2.75rem);
-    letter-spacing: 0.03em;
+    letter-spacing: 0;
     line-height: 1.55;
     overflow-wrap: anywhere;
     word-break: normal;

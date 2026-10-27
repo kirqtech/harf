@@ -1,5 +1,5 @@
 /*!
- * Harf — application UI and typing loop
+ * Harf - application UI and typing loop
  * No build step, no backend, no dependencies.
  */
 (function () {
@@ -24,14 +24,14 @@
       clearAria: 'Clear the current transliteration',
       typingAria: 'Type the Latin transliteration',
       subtitle: 'arabic · latin',
-      letters: 'Decode the drill, then type its Latin sound. Press ? for one rescue hint.',
-      words: 'Decode the Arabic word, then type its Latin transliteration. Space submits.',
-      reading: 'Read the unvocalized word and type its phonetic spelling. ? reveals a key.',
-      phrases: 'One phrase at a time. Decode each word, then press space. Punctuation is not typed.',
-      custom: 'Your custom text. Type each transliteration; punctuation is not typed.',
-      instruction: 'Read the Arabic, then type the Latin transliteration. Press ? for one hint.',
-      wrong: 'Not quite — backspace to erase the red character, or space to submit and review.',
-      complete: 'Word complete — press space for the next one.',
+      letters: 'Type the Latin sound for this letter. Press ? for a hint.',
+      words: 'Type the Latin transliteration. Press space to submit.',
+      reading: 'Read the word and type its Latin spelling. Press ? for a hint.',
+      phrases: 'Type each word and press space. Punctuation is skipped.',
+      custom: 'Type each transliteration. Punctuation is skipped.',
+      instruction: 'Read the Arabic and type the Latin transliteration. Press ? for a hint.',
+      wrong: 'Wrong character. Press backspace to fix, or space to skip.',
+      complete: 'Press space for the next word.',
       reviewLabel: 'standard spelling'
     },
     arabic: {
@@ -39,16 +39,16 @@
       inputLabel: 'Your Arabic input',
       hintAria: 'Reveal the remaining Arabic letters for this word',
       clearAria: 'Clear what you typed',
-      typingAria: 'Type the Arabic word again',
+      typingAria: 'Type the Arabic word',
       subtitle: 'arabic · script',
-      letters: 'Look at the letter, then type it on an Arabic keyboard. Harakat are not typed.',
-      words: 'Read the word, then type it again in Arabic. Harakat are not typed. Space submits.',
-      reading: 'Read the word without harakat, then type its letters. ? reveals the rest.',
-      phrases: 'One phrase at a time. Type each Arabic word letter by letter, then press space.',
-      custom: 'Your custom text. Type each Arabic word again; punctuation is not typed.',
-      instruction: 'Read the Arabic, then type its letters again in Arabic. Harakat are not typed. Press ? for a hint.',
-      wrong: 'Not quite — backspace to erase the red letter, or space to submit and review.',
-      complete: 'Word complete — press space for the next one.',
+      letters: 'Type the letter on an Arabic keyboard. Harakat are skipped.',
+      words: 'Type the word in Arabic. Harakat are skipped. Press space to submit.',
+      reading: 'Type the word in Arabic. Press ? for a hint.',
+      phrases: 'Type each Arabic word and press space. Punctuation is skipped.',
+      custom: 'Type each Arabic word. Punctuation is skipped.',
+      instruction: 'Type the Arabic word. Harakat are skipped. Press ? for a hint.',
+      wrong: 'Wrong letter. Press backspace to fix, or space to skip.',
+      complete: 'Press space for the next word.',
       reviewLabel: 'correct letters'
     }
   };
@@ -389,23 +389,30 @@
   }
 
   /**
-   * Arabic script mode: every target letter is rendered in the base colour,
-   * typed letters light up, the caret sits on the next letter, and extra
-   * letters past the end of the word are flagged in red.
+   * Arabic script mode: target letters are connected with Zero-Width Joiners
+   * (\u200D) across span boundaries so cursive shaping stays intact. Typed
+   * letters light up, wrong letters turn red, and extra letters appear at the end.
    */
   function renderArabicInput(word) {
     var parse = T.matchArabic(word.units, word.input);
     var fragment = document.createDocumentFragment();
-    var extra = parse.typed.slice(parse.matched);
+    var extra = parse.typed.slice(word.units.length);
     var isLong = word.units.length > 8;
+    var ZWJ = '\u200D';
 
     word.units.forEach(function (unit, index) {
       if (index === parse.matched) appendCaret(fragment);
 
       var span = document.createElement('span');
-      span.className = index < parse.matched ? 'arabic-letter is-typed' : 'arabic-letter';
+      var stateClass = 'arabic-letter';
+      if (index < parse.matched) {
+        stateClass = 'arabic-letter is-typed';
+      } else if (index < parse.typed.length) {
+        stateClass = 'arabic-letter is-wrong';
+      }
+      span.className = stateClass;
       span.lang = 'ar';
-      span.textContent = unit.letter;
+      span.textContent = (unit.joinPrev ? ZWJ : '') + unit.letter + (unit.joinNext ? ZWJ : '');
       fragment.appendChild(span);
     });
 
@@ -429,7 +436,7 @@
     if (!test) return;
 
     if (test.finishing) {
-      setText(els.instructionLine, 'Finishing…');
+      setText(els.instructionLine, 'Finishing...');
       return;
     }
 
@@ -468,10 +475,10 @@
 
     if (isFinished) progress = 100;
 
-    setStat(els.statWpm, isReady ? '—' : String(wpm == null ? 0 : wpm));
-    setStat(els.statAccuracy, accuracy == null ? '—' : accuracy + '%');
-    setStat(els.statStreak, isReady ? '—' : String(test.streak));
-    setStat(els.statTime, isReady ? '—' : formatLiveTime(elapsed));
+    setStat(els.statWpm, isReady ? '-' : String(wpm == null ? 0 : wpm));
+    setStat(els.statAccuracy, accuracy == null ? '-' : accuracy + '%');
+    setStat(els.statStreak, isReady ? '-' : String(test.streak));
+    setStat(els.statTime, isReady ? '-' : formatLiveTime(elapsed));
 
     setText(els.statProgress, completed + ' / ' + total);
     els.progressFill.style.width = progress + '%';
@@ -481,7 +488,7 @@
   function setStat(element, value) {
     if (!element) return;
     element.textContent = value;
-    element.classList.toggle('has-value', value !== '—');
+    element.classList.toggle('has-value', value !== '-');
   }
 
   function ensureActiveVisible() {
@@ -731,7 +738,7 @@
       typed.className = 'review-typed';
       typed.dir = isArabicScript() ? 'rtl' : 'ltr';
       if (isArabicScript()) typed.lang = 'ar';
-      typed.textContent = word.input || '—';
+      typed.textContent = word.input || '-';
 
       flow.append(arabic, arrow, typed);
 
@@ -817,7 +824,7 @@
 
     var wrapRect = els.promptInputWrap.getBoundingClientRect();
     var caretRect = caret.getBoundingClientRect();
-    if (!wrapRect.width || !caretRect.width) return;
+    if (!wrapRect.width || !caretRect.height) return;
 
     var center = caretRect.left - wrapRect.left + caretRect.width / 2;
     var padding = Math.min(56, wrapRect.width / 2);
@@ -1242,6 +1249,7 @@
     if (els.promptLatin) {
       els.promptLatin.setAttribute('aria-label', c.inputLabel);
       els.promptLatin.dir = state.script === 'arabic' ? 'rtl' : 'ltr';
+      els.promptLatin.lang = state.script === 'arabic' ? 'ar' : 'en';
     }
     if (els.hintButton) els.hintButton.setAttribute('aria-label', c.hintAria);
     if (els.clearButton) els.clearButton.setAttribute('aria-label', c.clearAria);

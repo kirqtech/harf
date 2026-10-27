@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17181c">
-  <meta name="description" content="Harf is a lightweight Arabic typing trainer for practicing Arabizi and Latin transliteration.">
-  <title>Harf — Arabic typing trainer</title>
+  <meta name="description" content="Harf is a lightweight Arabic typing trainer for practicing Arabizi and Arabic script.">
+  <title>Harf - Arabic typing trainer</title>
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,19 +72,19 @@
 
       <section class="stats-bar" aria-label="Live test statistics">
         <div class="stat-cell">
-          <span class="stat-value" id="statWpm">—</span>
+          <span class="stat-value" id="statWpm">-</span>
           <span class="stat-label">wpm</span>
         </div>
         <div class="stat-cell">
-          <span class="stat-value" id="statAccuracy">—</span>
+          <span class="stat-value" id="statAccuracy">-</span>
           <span class="stat-label">accuracy</span>
         </div>
         <div class="stat-cell">
-          <span class="stat-value" id="statStreak">—</span>
+          <span class="stat-value" id="statStreak">-</span>
           <span class="stat-label">streak</span>
         </div>
         <div class="stat-cell stat-cell--time">
-          <span class="stat-value" id="statTime">—</span>
+          <span class="stat-value" id="statTime">-</span>
           <span class="stat-label">time</span>
         </div>
         <div class="stat-progress">
@@ -120,7 +120,7 @@
             <div class="prompt-latin" id="promptLatin" dir="ltr" aria-label="Your transliteration input"></div>
           </div>
 
-          <p class="prompt-help">type the Latin transliteration · <kbd>?</kbd> reveals the standard solution · <kbd>space</kbd> submits</p>
+          <p class="prompt-help">type the Latin transliteration · <kbd>?</kbd> hint · <kbd>space</kbd> next word</p>
         </div>
 
         <div class="queue-wrap" id="queueWrap" hidden>
@@ -137,7 +137,7 @@
       </section>
 
       <p class="instruction-line" id="instructionLine">
-        Read the Arabic, then type the Latin transliteration. Press <kbd>?</kbd> for one hint.
+        Read the Arabic and type the Latin transliteration. Press <kbd>?</kbd> for a hint.
       </p>
 
       <footer class="test-footer">
@@ -230,7 +230,7 @@
         placeholder="الصق النص العربي هنا..."
         aria-describedby="customTextHelp"
       ></textarea>
-      <p class="field-help" id="customTextHelp">Every Arabic word becomes a prompt. Adding harakat makes the transliteration target more precise. Punctuation is not typed.</p>
+      <p class="field-help" id="customTextHelp">Each Arabic word becomes a prompt. Harakat and punctuation are not typed in Arabic mode.</p>
       <p class="form-error" id="customError" role="alert" hidden></p>
 
       <div class="modal-actions">
@@ -257,7 +257,7 @@
 
       <div class="sheet-body">
         <section class="sheet-panel" id="legendPanel" role="tabpanel" aria-labelledby="legendTab">
-          <p class="sheet-intro">The Latin solution stays hidden during practice. Type the transliteration you decode from the Arabic; press <kbd>?</kbd> or use the hint button when you need a rescue. Alternate spellings listed here are also accepted.</p>
+          <p class="sheet-intro">Type the Latin transliteration for the Arabic word. Press <kbd>?</kbd> if you need a hint. Alternate spellings listed below are also accepted.</p>
 
           <div class="legend-block">
             <h3>Numbers &amp; gutturals</h3>
@@ -302,20 +302,20 @@
               <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">فَ / فِ / فُ</span><span class="mapping-keys"><kbd>a</kbd><kbd>i</kbd><kbd>u</kbd></span></div>
               <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ا / و / ي</span><span class="mapping-keys"><kbd>aa</kbd><kbd>oo</kbd><kbd>ee</kbd></span></div>
               <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">و / ي consonantal</span><span class="mapping-keys"><kbd>w</kbd><kbd>y</kbd></span></div>
-              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ـْ</span><span class="mapping-keys"><span class="mapping-note">sukun — no key</span></span></div>
+              <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ـْ</span><span class="mapping-keys"><span class="mapping-note">sukun (no key)</span></span></div>
               <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ـّ</span><span class="mapping-keys"><span class="mapping-note">double the consonant</span></span></div>
               <div class="mapping-row"><span class="mapping-arabic" lang="ar" dir="rtl">ـً ـٍ ـٌ</span><span class="mapping-keys"><kbd>an</kbd><kbd>in</kbd><kbd>un</kbd></span></div>
             </div>
           </div>
 
           <div class="tip-card">
-            <strong>Case is part of the mapping.</strong>
-            <p><kbd>s</kbd> is س while <kbd>S</kbd> is ص. The same applies to d/D, t/T and z/Z. Lowercase <kbd>h</kbd> is only ه; use <kbd>H</kbd> or <kbd>7</kbd> for ح.</p>
+            <strong>Case matters.</strong>
+            <p><kbd>s</kbd> is س and <kbd>S</kbd> is ص. Same for d/D, t/T, and z/Z. Lowercase <kbd>h</kbd> is only ه; use <kbd>H</kbd> or <kbd>7</kbd> for ح.</p>
           </div>
         </section>
 
         <section class="sheet-panel" id="settingsPanel" role="tabpanel" aria-labelledby="settingsTab" hidden>
-          <p class="sheet-intro">Pick the script you practice in. <strong>Latin transliteration</strong> types Arabizi; <strong>Arabic letters</strong> retypes the displayed word on an Arabic keyboard. Hints follow the same choice.</p>
+          <p class="sheet-intro">Choose your typing mode. <strong>Latin transliteration</strong> uses Arabizi, and <strong>Arabic letters</strong> uses an Arabic keyboard.</p>
 
           <form class="settings-form" id="settingsForm" aria-labelledby="typographyHeading">
             <h3 class="settings-heading" id="typographyHeading">typing</h3>
@@ -328,11 +328,11 @@
               </select>
             </div>
 
-            <p class="field-help">Arabic letters retypes the displayed word on an Arabic keyboard. Harakat and punctuation are not typed.</p>
+            <p class="field-help">In Arabic mode, type the word on an Arabic keyboard. Harakat and punctuation are skipped.</p>
 
             <div class="settings-hint-panel" id="settingsHintPanel">
               <h3 class="settings-heading">transliteration spelling</h3>
-              <p class="field-help">Choose the spelling shown in the hints. Common alternates stay accepted, so you can type the form that feels natural.</p>
+              <p class="field-help">Choose the default spelling shown in hints. Common alternates are always accepted.</p>
             </div>
 
             <div class="setting-row setting-row--latin">

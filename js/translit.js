@@ -1,5 +1,5 @@
 /*!
- * Harf — Arabic transliteration engine
+ * Harf - Arabic transliteration engine
  * Dependency-free. Builds token-level Latin alternatives for Arabic text
  * and parses typed input against those alternatives.
  */
@@ -327,7 +327,7 @@
       if (ch === '\u0627' || ch === '\u0671') { // ا / ٱ
         if (i === 0) {
           if (isShortVowel(next)) {
-            // Alif wasl in words such as اِسْم — the vowel below it is pronounced.
+            // Alif wasl in words such as اِسْم: the vowel below it is pronounced.
             continue;
           }
           pushLetter(makeToken(['a', 'aa'], 'a', ch));
@@ -714,9 +714,9 @@
 
   /* ------------------------------------------------------------------------
      Arabic script mode
-     Harakat are not part of the target. Letters are compared by grapheme
-     cluster so the shadda carries over to the doubled letter: the prompt
-     shows جَمِيل but كلّ needs ك ل ل, not ك ل شَدّة.
+     Harakat are not part of the target. Letters are compared by base character
+     (with shadda and tanween marks stripped), so the word stays connected as
+     a normal Arabic word instead of breaking into isolated glyphs.
      ------------------------------------------------------------------------ */
 
   var SEGMENTER = typeof Intl !== 'undefined' && Intl.Segmenter
@@ -738,6 +738,37 @@
     '\u06A9': '\u0643'  // ک -> ك (both keyboards write kaf differently)
   };
 
+  // Arabic letters that join only to the right (never to the following letter).
+  var RIGHT_ONLY_JOINERS = {
+    '\u0621': true, // ء (isolated)
+    '\u0622': true, // آ
+    '\u0623': true, // أ
+    '\u0624': true, // ؤ
+    '\u0625': true, // إ
+    '\u0627': true, // ا
+    '\u0629': true, // ة
+    '\u062F': true, // د
+    '\u0630': true, // ذ
+    '\u0631': true, // ر
+    '\u0632': true, // ز
+    '\u0648': true, // و
+    '\u0649': true, // ى
+    '\u0671': true, // ٱ
+    '\u0698': true  // ژ
+  };
+
+  function joinsLeft(letter) {
+    return isArabic(letter) && !RIGHT_ONLY_JOINERS[letter];
+  }
+
+  function joinsRight(letter) {
+    return isArabic(letter) && letter !== '\u0621';
+  }
+
+  function canJoinArabic(prevLetter, nextLetter) {
+    return joinsLeft(prevLetter) && joinsRight(nextLetter);
+  }
+
   function foldLetter(letter) {
     var folded = Object.prototype.hasOwnProperty.call(LETTER_FOLD, letter)
       ? LETTER_FOLD[letter]
@@ -755,9 +786,9 @@
 
   /**
    * Split one written Arabic word into the letters that must be typed:
-   * harakat and tatweel are dropped, a shadda repeats the letter it sits on,
-   * and punctuation is ignored. Each item is the display letter plus the
-   * comparison key.
+   * harakat, shadda, and tatweel are dropped, and punctuation is ignored.
+   * Each item holds the display letter, comparison key, and whether it joins
+   * to the previous or next letter for connected cursive rendering.
    */
   function arabicLetterUnits(text) {
     var clusters = graphemes(text || '');
@@ -773,18 +804,23 @@
         return;
       }
 
-      var doubled = cluster.indexOf(SHADDA) !== -1;
       letters.forEach(function (letter) {
         // In the tanween spelling (كِتَابًا) the final alif is silent.
         if (letter === '\u0627' && previous && previous.letters.indexOf('\u064B') !== -1) return;
 
         var unit = { letter: letter, key: foldLetter(letter) };
         units.push(unit);
-        if (doubled) units.push({ letter: letter, key: unit.key });
       });
 
       previous = { key: letters[0], letters: cluster };
     });
+
+    for (var i = 0; i < units.length; i += 1) {
+      var prev = i > 0 ? units[i - 1].letter : '';
+      var next = i < units.length - 1 ? units[i + 1].letter : '';
+      units[i].joinPrev = prev ? canJoinArabic(prev, units[i].letter) : false;
+      units[i].joinNext = next ? canJoinArabic(units[i].letter, next) : false;
+    }
 
     return units;
   }
@@ -821,7 +857,6 @@
       matched += 1;
     }
 
-    var hasExtra = keys.length > list.length;
     var complete = keys.length === list.length && matched === keys.length;
 
     return {
@@ -837,18 +872,6 @@
       extra: matched < keys.length,
       target: list.map(function (unit) { return unit.letter; }).join('')
     };
-  }
-
-  function splitPhraseWords(text) {
-    return splitWordsForMode(text, 'arabic');
-  }
-
-  function splitPhraseWords(text) {
-    return splitWordsForMode(text, 'arabic');
-  }
-
-  function splitPhraseWords(text) {
-    return splitWordsForMode(text, 'arabic');
   }
 
   function splitWordsForMode(text, mode) {
