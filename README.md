@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo_horizontal_solid.png" alt="Nateq — Arabic typing trainer" width="100%">
+</p>
+
 # Nateq - Arabic typing trainer
 
 Nateq (ناطق) is a dependency-free Arabic typing trainer inspired by Monkeytype. It supports two typing modes across multiple Arabic varieties (Levantine, Egyptian, and Quranic):
