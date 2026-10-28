@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#17181c">
+  <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Nateq">
@@ -15,8 +15,24 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.has('dialect')) {
+          window.localStorage.setItem('nateq_dialect', params.get('dialect'));
+        }
+        var saved = window.localStorage.getItem('nateq_arabic_font');
+        document.documentElement.classList.add(
+          saved === 'classical' || saved === 'display' ? 'font-' + saved : 'font-modern'
+        );
+      } catch (error) {
+        document.documentElement.classList.add('font-modern');
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#testStage">Skip to typing test</a>
@@ -45,6 +61,15 @@
             <span class="dialect-pill-shortcut" aria-hidden="true">Alt+D</span>
           </button>
         </div>
+        <div class="font-selector">
+          <button class="font-pill" id="fontPill" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="fontModal" aria-label="Choose Arabic typeface. Current: Modern" title="Choose Arabic typeface">
+            <span class="font-pill-mark" aria-hidden="true">Aa</span>
+            <span class="font-pill-name" id="fontPillName">Modern</span>
+            <svg class="font-pill-chevron" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+              <path d="M3 4.5 6 7.5 9 4.5"></path>
+            </svg>
+          </button>
+        </div>
         <button class="icon-button icon-button--help" id="legendButton" type="button" title="Cheat sheet (F1)" aria-label="Open the transliteration cheat sheet" aria-haspopup="dialog" aria-controls="sheetDialog">
           <span class="hint-mark" aria-hidden="true">?</span>
         </button>
@@ -55,12 +80,21 @@
             <circle cx="8" cy="17" r="2"></circle>
           </svg>
         </button>
+        <button class="icon-button mobile-menu-btn" id="mobileMenuBtn" type="button" title="Settings" aria-label="Open settings" aria-haspopup="dialog" aria-controls="mobileDrawer">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <circle cx="9" cy="7" r="2.5"></circle>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+            <circle cx="15" cy="17" r="2.5"></circle>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main class="main-content">
       <section class="control-bar" aria-label="Test options">
-        <div class="mode-tabs" role="group" aria-label="Practice mode">
+        <div class="mode-tabs mode-segmented-track" role="group" aria-label="Practice mode">
+          <span class="mode-sliding-pill" aria-hidden="true"></span>
           <button class="mode-tab" type="button" data-mode="letters" aria-pressed="false">Letters</button>
           <button class="mode-tab is-active" type="button" data-mode="words" aria-pressed="true">Words</button>
           <button class="mode-tab" type="button" data-mode="reading" aria-pressed="false">Reading</button>
@@ -93,11 +127,11 @@
           <span class="stat-value" id="statWpm">-</span>
           <span class="stat-label">wpm</span>
         </div>
-        <div class="stat-cell">
+        <div class="stat-cell stat-cell--accuracy">
           <span class="stat-value" id="statAccuracy">-</span>
-          <span class="stat-label">accuracy</span>
+          <span class="stat-label"><span class="label-full">accuracy</span><span class="label-short">acc</span></span>
         </div>
-        <div class="stat-cell">
+        <div class="stat-cell stat-cell--streak">
           <span class="stat-value" id="statStreak">-</span>
           <span class="stat-label">streak</span>
         </div>
@@ -205,6 +239,7 @@
   <input
     class="typing-input"
     id="typingInput"
+    name="inputField"
     type="text"
     inputmode="text"
     autocomplete="off"
@@ -226,21 +261,21 @@
         <span class="results-unit">wpm</span>
       </div>
       <div class="results-grid">
-        <div>
+        <div class="stat-badge">
           <span class="result-label">accuracy</span>
           <strong id="resultAccuracy">0%</strong>
         </div>
-        <div>
+        <div class="stat-badge">
+          <span class="result-label">consistency</span>
+          <strong id="resultConsistency">0%</strong>
+        </div>
+        <div class="stat-badge">
           <span class="result-label">total time</span>
           <strong id="resultTime">0s</strong>
         </div>
-        <div>
+        <div class="stat-badge">
           <span class="result-label">best streak</span>
           <strong id="resultStreak">0</strong>
-        </div>
-        <div>
-          <span class="result-label">correct words</span>
-          <strong id="resultWords">0 / 0</strong>
         </div>
       </div>
       <div class="results-review" id="resultsReview" hidden>
@@ -262,9 +297,10 @@
       </div>
       <div class="results-actions">
         <button class="button button--primary" id="nextTestButton" type="button">new round <kbd>enter</kbd></button>
-        <button class="button button--ghost" id="repeatButton" type="button">repeat words</button>
+        <button class="button button--accent" id="repeatMissedButton" type="button" hidden>repeat missed <kbd>tab</kbd>+<kbd>enter</kbd></button>
+        <button class="button button--ghost" id="repeatButton" type="button">repeat all</button>
       </div>
-      <p class="results-hint"><kbd>enter</kbd> or <kbd>space</kbd> starts a new round</p>
+      <p class="results-hint" id="resultsHint"><kbd>enter</kbd> new round · <kbd>tab</kbd>+<kbd>enter</kbd> repeat missed</p>
     </div>
   </dialog>
 
@@ -478,6 +514,33 @@
     </div>
   </dialog>
 
+  <!-- Arabic Typeface Switcher -->
+  <dialog class="modal-dialog font-dialog" id="fontModal" aria-labelledby="fontTitle">
+    <div class="modal-card font-card">
+      <div class="modal-heading">
+        <div>
+          <p class="eyebrow">Arabic typography</p>
+          <h2 id="fontTitle">Choose a typeface</h2>
+        </div>
+        <button class="icon-button" type="button" id="closeFontModalButton" aria-label="Close typeface picker">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <p class="font-intro">Each typeface is tuned for tashkeel clarity and quick reading. The change applies instantly and is remembered on this device.</p>
+
+      <div class="font-options" id="fontOptions" role="radiogroup" aria-label="Arabic typeface options">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="font-modal-footer">
+        <span class="font-footer-note"><span class="font-footer-dot" aria-hidden="true"></span>Live preview updates the typing stage</span>
+      </div>
+    </div>
+  </dialog>
+
   <!-- First-Visit Onboarding Modal -->
   <dialog class="modal-dialog onboarding-dialog" id="onboardingModal" aria-labelledby="onboardingTitle">
     <div class="modal-card onboarding-card">
@@ -493,6 +556,94 @@
 
       <div class="modal-actions onboarding-actions">
         <button class="button button--primary" type="button" id="onboardingSubmitButton">Start Typing</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Native Mobile Bottom Sheet Drawer (viewport <= 768px) -->
+  <dialog class="modal-dialog mobile-drawer-dialog" id="mobileDrawer" aria-labelledby="mobileDrawerTitle">
+    <div class="mobile-drawer-sheet">
+      <div class="mobile-drawer-handle" aria-hidden="true"></div>
+      <header class="mobile-drawer-header">
+        <h2 class="mobile-drawer-title" id="mobileDrawerTitle">Settings</h2>
+        <button class="mobile-drawer-close" id="closeMobileDrawerButton" type="button" aria-label="Close settings">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </header>
+
+      <div class="mobile-drawer-body">
+        <!-- Arabic Typeface -->
+        <section class="drawer-section">
+          <span class="drawer-section-label">Arabic Font</span>
+          <div class="drawer-font-options" role="radiogroup" aria-label="Arabic typeface">
+            <button class="drawer-font-btn is-active" type="button" data-drawer-font="modern">
+              <span class="drawer-font-sample font-preview--modern" lang="ar" dir="rtl">أَهْلًا</span>
+              <span class="drawer-font-meta">
+                <span class="drawer-font-name">Modern</span>
+                <span class="drawer-font-desc">IBM Plex / Noto</span>
+              </span>
+            </button>
+            <button class="drawer-font-btn" type="button" data-drawer-font="classical">
+              <span class="drawer-font-sample font-preview--classical" lang="ar" dir="rtl">أَهْلًا</span>
+              <span class="drawer-font-meta">
+                <span class="drawer-font-name">Classical</span>
+                <span class="drawer-font-desc">Amiri Naskh</span>
+              </span>
+            </button>
+            <button class="drawer-font-btn" type="button" data-drawer-font="display">
+              <span class="drawer-font-sample font-preview--display" lang="ar" dir="rtl">أَهْلًا</span>
+              <span class="drawer-font-meta">
+                <span class="drawer-font-name">Display</span>
+                <span class="drawer-font-desc">Readex Pro</span>
+              </span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Practice Mode -->
+        <section class="drawer-section">
+          <span class="drawer-section-label">Practice Mode</span>
+          <div class="drawer-segmented-track" role="group" aria-label="Practice mode">
+            <button class="drawer-pill mode-tab is-active" type="button" data-mode="words" aria-pressed="true">Words</button>
+            <button class="drawer-pill mode-tab" type="button" data-mode="letters" aria-pressed="false">Letters</button>
+            <button class="drawer-pill mode-tab" type="button" data-mode="reading" aria-pressed="false">Reading</button>
+            <button class="drawer-pill mode-tab" type="button" data-mode="phrases" aria-pressed="false">Phrases</button>
+            <button class="drawer-pill mode-tab" type="button" data-mode="custom" aria-pressed="false">Custom</button>
+          </div>
+        </section>
+
+        <!-- Word Count -->
+        <section class="drawer-section drawer-count-section" id="drawerCountSection">
+          <span class="drawer-section-label">Word Count</span>
+          <div class="drawer-segmented-track" role="group" aria-label="Word count">
+            <button class="drawer-pill count-button is-active" type="button" data-count="20" aria-pressed="true">20</button>
+            <button class="drawer-pill count-button" type="button" data-count="50" aria-pressed="false">50</button>
+          </div>
+        </section>
+
+        <!-- Typing Script -->
+        <section class="drawer-section">
+          <span class="drawer-section-label">Input Script</span>
+          <div class="drawer-segmented-track" role="group" aria-label="Typing script">
+            <button class="drawer-pill script-tab is-active" type="button" data-script="latin" aria-pressed="true">abc · Latin</button>
+            <button class="drawer-pill script-tab script-tab--arabic" type="button" data-script="arabic" aria-pressed="false" lang="ar">عربي · Arabic</button>
+          </div>
+        </section>
+
+        <!-- Quick Links -->
+        <div class="drawer-footer-actions">
+          <button class="drawer-link-btn" type="button" id="drawerCheatSheetBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Cheat Sheet
+          </button>
+          <button class="drawer-link-btn drawer-link-btn--restart" type="button" id="drawerRestartBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 1 0-2.34 5.66"></path><path d="M20 4v7h-7"></path></svg>
+            Restart Test
+          </button>
+        </div>
       </div>
     </div>
   </dialog>

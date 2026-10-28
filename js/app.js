@@ -13,6 +13,30 @@
   var STORAGE_SETTINGS = 'nateq.settings.v1';
   var STORAGE_CUSTOM = 'nateq.custom.v1';
   var STORAGE_SCRIPT = 'nateq.script.v1';
+  var STORAGE_FONT = 'nateq_arabic_font';
+
+  var FONT_STYLES = {
+    modern: {
+      label: 'Modern',
+      className: 'font-modern',
+      preview: 'ناطق',
+      description: 'Geometric and razor-sharp. A technical, modern product voice.'
+    },
+    classical: {
+      label: 'Classical',
+      className: 'font-classical',
+      preview: 'ناطق',
+      description: 'Traditional Naskh calligraphy with rich diacritic balance.'
+    },
+    display: {
+      label: 'Display',
+      optionLabel: 'Display',
+      className: 'font-display',
+      preview: 'ناطق',
+      description: 'Fluid variable rhythm engineered for ultra-fast visual scanning.'
+    }
+  };
+  var FONT_ORDER = ['modern', 'classical', 'display'];
   var LEGACY_STORAGE_KEYS = {
     'nateq.settings.v1': 'harf.settings.v1',
     'nateq.custom.v1': 'harf.custom.v1',
@@ -63,6 +87,7 @@
   var state = {
     mode: 'words',
     script: 'latin',
+    fontStyle: 'modern',
     count: 20,
     settings: T.normalizeSettings(T.DEFAULT_SETTINGS),
     customText: '',
@@ -80,6 +105,7 @@
     errorCount: 0,
     toastTimer: null,
     tabPressedAt: 0,
+    resultsTabPressedAt: 0,
     lastPhrase: '',
     focused: false,
     sheetTab: 'legend',
@@ -88,7 +114,9 @@
     eventsBound: false,
     requestToken: 0,
     failedMode: '',
-    loading: false
+    loading: false,
+    renderedWordIndex: -1,
+    wordMotionTimer: null
   };
 
   var els = {};
@@ -169,6 +197,28 @@
     return Math.min(999, Math.round((test.correctKeystrokes / 5) / minutes));
   }
 
+  function computeConsistency(test) {
+    if (!test || !test.keystrokeTimes || test.keystrokeTimes.length < 3) return 100;
+    var times = test.keystrokeTimes;
+    var deltas = [];
+    for (var i = 1; i < times.length; i += 1) {
+      var delta = times[i] - times[i - 1];
+      if (delta > 0 && delta < 2200) {
+        deltas.push(delta);
+      }
+    }
+    if (deltas.length < 2) return 100;
+    var sum = deltas.reduce(function (acc, val) { return acc + val; }, 0);
+    var mean = sum / deltas.length;
+    if (mean <= 0) return 100;
+    var variance = deltas.reduce(function (acc, val) {
+      return acc + Math.pow(val - mean, 2);
+    }, 0) / deltas.length;
+    var stddev = Math.sqrt(variance);
+    var cv = stddev / mean;
+    return Math.max(0, Math.min(100, Math.round(100 * (1 - Math.min(1, cv)))));
+  }
+
   function isUthmanicStripped() {
     var activeDialect = (Dialects && typeof Dialects.getActiveDialect === 'function')
       ? Dialects.getActiveDialect()
@@ -180,7 +230,7 @@
     if (state.script === 'arabic') {
       return T.isArabicTypable(character, { stripUthmanicGlyphs: isUthmanicStripped() });
     }
-    return /^[A-Za-z0-9'-]$/.test(character);
+    return /^[A-Za-z0-9' -]$/.test(character);
   }
 
   function copy() {
@@ -241,11 +291,20 @@
   }
 
   function showWordFeedback(word) {
-    if (!els.wordFeedback || !els.wordFeedbackContent || !word) return;
+    updateActiveSubtitle(word);
+  }
 
-    var translation = word.translation_en || '';
-    var dialect = word.dialect || '';
-    var notes = word.notes || '';
+  function updateActiveSubtitle(word) {
+    if (!els.wordFeedback || !els.wordFeedbackContent) return;
+    var activeWord = word || currentWord();
+    if (!activeWord) {
+      clearWordFeedback();
+      return;
+    }
+
+    var translation = activeWord.translation_en || '';
+    var dialect = activeWord.dialect || '';
+    var notes = activeWord.notes || '';
 
     if (!translation && !notes) {
       clearWordFeedback();
@@ -515,7 +574,9 @@
       startedAt: null,
       endedAt: null,
       status: 'ready',
-      finishing: false
+      finishing: false,
+      keystrokeTimes: [],
+      consistency: null
     };
   }
 
@@ -533,23 +594,25 @@
     }
 
     if (mode === 'phrases') {
-      var phrase = D.pickPhrase(state.lastPhrase);
-      if (!phrase) return null;
-      var phraseArabic = phrase.arabic || phrase.arabic_plain || '';
-      var phrasePlain = phrase.arabic_plain || '';
-      state.lastPhrase = phraseArabic;
-      var arWords = T.splitWords(phraseArabic);
-      var plainWords = T.splitWords(phrasePlain);
-      var phraseEntries = arWords.map(function (w, idx) {
-        var found = D.lookupWord(w) || (plainWords[idx] ? D.lookupWord(plainWords[idx]) : null);
-        if (found) return found;
-        return {
-          arabic: w,
-          arabic_plain: plainWords.length === arWords.length ? plainWords[idx] : '',
-          dialect: phrase.dialect || ''
-        };
+      var allPhrases = D.getPhrases();
+      if (!allPhrases || !allPhrases.length) {
+        var fallbackPhrase = D.pickPhrase(state.lastPhrase);
+        if (!fallbackPhrase) return null;
+        allPhrases = [fallbackPhrase];
+      }
+      var available = allPhrases.filter(function (p) {
+        return (p.arabic !== state.lastPhrase) && (p.arabic_plain !== state.lastPhrase);
       });
-      return makeTest('phrases', phraseEntries, phraseArabic);
+      var pool = available.length ? available : allPhrases;
+      var shuffled = D.shuffle(pool.slice());
+      var count = Math.min(shuffled.length, 5);
+      var pickedPhrases = shuffled.slice(0, count);
+      if (pickedPhrases[0]) {
+        state.lastPhrase = pickedPhrases[0].arabic || pickedPhrases[0].arabic_plain || '';
+      }
+      return makeTest('phrases', pickedPhrases, pickedPhrases.map(function (p) {
+        return p.arabic || p.arabic_plain;
+      }).join(' '));
     }
 
     if (mode === 'custom') {
@@ -614,11 +677,11 @@
     fragment.appendChild(span);
   }
 
-  function appendPlaceholders(fragment, count) {
-    if (count <= 0) return;
+  function appendPlaceholders(fragment, remainingText) {
+    if (!remainingText) return;
     var span = document.createElement('span');
     span.className = 'latin-placeholder';
-    span.textContent = new Array(count + 1).join('_');
+    span.textContent = String(remainingText).replace(/[^\s]/g, '_');
     fragment.appendChild(span);
   }
 
@@ -634,6 +697,8 @@
     var word = currentWord();
     if (!test || !word || test.status === 'finished') return;
 
+    var wordChanged = state.renderedWordIndex !== test.index;
+
     setText(els.promptArabic, word.display);
     setText(els.promptCounter, (test.index + 1) + ' / ' + test.words.length);
     setText(els.promptModeTag, MODE_TAGS[test.mode] || MODE_TAGS.words);
@@ -645,7 +710,32 @@
     }
 
     if (els.clearButton) els.clearButton.disabled = !word.input.length;
+    updateActiveSubtitle(word);
     updateInstruction(parseWord(word));
+
+    if (wordChanged) {
+      state.renderedWordIndex = test.index;
+      playWordChange();
+    }
+  }
+
+  /** Swift blur-and-fade crossfade whenever the active word advances. */
+  function playWordChange() {
+    if (els.promptArabic) {
+      els.promptArabic.classList.remove('is-word-switch');
+      void els.promptArabic.offsetWidth;
+      els.promptArabic.classList.add('is-word-switch');
+    }
+    if (els.wordFeedback) {
+      els.wordFeedback.classList.remove('is-word-change');
+      void els.wordFeedback.offsetWidth;
+      els.wordFeedback.classList.add('is-word-change');
+    }
+    window.clearTimeout(state.wordMotionTimer);
+    state.wordMotionTimer = window.setTimeout(function () {
+      if (els.promptArabic) els.promptArabic.classList.remove('is-word-switch');
+      if (els.wordFeedback) els.wordFeedback.classList.remove('is-word-change');
+    }, 160);
   }
 
   function renderLatinInput(word) {
@@ -658,7 +748,7 @@
     appendLatinPart(fragment, typedPart, 'latin-typed');
     appendLatinPart(fragment, errorPart, 'latin-error');
     appendCaret(fragment);
-    appendPlaceholders(fragment, Math.max(0, target.length - typedPart.length - errorPart.length));
+    appendPlaceholders(fragment, parse.remaining || '');
 
     els.promptLatin.replaceChildren(fragment);
   }
@@ -680,14 +770,19 @@
 
       var span = document.createElement('span');
       var stateClass = 'arabic-letter';
+      if (unit.isSpace) {
+        stateClass += ' arabic-space';
+      }
       if (index < parse.matched) {
-        stateClass = 'arabic-letter is-typed';
+        stateClass += ' is-typed';
       } else if (index < parse.typed.length) {
-        stateClass = 'arabic-letter is-wrong';
+        stateClass += ' is-wrong';
       }
       span.className = stateClass;
       span.lang = 'ar';
-      span.textContent = (unit.joinPrev ? ZWJ : '') + unit.letter + (unit.joinNext ? ZWJ : '');
+      span.textContent = unit.isSpace
+        ? ' '
+        : ((unit.joinPrev ? ZWJ : '') + unit.letter + (unit.joinNext ? ZWJ : ''));
       fragment.appendChild(span);
     });
 
@@ -752,6 +847,9 @@
 
     setStat(els.statWpm, isReady ? '-' : String(wpm == null ? 0 : wpm));
     setStat(els.statAccuracy, accuracy == null ? '-' : accuracy + '%');
+    if (els.statAccuracy) {
+      els.statAccuracy.classList.toggle('is-warning', !isReady && accuracy != null && accuracy < 90);
+    }
     setStat(els.statStreak, isReady ? '-' : String(test.streak));
     setStat(els.statTime, isReady ? '-' : formatLiveTime(elapsed));
 
@@ -792,6 +890,7 @@
     clearHint();
     hideReview();
     state.test = test;
+    state.renderedWordIndex = -1;
     state.tabPressedAt = 0;
     state.focused = false;
     state.errorToken = -1;
@@ -854,8 +953,35 @@
       return;
     }
 
+    closeResultsDialog();
     hideToast();
     startTest(repeated, { focus: true });
+  }
+
+  function repeatMissedWords() {
+    var test = state.test;
+    if (!test) return;
+
+    var missed = test.words.filter(function (word) {
+      return word.committed && word.correct === false;
+    });
+
+    if (!missed.length) {
+      startNewTest({ mode: test.mode });
+      return;
+    }
+
+    var rawWords = missed.map(function (word) { return word.entry; });
+    var missedSession = makeTest(test.mode, rawWords, test.sourceText);
+    if (!missedSession) {
+      startNewTest({ mode: test.mode });
+      return;
+    }
+
+    closeResultsDialog();
+    hideToast();
+    startTest(missedSession, { focus: true });
+    showToast('Practicing ' + missed.length + ' missed item' + (missed.length > 1 ? 's' : ''), 2000);
   }
 
   function beginClock(test) {
@@ -886,6 +1012,8 @@
     state.hintHideTimer = null;
     window.clearTimeout(state.reviewTimer);
     state.reviewTimer = null;
+    window.clearTimeout(state.wordMotionTimer);
+    state.wordMotionTimer = null;
     clearWordFeedback();
   }
 
@@ -936,12 +1064,27 @@
     var duration = test.endedAt - test.startedAt;
     var accuracy = computeAccuracy(test);
     var wpm = computeWpm(test);
+    var consistency = computeConsistency(test);
 
     setText(els.resultWpm, String(wpm == null ? 0 : wpm));
     setText(els.resultAccuracy, (accuracy == null ? 0 : accuracy) + '%');
+    setText(els.resultConsistency, (consistency == null ? 100 : consistency) + '%');
     setText(els.resultStreak, String(test.maxStreak));
     setText(els.resultTime, formatResultTime(duration));
     setText(els.resultWords, test.correctWords + ' / ' + test.words.length);
+
+    var missed = test.words.filter(function (word) {
+      return word.committed && word.correct === false;
+    });
+
+    if (els.repeatMissedButton) {
+      els.repeatMissedButton.hidden = missed.length === 0;
+    }
+    if (els.resultsHint) {
+      els.resultsHint.innerHTML = missed.length > 0
+        ? '<kbd>enter</kbd> new round · <kbd>tab</kbd>+<kbd>enter</kbd> repeat missed'
+        : '<kbd>enter</kbd> or <kbd>space</kbd> starts a new round';
+    }
 
     renderResultsReview(test);
   }
@@ -1105,6 +1248,23 @@
       }
 
       rowMain.appendChild(flow);
+
+      if (isMistake) {
+        var retrySingleBtn = document.createElement('button');
+        retrySingleBtn.type = 'button';
+        retrySingleBtn.className = 'review-retry-single-btn';
+        retrySingleBtn.title = 'Practice this word';
+        retrySingleBtn.setAttribute('aria-label', 'Practice ' + (word.raw || word.display));
+        retrySingleBtn.innerHTML = '<span aria-hidden="true">↻</span> retry';
+        retrySingleBtn.addEventListener('click', function () {
+          closeResultsDialog();
+          var singleTest = makeTest(test.mode, [word.entry], word.display);
+          if (singleTest) {
+            startTest(singleTest, { focus: true });
+          }
+        });
+        rowMain.appendChild(retrySingleBtn);
+      }
 
       // Meta line: Dialect tag + English meaning + Explanation toggle
       var metaLine = document.createElement('div');
@@ -1334,6 +1494,10 @@
     state.tabPressedAt = 0;
     if (test.status === 'ready') beginClock(test);
 
+    if (test.keystrokeTimes) {
+      test.keystrokeTimes.push(performance.now());
+    }
+
     word.input += character;
     var parse = parseWord(word);
 
@@ -1430,6 +1594,20 @@
     }
   }
 
+  function isMultiWord(word) {
+    if (!word) return false;
+    if (isArabicScript()) {
+      var arabicTarget = word.arabic_plain || word.raw || '';
+      return /\S\s+\S/.test(arabicTarget);
+    }
+    if (word.solutions && word.solutions.some(function (s) { return /\S\s+\S/.test(s); })) {
+      return true;
+    }
+    if (word.canonical && /\S\s+\S/.test(word.canonical)) return true;
+    if (word.arabic_plain && /\S\s+\S/.test(word.arabic_plain)) return true;
+    return false;
+  }
+
   function handleSpace() {
     var test = state.test;
     if (!test || test.status === 'finished' || test.finishing) return;
@@ -1442,6 +1620,42 @@
       flashActiveError();
       return;
     }
+
+    var multiWord = isMultiWord(word);
+    var parse = parseWord(word);
+
+    if (multiWord) {
+      var targetSpaces = 0;
+      if (isArabicScript()) {
+        targetSpaces = (word.units.filter(function (u) { return u.isSpace; })).length;
+        if (!targetSpaces) {
+          targetSpaces = ((word.arabic_plain || word.raw || '').match(/\s+/g) || []).length;
+        }
+      } else {
+        var targetStr = parse.target || word.canonical || '';
+        targetSpaces = (targetStr.match(/\s+/g) || []).length;
+      }
+
+      var currentSpaces = (word.input.match(/\s+/g) || []).length;
+      var lastCharIsSpace = /\s$/.test(word.input);
+      var isReadyToSubmit = parse.complete || (currentSpaces >= targetSpaces && !lastCharIsSpace && targetSpaces > 0);
+
+      if (!isReadyToSubmit) {
+        // Multi-word phrase: Space advances the caret across that internal word boundary
+        if (!lastCharIsSpace) {
+          handleCharacter(' ');
+        }
+        return;
+      }
+    }
+
+    submitCurrentWord();
+  }
+
+  function submitCurrentWord() {
+    var test = state.test;
+    var word = currentWord();
+    if (!test || !word) return;
 
     var parse = parseWord(word);
     var correct = isArabicScript()
@@ -1538,13 +1752,42 @@
   }
 
   function onResultsKeyDown(event) {
-    if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'Spacebar') return;
     if (!state.test || state.test.status !== 'finished') return;
 
-    event.preventDefault();
-    event.stopPropagation();
-    hideToast();
-    startNewTest({ mode: state.mode });
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      state.resultsTabPressedAt = Date.now();
+      var missedCount = state.test.words.filter(function (w) { return w.committed && w.correct === false; }).length;
+      if (missedCount > 0) {
+        showToast('Press Enter to repeat ' + missedCount + ' missed item' + (missedCount > 1 ? 's' : ''), 1800);
+      } else {
+        showToast('Press Enter for a new round', 1800);
+      }
+      return;
+    }
+
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      var chordUsed = state.resultsTabPressedAt && (Date.now() - state.resultsTabPressedAt) <= 1500;
+      state.resultsTabPressedAt = 0;
+      hideToast();
+
+      var missed = state.test.words.filter(function (w) { return w.committed && w.correct === false; });
+      if (chordUsed && missed.length > 0) {
+        repeatMissedWords();
+      } else {
+        startNewTest({ mode: state.mode });
+      }
+      return;
+    }
+
+    if (event.key === ' ' || event.key === 'Spacebar') {
+      event.preventDefault();
+      event.stopPropagation();
+      hideToast();
+      startNewTest({ mode: state.mode });
+    }
   }
 
   /* ------------------------------------------------------------------------
@@ -1575,7 +1818,7 @@
       els.focusBadge.hidden = !ready || inputFocused || dialogOpen || finished || !state.test;
     }
 
-    var isMobile = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
+    var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
     if (isMobile) {
       if (ready && inputFocused && !dialogOpen && !finished) {
         document.body.classList.add('keyboard-open');
@@ -1696,6 +1939,52 @@
       tab.classList.toggle('is-active', active);
       tab.setAttribute('aria-pressed', String(active));
     });
+    updateModePill(mode, true);
+  }
+
+  /**
+   * Park the shared sliding pill under the active tab. Measuring offsetLeft
+   * and offsetWidth keeps the pill exact at any viewport width without
+   * duplicating layout rules for every label length.
+   */
+  function updateModePill(mode, animate) {
+    var track = els.modeTrack;
+    var pill = els.modeSlidingPill;
+    if (!track || !pill) return;
+
+    var active = null;
+    els.modeTabs.forEach(function (tab) {
+      if (tab.dataset.mode === mode) active = tab;
+    });
+    if (!active) return;
+
+    if (!animate) pill.classList.add('is-instant');
+
+    var trackRect = track.getBoundingClientRect();
+    var tabRect = active.getBoundingClientRect();
+    var left = tabRect.left - trackRect.left - track.clientLeft + track.scrollLeft;
+
+    pill.style.width = tabRect.width + 'px';
+    pill.style.transform = 'translate3d(' + left + 'px, 0, 0)';
+
+    if (!animate) {
+      // Commit the un-animated position before restoring the spring.
+      void pill.offsetWidth;
+      window.requestAnimationFrame(function () {
+        pill.classList.remove('is-instant');
+        pill.classList.add('is-ready');
+      });
+    } else {
+      pill.classList.add('is-ready');
+    }
+
+    // Keep a scrolled, overflowing track centred on the active tab.
+    var padding = 3;
+    if (left < track.scrollLeft + padding) {
+      track.scrollLeft = Math.max(0, left - padding);
+    } else if (left + tabRect.width > track.scrollLeft + track.clientWidth - padding) {
+      track.scrollLeft = left + tabRect.width - track.clientWidth + padding;
+    }
   }
 
   /** Re-label every piece of static UI that depends on the active script. */
@@ -1752,6 +2041,7 @@
   function updateCountUI() {
     var visible = state.mode === 'words' || state.mode === 'reading';
     els.countControl.hidden = !visible;
+    if (els.drawerCountSection) els.drawerCountSection.hidden = !visible;
 
     els.countButtons.forEach(function (button) {
       var active = Number(button.dataset.count) === state.count;
@@ -1801,6 +2091,41 @@
   }
 
   /* ------------------------------------------------------------------------
+     Mobile Drawer Management
+     ------------------------------------------------------------------------ */
+
+  function syncDrawerUI() {
+    if (els.drawerFontButtons) {
+      els.drawerFontButtons.forEach(function (btn) {
+        var active = btn.dataset.drawerFont === state.fontStyle;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      });
+    }
+    if (els.drawerCountSection) {
+      var visible = state.mode === 'words' || state.mode === 'reading';
+      els.drawerCountSection.hidden = !visible;
+    }
+  }
+
+  function openMobileDrawer() {
+    if (!els.mobileDrawer || isDialogOpen()) return;
+    syncDrawerUI();
+    els.mobileDrawer.showModal();
+    if (els.mobileMenuBtn) els.mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    syncFocusUI();
+  }
+
+  function closeMobileDrawer() {
+    if (els.mobileDrawer && els.mobileDrawer.open) {
+      els.mobileDrawer.close();
+    }
+    if (els.mobileMenuBtn) els.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    syncFocusUI();
+    if (state.test) focusTyping();
+  }
+
+  /* ------------------------------------------------------------------------
      Dialect UI and Modal Management
      ------------------------------------------------------------------------ */
 
@@ -1809,6 +2134,131 @@
     selectedIndex: 0,
     filteredDialects: []
   };
+
+  /* ------------------------------------------------------------------------
+     Arabic typeface switching
+     ------------------------------------------------------------------------ */
+
+  function applyFontStyle(style, options) {
+    var key = FONT_STYLES[style] ? style : 'modern';
+    var config = FONT_STYLES[key];
+    var root = document.documentElement;
+
+    state.fontStyle = key;
+    root.classList.remove('font-modern', 'font-classical', 'font-display');
+    root.classList.add(config.className);
+
+    if (!options || options.persist !== false) {
+      writeStorage(STORAGE_FONT, key);
+    }
+
+    updateFontPill();
+    updateFontOptionSelection();
+    syncDrawerUI();
+
+    // The hint bubble is positioned from the caret. Re-measure after the
+    // new font metrics settle without touching the typing surface.
+    if (els.promptHint && !els.promptHint.hidden) {
+      window.requestAnimationFrame(positionHint);
+    }
+  }
+
+  function updateFontPill() {
+    if (!els.fontPillName) return;
+    var config = FONT_STYLES[state.fontStyle] || FONT_STYLES.modern;
+    els.fontPillName.textContent = config.label;
+    if (els.fontPill) {
+      els.fontPill.title = 'Arabic typeface: ' + config.label;
+      els.fontPill.setAttribute('aria-label', 'Choose Arabic typeface. Current: ' + config.label);
+    }
+  }
+
+  function updateFontOptionSelection() {
+    if (!els.fontOptions) return;
+    var options = els.fontOptions.querySelectorAll('.font-option');
+    options.forEach(function (option) {
+      var selected = option.dataset.fontStyle === state.fontStyle;
+      option.classList.toggle('is-selected', selected);
+      var input = option.querySelector('input[type="radio"]');
+      if (input) input.checked = selected;
+    });
+  }
+
+  function renderFontOptions() {
+    if (!els.fontOptions) return;
+    var fragment = document.createDocumentFragment();
+
+    FONT_ORDER.forEach(function (key) {
+      var config = FONT_STYLES[key];
+      var selected = state.fontStyle === key;
+
+      var label = document.createElement('label');
+      label.className = 'font-option' + (selected ? ' is-selected' : '');
+      label.dataset.fontStyle = key;
+
+      var input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'arabicFont';
+      input.value = key;
+      input.checked = selected;
+      input.addEventListener('change', function () {
+        if (input.checked) applyFontStyle(key);
+      });
+
+      var preview = document.createElement('span');
+      preview.className = 'font-preview font-preview--' + key;
+      preview.lang = 'ar';
+      preview.dir = 'rtl';
+      preview.setAttribute('aria-hidden', 'true');
+      preview.textContent = config.preview;
+
+      var copy = document.createElement('span');
+      copy.className = 'font-option-copy';
+
+      var name = document.createElement('span');
+      name.className = 'font-option-name';
+      name.textContent = config.optionLabel || config.label;
+
+      var desc = document.createElement('span');
+      desc.className = 'font-option-desc';
+      desc.textContent = config.description;
+
+      copy.appendChild(name);
+      copy.appendChild(desc);
+
+      var check = document.createElement('span');
+      check.className = 'font-option-check';
+      check.setAttribute('aria-hidden', 'true');
+      check.innerHTML = '<svg viewBox="0 0 12 12"><path d="M2.5 6.2 5 8.6 9.6 3.4"></path></svg>';
+
+      label.appendChild(input);
+      label.appendChild(preview);
+      label.appendChild(copy);
+      label.appendChild(check);
+      fragment.appendChild(label);
+    });
+
+    els.fontOptions.replaceChildren(fragment);
+  }
+
+  function openFontModal() {
+    if (!els.fontModal) return;
+    if (isDialogOpen() && !els.fontModal.open) return;
+
+    renderFontOptions();
+    if (!els.fontModal.open) els.fontModal.showModal();
+    if (els.fontPill) els.fontPill.setAttribute('aria-expanded', 'true');
+    syncFocusUI();
+  }
+
+  function closeFontModal() {
+    if (els.fontModal && els.fontModal.open) {
+      els.fontModal.close();
+    }
+    if (els.fontPill) els.fontPill.setAttribute('aria-expanded', 'false');
+    syncFocusUI();
+    if (state.test) focusTyping();
+  }
 
   function updateDialectPill() {
     if (!els.dialectPillName || !Dialects) return;
@@ -2155,11 +2605,14 @@
 
     els.resultWpm = $('resultWpm');
     els.resultAccuracy = $('resultAccuracy');
+    els.resultConsistency = $('resultConsistency');
     els.resultStreak = $('resultStreak');
     els.resultTime = $('resultTime');
     els.resultWords = $('resultWords');
     els.resultsReview = $('resultsReview');
     els.resultsReviewList = $('resultsReviewList');
+    els.repeatMissedButton = $('repeatMissedButton');
+    els.resultsHint = $('resultsHint');
 
     els.wordFeedback = $('wordFeedback');
     els.wordFeedbackContent = $('wordFeedbackContent');
@@ -2175,6 +2628,8 @@
     els.reviewToggleNotesLabel = $('reviewToggleNotesLabel');
 
     els.modeTabs = Array.from(document.querySelectorAll('.mode-tab'));
+    els.modeTrack = document.querySelector('.mode-segmented-track');
+    els.modeSlidingPill = document.querySelector('.mode-sliding-pill');
     els.countControl = $('countControl');
     els.countButtons = Array.from(document.querySelectorAll('.count-button'));
 
@@ -2212,6 +2667,13 @@
     els.settingScript = $('settingScript');
     els.resetSettingsButton = $('resetSettingsButton');
 
+    // Arabic Typeface Picker
+    els.fontPill = $('fontPill');
+    els.fontPillName = $('fontPillName');
+    els.fontModal = $('fontModal');
+    els.fontOptions = $('fontOptions');
+    els.closeFontModalButton = $('closeFontModalButton');
+
     // Dialect Picker and Onboarding UI
     els.dialectPill = $('dialectPill');
     els.dialectPillName = $('dialectPillName');
@@ -2222,6 +2684,15 @@
     els.onboardingModal = $('onboardingModal');
     els.onboardingDialects = $('onboardingDialects');
     els.onboardingSubmitButton = $('onboardingSubmitButton');
+
+    // Mobile Drawer UI
+    els.mobileMenuBtn = $('mobileMenuBtn');
+    els.mobileDrawer = $('mobileDrawer');
+    els.closeMobileDrawerButton = $('closeMobileDrawerButton');
+    els.drawerCountSection = $('drawerCountSection');
+    els.drawerCheatSheetBtn = $('drawerCheatSheetBtn');
+    els.drawerRestartBtn = $('drawerRestartBtn');
+    els.drawerFontButtons = Array.from(document.querySelectorAll('[data-drawer-font]'));
   }
 
   function bindEvents() {
@@ -2234,6 +2705,8 @@
           openCustomDialog();
           return;
         }
+        // Slide the indicator immediately; the test resets underneath it.
+        setModeUI(mode);
         startNewTest({ mode: mode, focus: true });
       });
     });
@@ -2269,6 +2742,12 @@
     els.repeatButton.addEventListener('click', function () {
       repeatTest();
     });
+
+    if (els.repeatMissedButton) {
+      els.repeatMissedButton.addEventListener('click', function () {
+        repeatMissedWords();
+      });
+    }
 
     els.legendButton.addEventListener('click', function () {
       openSheet('legend');
@@ -2450,11 +2929,17 @@
       focusTyping();
     });
 
+    els.testStage.addEventListener('touchend', function (event) {
+      if (isInteractiveTarget(event.target)) return;
+      focusTyping();
+    });
+
     document.addEventListener('keydown', onKeyDown);
 
     window.addEventListener('blur', syncFocusUI);
     window.addEventListener('focus', syncFocusUI);
     window.addEventListener('resize', function () {
+      updateModePill(state.mode, false);
       if (els.promptHint && !els.promptHint.hidden) positionHint();
     });
 
@@ -2463,7 +2948,7 @@
       if (typeof window === 'undefined') return;
 
       function updateViewport() {
-        var isMobile = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
+        var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
         if (!isMobile) {
           document.documentElement.style.removeProperty('--vvh');
           document.documentElement.style.removeProperty('--keyboard-inset');
@@ -2502,6 +2987,30 @@
     }
 
     initMobileViewport();
+
+    // Arabic Typeface Picker Events
+    if (els.fontPill) {
+      els.fontPill.addEventListener('click', function () {
+        openFontModal();
+      });
+    }
+
+    if (els.closeFontModalButton) {
+      els.closeFontModalButton.addEventListener('click', function () {
+        closeFontModal();
+      });
+    }
+
+    if (els.fontModal) {
+      els.fontModal.addEventListener('click', function (event) {
+        if (event.target === els.fontModal) closeFontModal();
+      });
+      els.fontModal.addEventListener('close', function () {
+        if (els.fontPill) els.fontPill.setAttribute('aria-expanded', 'false');
+        syncFocusUI();
+        if (state.test) focusTyping();
+      });
+    }
 
     // Dialect Picker and Modal Events
     if (els.dialectPill) {
@@ -2550,6 +3059,56 @@
         completeOnboarding();
       });
     }
+
+    // Mobile Drawer Events
+    if (els.mobileMenuBtn) {
+      els.mobileMenuBtn.addEventListener('click', function () {
+        openMobileDrawer();
+      });
+    }
+
+    if (els.closeMobileDrawerButton) {
+      els.closeMobileDrawerButton.addEventListener('click', function () {
+        closeMobileDrawer();
+      });
+    }
+
+    if (els.mobileDrawer) {
+      els.mobileDrawer.addEventListener('click', function (event) {
+        if (event.target === els.mobileDrawer) closeMobileDrawer();
+      });
+      els.mobileDrawer.addEventListener('close', function () {
+        if (els.mobileMenuBtn) els.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        syncFocusUI();
+        if (state.test) focusTyping();
+      });
+    }
+
+    if (els.drawerFontButtons) {
+      els.drawerFontButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var fontKey = btn.dataset.drawerFont;
+          if (fontKey) {
+            applyFontStyle(fontKey);
+            syncDrawerUI();
+          }
+        });
+      });
+    }
+
+    if (els.drawerCheatSheetBtn) {
+      els.drawerCheatSheetBtn.addEventListener('click', function () {
+        closeMobileDrawer();
+        openSheet('legend');
+      });
+    }
+
+    if (els.drawerRestartBtn) {
+      els.drawerRestartBtn.addEventListener('click', function () {
+        closeMobileDrawer();
+        startNewTest({ mode: state.mode, focus: true });
+      });
+    }
   }
 
   function loadPreferences() {
@@ -2566,13 +3125,24 @@
 
     var storedScript = readStorage(STORAGE_SCRIPT, '');
     state.script = storedScript === 'arabic' ? 'arabic' : 'latin';
+
+    var storedFont = readStorage(STORAGE_FONT, 'modern');
+    state.fontStyle = FONT_STYLES[storedFont] ? storedFont : 'modern';
   }
 
   function init() {
     cacheElements();
     loadPreferences();
+    applyFontStyle(state.fontStyle, { persist: false });
     updateSettingsForm();
     applyScriptCopy();
+    updateModePill(state.mode, false);
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        updateModePill(state.mode, false);
+      });
+    }
 
     // Recovery controls are available before the app is booted; every typing
     // listener is registered by bindEvents only after the first dataset loads.
@@ -2589,6 +3159,10 @@
         });
         bootWithMode('words');
         checkFirstVisitOnboarding();
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('drawer')) {
+          window.setTimeout(openMobileDrawer, 150);
+        }
       }).catch(function (err) {
         console.warn('Dialect initialization fallback:', err);
         bootWithMode('words');
