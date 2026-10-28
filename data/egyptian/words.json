@@ -1,0 +1,7388 @@
+[
+  {
+    "arabic": "إِزَّيَّك",
+    "arabic_plain": "ازيك",
+    "translit": [
+      "ezzayak",
+      "ezzayek",
+      "ezayak",
+      "ezayek",
+      "izzayak",
+      "izzayik"
+    ],
+    "translation_en": "how are you (m/f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِزَّي حضرتك",
+    "arabic_plain": "ازي حضرتك",
+    "translit": [
+      "ezzay 7adretak",
+      "ezay 7adretak",
+      "ezzay hadretak",
+      "ezzay 7adretik"
+    ],
+    "translation_en": "how are you (formal)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَايِز",
+    "arabic_plain": "عايز",
+    "translit": [
+      "3ayez",
+      "3ayiz",
+      "ayez",
+      "aayez"
+    ],
+    "translation_en": "want / needing (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَايْزَة",
+    "arabic_plain": "عايزة",
+    "translit": [
+      "3ayza",
+      "3ayzah",
+      "ayza",
+      "aayza"
+    ],
+    "translation_en": "want / needing (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَايْزِين",
+    "arabic_plain": "عايزين",
+    "translit": [
+      "3ayzeen",
+      "3ayzin",
+      "ayzeen",
+      "ayzin"
+    ],
+    "translation_en": "want / needing (pl)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَاوِز",
+    "arabic_plain": "عاوز",
+    "translit": [
+      "3awez",
+      "3awiz",
+      "awez"
+    ],
+    "translation_en": "want (m, alternate Masri form)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَاوْزَة",
+    "arabic_plain": "عاوزة",
+    "translit": [
+      "3awza",
+      "3awzah",
+      "awza"
+    ],
+    "translation_en": "want (f, alternate Masri form)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِدَة",
+    "arabic_plain": "كدة",
+    "translit": [
+      "keda",
+      "kida",
+      "kedah",
+      "kidah"
+    ],
+    "translation_en": "like this / thus / so",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِدَه",
+    "arabic_plain": "كده",
+    "translit": [
+      "keda",
+      "kida",
+      "kedah",
+      "kidah"
+    ],
+    "translation_en": "like this / that way",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِين",
+    "arabic_plain": "فين",
+    "translit": [
+      "feen",
+      "fen",
+      "fiin"
+    ],
+    "translation_en": "where",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَفِيش",
+    "arabic_plain": "مفيش",
+    "translit": [
+      "mafish",
+      "mafeesh",
+      "mafesh"
+    ],
+    "translation_en": "there is no / there isn't",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دِلْوَقْتِي",
+    "arabic_plain": "دلوقتي",
+    "translit": [
+      "delwa2ti",
+      "delwa'ti",
+      "dilwa2ti",
+      "delwaty"
+    ],
+    "translation_en": "now / right now",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَلَاص",
+    "arabic_plain": "خلاص",
+    "translit": [
+      "khallas",
+      "khalas",
+      "5alas",
+      "5allas"
+    ],
+    "translation_en": "done / enough / okay",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَلَّص",
+    "arabic_plain": "خلص",
+    "translit": [
+      "khallas",
+      "5allas",
+      "khalas"
+    ],
+    "translation_en": "he finished / finish!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَامِد",
+    "arabic_plain": "جامد",
+    "translit": [
+      "gamed",
+      "gaamed",
+      "gamid"
+    ],
+    "translation_en": "awesome / cool / solid (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَامْدَة",
+    "arabic_plain": "جامدة",
+    "translit": [
+      "gamda",
+      "gamdah",
+      "gaamda"
+    ],
+    "translation_en": "awesome / cool / strong (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جِدِيد",
+    "arabic_plain": "جديد",
+    "translit": [
+      "gedeed",
+      "gedid",
+      "gideed",
+      "gdeed"
+    ],
+    "translation_en": "new (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جِدِيدَة",
+    "arabic_plain": "جديدة",
+    "translit": [
+      "gedeeda",
+      "gedida",
+      "gideeda"
+    ],
+    "translation_en": "new (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جُوَّة",
+    "arabic_plain": "جوة",
+    "translit": [
+      "gowa",
+      "gowwa",
+      "guwwa",
+      "guwa"
+    ],
+    "translation_en": "inside",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جُوَّه",
+    "arabic_plain": "جوه",
+    "translit": [
+      "gowa",
+      "gowwa",
+      "guwwa",
+      "guwa"
+    ],
+    "translation_en": "inside / indoors",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَلْبِي",
+    "arabic_plain": "قلبي",
+    "translit": [
+      "2albi",
+      "'albi",
+      "2alby",
+      "albi"
+    ],
+    "translation_en": "my heart / my love",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَهْوَة",
+    "arabic_plain": "قهوة",
+    "translit": [
+      "2ahwa",
+      "'ahwa",
+      "2ahwah",
+      "ahwa"
+    ],
+    "translation_en": "coffee / traditional cafe",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُوَيِّس",
+    "arabic_plain": "كويس",
+    "translit": [
+      "kwayyes",
+      "kwayes",
+      "kwayis",
+      "kwayyis"
+    ],
+    "translation_en": "good / fine (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُوَيِّسَة",
+    "arabic_plain": "كويسة",
+    "translit": [
+      "kwayyesa",
+      "kwayesa",
+      "kwayisa"
+    ],
+    "translation_en": "good / fine (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُوَيِّسِين",
+    "arabic_plain": "كويسين",
+    "translit": [
+      "kwayyeseen",
+      "kwayeseen",
+      "kwayisin"
+    ],
+    "translation_en": "good / fine (pl)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَرْضُه",
+    "arabic_plain": "برضه",
+    "translit": [
+      "bardo",
+      "bardoh",
+      "bardu"
+    ],
+    "translation_en": "also / still / anyway",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَرْضُو",
+    "arabic_plain": "برضو",
+    "translit": [
+      "bardo",
+      "bardu",
+      "bardoo"
+    ],
+    "translation_en": "too / as well / still",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَوِي",
+    "arabic_plain": "أوي",
+    "translit": [
+      "2awi",
+      "'awi",
+      "awi",
+      "2awy"
+    ],
+    "translation_en": "very / a lot",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَوِي",
+    "arabic_plain": "قوي",
+    "translit": [
+      "2awi",
+      "'awi",
+      "2awy",
+      "gawi"
+    ],
+    "translation_en": "very / strong",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَالِص",
+    "arabic_plain": "خالص",
+    "translit": [
+      "khalis",
+      "5ales",
+      "khales",
+      "5alis"
+    ],
+    "translation_en": "at all / completely",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِسَّة",
+    "arabic_plain": "لسة",
+    "translit": [
+      "lessa",
+      "lissa",
+      "lesa",
+      "lisa"
+    ],
+    "translation_en": "still / not yet / just now",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِسَّه",
+    "arabic_plain": "لسه",
+    "translit": [
+      "lessa",
+      "lissa",
+      "lesah"
+    ],
+    "translation_en": "still / not yet",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَشَان",
+    "arabic_plain": "عشان",
+    "translit": [
+      "3ashan",
+      "ashan",
+      "3ashaan"
+    ],
+    "translation_en": "because / in order to / for",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَلَشَان",
+    "arabic_plain": "علشان",
+    "translit": [
+      "3alashan",
+      "alashan",
+      "3alashaan"
+    ],
+    "translation_en": "because / for the sake of",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَسّ",
+    "arabic_plain": "بس",
+    "translit": [
+      "bas",
+      "bass"
+    ],
+    "translation_en": "only / enough / but",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَمَان",
+    "arabic_plain": "كمان",
+    "translit": [
+      "kaman",
+      "kamaan"
+    ],
+    "translation_en": "also / more / again",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَبْعًا",
+    "arabic_plain": "طبعا",
+    "translit": [
+      "tab3an",
+      "Tab3an",
+      "taban"
+    ],
+    "translation_en": "of course / naturally",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَكِيد",
+    "arabic_plain": "أكيد",
+    "translit": [
+      "2akeed",
+      "akeed",
+      "'akeed",
+      "akid"
+    ],
+    "translation_en": "surely / definitely",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لَازِم",
+    "arabic_plain": "لازم",
+    "translit": [
+      "lazem",
+      "laazem",
+      "lazim"
+    ],
+    "translation_en": "must / necessary",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُمْكِن",
+    "arabic_plain": "ممكن",
+    "translit": [
+      "momken",
+      "mumkin",
+      "momkin"
+    ],
+    "translation_en": "possible / maybe / can I",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "يِمْكِن",
+    "arabic_plain": "يمكن",
+    "translit": [
+      "yemken",
+      "yimkin",
+      "yemkin"
+    ],
+    "translation_en": "maybe / perhaps",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَمَام",
+    "arabic_plain": "تمام",
+    "translit": [
+      "tamam",
+      "tamaam"
+    ],
+    "translation_en": "fine / exact / alright",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَاشِي",
+    "arabic_plain": "ماشي",
+    "translit": [
+      "mashi",
+      "maashi",
+      "mashy"
+    ],
+    "translation_en": "okay / walking / going",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَيِّب",
+    "arabic_plain": "طيب",
+    "translit": [
+      "tayyeb",
+      "tayeb",
+      "Tayyeb",
+      "tayib"
+    ],
+    "translation_en": "okay / kind / good-hearted",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَاضِر",
+    "arabic_plain": "حاضر",
+    "translit": [
+      "7ader",
+      "7aader",
+      "hader",
+      "Haader"
+    ],
+    "translation_en": "certainly / right away / present",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَعْلِشّ",
+    "arabic_plain": "معلش",
+    "translit": [
+      "ma3lesh",
+      "ma3lish",
+      "malesh"
+    ],
+    "translation_en": "never mind / sorry / it's okay",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَا رِيت",
+    "arabic_plain": "يا ريت",
+    "translit": [
+      "ya reet",
+      "yareet",
+      "ya ret"
+    ],
+    "translation_en": "I wish / if only",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بُكْرَة",
+    "arabic_plain": "بكرة",
+    "translit": [
+      "bokra",
+      "bukra",
+      "bokrah"
+    ],
+    "translation_en": "tomorrow",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِمْبَارِح",
+    "arabic_plain": "امبارح",
+    "translit": [
+      "embare7",
+      "imbari7",
+      "embareh",
+      "2embare7"
+    ],
+    "translation_en": "yesterday",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "النَّهَارْدَة",
+    "arabic_plain": "النهاردة",
+    "translit": [
+      "el-naharda",
+      "ennaharda",
+      "elnaharda",
+      "naharda"
+    ],
+    "translation_en": "today",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَعْدِين",
+    "arabic_plain": "بعدين",
+    "translit": [
+      "ba3deen",
+      "ba3den",
+      "baaden"
+    ],
+    "translation_en": "later / afterwards",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَدْرِي",
+    "arabic_plain": "بدري",
+    "translit": [
+      "badri",
+      "badry"
+    ],
+    "translation_en": "early",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَخْرِي",
+    "arabic_plain": "وخري",
+    "translit": [
+      "wakhri",
+      "wa5ri",
+      "wakhry"
+    ],
+    "translation_en": "late",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَوَا",
+    "arabic_plain": "سوا",
+    "translit": [
+      "sawa",
+      "sawaa"
+    ],
+    "translation_en": "together",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شْوَيَّة",
+    "arabic_plain": "شوية",
+    "translit": [
+      "shwayya",
+      "shwaya",
+      "shwayyah"
+    ],
+    "translation_en": "a little / a bit / a few",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كْتِير",
+    "arabic_plain": "كتير",
+    "translit": [
+      "kteer",
+      "ketir",
+      "keteer",
+      "ktir"
+    ],
+    "translation_en": "many / much / a lot",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُلَيِّل",
+    "arabic_plain": "قليل",
+    "translit": [
+      "2olayyel",
+      "'olayyel",
+      "2olayel",
+      "olayyel"
+    ],
+    "translation_en": "little / few / scarce",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَرَّة",
+    "arabic_plain": "برة",
+    "translit": [
+      "barra",
+      "bara",
+      "barrah"
+    ],
+    "translation_en": "outside",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فُوق",
+    "arabic_plain": "فوق",
+    "translit": [
+      "fo2",
+      "fo'",
+      "foo2",
+      "fow2"
+    ],
+    "translation_en": "up / above / upstairs",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَحْت",
+    "arabic_plain": "تحت",
+    "translit": [
+      "ta7t",
+      "taht",
+      "taHt"
+    ],
+    "translation_en": "down / under / downstairs",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَنْب",
+    "arabic_plain": "جنب",
+    "translit": [
+      "gamb",
+      "ganb"
+    ],
+    "translation_en": "beside / next to",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُدَّام",
+    "arabic_plain": "قدام",
+    "translit": [
+      "2oddam",
+      "'oddam",
+      "2odam",
+      "oddam"
+    ],
+    "translation_en": "in front of / ahead",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَرَا",
+    "arabic_plain": "ورا",
+    "translit": [
+      "wara",
+      "waraa"
+    ],
+    "translation_en": "behind / after",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هُنَاك",
+    "arabic_plain": "هناك",
+    "translit": [
+      "henak",
+      "hinaak",
+      "henaak"
+    ],
+    "translation_en": "there / over there",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هِنَا",
+    "arabic_plain": "هنا",
+    "translit": [
+      "hena",
+      "hina",
+      "henah"
+    ],
+    "translation_en": "here",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَه",
+    "arabic_plain": "ده",
+    "translit": [
+      "da",
+      "dah"
+    ],
+    "translation_en": "this / that (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دِي",
+    "arabic_plain": "دي",
+    "translit": [
+      "di",
+      "dee",
+      "dy"
+    ],
+    "translation_en": "this / that (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دُول",
+    "arabic_plain": "دول",
+    "translit": [
+      "dol",
+      "dool"
+    ],
+    "translation_en": "these / those (pl)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِيه",
+    "arabic_plain": "ايه",
+    "translit": [
+      "eh",
+      "eih",
+      "2eh",
+      "'eh"
+    ],
+    "translation_en": "what",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِيه",
+    "arabic_plain": "ليه",
+    "translit": [
+      "leh",
+      "leeh",
+      "leih"
+    ],
+    "translation_en": "why",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِزَّاي",
+    "arabic_plain": "ازاي",
+    "translit": [
+      "ezzay",
+      "ezay",
+      "izzay",
+      "2ezzay"
+    ],
+    "translation_en": "how",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِمْتَى",
+    "arabic_plain": "امتى",
+    "translit": [
+      "emta",
+      "imta",
+      "2emta",
+      "'emta"
+    ],
+    "translation_en": "when",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِين",
+    "arabic_plain": "مين",
+    "translit": [
+      "meen",
+      "min",
+      "miin"
+    ],
+    "translation_en": "who",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَام",
+    "arabic_plain": "كام",
+    "translit": [
+      "kam",
+      "kaam"
+    ],
+    "translation_en": "how much / how many",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِكَام",
+    "arabic_plain": "بكام",
+    "translit": [
+      "bekam",
+      "bikaam",
+      "bikam"
+    ],
+    "translation_en": "how much does it cost",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَنْهُو",
+    "arabic_plain": "انهو",
+    "translit": [
+      "anho",
+      "2anho",
+      "anhu"
+    ],
+    "translation_en": "which one (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَنْهِي",
+    "arabic_plain": "انهي",
+    "translit": [
+      "anhi",
+      "2anhi",
+      "anhy"
+    ],
+    "translation_en": "which one (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَاجَة",
+    "arabic_plain": "حاجة",
+    "translit": [
+      "7aga",
+      "7agah",
+      "haga",
+      "Haaga"
+    ],
+    "translation_en": "thing / something",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَاجَات",
+    "arabic_plain": "حاجات",
+    "translit": [
+      "7agat",
+      "7agaat",
+      "hagat"
+    ],
+    "translation_en": "things / stuff",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَوْضُوع",
+    "arabic_plain": "موضوع",
+    "translit": [
+      "mawdoo3",
+      "mawdu3",
+      "mawdou3"
+    ],
+    "translation_en": "topic / matter / issue",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حِكَايَة",
+    "arabic_plain": "حكاية",
+    "translit": [
+      "7ekaya",
+      "7ikaya",
+      "hekaya"
+    ],
+    "translation_en": "story / matter",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَنَا",
+    "arabic_plain": "أنا",
+    "translit": [
+      "2ana",
+      "ana",
+      "'ana"
+    ],
+    "translation_en": "I",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِنْتَ",
+    "arabic_plain": "انت",
+    "translit": [
+      "enta",
+      "inta",
+      "2enta"
+    ],
+    "translation_en": "you (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِنْتِي",
+    "arabic_plain": "انتي",
+    "translit": [
+      "enti",
+      "inty",
+      "2enti",
+      "inti"
+    ],
+    "translation_en": "you (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِنْتُو",
+    "arabic_plain": "انتو",
+    "translit": [
+      "ento",
+      "intu",
+      "2ento",
+      "entoo"
+    ],
+    "translation_en": "you (pl)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هُوَّ",
+    "arabic_plain": "هو",
+    "translit": [
+      "howwa",
+      "howa",
+      "huwwa"
+    ],
+    "translation_en": "he",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هِيَّ",
+    "arabic_plain": "هي",
+    "translit": [
+      "heyya",
+      "heya",
+      "hiyya"
+    ],
+    "translation_en": "she",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِحْنَا",
+    "arabic_plain": "احنا",
+    "translit": [
+      "e7na",
+      "i7na",
+      "2e7na",
+      "ehna"
+    ],
+    "translation_en": "we",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هُمَّ",
+    "arabic_plain": "هم",
+    "translit": [
+      "homma",
+      "humma",
+      "homa"
+    ],
+    "translation_en": "they",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَاجِل",
+    "arabic_plain": "راجل",
+    "translit": [
+      "ragel",
+      "raagel",
+      "ragil"
+    ],
+    "translation_en": "man",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رِجَّالَة",
+    "arabic_plain": "رجالة",
+    "translit": [
+      "reggala",
+      "regala",
+      "riggala"
+    ],
+    "translation_en": "men",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِتّ",
+    "arabic_plain": "ست",
+    "translit": [
+      "sett",
+      "sitt",
+      "set"
+    ],
+    "translation_en": "woman / lady / grandmother",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِتَّات",
+    "arabic_plain": "ستات",
+    "translit": [
+      "settat",
+      "sittat",
+      "setat"
+    ],
+    "translation_en": "women / ladies",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَلَد",
+    "arabic_plain": "ولد",
+    "translit": [
+      "walad",
+      "waad"
+    ],
+    "translation_en": "boy / son",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَاد",
+    "arabic_plain": "واد",
+    "translit": [
+      "wad",
+      "waad"
+    ],
+    "translation_en": "guy / boy (colloquial)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِنْت",
+    "arabic_plain": "بنت",
+    "translit": [
+      "bent",
+      "bint",
+      "bitt"
+    ],
+    "translation_en": "girl / daughter",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَيِّل",
+    "arabic_plain": "عيل",
+    "translit": [
+      "3ayyel",
+      "3ayel",
+      "ayyel"
+    ],
+    "translation_en": "kid / child",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِيَال",
+    "arabic_plain": "عيال",
+    "translit": [
+      "3eyal",
+      "3iyal",
+      "eyal"
+    ],
+    "translation_en": "kids / children",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَبُويا",
+    "arabic_plain": "أبويا",
+    "translit": [
+      "2aboya",
+      "aboya",
+      "2abouya",
+      "abouya"
+    ],
+    "translation_en": "my father",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُمِّي",
+    "arabic_plain": "أمي",
+    "translit": [
+      "2ommi",
+      "ommi",
+      "'ommi",
+      "2ommy"
+    ],
+    "translation_en": "my mother",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَخُويا",
+    "arabic_plain": "أخويا",
+    "translit": [
+      "2akhoya",
+      "akhoya",
+      "2a5oya",
+      "akhouya"
+    ],
+    "translation_en": "my brother",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُخْتِي",
+    "arabic_plain": "أختي",
+    "translit": [
+      "2okhti",
+      "okhti",
+      "2o5ti",
+      "okhty"
+    ],
+    "translation_en": "my sister",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَدِّي",
+    "arabic_plain": "جدي",
+    "translit": [
+      "gaddi",
+      "geddi",
+      "gaddy",
+      "geddy"
+    ],
+    "translation_en": "my grandfather",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَدِّتِي",
+    "arabic_plain": "جدتي",
+    "translit": [
+      "gaddeti",
+      "geddeti",
+      "gaddity"
+    ],
+    "translation_en": "my grandmother",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جُوزِي",
+    "arabic_plain": "جوزي",
+    "translit": [
+      "gozi",
+      "gowzi",
+      "gozy",
+      "guzi"
+    ],
+    "translation_en": "my husband",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مْرَاتِي",
+    "arabic_plain": "مراتي",
+    "translit": [
+      "mraati",
+      "mrati",
+      "merati",
+      "meraaty"
+    ],
+    "translation_en": "my wife",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَاحْبِي",
+    "arabic_plain": "صاحبي",
+    "translit": [
+      "sa7bi",
+      "Sa7bi",
+      "sahbi",
+      "sa7by"
+    ],
+    "translation_en": "my friend (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَاحْبِتِي",
+    "arabic_plain": "صاحبتي",
+    "translit": [
+      "sa7beti",
+      "Sa7beti",
+      "sahbeti",
+      "sa7bety"
+    ],
+    "translation_en": "my friend (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَصْحَاب",
+    "arabic_plain": "أصحاب",
+    "translit": [
+      "2as7ab",
+      "as7ab",
+      "ashab"
+    ],
+    "translation_en": "friends",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَار",
+    "arabic_plain": "جار",
+    "translit": [
+      "gar",
+      "gaar"
+    ],
+    "translation_en": "neighbor",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جِيرَان",
+    "arabic_plain": "جيران",
+    "translit": [
+      "geeran",
+      "giran",
+      "giraan"
+    ],
+    "translation_en": "neighbors",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَرِيس",
+    "arabic_plain": "عريس",
+    "translit": [
+      "3arees",
+      "3aris",
+      "arees"
+    ],
+    "translation_en": "groom",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَرُوسَة",
+    "arabic_plain": "عروسة",
+    "translit": [
+      "3aroosa",
+      "3arousa",
+      "3arusa"
+    ],
+    "translation_en": "bride / doll",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَاشَا",
+    "arabic_plain": "باشا",
+    "translit": [
+      "basha",
+      "baasha"
+    ],
+    "translation_en": "pasha / sir / boss (friendly address)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِيه",
+    "arabic_plain": "بيه",
+    "translit": [
+      "beh",
+      "beeh",
+      "beih"
+    ],
+    "translation_en": "bey / sir",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُسْطَى",
+    "arabic_plain": "أسطى",
+    "translit": [
+      "2osta",
+      "osta",
+      "'osta"
+    ],
+    "translation_en": "master craftsman / driver",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُعَلِّم",
+    "arabic_plain": "معلم",
+    "translit": [
+      "mo3allem",
+      "m3allem",
+      "mu3allim"
+    ],
+    "translation_en": "boss / master / teacher",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَبُون",
+    "arabic_plain": "زبون",
+    "translit": [
+      "zaboon",
+      "zabun",
+      "zabon"
+    ],
+    "translation_en": "customer / client",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "ضِيف",
+    "arabic_plain": "ضيف",
+    "translit": [
+      "deef",
+      "Deef",
+      "dayf"
+    ],
+    "translation_en": "guest",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "ضُيُوف",
+    "arabic_plain": "ضيوف",
+    "translit": [
+      "doyoof",
+      "duyuf",
+      "Doyoof"
+    ],
+    "translation_en": "guests",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَارِف",
+    "arabic_plain": "عارف",
+    "translit": [
+      "3aref",
+      "3aarif",
+      "aref",
+      "3arif"
+    ],
+    "translation_en": "knowing / I know (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَارْفَة",
+    "arabic_plain": "عارفة",
+    "translit": [
+      "3arfa",
+      "3arfah",
+      "arfa"
+    ],
+    "translation_en": "knowing / I know (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَاهِم",
+    "arabic_plain": "فاهم",
+    "translit": [
+      "fahem",
+      "faahem",
+      "fahim"
+    ],
+    "translation_en": "understanding (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَاهْمَة",
+    "arabic_plain": "فاهمة",
+    "translit": [
+      "fahma",
+      "fahmah",
+      "faahma"
+    ],
+    "translation_en": "understanding (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَايِف",
+    "arabic_plain": "شايف",
+    "translit": [
+      "shayef",
+      "shaayef",
+      "shayif"
+    ],
+    "translation_en": "seeing / looking (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَايْفَة",
+    "arabic_plain": "شايفة",
+    "translit": [
+      "shayfa",
+      "shayfah",
+      "shaayfa"
+    ],
+    "translation_en": "seeing / looking (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَامِع",
+    "arabic_plain": "سامع",
+    "translit": [
+      "same3",
+      "saame3",
+      "sami3"
+    ],
+    "translation_en": "hearing / listening (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَامْعَة",
+    "arabic_plain": "سامعة",
+    "translit": [
+      "sam3a",
+      "sam3ah",
+      "saam3a"
+    ],
+    "translation_en": "hearing / listening (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَايّ",
+    "arabic_plain": "جاي",
+    "translit": [
+      "gay",
+      "gayy",
+      "gaay"
+    ],
+    "translation_en": "coming (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَايَّة",
+    "arabic_plain": "جاية",
+    "translit": [
+      "gayya",
+      "gaya",
+      "gayyah"
+    ],
+    "translation_en": "coming (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَايِح",
+    "arabic_plain": "رايح",
+    "translit": [
+      "raye7",
+      "raaye7",
+      "rayeh",
+      "rayi7"
+    ],
+    "translation_en": "going (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَايْحَة",
+    "arabic_plain": "رايحة",
+    "translit": [
+      "ray7a",
+      "ray7ah",
+      "rayha"
+    ],
+    "translation_en": "going (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَاعِد",
+    "arabic_plain": "قاعد",
+    "translit": [
+      "2a3ed",
+      "'a3ed",
+      "2aa3ed",
+      "a3ed"
+    ],
+    "translation_en": "sitting / staying (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَاعْدَة",
+    "arabic_plain": "قاعدة",
+    "translit": [
+      "2a3da",
+      "'a3da",
+      "a3da"
+    ],
+    "translation_en": "sitting / session (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَاقِف",
+    "arabic_plain": "واقف",
+    "translit": [
+      "wa2ef",
+      "wa'ef",
+      "waa2ef",
+      "waqef"
+    ],
+    "translation_en": "standing / stopped (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَايِم",
+    "arabic_plain": "نايم",
+    "translit": [
+      "nayem",
+      "naayem",
+      "nayim"
+    ],
+    "translation_en": "sleeping / asleep (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَاحِي",
+    "arabic_plain": "صاحي",
+    "translit": [
+      "sa7i",
+      "Sa7i",
+      "sahi",
+      "sa7y"
+    ],
+    "translation_en": "awake / alert (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِأَقُول",
+    "arabic_plain": "بأقول",
+    "translit": [
+      "ba2ool",
+      "ba'ool",
+      "ba2ul"
+    ],
+    "translation_en": "I say / I am saying",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِتْقُول",
+    "arabic_plain": "بتقول",
+    "translit": [
+      "bet2ool",
+      "bit2ool",
+      "bet'ool",
+      "bit2ul"
+    ],
+    "translation_en": "you say / she says",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِيقُول",
+    "arabic_plain": "بيقول",
+    "translit": [
+      "bey2ool",
+      "bi2ool",
+      "bey'ool",
+      "biy2ool"
+    ],
+    "translation_en": "he says / he is saying",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَأَحِبّ",
+    "arabic_plain": "بأحب",
+    "translit": [
+      "ba7ebb",
+      "ba7eb",
+      "baheb"
+    ],
+    "translation_en": "I love / I like",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِأَعْرَف",
+    "arabic_plain": "بأعرف",
+    "translit": [
+      "ba3raf",
+      "ba'raf",
+      "baaraf"
+    ],
+    "translation_en": "I know",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِأَعْمِل",
+    "arabic_plain": "بأعمل",
+    "translit": [
+      "ba3mel",
+      "ba3mil",
+      "baamel"
+    ],
+    "translation_en": "I do / I make",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِتِعْمِل",
+    "arabic_plain": "بتعمل",
+    "translit": [
+      "bete3mel",
+      "biti3mil",
+      "bte3mel"
+    ],
+    "translation_en": "you do / she does",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِأَرُوح",
+    "arabic_plain": "بأروح",
+    "translit": [
+      "baroo7",
+      "baru7",
+      "barooh"
+    ],
+    "translation_en": "I go",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِأَجِي",
+    "arabic_plain": "بأجي",
+    "translit": [
+      "bagi",
+      "baagi",
+      "bagy"
+    ],
+    "translation_en": "I come",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جِه",
+    "arabic_plain": "جه",
+    "translit": [
+      "geh",
+      "ge",
+      "gih"
+    ],
+    "translation_en": "he came",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَت",
+    "arabic_plain": "جت",
+    "translit": [
+      "gat",
+      "gatt"
+    ],
+    "translation_en": "she came",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جُم",
+    "arabic_plain": "جم",
+    "translit": [
+      "gom",
+      "gum",
+      "goom"
+    ],
+    "translation_en": "they came",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِدَّى",
+    "arabic_plain": "إدى",
+    "translit": [
+      "edda",
+      "2edda",
+      "idda"
+    ],
+    "translation_en": "he gave",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِدِّينِي",
+    "arabic_plain": "اديني",
+    "translit": [
+      "eddeeni",
+      "eddini",
+      "2eddeeni",
+      "iddini"
+    ],
+    "translation_en": "give me",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَد",
+    "arabic_plain": "خد",
+    "translit": [
+      "khad",
+      "5ad"
+    ],
+    "translation_en": "he took / take!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خُدِي",
+    "arabic_plain": "خدي",
+    "translit": [
+      "khodi",
+      "5odi",
+      "khudy"
+    ],
+    "translation_en": "take! (to female)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَال",
+    "arabic_plain": "قال",
+    "translit": [
+      "2al",
+      "'al",
+      "2aal"
+    ],
+    "translation_en": "he said",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُلْت",
+    "arabic_plain": "قلت",
+    "translit": [
+      "2olt",
+      "'olt",
+      "2ult",
+      "olt"
+    ],
+    "translation_en": "I said / you said",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُول",
+    "arabic_plain": "قول",
+    "translit": [
+      "2ool",
+      "'ool",
+      "2ul",
+      "ool"
+    ],
+    "translation_en": "say! / tell!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَاف",
+    "arabic_plain": "شاف",
+    "translit": [
+      "shaf",
+      "shaaf"
+    ],
+    "translation_en": "he saw",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شُفْت",
+    "arabic_plain": "شفت",
+    "translit": [
+      "shoft",
+      "shuft"
+    ],
+    "translation_en": "I saw / did you see",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شُوف",
+    "arabic_plain": "شوف",
+    "translit": [
+      "shoof",
+      "shuf",
+      "shof"
+    ],
+    "translation_en": "look! / see!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بُصّ",
+    "arabic_plain": "بص",
+    "translit": [
+      "boss",
+      "bos",
+      "buss"
+    ],
+    "translation_en": "look!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَاح",
+    "arabic_plain": "راح",
+    "translit": [
+      "ra7",
+      "raa7",
+      "rah"
+    ],
+    "translation_en": "he went",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رِجِع",
+    "arabic_plain": "رجع",
+    "translit": [
+      "rege3",
+      "rigi3",
+      "rega3"
+    ],
+    "translation_en": "he returned / came back",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَتَح",
+    "arabic_plain": "فتح",
+    "translit": [
+      "fata7",
+      "fatah"
+    ],
+    "translation_en": "he opened",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَفَل",
+    "arabic_plain": "قفل",
+    "translit": [
+      "2afal",
+      "'afal",
+      "afal"
+    ],
+    "translation_en": "he closed / locked",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَتَب",
+    "arabic_plain": "كتب",
+    "translit": [
+      "katab"
+    ],
+    "translation_en": "he wrote",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَرَا",
+    "arabic_plain": "قرا",
+    "translit": [
+      "2ara",
+      "'ara",
+      "ara"
+    ],
+    "translation_en": "he read",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَان",
+    "arabic_plain": "كان",
+    "translit": [
+      "kan",
+      "kaan"
+    ],
+    "translation_en": "he was / there was",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَقَى",
+    "arabic_plain": "بقى",
+    "translit": [
+      "ba2a",
+      "ba'a",
+      "baqa"
+    ],
+    "translation_en": "became / so / then",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِضِل",
+    "arabic_plain": "فضل",
+    "translit": [
+      "fedel",
+      "fidil",
+      "fadel"
+    ],
+    "translation_en": "remained / kept on",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَام",
+    "arabic_plain": "قام",
+    "translit": [
+      "2am",
+      "'am",
+      "2aam"
+    ],
+    "translation_en": "stood up / got up",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَعَد",
+    "arabic_plain": "قعد",
+    "translit": [
+      "2a3ad",
+      "'a3ad",
+      "a3ad"
+    ],
+    "translation_en": "sat down / stayed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نِزِل",
+    "arabic_plain": "نزل",
+    "translit": [
+      "nezel",
+      "nizil",
+      "nazal"
+    ],
+    "translation_en": "went down / went out",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طِلِع",
+    "arabic_plain": "طلع",
+    "translit": [
+      "tele3",
+      "tili3",
+      "Tili3"
+    ],
+    "translation_en": "went up / turned out",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَخَل",
+    "arabic_plain": "دخل",
+    "translit": [
+      "dakhal",
+      "da5al"
+    ],
+    "translation_en": "entered / went in",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَرَج",
+    "arabic_plain": "خرج",
+    "translit": [
+      "kharag",
+      "5arag"
+    ],
+    "translation_en": "went out / exited",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَافِر",
+    "arabic_plain": "سافر",
+    "translit": [
+      "safer",
+      "saafir",
+      "safir"
+    ],
+    "translation_en": "traveled",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَصَل",
+    "arabic_plain": "وصل",
+    "translit": [
+      "wasal",
+      "wesel",
+      "wisil"
+    ],
+    "translation_en": "arrived / reached",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَعَت",
+    "arabic_plain": "بعت",
+    "translit": [
+      "ba3at",
+      "baat"
+    ],
+    "translation_en": "sent",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَاب",
+    "arabic_plain": "جاب",
+    "translit": [
+      "gab",
+      "gaab"
+    ],
+    "translation_en": "brought / got",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هَات",
+    "arabic_plain": "هات",
+    "translit": [
+      "hat",
+      "haat"
+    ],
+    "translation_en": "bring! / give!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَاب",
+    "arabic_plain": "ساب",
+    "translit": [
+      "sab",
+      "saab"
+    ],
+    "translation_en": "left / let go",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِيب",
+    "arabic_plain": "سيب",
+    "translit": [
+      "seeb",
+      "sib"
+    ],
+    "translation_en": "leave! / let go!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَطّ",
+    "arabic_plain": "حط",
+    "translit": [
+      "7att",
+      "7at",
+      "hatt"
+    ],
+    "translation_en": "put / placed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَال",
+    "arabic_plain": "شال",
+    "translit": [
+      "shal",
+      "shaal"
+    ],
+    "translation_en": "carried / removed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَيَّط",
+    "arabic_plain": "عيط",
+    "translit": [
+      "3ayyat",
+      "3ayat",
+      "ayyat"
+    ],
+    "translation_en": "cried / wept",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "ضِحِك",
+    "arabic_plain": "ضحك",
+    "translit": [
+      "de7ek",
+      "di7ik",
+      "da7ak"
+    ],
+    "translation_en": "laughed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْكَلِّم",
+    "arabic_plain": "اتكلم",
+    "translit": [
+      "etkallem",
+      "itkallim",
+      "2etkallem"
+    ],
+    "translation_en": "spoke / talked",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِسْتَنَّى",
+    "arabic_plain": "استنى",
+    "translit": [
+      "estanna",
+      "istanna",
+      "2estanna"
+    ],
+    "translation_en": "wait! / waited",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْفَضَّل",
+    "arabic_plain": "اتفضل",
+    "translit": [
+      "etfaddal",
+      "itfaddal",
+      "2etfaddal"
+    ],
+    "translation_en": "please come in / here you go",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِشْتَرَى",
+    "arabic_plain": "اشترى",
+    "translit": [
+      "eshtara",
+      "ishtara",
+      "2eshtara"
+    ],
+    "translation_en": "bought",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَاع",
+    "arabic_plain": "باع",
+    "translit": [
+      "ba3",
+      "baa3"
+    ],
+    "translation_en": "sold",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَفَع",
+    "arabic_plain": "دفع",
+    "translit": [
+      "dafa3",
+      "dafa"
+    ],
+    "translation_en": "paid",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَاسِب",
+    "arabic_plain": "حاسب",
+    "translit": [
+      "7aseb",
+      "7aasib",
+      "haseb"
+    ],
+    "translation_en": "watch out! / pay the bill",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْأَخَّر",
+    "arabic_plain": "اتأخر",
+    "translit": [
+      "et2akhkhar",
+      "et2a5ar",
+      "it2akhar"
+    ],
+    "translation_en": "was late / delayed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَاوِل",
+    "arabic_plain": "حاول",
+    "translit": [
+      "7awel",
+      "7aawil",
+      "hawel"
+    ],
+    "translation_en": "tried / try!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نِسِي",
+    "arabic_plain": "نسي",
+    "translit": [
+      "nesi",
+      "nisi",
+      "nisy"
+    ],
+    "translation_en": "forgot",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِاكِر",
+    "arabic_plain": "فاكر",
+    "translit": [
+      "faker",
+      "faaker",
+      "fakir"
+    ],
+    "translation_en": "remembering / thinking (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَاكْرَة",
+    "arabic_plain": "فاكرة",
+    "translit": [
+      "fakra",
+      "fakrah",
+      "faakra"
+    ],
+    "translation_en": "remembering / thinking (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَمِيل",
+    "arabic_plain": "جميل",
+    "translit": [
+      "gameel",
+      "gamil",
+      "gamiil"
+    ],
+    "translation_en": "beautiful / lovely (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَمِيلَة",
+    "arabic_plain": "جميلة",
+    "translit": [
+      "gameela",
+      "gamila",
+      "gamilah"
+    ],
+    "translation_en": "beautiful / lovely (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حِلْو",
+    "arabic_plain": "حلو",
+    "translit": [
+      "7elw",
+      "7ilw",
+      "helw"
+    ],
+    "translation_en": "sweet / pretty / nice (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حِلْوَة",
+    "arabic_plain": "حلوة",
+    "translit": [
+      "7elwa",
+      "7ilwa",
+      "helwa"
+    ],
+    "translation_en": "sweet / pretty / nice (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وِحِش",
+    "arabic_plain": "وحش",
+    "translit": [
+      "we7esh",
+      "wi7ish",
+      "wehesh"
+    ],
+    "translation_en": "bad / ugly (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وِحْشَة",
+    "arabic_plain": "وحشة",
+    "translit": [
+      "we7sha",
+      "wi7sha",
+      "wehsha"
+    ],
+    "translation_en": "bad / ugly (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِبِير",
+    "arabic_plain": "كبير",
+    "translit": [
+      "kebeer",
+      "kebir",
+      "kibeer",
+      "kbir"
+    ],
+    "translation_en": "big / old (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِبِيرَة",
+    "arabic_plain": "كبيرة",
+    "translit": [
+      "kebeera",
+      "kebira",
+      "kibeera"
+    ],
+    "translation_en": "big / old (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صُغَيَّر",
+    "arabic_plain": "صغير",
+    "translit": [
+      "soghayyar",
+      "sughayyar",
+      "soghayar"
+    ],
+    "translation_en": "small / young (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صُغَيَّرَة",
+    "arabic_plain": "صغيرة",
+    "translit": [
+      "soghayyara",
+      "sughayyara",
+      "soghayara"
+    ],
+    "translation_en": "small / young (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَدِيم",
+    "arabic_plain": "قديم",
+    "translit": [
+      "2adeem",
+      "'adeem",
+      "2adim",
+      "adeem"
+    ],
+    "translation_en": "old / ancient (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَدِيمَة",
+    "arabic_plain": "قديمة",
+    "translit": [
+      "2adeema",
+      "'adeema",
+      "2adima"
+    ],
+    "translation_en": "old / ancient (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَوِيل",
+    "arabic_plain": "طويل",
+    "translit": [
+      "taweel",
+      "tawil",
+      "Taweel"
+    ],
+    "translation_en": "tall / long (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُصَيَّر",
+    "arabic_plain": "قصير",
+    "translit": [
+      "2osayyar",
+      "'osayyar",
+      "2osayar"
+    ],
+    "translation_en": "short (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَخِيص",
+    "arabic_plain": "رخيص",
+    "translit": [
+      "rakhees",
+      "rakhis",
+      "ra5ees"
+    ],
+    "translation_en": "cheap / inexpensive",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَالِي",
+    "arabic_plain": "غالي",
+    "translit": [
+      "ghali",
+      "ghaali",
+      "8ali"
+    ],
+    "translation_en": "expensive / precious",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَضِيف",
+    "arabic_plain": "نضيف",
+    "translit": [
+      "nadeef",
+      "nadif",
+      "naDeef"
+    ],
+    "translation_en": "clean",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وِسِخ",
+    "arabic_plain": "وسخ",
+    "translit": [
+      "wesekh",
+      "wisikh",
+      "wese5"
+    ],
+    "translation_en": "dirty",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَهْل",
+    "arabic_plain": "سهل",
+    "translit": [
+      "sahl",
+      "sahel"
+    ],
+    "translation_en": "easy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَعْب",
+    "arabic_plain": "صعب",
+    "translit": [
+      "sa3b",
+      "Sa3b",
+      "saab"
+    ],
+    "translation_en": "difficult / hard",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَقِيل",
+    "arabic_plain": "تقيل",
+    "translit": [
+      "te2eel",
+      "ti2eel",
+      "te'eel",
+      "te2il"
+    ],
+    "translation_en": "heavy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَفِيف",
+    "arabic_plain": "خفيف",
+    "translit": [
+      "khafeef",
+      "5afeef",
+      "khafif"
+    ],
+    "translation_en": "light (weight / spirit)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَرِيع",
+    "arabic_plain": "سريع",
+    "translit": [
+      "saree3",
+      "sari3",
+      "saree"
+    ],
+    "translation_en": "fast / quick",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَطِيء",
+    "arabic_plain": "بطيء",
+    "translit": [
+      "batee2",
+      "bati2",
+      "batee'"
+    ],
+    "translation_en": "slow",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُرَيِّب",
+    "arabic_plain": "قريب",
+    "translit": [
+      "2orayyeb",
+      "'orayyeb",
+      "2orayeb"
+    ],
+    "translation_en": "near / close / relative",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَعِيد",
+    "arabic_plain": "بعيد",
+    "translit": [
+      "ba3eed",
+      "be3eed",
+      "ba3id"
+    ],
+    "translation_en": "far / distant",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُخْن",
+    "arabic_plain": "سخن",
+    "translit": [
+      "sokhn",
+      "sukhn",
+      "so5n"
+    ],
+    "translation_en": "hot (food / drink / fever)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَاقِع",
+    "arabic_plain": "ساقع",
+    "translit": [
+      "sa2e3",
+      "sa'e3",
+      "saa2e3"
+    ],
+    "translation_en": "cold (weather / drink)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَرّ",
+    "arabic_plain": "حر",
+    "translit": [
+      "7arr",
+      "7ar",
+      "harr"
+    ],
+    "translation_en": "hot (weather)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَرْد",
+    "arabic_plain": "برد",
+    "translit": [
+      "bard"
+    ],
+    "translation_en": "cold / chilly",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَاضِي",
+    "arabic_plain": "فاضي",
+    "translit": [
+      "fadi",
+      "faadi",
+      "fady"
+    ],
+    "translation_en": "empty / free (not busy)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَلْيَان",
+    "arabic_plain": "مليان",
+    "translit": [
+      "malyan",
+      "malyaan"
+    ],
+    "translation_en": "full",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَبْسُوط",
+    "arabic_plain": "مبسوط",
+    "translit": [
+      "mabsoot",
+      "mabsut",
+      "mabsooT"
+    ],
+    "translation_en": "happy / pleased (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَبْسُوطَة",
+    "arabic_plain": "مبسوطة",
+    "translit": [
+      "mabsoota",
+      "mabsuta",
+      "mabsooTa"
+    ],
+    "translation_en": "happy / pleased (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَرْحَان",
+    "arabic_plain": "فرحان",
+    "translit": [
+      "far7an",
+      "far7aan",
+      "farhan"
+    ],
+    "translation_en": "joyful / glad",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَعْلَان",
+    "arabic_plain": "زعلان",
+    "translit": [
+      "za3lan",
+      "za3laan",
+      "zalan"
+    ],
+    "translation_en": "upset / sad / angry",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَعْبَان",
+    "arabic_plain": "تعبان",
+    "translit": [
+      "ta3ban",
+      "ta3baan",
+      "taban"
+    ],
+    "translation_en": "tired / sick",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَهْقَان",
+    "arabic_plain": "زهقان",
+    "translit": [
+      "zah2an",
+      "zah'an",
+      "zah2aan"
+    ],
+    "translation_en": "bored / fed up",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَخْنُوق",
+    "arabic_plain": "مخنوق",
+    "translit": [
+      "makhnoo2",
+      "ma5noo2",
+      "makhnu2"
+    ],
+    "translation_en": "suffocated / distressed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَلْقَان",
+    "arabic_plain": "قلقان",
+    "translit": [
+      "2al2an",
+      "'al'an",
+      "2al2aan"
+    ],
+    "translation_en": "worried / anxious",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَايِف",
+    "arabic_plain": "خايف",
+    "translit": [
+      "khayef",
+      "5ayef",
+      "khayif"
+    ],
+    "translation_en": "afraid / scared",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَعَان",
+    "arabic_plain": "جعان",
+    "translit": [
+      "ga3an",
+      "ga3aan",
+      "gaan"
+    ],
+    "translation_en": "hungry",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَطْشَان",
+    "arabic_plain": "عطشان",
+    "translit": [
+      "3atshan",
+      "3atshaan",
+      "atshan"
+    ],
+    "translation_en": "thirsty",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَبْعَان",
+    "arabic_plain": "شبعان",
+    "translit": [
+      "shab3an",
+      "shab3aan"
+    ],
+    "translation_en": "full (from eating)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَعْسَان",
+    "arabic_plain": "نعسان",
+    "translit": [
+      "na3san",
+      "na3saan"
+    ],
+    "translation_en": "sleepy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُسْتَعْجِل",
+    "arabic_plain": "مستعجل",
+    "translit": [
+      "mosta3gel",
+      "musta3gil",
+      "mostaagel"
+    ],
+    "translation_en": "in a hurry",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَشْغُول",
+    "arabic_plain": "مشغول",
+    "translit": [
+      "mashghool",
+      "mash8ool",
+      "mashghul"
+    ],
+    "translation_en": "busy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَاهِز",
+    "arabic_plain": "جاهز",
+    "translit": [
+      "gahez",
+      "gaahez",
+      "gahiz"
+    ],
+    "translation_en": "ready (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَاهْزَة",
+    "arabic_plain": "جاهزة",
+    "translit": [
+      "gahza",
+      "gaahza",
+      "gahzah"
+    ],
+    "translation_en": "ready (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَظْبُوط",
+    "arabic_plain": "مظبوط",
+    "translit": [
+      "mazboot",
+      "mazbut",
+      "maZboot"
+    ],
+    "translation_en": "correct / exact / medium sugar",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَلَط",
+    "arabic_plain": "غلط",
+    "translit": [
+      "ghalat",
+      "8alat",
+      "ghalaT"
+    ],
+    "translation_en": "wrong / mistake",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَحّ",
+    "arabic_plain": "صح",
+    "translit": [
+      "sa77",
+      "sa7",
+      "Sa7"
+    ],
+    "translation_en": "right / correct",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَجْنُون",
+    "arabic_plain": "مجنون",
+    "translit": [
+      "magnoon",
+      "magnun"
+    ],
+    "translation_en": "crazy / mad",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَاقِل",
+    "arabic_plain": "عاقل",
+    "translit": [
+      "3a2el",
+      "3aa2el",
+      "'a2el"
+    ],
+    "translation_en": "wise / sensible",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَاطِر",
+    "arabic_plain": "شاطر",
+    "translit": [
+      "shater",
+      "shaater",
+      "shatir"
+    ],
+    "translation_en": "clever / smart (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَاطْرَة",
+    "arabic_plain": "شاطرة",
+    "translit": [
+      "shatra",
+      "shaatra",
+      "shatrah"
+    ],
+    "translation_en": "clever / smart (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَدَع",
+    "arabic_plain": "جدع",
+    "translit": [
+      "gada3",
+      "gada"
+    ],
+    "translation_en": "brave / noble / stand-up guy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَيِّبَة",
+    "arabic_plain": "طيبة",
+    "translit": [
+      "tayyeba",
+      "tayeba",
+      "Tayyeba"
+    ],
+    "translation_en": "kind / good-hearted (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَرِيب",
+    "arabic_plain": "غريب",
+    "translit": [
+      "ghareeb",
+      "8areeb",
+      "gharib"
+    ],
+    "translation_en": "strange / stranger",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَجِيب",
+    "arabic_plain": "عجيب",
+    "translit": [
+      "3ageeb",
+      "3agib",
+      "ageeb"
+    ],
+    "translation_en": "wondrous / weird",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِيش",
+    "arabic_plain": "عيش",
+    "translit": [
+      "3eesh",
+      "3ish",
+      "eesh"
+    ],
+    "translation_en": "bread (literally life in Egyptian)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَيَّة",
+    "arabic_plain": "مية",
+    "translit": [
+      "mayya",
+      "maya",
+      "mayyah"
+    ],
+    "translation_en": "water",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَاي",
+    "arabic_plain": "شاي",
+    "translit": [
+      "shay",
+      "shaay"
+    ],
+    "translation_en": "tea",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لَبَن",
+    "arabic_plain": "لبن",
+    "translit": [
+      "laban"
+    ],
+    "translation_en": "milk",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُكَّر",
+    "arabic_plain": "سكر",
+    "translit": [
+      "sokkar",
+      "sukkar",
+      "sokar"
+    ],
+    "translation_en": "sugar",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَلْح",
+    "arabic_plain": "ملح",
+    "translit": [
+      "mal7",
+      "mel7",
+      "malh"
+    ],
+    "translation_en": "salt",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زِيت",
+    "arabic_plain": "زيت",
+    "translit": [
+      "zeet",
+      "zeit",
+      "zit"
+    ],
+    "translation_en": "oil",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَمْنَة",
+    "arabic_plain": "سمنة",
+    "translit": [
+      "samna",
+      "samnah"
+    ],
+    "translation_en": "ghee / clarified butter",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زِبْدَة",
+    "arabic_plain": "زبدة",
+    "translit": [
+      "zebda",
+      "zibda"
+    ],
+    "translation_en": "butter",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جِبْنَة",
+    "arabic_plain": "جبنة",
+    "translit": [
+      "gebna",
+      "gibna",
+      "gebnah"
+    ],
+    "translation_en": "cheese",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِيض",
+    "arabic_plain": "بيض",
+    "translit": [
+      "beed",
+      "bayd",
+      "biid"
+    ],
+    "translation_en": "eggs",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فُول",
+    "arabic_plain": "فول",
+    "translit": [
+      "fool",
+      "ful"
+    ],
+    "translation_en": "fava beans (Egyptian staple)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَعْمِيَّة",
+    "arabic_plain": "طعمية",
+    "translit": [
+      "ta3meyya",
+      "ta3meya",
+      "Ta3meyya"
+    ],
+    "translation_en": "Egyptian falafel (made with fava beans)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُشَرِي",
+    "arabic_plain": "كشري",
+    "translit": [
+      "koshari",
+      "koshary",
+      "kushari"
+    ],
+    "translation_en": "koshary (Egyptian national dish)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُلُوخِيَّة",
+    "arabic_plain": "ملوخية",
+    "translit": [
+      "molokheyya",
+      "molokhiya",
+      "mulukhiyya"
+    ],
+    "translation_en": "molokhia (jute mallow soup)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَحْشِي",
+    "arabic_plain": "محشي",
+    "translit": [
+      "ma7shi",
+      "ma7shy",
+      "mahshi"
+    ],
+    "translation_en": "stuffed vegetables",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِرَاخ",
+    "arabic_plain": "فراخ",
+    "translit": [
+      "ferakh",
+      "fira5",
+      "fera5",
+      "firakh"
+    ],
+    "translation_en": "chicken",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لَحْمَة",
+    "arabic_plain": "لحمة",
+    "translit": [
+      "la7ma",
+      "lahma",
+      "la7mah"
+    ],
+    "translation_en": "meat / beef",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَمَك",
+    "arabic_plain": "سمك",
+    "translit": [
+      "samak"
+    ],
+    "translation_en": "fish",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَمْبَرِي",
+    "arabic_plain": "جمبري",
+    "translit": [
+      "gambari",
+      "gambary"
+    ],
+    "translation_en": "shrimp / prawns",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رُزّ",
+    "arabic_plain": "رز",
+    "translit": [
+      "rozz",
+      "roz",
+      "ruzz"
+    ],
+    "translation_en": "rice",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَكَرُونَة",
+    "arabic_plain": "مكرونة",
+    "translit": [
+      "makarona",
+      "makaroona",
+      "macarona"
+    ],
+    "translation_en": "pasta / macaroni",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَطَاطِس",
+    "arabic_plain": "بطاطس",
+    "translit": [
+      "batates",
+      "baTaTes",
+      "batatis"
+    ],
+    "translation_en": "potatoes / french fries",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَمَاطِم",
+    "arabic_plain": "طماطم",
+    "translit": [
+      "tamatem",
+      "TamaTem",
+      "tamatim"
+    ],
+    "translation_en": "tomatoes",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُوطَة",
+    "arabic_plain": "قوطة",
+    "translit": [
+      "2oota",
+      "'oota",
+      "2outa"
+    ],
+    "translation_en": "tomatoes (colloquial Cairene)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خِيَار",
+    "arabic_plain": "خيار",
+    "translit": [
+      "kheyar",
+      "5eyar",
+      "khiyar"
+    ],
+    "translation_en": "cucumber",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَصَل",
+    "arabic_plain": "بصل",
+    "translit": [
+      "basal",
+      "baSal"
+    ],
+    "translation_en": "onions",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تُوم",
+    "arabic_plain": "توم",
+    "translit": [
+      "toom",
+      "tum"
+    ],
+    "translation_en": "garlic",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لَمُون",
+    "arabic_plain": "لمون",
+    "translit": [
+      "lamoon",
+      "lamun"
+    ],
+    "translation_en": "lemon / lime",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بُرْتُقَان",
+    "arabic_plain": "برتقان",
+    "translit": [
+      "borto2an",
+      "burtu2an",
+      "borto'an"
+    ],
+    "translation_en": "oranges",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَانْجَة",
+    "arabic_plain": "مانجة",
+    "translit": [
+      "manga",
+      "mangah"
+    ],
+    "translation_en": "mango",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَوَافَة",
+    "arabic_plain": "جوافة",
+    "translit": [
+      "gawafa",
+      "gawaafa"
+    ],
+    "translation_en": "guava",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَطِّيخ",
+    "arabic_plain": "بطيخ",
+    "translit": [
+      "batteekh",
+      "battee5",
+      "batti5"
+    ],
+    "translation_en": "watermelon",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَصِير",
+    "arabic_plain": "عصير",
+    "translit": [
+      "3aseer",
+      "3asir",
+      "aseer"
+    ],
+    "translation_en": "juice",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَصَب",
+    "arabic_plain": "قصب",
+    "translit": [
+      "2asab",
+      "'asab",
+      "asab"
+    ],
+    "translation_en": "sugarcane (juice)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَرْكَدِيه",
+    "arabic_plain": "كركديه",
+    "translit": [
+      "karkadeh",
+      "karkade",
+      "karkadih"
+    ],
+    "translation_en": "hibiscus tea",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَحْلَب",
+    "arabic_plain": "سحلب",
+    "translit": [
+      "sa7lab",
+      "sahlab"
+    ],
+    "translation_en": "sahlab (hot winter milk drink)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِطَار",
+    "arabic_plain": "فطار",
+    "translit": [
+      "fetar",
+      "fitar",
+      "fitaar"
+    ],
+    "translation_en": "breakfast",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَدَا",
+    "arabic_plain": "غدا",
+    "translit": [
+      "ghada",
+      "8ada",
+      "ghadaa"
+    ],
+    "translation_en": "lunch",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَشَا",
+    "arabic_plain": "عشا",
+    "translit": [
+      "3asha",
+      "asha",
+      "3ashaa"
+    ],
+    "translation_en": "dinner",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَطْعَم",
+    "arabic_plain": "مطعم",
+    "translit": [
+      "mat3am",
+      "maT3am"
+    ],
+    "translation_en": "restaurant",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَطْبَخ",
+    "arabic_plain": "مطبخ",
+    "translit": [
+      "matbakh",
+      "maTba5",
+      "matba5"
+    ],
+    "translation_en": "kitchen",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَبَق",
+    "arabic_plain": "طبق",
+    "translit": [
+      "taba2",
+      "Taba2",
+      "taba'"
+    ],
+    "translation_en": "plate / dish",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُبَّايَة",
+    "arabic_plain": "كباية",
+    "translit": [
+      "kobbaya",
+      "kubaya",
+      "kobbayah"
+    ],
+    "translation_en": "glass / cup",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِنْجَان",
+    "arabic_plain": "فنجان",
+    "translit": [
+      "fengan",
+      "fingan",
+      "fingaan"
+    ],
+    "translation_en": "coffee cup",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَعْلَقَة",
+    "arabic_plain": "معلقة",
+    "translit": [
+      "ma3la2a",
+      "ma3la'a",
+      "mala2a"
+    ],
+    "translation_en": "spoon",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شُوكَة",
+    "arabic_plain": "شوكة",
+    "translit": [
+      "shoka",
+      "shooka",
+      "showka"
+    ],
+    "translation_en": "fork",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِكِّينَة",
+    "arabic_plain": "سكينة",
+    "translit": [
+      "sekkeena",
+      "sikkina",
+      "sekkina"
+    ],
+    "translation_en": "knife",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِزَازَة",
+    "arabic_plain": "إزازة",
+    "translit": [
+      "2ezaza",
+      "ezaza",
+      "'ezaza"
+    ],
+    "translation_en": "bottle / glass",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِيت",
+    "arabic_plain": "بيت",
+    "translit": [
+      "beet",
+      "beit",
+      "bit"
+    ],
+    "translation_en": "house / home",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَقَّة",
+    "arabic_plain": "شقة",
+    "translit": [
+      "sha22a",
+      "sha'a",
+      "sha2a"
+    ],
+    "translation_en": "apartment / flat",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِمَارَة",
+    "arabic_plain": "عمارة",
+    "translit": [
+      "3emara",
+      "3imara",
+      "emara"
+    ],
+    "translation_en": "apartment building",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُوضَة",
+    "arabic_plain": "أوضة",
+    "translit": [
+      "2ooda",
+      "ooda",
+      "'ooda",
+      "2oda"
+    ],
+    "translation_en": "room",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَالَة",
+    "arabic_plain": "صالة",
+    "translit": [
+      "sala",
+      "Saala",
+      "salah"
+    ],
+    "translation_en": "living room / hall",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَلَكُونَة",
+    "arabic_plain": "بلكونة",
+    "translit": [
+      "balakona",
+      "balakoona"
+    ],
+    "translation_en": "balcony",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُطُوح",
+    "arabic_plain": "سطوح",
+    "translit": [
+      "sotoo7",
+      "sutuh",
+      "sotou7"
+    ],
+    "translation_en": "rooftop",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِلِّم",
+    "arabic_plain": "سلم",
+    "translit": [
+      "sellem",
+      "sillim"
+    ],
+    "translation_en": "stairs / ladder",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَسَانْسِير",
+    "arabic_plain": "أسانسير",
+    "translit": [
+      "2asanseer",
+      "asanseer",
+      "asansir"
+    ],
+    "translation_en": "elevator",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَاب",
+    "arabic_plain": "باب",
+    "translit": [
+      "bab",
+      "baab"
+    ],
+    "translation_en": "door",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شُبَّاك",
+    "arabic_plain": "شباك",
+    "translit": [
+      "shebbak",
+      "shibbak",
+      "shobbak"
+    ],
+    "translation_en": "window",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُفْتَاح",
+    "arabic_plain": "مفتاح",
+    "translit": [
+      "mofta7",
+      "mufta7",
+      "moftah"
+    ],
+    "translation_en": "key",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَرَابِيزَة",
+    "arabic_plain": "ترابيزة",
+    "translit": [
+      "tarabeza",
+      "tarabeeza",
+      "tarabiza"
+    ],
+    "translation_en": "table",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُرْسِي",
+    "arabic_plain": "كرسي",
+    "translit": [
+      "korsi",
+      "kursi",
+      "korsy"
+    ],
+    "translation_en": "chair",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَنَبَة",
+    "arabic_plain": "كنبة",
+    "translit": [
+      "kanaba",
+      "kanabah"
+    ],
+    "translation_en": "sofa / couch",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِرِير",
+    "arabic_plain": "سرير",
+    "translit": [
+      "sereer",
+      "sarir",
+      "sireer"
+    ],
+    "translation_en": "bed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِخَدَّة",
+    "arabic_plain": "مخدة",
+    "translit": [
+      "mekhadda",
+      "mi5adda",
+      "makhadda"
+    ],
+    "translation_en": "pillow",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَطَّانِيَّة",
+    "arabic_plain": "بطانية",
+    "translit": [
+      "battaneyya",
+      "baTTaneyya",
+      "battaniya"
+    ],
+    "translation_en": "blanket",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَلَّاجَة",
+    "arabic_plain": "تلاجة",
+    "translit": [
+      "tallaga",
+      "talaga",
+      "tallaaga"
+    ],
+    "translation_en": "refrigerator",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَسَّالَة",
+    "arabic_plain": "غسالة",
+    "translit": [
+      "ghassala",
+      "8assala",
+      "ghasala"
+    ],
+    "translation_en": "washing machine",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بُوتَاجَاز",
+    "arabic_plain": "بوتاجاز",
+    "translit": [
+      "botagaz",
+      "butagaz",
+      "botagaaz"
+    ],
+    "translation_en": "stove / cooker",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَكْيِيف",
+    "arabic_plain": "تكييف",
+    "translit": [
+      "takyeef",
+      "takyif"
+    ],
+    "translation_en": "air conditioning",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَرْوَحَة",
+    "arabic_plain": "مروحة",
+    "translit": [
+      "marwa7a",
+      "marwaha"
+    ],
+    "translation_en": "fan",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تِلِفِزْيُون",
+    "arabic_plain": "تلفزيون",
+    "translit": [
+      "telefezyon",
+      "tilifizyon",
+      "tv"
+    ],
+    "translation_en": "television",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تِلِيفُون",
+    "arabic_plain": "تليفون",
+    "translit": [
+      "telifon",
+      "telefoon",
+      "tilifoon"
+    ],
+    "translation_en": "telephone / phone",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُوبَايْل",
+    "arabic_plain": "موبايل",
+    "translit": [
+      "mobayl",
+      "mobile",
+      "mobaayl"
+    ],
+    "translation_en": "mobile phone",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَاحِن",
+    "arabic_plain": "شاحن",
+    "translit": [
+      "sha7en",
+      "shaa7en",
+      "shahen"
+    ],
+    "translation_en": "charger",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَنْطَة",
+    "arabic_plain": "شنطة",
+    "translit": [
+      "shanta",
+      "shanTa",
+      "shantah"
+    ],
+    "translation_en": "bag / suitcase",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَزْمَة",
+    "arabic_plain": "جزمة",
+    "translit": [
+      "gazma",
+      "gazmah"
+    ],
+    "translation_en": "shoes / pair of shoes",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شُرَاب",
+    "arabic_plain": "شراب",
+    "translit": [
+      "shorab",
+      "shuraab"
+    ],
+    "translation_en": "socks",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هُدُوم",
+    "arabic_plain": "هدوم",
+    "translit": [
+      "hodoom",
+      "hudum",
+      "hodom"
+    ],
+    "translation_en": "clothes",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَمِيص",
+    "arabic_plain": "قميص",
+    "translit": [
+      "2amees",
+      "'amees",
+      "2amis"
+    ],
+    "translation_en": "shirt",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَنْطَلُون",
+    "arabic_plain": "بنطلون",
+    "translit": [
+      "bantalon",
+      "banTalon",
+      "bantaloon"
+    ],
+    "translation_en": "pants / trousers",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَلَّابِيَّة",
+    "arabic_plain": "جلابية",
+    "translit": [
+      "gallabeyya",
+      "galabeya",
+      "gallabiya"
+    ],
+    "translation_en": "galabeya (traditional robe)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَاقِيَّة",
+    "arabic_plain": "طاقية",
+    "translit": [
+      "ta2eyya",
+      "ta'eyya",
+      "Ta2eyya"
+    ],
+    "translation_en": "skullcap / hat",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَضَّارَة",
+    "arabic_plain": "نضارة",
+    "translit": [
+      "naddara",
+      "naDDara",
+      "nadara"
+    ],
+    "translation_en": "glasses / spectacles",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَاعَة",
+    "arabic_plain": "ساعة",
+    "translit": [
+      "sa3a",
+      "saa3a",
+      "sa3ah"
+    ],
+    "translation_en": "hour / clock / watch",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَارِع",
+    "arabic_plain": "شارع",
+    "translit": [
+      "share3",
+      "shaare3",
+      "shari3"
+    ],
+    "translation_en": "street",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَارَة",
+    "arabic_plain": "حارة",
+    "translit": [
+      "7ara",
+      "7aara",
+      "hara"
+    ],
+    "translation_en": "alley / neighborhood lane",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِيدَان",
+    "arabic_plain": "ميدان",
+    "translit": [
+      "meedan",
+      "midan",
+      "midaan"
+    ],
+    "translation_en": "square / plaza",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُوبْرِي",
+    "arabic_plain": "كوبري",
+    "translit": [
+      "kobri",
+      "kubri",
+      "kobry"
+    ],
+    "translation_en": "bridge / overpass",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَفَق",
+    "arabic_plain": "نفق",
+    "translit": [
+      "nafa2",
+      "nafa'",
+      "nafaq"
+    ],
+    "translation_en": "tunnel / underpass",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَصِيف",
+    "arabic_plain": "رصيف",
+    "translit": [
+      "raseef",
+      "rasif",
+      "raSeef"
+    ],
+    "translation_en": "sidewalk / platform",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِشَارَة",
+    "arabic_plain": "إشارة",
+    "translit": [
+      "2eshara",
+      "eshara",
+      "ishara"
+    ],
+    "translation_en": "traffic light / signal",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَحْمَة",
+    "arabic_plain": "زحمة",
+    "translit": [
+      "za7ma",
+      "zahma",
+      "za7mah"
+    ],
+    "translation_en": "traffic / crowd",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَرَبِيَّة",
+    "arabic_plain": "عربية",
+    "translit": [
+      "3arabeyya",
+      "3arabeya",
+      "arabeya",
+      "3arabiyya"
+    ],
+    "translation_en": "car",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَاكْسِي",
+    "arabic_plain": "تاكسي",
+    "translit": [
+      "taksi",
+      "taxi",
+      "taksy"
+    ],
+    "translation_en": "taxi",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِيكْرُوبَاص",
+    "arabic_plain": "ميكروباص",
+    "translit": [
+      "mikrobas",
+      "microbus",
+      "mekrobas"
+    ],
+    "translation_en": "minibus",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُوتُوبِيس",
+    "arabic_plain": "أوتوبيس",
+    "translit": [
+      "2otobees",
+      "otobees",
+      "utubis"
+    ],
+    "translation_en": "bus",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِتْرُو",
+    "arabic_plain": "مترو",
+    "translit": [
+      "metro",
+      "mitro"
+    ],
+    "translation_en": "metro / subway",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَطْر",
+    "arabic_plain": "قطر",
+    "translit": [
+      "2atr",
+      "'atr",
+      "2aTr"
+    ],
+    "translation_en": "train",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَحَطَّة",
+    "arabic_plain": "محطة",
+    "translit": [
+      "ma7atta",
+      "ma7aTTa",
+      "mahatta"
+    ],
+    "translation_en": "station / stop",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَوْقِف",
+    "arabic_plain": "موقف",
+    "translit": [
+      "maw2ef",
+      "maw'ef",
+      "mawqif"
+    ],
+    "translation_en": "bus terminal / parking",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَوَّاق",
+    "arabic_plain": "سواق",
+    "translit": [
+      "sawwa2",
+      "sawa2",
+      "sawwa'"
+    ],
+    "translation_en": "driver",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُجْرَة",
+    "arabic_plain": "أجرة",
+    "translit": [
+      "2ogra",
+      "ogra",
+      "'ogra"
+    ],
+    "translation_en": "fare / taxi fee",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَذْكَرَة",
+    "arabic_plain": "تذكرة",
+    "translit": [
+      "tazkara",
+      "tazkarah"
+    ],
+    "translation_en": "ticket",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِشْوَار",
+    "arabic_plain": "مشوار",
+    "translit": [
+      "meshwar",
+      "mishwar",
+      "meshwaar"
+    ],
+    "translation_en": "errand / trip",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِكَّة",
+    "arabic_plain": "سكة",
+    "translit": [
+      "sekka",
+      "sikka",
+      "sekkah"
+    ],
+    "translation_en": "way / road / track",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَرِيق",
+    "arabic_plain": "طريق",
+    "translit": [
+      "taree2",
+      "tari2",
+      "taree'",
+      "Taree2"
+    ],
+    "translation_en": "road / way",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فُلُوس",
+    "arabic_plain": "فلوس",
+    "translit": [
+      "foloos",
+      "flous",
+      "fulus",
+      "floos"
+    ],
+    "translation_en": "money",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جِنِيه",
+    "arabic_plain": "جنيه",
+    "translit": [
+      "geneh",
+      "gineh",
+      "geneih",
+      "gineih"
+    ],
+    "translation_en": "Egyptian pound",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَكَّة",
+    "arabic_plain": "فكة",
+    "translit": [
+      "fakka",
+      "faka",
+      "fakkah"
+    ],
+    "translation_en": "small change (coins/notes)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حِسَاب",
+    "arabic_plain": "حساب",
+    "translit": [
+      "7esab",
+      "7isaab",
+      "hesab"
+    ],
+    "translation_en": "bill / check / account",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِعْر",
+    "arabic_plain": "سعر",
+    "translit": [
+      "se3r",
+      "si3r",
+      "seer"
+    ],
+    "translation_en": "price",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُوق",
+    "arabic_plain": "سوق",
+    "translit": [
+      "soo2",
+      "sou2",
+      "soo'",
+      "su2"
+    ],
+    "translation_en": "market",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَحَلّ",
+    "arabic_plain": "محل",
+    "translit": [
+      "ma7all",
+      "ma7al",
+      "mahall"
+    ],
+    "translation_en": "shop / store",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دُكَّان",
+    "arabic_plain": "دكان",
+    "translit": [
+      "dokkan",
+      "dukkan",
+      "dokaan"
+    ],
+    "translation_en": "small shop",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَيْدَلِيَّة",
+    "arabic_plain": "صيدلية",
+    "translit": [
+      "saydaleyya",
+      "saydaleya",
+      "saydaliyya"
+    ],
+    "translation_en": "pharmacy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُسْتَشْفَى",
+    "arabic_plain": "مستشفى",
+    "translit": [
+      "mostashfa",
+      "mustashfa"
+    ],
+    "translation_en": "hospital",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دُكْتُور",
+    "arabic_plain": "دكتور",
+    "translit": [
+      "doktor",
+      "duktur",
+      "doktoor"
+    ],
+    "translation_en": "doctor",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَدْرَسَة",
+    "arabic_plain": "مدرسة",
+    "translit": [
+      "madrasa",
+      "madrasah"
+    ],
+    "translation_en": "school",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَامْعَة",
+    "arabic_plain": "جامعة",
+    "translit": [
+      "gam3a",
+      "gaam3a",
+      "gam3ah"
+    ],
+    "translation_en": "university",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شُغْل",
+    "arabic_plain": "شغل",
+    "translit": [
+      "shoghl",
+      "shughl",
+      "sho8l"
+    ],
+    "translation_en": "work / job",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَرِكَة",
+    "arabic_plain": "شركة",
+    "translit": [
+      "sherka",
+      "shirka",
+      "sherkah"
+    ],
+    "translation_en": "company",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَكْتَب",
+    "arabic_plain": "مكتب",
+    "translit": [
+      "maktab"
+    ],
+    "translation_en": "office / desk",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِجَازَة",
+    "arabic_plain": "إجازة",
+    "translit": [
+      "2egaza",
+      "egaza",
+      "igaza"
+    ],
+    "translation_en": "vacation / day off",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دِمَاغ",
+    "arabic_plain": "دماغ",
+    "translit": [
+      "demagh",
+      "dima8",
+      "dema8",
+      "dimagh"
+    ],
+    "translation_en": "head / mind / mood",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَشّ",
+    "arabic_plain": "وش",
+    "translit": [
+      "wesh",
+      "wish",
+      "weshsh"
+    ],
+    "translation_en": "face",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِين",
+    "arabic_plain": "عين",
+    "translit": [
+      "3een",
+      "3ein",
+      "een"
+    ],
+    "translation_en": "eye",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وِدْن",
+    "arabic_plain": "ودن",
+    "translit": [
+      "wedn",
+      "widn"
+    ],
+    "translation_en": "ear",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَنَاخِير",
+    "arabic_plain": "مناخير",
+    "translit": [
+      "manakheer",
+      "mana5eer",
+      "manakhir"
+    ],
+    "translation_en": "nose",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بُقّ",
+    "arabic_plain": "بق",
+    "translit": [
+      "bo22",
+      "bo2",
+      "bo'",
+      "bu2"
+    ],
+    "translation_en": "mouth",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِنَان",
+    "arabic_plain": "سنان",
+    "translit": [
+      "senan",
+      "sinan",
+      "sinaan"
+    ],
+    "translation_en": "teeth",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِسَان",
+    "arabic_plain": "لسان",
+    "translit": [
+      "lesan",
+      "lisan",
+      "lisaan"
+    ],
+    "translation_en": "tongue",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَقَبَة",
+    "arabic_plain": "رقبة",
+    "translit": [
+      "ra2aba",
+      "ra'aba",
+      "raqaba"
+    ],
+    "translation_en": "neck",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِيد",
+    "arabic_plain": "إيد",
+    "translit": [
+      "2eed",
+      "eed",
+      "'eed",
+      "id"
+    ],
+    "translation_en": "hand / arm",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رِجْل",
+    "arabic_plain": "رجل",
+    "translit": [
+      "regl",
+      "rigl"
+    ],
+    "translation_en": "foot / leg",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "ضَهْر",
+    "arabic_plain": "ضهر",
+    "translit": [
+      "dahr",
+      "Dahr"
+    ],
+    "translation_en": "back",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَطْن",
+    "arabic_plain": "بطن",
+    "translit": [
+      "batn",
+      "baTn"
+    ],
+    "translation_en": "stomach / belly",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صُبَاع",
+    "arabic_plain": "صباع",
+    "translit": [
+      "soba3",
+      "Suba3",
+      "sobaa3"
+    ],
+    "translation_en": "finger / toe",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صُدَاع",
+    "arabic_plain": "صداع",
+    "translit": [
+      "soda3",
+      "suda3",
+      "Soda3"
+    ],
+    "translation_en": "headache",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَوَا",
+    "arabic_plain": "دوا",
+    "translit": [
+      "dawa",
+      "dawaa"
+    ],
+    "translation_en": "medicine",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صُبْح",
+    "arabic_plain": "صبح",
+    "translit": [
+      "sob7",
+      "sub7",
+      "sobh"
+    ],
+    "translation_en": "morning",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَصْر",
+    "arabic_plain": "عصر",
+    "translit": [
+      "3asr",
+      "3aSr",
+      "asr"
+    ],
+    "translation_en": "afternoon",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَغْرِب",
+    "arabic_plain": "مغرب",
+    "translit": [
+      "maghreb",
+      "ma8reb",
+      "maghrib"
+    ],
+    "translation_en": "sunset / Maghrib",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِيل",
+    "arabic_plain": "ليل",
+    "translit": [
+      "leel",
+      "leil",
+      "lil"
+    ],
+    "translation_en": "night",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَجْر",
+    "arabic_plain": "فجر",
+    "translit": [
+      "fagr"
+    ],
+    "translation_en": "dawn",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُسْبُوع",
+    "arabic_plain": "أسبوع",
+    "translit": [
+      "2osboo3",
+      "osboo3",
+      "usbu3"
+    ],
+    "translation_en": "week",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَهْر",
+    "arabic_plain": "شهر",
+    "translit": [
+      "shahr"
+    ],
+    "translation_en": "month",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَنَة",
+    "arabic_plain": "سنة",
+    "translit": [
+      "sana",
+      "sanah"
+    ],
+    "translation_en": "year",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَوّ",
+    "arabic_plain": "جو",
+    "translit": [
+      "gaww",
+      "gaw"
+    ],
+    "translation_en": "weather / atmosphere / mood",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَمْس",
+    "arabic_plain": "شمس",
+    "translit": [
+      "shams"
+    ],
+    "translation_en": "sun",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَمَر",
+    "arabic_plain": "قمر",
+    "translit": [
+      "2amar",
+      "'amar",
+      "amar"
+    ],
+    "translation_en": "moon / gorgeous person",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَطَر",
+    "arabic_plain": "مطر",
+    "translit": [
+      "matar",
+      "maTar"
+    ],
+    "translation_en": "rain",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هَوَا",
+    "arabic_plain": "هوا",
+    "translit": [
+      "hawa",
+      "hawaa"
+    ],
+    "translation_en": "air / wind / breeze",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَحْر",
+    "arabic_plain": "بحر",
+    "translit": [
+      "ba7r",
+      "bahr"
+    ],
+    "translation_en": "sea / large river",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "النِّيل",
+    "arabic_plain": "النيل",
+    "translit": [
+      "el-neil",
+      "enneel",
+      "el-neel",
+      "elneel"
+    ],
+    "translation_en": "the Nile",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَجَرَة",
+    "arabic_plain": "شجرة",
+    "translit": [
+      "shagara",
+      "shagarah"
+    ],
+    "translation_en": "tree",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَرْد",
+    "arabic_plain": "ورد",
+    "translit": [
+      "ward"
+    ],
+    "translation_en": "roses / flowers",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُطَّة",
+    "arabic_plain": "قطة",
+    "translit": [
+      "2otta",
+      "'otta",
+      "2oTTa",
+      "otta"
+    ],
+    "translation_en": "cat",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَلْب",
+    "arabic_plain": "كلب",
+    "translit": [
+      "kalb"
+    ],
+    "translation_en": "dog",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَصْفُورَة",
+    "arabic_plain": "عصفورة",
+    "translit": [
+      "3asfoora",
+      "3asfura",
+      "asfoora"
+    ],
+    "translation_en": "little bird",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صُوت",
+    "arabic_plain": "صوت",
+    "translit": [
+      "soot",
+      "sout",
+      "Soot"
+    ],
+    "translation_en": "voice / sound",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَلَام",
+    "arabic_plain": "كلام",
+    "translit": [
+      "kalam",
+      "kalaam"
+    ],
+    "translation_en": "speech / talk / words",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِلْمَة",
+    "arabic_plain": "كلمة",
+    "translit": [
+      "kelma",
+      "kilma",
+      "kelmah"
+    ],
+    "translation_en": "word",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُؤَال",
+    "arabic_plain": "سؤال",
+    "translit": [
+      "so2al",
+      "su2al",
+      "so'al"
+    ],
+    "translation_en": "question",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَوَاب",
+    "arabic_plain": "جواب",
+    "translit": [
+      "gawab",
+      "gawaab"
+    ],
+    "translation_en": "answer / letter",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِكْرَة",
+    "arabic_plain": "فكرة",
+    "translit": [
+      "fekra",
+      "fikra",
+      "fekrah"
+    ],
+    "translation_en": "idea / thought",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُشْكِلَة",
+    "arabic_plain": "مشكلة",
+    "translit": [
+      "moshkela",
+      "mushkila",
+      "moshkelah"
+    ],
+    "translation_en": "problem",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَلّ",
+    "arabic_plain": "حل",
+    "translit": [
+      "7all",
+      "7al",
+      "hall"
+    ],
+    "translation_en": "solution",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فُرْصَة",
+    "arabic_plain": "فرصة",
+    "translit": [
+      "forsa",
+      "fursa",
+      "forSa"
+    ],
+    "translation_en": "opportunity / chance",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَظّ",
+    "arabic_plain": "حظ",
+    "translit": [
+      "7azz",
+      "7az",
+      "hazz"
+    ],
+    "translation_en": "luck",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَصِيب",
+    "arabic_plain": "نصيب",
+    "translit": [
+      "naseeb",
+      "nasib",
+      "naSeeb"
+    ],
+    "translation_en": "destiny / share / lot",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دُنْيَا",
+    "arabic_plain": "دنيا",
+    "translit": [
+      "donya",
+      "dunya"
+    ],
+    "translation_en": "world / life",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَيَاة",
+    "arabic_plain": "حياة",
+    "translit": [
+      "7ayah",
+      "7aya",
+      "hayah"
+    ],
+    "translation_en": "life",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَاس",
+    "arabic_plain": "ناس",
+    "translit": [
+      "nas",
+      "naas"
+    ],
+    "translation_en": "people",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَهْل",
+    "arabic_plain": "أهل",
+    "translit": [
+      "2ahl",
+      "ahl",
+      "'ahl"
+    ],
+    "translation_en": "family / folks",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَلَد",
+    "arabic_plain": "بلد",
+    "translit": [
+      "balad"
+    ],
+    "translation_en": "country / hometown / downtown",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَصْر",
+    "arabic_plain": "مصر",
+    "translit": [
+      "masr",
+      "maSr"
+    ],
+    "translation_en": "Egypt / Cairo",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَصْرِي",
+    "arabic_plain": "مصري",
+    "translit": [
+      "masri",
+      "maSri",
+      "masry"
+    ],
+    "translation_en": "Egyptian (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَصْرِيَّة",
+    "arabic_plain": "مصرية",
+    "translit": [
+      "masreyya",
+      "masreya",
+      "maSreyya"
+    ],
+    "translation_en": "Egyptian (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِسْكَنْدَرِيَّة",
+    "arabic_plain": "إسكندرية",
+    "translit": [
+      "eskendereyya",
+      "iskandiriyya",
+      "eskendereya"
+    ],
+    "translation_en": "Alexandria",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "الصَّعِيد",
+    "arabic_plain": "الصعيد",
+    "translit": [
+      "el-sa3eed",
+      "essa3eed",
+      "elsa3eed"
+    ],
+    "translation_en": "Upper Egypt",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَغْنِيَة",
+    "arabic_plain": "أغنية",
+    "translit": [
+      "2oghneyya",
+      "oghneya",
+      "2o8neya"
+    ],
+    "translation_en": "song",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِيلْم",
+    "arabic_plain": "فيلم",
+    "translit": [
+      "felm",
+      "film"
+    ],
+    "translation_en": "movie / film",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُسَلْسَل",
+    "arabic_plain": "مسلسل",
+    "translit": [
+      "mosalsal",
+      "musalsal"
+    ],
+    "translation_en": "TV series",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُورَة",
+    "arabic_plain": "كورة",
+    "translit": [
+      "koora",
+      "kora",
+      "kura"
+    ],
+    "translation_en": "football / ball",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِعْبَة",
+    "arabic_plain": "لعبة",
+    "translit": [
+      "le3ba",
+      "li3ba",
+      "le3bah"
+    ],
+    "translation_en": "game / toy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَادِي",
+    "arabic_plain": "نادي",
+    "translit": [
+      "nadi",
+      "naadi",
+      "nady"
+    ],
+    "translation_en": "club / sports club",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَرِيق",
+    "arabic_plain": "فريق",
+    "translit": [
+      "faree2",
+      "fari2",
+      "faree'"
+    ],
+    "translation_en": "team",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَاتْش",
+    "arabic_plain": "ماتش",
+    "translit": [
+      "matsh",
+      "match"
+    ],
+    "translation_en": "match / game",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جُون",
+    "arabic_plain": "جون",
+    "translit": [
+      "goon",
+      "gon",
+      "goun"
+    ],
+    "translation_en": "goal (in football)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَرَح",
+    "arabic_plain": "فرح",
+    "translit": [
+      "fara7",
+      "farah"
+    ],
+    "translation_en": "wedding / joy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِيد",
+    "arabic_plain": "عيد",
+    "translit": [
+      "3eed",
+      "3id",
+      "eed"
+    ],
+    "translation_en": "holiday / feast / Eid",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هَدِيَّة",
+    "arabic_plain": "هدية",
+    "translit": [
+      "hadeyya",
+      "hadeya",
+      "hadiyya"
+    ],
+    "translation_en": "gift / present",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُفَاجْأَة",
+    "arabic_plain": "مفاجأة",
+    "translit": [
+      "mofag2a",
+      "mufag2a",
+      "mofag'a"
+    ],
+    "translation_en": "surprise",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَفْلَة",
+    "arabic_plain": "حفلة",
+    "translit": [
+      "7afla",
+      "hafla",
+      "7aflah"
+    ],
+    "translation_en": "party / concert",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَهْرَة",
+    "arabic_plain": "سهرة",
+    "translit": [
+      "sahra",
+      "sahrah"
+    ],
+    "translation_en": "evening gathering / night out",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَعْدَة",
+    "arabic_plain": "قعدة",
+    "translit": [
+      "2a3da",
+      "'a3da",
+      "a3da"
+    ],
+    "translation_en": "get-together / hangout",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فُسْحَة",
+    "arabic_plain": "فسحة",
+    "translit": [
+      "fos7a",
+      "fus7a",
+      "fosha"
+    ],
+    "translation_en": "outing / stroll",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِجَازَة",
+    "arabic_plain": "اجازة",
+    "translit": [
+      "egaza",
+      "2egaza",
+      "igaza"
+    ],
+    "translation_en": "holiday / leave",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَخْشِيش",
+    "arabic_plain": "بخشيش",
+    "translit": [
+      "bakhsheesh",
+      "ba5sheesh",
+      "bakhshish"
+    ],
+    "translation_en": "tip / gratuity",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَاسْطَة",
+    "arabic_plain": "واسطة",
+    "translit": [
+      "wasta",
+      "wasTa"
+    ],
+    "translation_en": "connections / clout",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زِفْت",
+    "arabic_plain": "زفت",
+    "translit": [
+      "zeft",
+      "zift"
+    ],
+    "translation_en": "terrible / awful (slang)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تُحْفَة",
+    "arabic_plain": "تحفة",
+    "translit": [
+      "to7fa",
+      "tu7fa",
+      "tohfa"
+    ],
+    "translation_en": "masterpiece / amazing",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خُرَافَة",
+    "arabic_plain": "خرافة",
+    "translit": [
+      "khorafa",
+      "5orafa",
+      "khurafa"
+    ],
+    "translation_en": "fabulous / myth",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَسَل",
+    "arabic_plain": "عسل",
+    "translit": [
+      "3asal",
+      "asal"
+    ],
+    "translation_en": "honey / sweet person",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُكَّرَة",
+    "arabic_plain": "سكرة",
+    "translit": [
+      "sokkara",
+      "sukkara"
+    ],
+    "translation_en": "sweetheart / adorable",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قِشْطَة",
+    "arabic_plain": "قشطة",
+    "translit": [
+      "2eshta",
+      "'eshta",
+      "2eshTa",
+      "eshta"
+    ],
+    "translation_en": "cream / cool / awesome!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فُلّ",
+    "arabic_plain": "فل",
+    "translit": [
+      "foll",
+      "full",
+      "fol"
+    ],
+    "translation_en": "Arabian jasmine / great!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَاسْمِين",
+    "arabic_plain": "ياسمين",
+    "translit": [
+      "yasmeen",
+      "yasmin"
+    ],
+    "translation_en": "jasmine",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نُور",
+    "arabic_plain": "نور",
+    "translit": [
+      "noor",
+      "nur"
+    ],
+    "translation_en": "light",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَرَكَة",
+    "arabic_plain": "بركة",
+    "translit": [
+      "baraka",
+      "barakah"
+    ],
+    "translation_en": "blessing",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خِير",
+    "arabic_plain": "خير",
+    "translit": [
+      "kheer",
+      "kher",
+      "5eer"
+    ],
+    "translation_en": "goodness / well-being",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَلَام",
+    "arabic_plain": "سلام",
+    "translit": [
+      "salam",
+      "salaam"
+    ],
+    "translation_en": "peace / goodbye",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَمَان",
+    "arabic_plain": "أمان",
+    "translit": [
+      "2aman",
+      "aman",
+      "2amaan"
+    ],
+    "translation_en": "safety / security",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَبْر",
+    "arabic_plain": "صبر",
+    "translit": [
+      "sabr",
+      "Sabr"
+    ],
+    "translation_en": "patience",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَمَل",
+    "arabic_plain": "أمل",
+    "translit": [
+      "2amal",
+      "amal",
+      "'amal"
+    ],
+    "translation_en": "hope",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حُبّ",
+    "arabic_plain": "حب",
+    "translit": [
+      "7obb",
+      "7ob",
+      "hobb"
+    ],
+    "translation_en": "love",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شُوق",
+    "arabic_plain": "شوق",
+    "translit": [
+      "sho2",
+      "shoo2",
+      "sho'"
+    ],
+    "translation_en": "longing / missing",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَلْطَة",
+    "arabic_plain": "غلطة",
+    "translit": [
+      "ghalta",
+      "8alta",
+      "ghalTa"
+    ],
+    "translation_en": "mistake / slip-up",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نُكْتَة",
+    "arabic_plain": "نكتة",
+    "translit": [
+      "nokta",
+      "nukta",
+      "noktah"
+    ],
+    "translation_en": "joke",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَمّ",
+    "arabic_plain": "دم",
+    "translit": [
+      "damm",
+      "dam"
+    ],
+    "translation_en": "blood / sense of humor",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِزَاج",
+    "arabic_plain": "مزاج",
+    "translit": [
+      "mezag",
+      "mizag",
+      "mizaag"
+    ],
+    "translation_en": "mood / temperament",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِيف",
+    "arabic_plain": "كيف",
+    "translit": [
+      "keef",
+      "kef"
+    ],
+    "translation_en": "mood / pleasure",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَقْت",
+    "arabic_plain": "وقت",
+    "translit": [
+      "wa2t",
+      "wa't",
+      "waqt"
+    ],
+    "translation_en": "time",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَكَان",
+    "arabic_plain": "مكان",
+    "translit": [
+      "makan",
+      "makaan"
+    ],
+    "translation_en": "place / spot",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حِتَّة",
+    "arabic_plain": "حتة",
+    "translit": [
+      "7etta",
+      "7itta",
+      "hetta"
+    ],
+    "translation_en": "piece / neighborhood / place",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَاحْيَة",
+    "arabic_plain": "ناحية",
+    "translit": [
+      "na7ya",
+      "nahya",
+      "na7yah"
+    ],
+    "translation_en": "side / direction",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "آخِر",
+    "arabic_plain": "آخر",
+    "translit": [
+      "2akher",
+      "akher",
+      "2a5er"
+    ],
+    "translation_en": "end / last",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَوِّل",
+    "arabic_plain": "أول",
+    "translit": [
+      "2awwel",
+      "awwel",
+      "'awwel"
+    ],
+    "translation_en": "first / beginning",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نُصّ",
+    "arabic_plain": "نص",
+    "translit": [
+      "noss",
+      "nos",
+      "nuss"
+    ],
+    "translation_en": "half / middle",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُلّ",
+    "arabic_plain": "كل",
+    "translit": [
+      "koll",
+      "kol",
+      "kull"
+    ],
+    "translation_en": "all / every",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَعْض",
+    "arabic_plain": "بعض",
+    "translit": [
+      "ba3d",
+      "ba3D"
+    ],
+    "translation_en": "some / each other",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غِير",
+    "arabic_plain": "غير",
+    "translit": [
+      "gheer",
+      "8eer",
+      "gher"
+    ],
+    "translation_en": "other than / without",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَيّ",
+    "arabic_plain": "زي",
+    "translit": [
+      "zayy",
+      "zay"
+    ],
+    "translation_en": "like / as",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَعَ",
+    "arabic_plain": "مع",
+    "translit": [
+      "ma3a",
+      "maa"
+    ],
+    "translation_en": "with",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِنْ",
+    "arabic_plain": "من",
+    "translit": [
+      "men",
+      "min"
+    ],
+    "translation_en": "from / who",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فِي",
+    "arabic_plain": "في",
+    "translit": [
+      "fi",
+      "fee",
+      "fy"
+    ],
+    "translation_en": "in / there is",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَلَى",
+    "arabic_plain": "على",
+    "translit": [
+      "3ala",
+      "ala"
+    ],
+    "translation_en": "on / upon",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَنْ",
+    "arabic_plain": "عن",
+    "translit": [
+      "3an",
+      "an"
+    ],
+    "translation_en": "about / from",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِحَدّ",
+    "arabic_plain": "لحد",
+    "translit": [
+      "le7add",
+      "li7add",
+      "le7ad"
+    ],
+    "translation_en": "until / up to",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَدَل",
+    "arabic_plain": "بدل",
+    "translit": [
+      "badal"
+    ],
+    "translation_en": "instead of",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طُول",
+    "arabic_plain": "طول",
+    "translit": [
+      "tool",
+      "tul",
+      "Tool"
+    ],
+    "translation_en": "length / throughout",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْأَكِّد",
+    "arabic_plain": "اتأكد",
+    "translit": [
+      "et2akked",
+      "it2akkid",
+      "et'akked"
+    ],
+    "translation_en": "make sure / verified",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْبَسَط",
+    "arabic_plain": "اتبسط",
+    "translit": [
+      "etbasat",
+      "itbasat",
+      "2etbasat"
+    ],
+    "translation_en": "enjoyed / had fun",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْجَوِّز",
+    "arabic_plain": "اتجوز",
+    "translit": [
+      "etgawwiz",
+      "etgawez",
+      "itgawwiz"
+    ],
+    "translation_en": "got married",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْخَانِق",
+    "arabic_plain": "اتخانق",
+    "translit": [
+      "etkhane2",
+      "et5ane2",
+      "itkhani2"
+    ],
+    "translation_en": "quarreled / fought",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْصَرَّف",
+    "arabic_plain": "اتصرف",
+    "translit": [
+      "etsarraf",
+      "itsarraf",
+      "etSarraf"
+    ],
+    "translation_en": "acted / handled it",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْعَوِّد",
+    "arabic_plain": "اتعود",
+    "translit": [
+      "et3awwed",
+      "it3awwid",
+      "etawwed"
+    ],
+    "translation_en": "got used to",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْغَدَّى",
+    "arabic_plain": "اتغدى",
+    "translit": [
+      "etghadda",
+      "et8adda",
+      "itghadda"
+    ],
+    "translation_en": "had lunch",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْعَشَّى",
+    "arabic_plain": "اتعشى",
+    "translit": [
+      "et3ashsha",
+      "it3ashsha",
+      "etasha"
+    ],
+    "translation_en": "had dinner",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْفَرَّج",
+    "arabic_plain": "اتفرج",
+    "translit": [
+      "etfarrag",
+      "itfarrag",
+      "2etfarrag"
+    ],
+    "translation_en": "watched / looked around",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْفَق",
+    "arabic_plain": "اتفق",
+    "translit": [
+      "ettafa2",
+      "ittafa2",
+      "ettafa'"
+    ],
+    "translation_en": "agreed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْقَابِل",
+    "arabic_plain": "اتقابل",
+    "translit": [
+      "et2abel",
+      "it2abil",
+      "et'abel"
+    ],
+    "translation_en": "met up",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْكَسَف",
+    "arabic_plain": "اتكسف",
+    "translit": [
+      "etkasaf",
+      "itkasaf",
+      "2etkasaf"
+    ],
+    "translation_en": "felt shy / embarrassed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْلَخْبَط",
+    "arabic_plain": "اتلخبط",
+    "translit": [
+      "etlakhbat",
+      "etla5bat",
+      "itlakhbat"
+    ],
+    "translation_en": "got confused / mixed up",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْمَشَّى",
+    "arabic_plain": "اتمشى",
+    "translit": [
+      "etmashsha",
+      "itmashsha",
+      "etmasha"
+    ],
+    "translation_en": "went for a walk / strolled",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِسْتَحْمِل",
+    "arabic_plain": "استحمل",
+    "translit": [
+      "esta7mel",
+      "ista7mil",
+      "estahmel"
+    ],
+    "translation_en": "endured / tolerated",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِسْتَلِف",
+    "arabic_plain": "استلف",
+    "translit": [
+      "estalef",
+      "istalif",
+      "2estalef"
+    ],
+    "translation_en": "borrowed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِسْتَنَّى",
+    "arabic_plain": "إستنى",
+    "translit": [
+      "2estanna",
+      "estanna",
+      "istanna"
+    ],
+    "translation_en": "wait!",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِشْتَغَل",
+    "arabic_plain": "اشتغل",
+    "translit": [
+      "eshtaghal",
+      "eshta8al",
+      "ishtaghal"
+    ],
+    "translation_en": "worked / started working",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِفْتَكَر",
+    "arabic_plain": "افتكر",
+    "translit": [
+      "eftakar",
+      "iftakar",
+      "2eftakar"
+    ],
+    "translation_en": "remembered / thought",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَصَّة",
+    "arabic_plain": "بصة",
+    "translit": [
+      "bassa",
+      "baSSa",
+      "bassah"
+    ],
+    "translation_en": "a look / a glance",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لَفَّة",
+    "arabic_plain": "لفة",
+    "translit": [
+      "laffa",
+      "laffah"
+    ],
+    "translation_en": "turn / spin / tour",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَقَّة",
+    "arabic_plain": "زقة",
+    "translit": [
+      "za22a",
+      "za'a",
+      "za2a"
+    ],
+    "translation_en": "push / nudge",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَبْطَة",
+    "arabic_plain": "خبطة",
+    "translit": [
+      "khabta",
+      "5abta",
+      "khabTa"
+    ],
+    "translation_en": "knock / bump / blow",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَوْشَة",
+    "arabic_plain": "دوشة",
+    "translit": [
+      "dawsha",
+      "dowsha",
+      "dawshah"
+    ],
+    "translation_en": "noise / racket",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَيْطَة",
+    "arabic_plain": "زيطة",
+    "translit": [
+      "zeeta",
+      "zeyta",
+      "zeeTa"
+    ],
+    "translation_en": "commotion / fuss",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خِنَاقَة",
+    "arabic_plain": "خناقة",
+    "translit": [
+      "khena2a",
+      "5ena2a",
+      "khina2a"
+    ],
+    "translation_en": "fight / argument",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَصْلَحَة",
+    "arabic_plain": "مصلحة",
+    "translit": [
+      "masla7a",
+      "maSla7a",
+      "maslaha"
+    ],
+    "translation_en": "interest / favor / benefit",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خِدْمَة",
+    "arabic_plain": "خدمة",
+    "translit": [
+      "khedma",
+      "5edma",
+      "khidma"
+    ],
+    "translation_en": "service / favor",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَمِيلَة",
+    "arabic_plain": "جميله",
+    "translit": [
+      "gameela",
+      "gamila"
+    ],
+    "translation_en": "favor / pretty",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَعْرُوف",
+    "arabic_plain": "معروف",
+    "translit": [
+      "ma3roof",
+      "ma3ruf",
+      "maroof"
+    ],
+    "translation_en": "favor / well-known",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَاجِب",
+    "arabic_plain": "واجب",
+    "translit": [
+      "wageb",
+      "waagib",
+      "wagib"
+    ],
+    "translation_en": "duty / hospitality",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُصُول",
+    "arabic_plain": "أصول",
+    "translit": [
+      "2osool",
+      "osool",
+      "usul"
+    ],
+    "translation_en": "proper manners / roots",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "ذُوق",
+    "arabic_plain": "ذوق",
+    "translit": [
+      "zoo2",
+      "zo2",
+      "zou2"
+    ],
+    "translation_en": "taste / politeness / courtesy",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَدَب",
+    "arabic_plain": "أدب",
+    "translit": [
+      "2adab",
+      "adab"
+    ],
+    "translation_en": "politeness / literature",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِحْتِرَام",
+    "arabic_plain": "احترام",
+    "translit": [
+      "e7teram",
+      "i7tiram",
+      "ehteram"
+    ],
+    "translation_en": "respect",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَرَم",
+    "arabic_plain": "كرم",
+    "translit": [
+      "karam"
+    ],
+    "translation_en": "generosity",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَهَامَة",
+    "arabic_plain": "شهامة",
+    "translit": [
+      "shahama",
+      "shahaama"
+    ],
+    "translation_en": "chivalry / gallantry",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رُجُولَة",
+    "arabic_plain": "رجولة",
+    "translit": [
+      "rogoola",
+      "rugula",
+      "rogola"
+    ],
+    "translation_en": "manliness / courage",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَدْعَنَة",
+    "arabic_plain": "جدعنة",
+    "translit": [
+      "gad3ana",
+      "gada3ana"
+    ],
+    "translation_en": "nobility / helpfulness",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَنَان",
+    "arabic_plain": "حنان",
+    "translit": [
+      "7anan",
+      "hanaan"
+    ],
+    "translation_en": "tenderness / affection",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِشْرَة",
+    "arabic_plain": "عشرة",
+    "translit": [
+      "3eshra",
+      "3ishra",
+      "eshra"
+    ],
+    "translation_en": "companionship / long friendship",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صُحْبَة",
+    "arabic_plain": "صحبة",
+    "translit": [
+      "so7ba",
+      "su7ba",
+      "So7ba"
+    ],
+    "translation_en": "friendship / company",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شِلَّة",
+    "arabic_plain": "شلة",
+    "translit": [
+      "shella",
+      "shilla",
+      "shellah"
+    ],
+    "translation_en": "group of friends / clique",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لَمَّة",
+    "arabic_plain": "لمة",
+    "translit": [
+      "lamma",
+      "lammah"
+    ],
+    "translation_en": "gathering / family reunion",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَنْسَة",
+    "arabic_plain": "ونسة",
+    "translit": [
+      "wansa",
+      "wanasa"
+    ],
+    "translation_en": "pleasant company / cozy chat",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "هَزَار",
+    "arabic_plain": "هزار",
+    "translit": [
+      "hazar",
+      "hazaar"
+    ],
+    "translation_en": "joking / banter",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَدّ",
+    "arabic_plain": "جد",
+    "translit": [
+      "gadd",
+      "gad"
+    ],
+    "translation_en": "serious / earnest",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَعْلًا",
+    "arabic_plain": "فعلا",
+    "translit": [
+      "fe3lan",
+      "fi3lan",
+      "felan"
+    ],
+    "translation_en": "really / indeed",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَقِيقِي",
+    "arabic_plain": "حقيقي",
+    "translit": [
+      "7a2ee2i",
+      "7a'ee'i",
+      "7a2i2i"
+    ],
+    "translation_en": "real / truly",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِالظَّبْط",
+    "arabic_plain": "بالظبط",
+    "translit": [
+      "bel-zabt",
+      "bizzabt",
+      "bilzabt"
+    ],
+    "translation_en": "exactly / precisely",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَقْرِيبًا",
+    "arabic_plain": "تقريبا",
+    "translit": [
+      "ta2reeban",
+      "ta'reeban",
+      "ta2riban"
+    ],
+    "translation_en": "approximately / almost",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَبِيعِي",
+    "arabic_plain": "طبيعي",
+    "translit": [
+      "tabee3i",
+      "Tabee3i",
+      "tabi3i"
+    ],
+    "translation_en": "natural / normal",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَادِي",
+    "arabic_plain": "عادي",
+    "translit": [
+      "3adi",
+      "3aadi",
+      "aadi"
+    ],
+    "translation_en": "normal / ordinary / it's fine",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَالِبًا",
+    "arabic_plain": "غالبا",
+    "translit": [
+      "ghaleban",
+      "8aleban",
+      "ghaliban"
+    ],
+    "translation_en": "mostly / probably",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَحْيَانًا",
+    "arabic_plain": "أحيانا",
+    "translit": [
+      "2a7yanan",
+      "a7yanan",
+      "ahyanan"
+    ],
+    "translation_en": "sometimes",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَايْمًا",
+    "arabic_plain": "دايما",
+    "translit": [
+      "dayman",
+      "daayman"
+    ],
+    "translation_en": "always",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَبَدًا",
+    "arabic_plain": "أبدا",
+    "translit": [
+      "2abadan",
+      "abadan"
+    ],
+    "translation_en": "never",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَجْأَة",
+    "arabic_plain": "فجأة",
+    "translit": [
+      "fag2a",
+      "fag'a",
+      "fag2ah"
+    ],
+    "translation_en": "suddenly",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِسُرْعَة",
+    "arabic_plain": "بسرعة",
+    "translit": [
+      "besor3a",
+      "bisur3a",
+      "bsor3a"
+    ],
+    "translation_en": "quickly / fast",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِالرَّاحَة",
+    "arabic_plain": "بالراحة",
+    "translit": [
+      "bel-ra7a",
+      "berra7a",
+      "bilra7a"
+    ],
+    "translation_en": "slowly / gently",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شْوَيَّة شْوَيَّة",
+    "arabic_plain": "شوية شوية",
+    "translit": [
+      "shwayya shwayya",
+      "shwaya shwaya"
+    ],
+    "translation_en": "little by little",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَاحْدَة وَاحْدَة",
+    "arabic_plain": "واحدة واحدة",
+    "translit": [
+      "wa7da wa7da",
+      "wahda wahda"
+    ],
+    "translation_en": "step by step / one by one",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَا دُوب",
+    "arabic_plain": "يا دوب",
+    "translit": [
+      "ya doob",
+      "yadoob",
+      "ya dub"
+    ],
+    "translation_en": "barely / just now",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَصْلًا",
+    "arabic_plain": "أصلا",
+    "translit": [
+      "2aslan",
+      "aslan",
+      "'aslan"
+    ],
+    "translation_en": "originally / anyway",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عُمُومًا",
+    "arabic_plain": "عموما",
+    "translit": [
+      "3omooman",
+      "3umuman",
+      "omooman"
+    ],
+    "translation_en": "in general / anyway",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خُصُوصًا",
+    "arabic_plain": "خصوصا",
+    "translit": [
+      "khosoosan",
+      "5osoosan",
+      "khususan"
+    ],
+    "translation_en": "especially",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَرَاحَة",
+    "arabic_plain": "صراحة",
+    "translit": [
+      "sara7a",
+      "Sara7a",
+      "saraha"
+    ],
+    "translation_en": "frankly / honestly",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِصَرَاحَة",
+    "arabic_plain": "بصراحة",
+    "translit": [
+      "besara7a",
+      "bisara7a",
+      "bsara7a"
+    ],
+    "translation_en": "to be honest / frankly",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَلَى فِكْرَة",
+    "arabic_plain": "على فكرة",
+    "translit": [
+      "3ala fekra",
+      "3ala fikra",
+      "ala fekra"
+    ],
+    "translation_en": "by the way",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِن غِير",
+    "arabic_plain": "من غير",
+    "translit": [
+      "men gheer",
+      "min 8eer",
+      "men gher"
+    ],
+    "translation_en": "without",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَلَى طُول",
+    "arabic_plain": "على طول",
+    "translit": [
+      "3ala tool",
+      "3ala tul",
+      "ala tool"
+    ],
+    "translation_en": "straight ahead / right away / always",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِوَحْدِي",
+    "arabic_plain": "لوحدي",
+    "translit": [
+      "lewa7di",
+      "liwa7di",
+      "lewahdi"
+    ],
+    "translation_en": "by myself / alone",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "لِوَحْدَك",
+    "arabic_plain": "لوحدك",
+    "translit": [
+      "lewa7dak",
+      "liwa7dak",
+      "lewahdak"
+    ],
+    "translation_en": "by yourself / alone",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بِنَفْسِي",
+    "arabic_plain": "بنفسي",
+    "translit": [
+      "benafsi",
+      "binafsi"
+    ],
+    "translation_en": "by myself / personally",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَعَ بَعْض",
+    "arabic_plain": "مع بعض",
+    "translit": [
+      "ma3a ba3d",
+      "maa ba3d"
+    ],
+    "translation_en": "together / with each other",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَيّ حَدّ",
+    "arabic_plain": "أي حد",
+    "translit": [
+      "2ayy 7add",
+      "ay 7ad",
+      "ayy had"
+    ],
+    "translation_en": "anyone / anybody",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُلّ حَدّ",
+    "arabic_plain": "كل حد",
+    "translit": [
+      "koll 7add",
+      "kol 7ad"
+    ],
+    "translation_en": "everyone",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَلَا حَدّ",
+    "arabic_plain": "ولا حد",
+    "translit": [
+      "wala 7add",
+      "wala 7ad"
+    ],
+    "translation_en": "no one / nobody",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَيّ حَاجَة",
+    "arabic_plain": "أي حاجة",
+    "translit": [
+      "2ayy 7aga",
+      "ay 7aga",
+      "ayy haga"
+    ],
+    "translation_en": "anything",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كُلّ حَاجَة",
+    "arabic_plain": "كل حاجة",
+    "translit": [
+      "koll 7aga",
+      "kol 7aga",
+      "kull 7aga"
+    ],
+    "translation_en": "everything",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَلَا حَاجَة",
+    "arabic_plain": "ولا حاجة",
+    "translit": [
+      "wala 7aga",
+      "wala haga"
+    ],
+    "translation_en": "nothing",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حِتَّة تَانْيَة",
+    "arabic_plain": "حتة تانية",
+    "translit": [
+      "7etta tanya",
+      "7itta tanya"
+    ],
+    "translation_en": "another place / next level",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَرَّة",
+    "arabic_plain": "مرة",
+    "translit": [
+      "marra",
+      "marrah"
+    ],
+    "translation_en": "once / a time",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَرِّتِين",
+    "arabic_plain": "مرتين",
+    "translit": [
+      "marreteen",
+      "marritin",
+      "martein"
+    ],
+    "translation_en": "twice",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَانِي",
+    "arabic_plain": "تاني",
+    "translit": [
+      "tani",
+      "taani",
+      "tany"
+    ],
+    "translation_en": "again / second / another (m)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَانْيَة",
+    "arabic_plain": "تانية",
+    "translit": [
+      "tanya",
+      "taanya",
+      "tanyah"
+    ],
+    "translation_en": "second / another (f)",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَالِت",
+    "arabic_plain": "تالت",
+    "translit": [
+      "talet",
+      "taalet",
+      "talit"
+    ],
+    "translation_en": "third",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَابِع",
+    "arabic_plain": "رابع",
+    "translit": [
+      "rabe3",
+      "raabe3",
+      "rabi3"
+    ],
+    "translation_en": "fourth",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَامِس",
+    "arabic_plain": "خامس",
+    "translit": [
+      "khames",
+      "5ames",
+      "khamis"
+    ],
+    "translation_en": "fifth",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَاحِد",
+    "arabic_plain": "واحد",
+    "translit": [
+      "wa7ed",
+      "waa7ed",
+      "wahed"
+    ],
+    "translation_en": "one",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِتْنِين",
+    "arabic_plain": "إتنين",
+    "translit": [
+      "2etneen",
+      "etneen",
+      "itnein"
+    ],
+    "translation_en": "two",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَلَاتَة",
+    "arabic_plain": "تلاتة",
+    "translit": [
+      "talata",
+      "talaata"
+    ],
+    "translation_en": "three",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَرْبَعَة",
+    "arabic_plain": "أربعة",
+    "translit": [
+      "2arba3a",
+      "arba3a"
+    ],
+    "translation_en": "four",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَمْسَة",
+    "arabic_plain": "خمسة",
+    "translit": [
+      "khamsa",
+      "5amsa"
+    ],
+    "translation_en": "five",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سِتَّة",
+    "arabic_plain": "ستة",
+    "translit": [
+      "setta",
+      "sitta"
+    ],
+    "translation_en": "six",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَبْعَة",
+    "arabic_plain": "سبعة",
+    "translit": [
+      "sab3a",
+      "saba3a"
+    ],
+    "translation_en": "seven",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَمَانْيَة",
+    "arabic_plain": "تمانية",
+    "translit": [
+      "tamanya",
+      "tamaanya"
+    ],
+    "translation_en": "eight",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تِسْعَة",
+    "arabic_plain": "تسعة",
+    "translit": [
+      "tes3a",
+      "tis3a"
+    ],
+    "translation_en": "nine",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَلْف",
+    "arabic_plain": "ألف",
+    "translit": [
+      "2alf",
+      "alf",
+      "'alf"
+    ],
+    "translation_en": "thousand",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَوَاز",
+    "arabic_plain": "جواز",
+    "translit": [
+      "gawaz",
+      "gawaaz"
+    ],
+    "translation_en": "marriage / passport",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "خُطُوبَة",
+    "arabic_plain": "خطوبة",
+    "translit": [
+      "khotooba",
+      "5otooba",
+      "khutuba"
+    ],
+    "translation_en": "engagement",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِيد مِيلَاد",
+    "arabic_plain": "عيد ميلاد",
+    "translit": [
+      "3eed meelad",
+      "3id milad",
+      "eed milad"
+    ],
+    "translation_en": "birthday",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَجَاح",
+    "arabic_plain": "نجاح",
+    "translit": [
+      "naga7",
+      "nagaa7",
+      "nagah"
+    ],
+    "translation_en": "success / passing exams",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِمْتِحَان",
+    "arabic_plain": "امتحان",
+    "translit": [
+      "emte7an",
+      "imti7an",
+      "emtehan"
+    ],
+    "translation_en": "exam / test",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُذَاكْرَة",
+    "arabic_plain": "مذاكرة",
+    "translit": [
+      "mozakra",
+      "muzakrah"
+    ],
+    "translation_en": "studying",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِتَاب",
+    "arabic_plain": "كتاب",
+    "translit": [
+      "ketab",
+      "kitab",
+      "kitaab"
+    ],
+    "translation_en": "book",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "وَرَقَة",
+    "arabic_plain": "ورقة",
+    "translit": [
+      "wara2a",
+      "wara'a",
+      "waraqa"
+    ],
+    "translation_en": "paper / sheet / note",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَلَم",
+    "arabic_plain": "قلم",
+    "translit": [
+      "2alam",
+      "'alam",
+      "alam"
+    ],
+    "translation_en": "pen / pencil",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَهَادَة",
+    "arabic_plain": "شهادة",
+    "translit": [
+      "shahada",
+      "shahaada"
+    ],
+    "translation_en": "certificate / degree",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُهَنْدِس",
+    "arabic_plain": "مهندس",
+    "translit": [
+      "mohandes",
+      "muhandis",
+      "ashmawi"
+    ],
+    "translation_en": "engineer",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُحَامِي",
+    "arabic_plain": "محامي",
+    "translit": [
+      "mo7ami",
+      "mu7ami",
+      "mohami"
+    ],
+    "translation_en": "lawyer",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُدَرِّس",
+    "arabic_plain": "مدرس",
+    "translit": [
+      "modarres",
+      "mudarris"
+    ],
+    "translation_en": "teacher",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَبَّاخ",
+    "arabic_plain": "طباخ",
+    "translit": [
+      "tabbakh",
+      "Tabba5",
+      "tabba5"
+    ],
+    "translation_en": "cook / chef",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَلَّاق",
+    "arabic_plain": "حلاق",
+    "translit": [
+      "7alla2",
+      "7alla'",
+      "halla2"
+    ],
+    "translation_en": "barber",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَوَّاب",
+    "arabic_plain": "بواب",
+    "translit": [
+      "bawwab",
+      "bawab"
+    ],
+    "translation_en": "doorman / building caretaker",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "مِيكَانِيكِي",
+    "arabic_plain": "ميكانيكي",
+    "translit": [
+      "mekaneeki",
+      "mikaniki"
+    ],
+    "translation_en": "mechanic",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَهْرَبَائِي",
+    "arabic_plain": "كهربائي",
+    "translit": [
+      "kahraba2i",
+      "kahraba'i"
+    ],
+    "translation_en": "electrician",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَبَّاك",
+    "arabic_plain": "سباك",
+    "translit": [
+      "sabbak",
+      "sabbaak"
+    ],
+    "translation_en": "plumber",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَجَّار",
+    "arabic_plain": "نجار",
+    "translit": [
+      "naggar",
+      "naggaar"
+    ],
+    "translation_en": "carpenter",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَاجِر",
+    "arabic_plain": "تاجر",
+    "translit": [
+      "tager",
+      "taager",
+      "tagir"
+    ],
+    "translation_en": "merchant / trader",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَلَّاح",
+    "arabic_plain": "فلاح",
+    "translit": [
+      "falla7",
+      "fala7",
+      "fallah"
+    ],
+    "translation_en": "farmer",
+    "dialect": "Egyptian",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَيَّاد",
+    "arabic_plain": "صياد",
+    "translit": [
+      "sayyad",
+      "Sayyad",
+      "sayad"
+    ],
+    "translation_en": "fisherman",
+    "dialect": "Egyptian",
+    "category": "Words"
+  }
+]

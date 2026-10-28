@@ -1,0 +1,4741 @@
+[
+  {
+    "arabic": "بِسْمِ ٱللَّهِ",
+    "arabic_plain": "بسم الله",
+    "translit": [
+      "bismillah",
+      "bismi allah",
+      "bismillahi"
+    ],
+    "translation_en": "In the Name of Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَمْدُ لِلَّهِ",
+    "arabic_plain": "الحمد لله",
+    "translit": [
+      "al-7amdulillah",
+      "alhamdulillah",
+      "al-7amdu lillah",
+      "al7amdulillah"
+    ],
+    "translation_en": "All praise is due to Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّحْمَٰنِ",
+    "arabic_plain": "الرحمن",
+    "translit": [
+      "al-ra7man",
+      "ar-ra7man",
+      "ar-rahman",
+      "al-rahman"
+    ],
+    "translation_en": "The Entirely Merciful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّحِيمِ",
+    "arabic_plain": "الرحيم",
+    "translit": [
+      "al-ra7eem",
+      "ar-ra7eem",
+      "ar-raheem",
+      "al-raheem"
+    ],
+    "translation_en": "The Especially Merciful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَٰلَمِينَ",
+    "arabic_plain": "العالمين",
+    "translit": [
+      "al-3alameen",
+      "al-3alamin",
+      "al-alameen",
+      "al3alameen"
+    ],
+    "translation_en": "the worlds / all creation",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَٰسٓ",
+    "arabic_plain": "يس",
+    "translit": [
+      "ya-seen",
+      "yaseen",
+      "ya-sin",
+      "yasin"
+    ],
+    "translation_en": "Ya-Seen (Huruf Muqatta'at)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "طَهَ",
+    "arabic_plain": "طه",
+    "translit": [
+      "ta-ha",
+      "taha",
+      "Ta-ha"
+    ],
+    "translation_en": "Ta-Ha (Huruf Muqatta'at)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَٰلِكِ",
+    "arabic_plain": "مالك",
+    "translit": [
+      "maliki",
+      "maaliki",
+      "malik",
+      "maalik"
+    ],
+    "translation_en": "Sovereign / Master",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَوْمِ",
+    "arabic_plain": "يوم",
+    "translit": [
+      "yawmi",
+      "yawm",
+      "yowm"
+    ],
+    "translation_en": "Day",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلدِّينِ",
+    "arabic_plain": "الدين",
+    "translit": [
+      "al-deen",
+      "ad-deen",
+      "al-din",
+      "ad-din"
+    ],
+    "translation_en": "the Judgment / the Religion",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَعْبُدُ",
+    "arabic_plain": "نعبد",
+    "translit": [
+      "na3budu",
+      "na3bud",
+      "nabudu"
+    ],
+    "translation_en": "we worship",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَسْتَعِينُ",
+    "arabic_plain": "نستعين",
+    "translit": [
+      "nasta3een",
+      "nasta3in",
+      "nasta3eenu"
+    ],
+    "translation_en": "we seek help",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱهْدِنَا",
+    "arabic_plain": "اهدنا",
+    "translit": [
+      "ihdina",
+      "ehdina",
+      "ihdinaa"
+    ],
+    "translation_en": "guide us",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصِّرَٰطَ",
+    "arabic_plain": "الصراط",
+    "translit": [
+      "al-sirat",
+      "as-sirat",
+      "al-siraT",
+      "as-siraat"
+    ],
+    "translation_en": "the path / the way",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُسْتَقِيمَ",
+    "arabic_plain": "المستقيم",
+    "translit": [
+      "al-mustaqeem",
+      "al-mustaqim",
+      "al-musta9eem"
+    ],
+    "translation_en": "the straight / the upright",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَنْعَمْتَ",
+    "arabic_plain": "أنعمت",
+    "translit": [
+      "an3amta",
+      "2an3amta",
+      "anamta"
+    ],
+    "translation_en": "You have bestowed favor",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَغْضُوبِ",
+    "arabic_plain": "المغضوب",
+    "translit": [
+      "al-maghdoobi",
+      "al-maghdub",
+      "al-ma8doob"
+    ],
+    "translation_en": "those who evoked wrath",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلضَّالِّينَ",
+    "arabic_plain": "الضالين",
+    "translit": [
+      "al-dalleen",
+      "ad-dalleen",
+      "al-Dalleen"
+    ],
+    "translation_en": "those who have gone astray",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱللَّهُ",
+    "arabic_plain": "الله",
+    "translit": [
+      "allahu",
+      "allah",
+      "allaahu"
+    ],
+    "translation_en": "Allah (The One God)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّبُّ",
+    "arabic_plain": "الرب",
+    "translit": [
+      "al-rabb",
+      "ar-rabb",
+      "al-rabbu"
+    ],
+    "translation_en": "The Lord and Sustainer",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَلِكُ",
+    "arabic_plain": "الملك",
+    "translit": [
+      "al-malik",
+      "al-maliku"
+    ],
+    "translation_en": "The Sovereign King",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقُدُّوسُ",
+    "arabic_plain": "القدوس",
+    "translit": [
+      "al-quddoos",
+      "al-quddus",
+      "al-9uddoos"
+    ],
+    "translation_en": "The Most Pure and Holy",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّلَامُ",
+    "arabic_plain": "السلام",
+    "translit": [
+      "al-salam",
+      "as-salam",
+      "al-salaam"
+    ],
+    "translation_en": "The Source of Peace",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُؤْمِنُ",
+    "arabic_plain": "المؤمن",
+    "translit": [
+      "al-mu2min",
+      "al-mumin",
+      "al-mu'min"
+    ],
+    "translation_en": "The Granter of Security / The Believer",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُهَيْمِنُ",
+    "arabic_plain": "المهيمن",
+    "translit": [
+      "al-muhaymin",
+      "al-muhayminu"
+    ],
+    "translation_en": "The Guardian and Overseer",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَزِيزُ",
+    "arabic_plain": "العزيز",
+    "translit": [
+      "al-3azeez",
+      "al-3aziz",
+      "al-azeez"
+    ],
+    "translation_en": "The Almighty / The Exalted in Might",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْجَبَّارُ",
+    "arabic_plain": "الجبار",
+    "translit": [
+      "al-jabbar",
+      "al-jabbaru"
+    ],
+    "translation_en": "The Compeller / The Restorer",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُتَكَبِّرُ",
+    "arabic_plain": "المتكبر",
+    "translit": [
+      "al-mutakabbir",
+      "al-mutakabbiru"
+    ],
+    "translation_en": "The Supreme in Majesty",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْخَالِقُ",
+    "arabic_plain": "الخالق",
+    "translit": [
+      "al-khaliq",
+      "al-5aliq",
+      "al-khaaliq"
+    ],
+    "translation_en": "The Creator",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَارِئُ",
+    "arabic_plain": "البارئ",
+    "translit": [
+      "al-bari2",
+      "al-baari2",
+      "al-bari"
+    ],
+    "translation_en": "The Evolver / The Maker",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُصَوِّرُ",
+    "arabic_plain": "المصور",
+    "translit": [
+      "al-musawwir",
+      "al-muSawwir"
+    ],
+    "translation_en": "The Fashioner of Forms",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْغَفَّارُ",
+    "arabic_plain": "الغفار",
+    "translit": [
+      "al-ghaffar",
+      "al-8affar",
+      "al-ghaffaar"
+    ],
+    "translation_en": "The Perpetual Forgiver",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَهَّارُ",
+    "arabic_plain": "القهار",
+    "translit": [
+      "al-qahhar",
+      "al-9ahhar",
+      "al-qahhaar"
+    ],
+    "translation_en": "The Subduer",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَهَّابُ",
+    "arabic_plain": "الوهاب",
+    "translit": [
+      "al-wahhab",
+      "al-wahhaab"
+    ],
+    "translation_en": "The Bestower",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّزَّاقُ",
+    "arabic_plain": "الرزاق",
+    "translit": [
+      "al-razzaq",
+      "ar-razzaq",
+      "al-razzaa9"
+    ],
+    "translation_en": "The Total Provider",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفَتَّاحُ",
+    "arabic_plain": "الفتاح",
+    "translit": [
+      "al-fatta7",
+      "al-fattah",
+      "al-fattaa7"
+    ],
+    "translation_en": "The Supreme Opener and Judge",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَلِيمُ",
+    "arabic_plain": "العليم",
+    "translit": [
+      "al-3aleem",
+      "al-3alim",
+      "al-aleem"
+    ],
+    "translation_en": "The All-Knowing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّمِيعُ",
+    "arabic_plain": "السميع",
+    "translit": [
+      "al-samee3",
+      "as-samee3",
+      "al-sami3"
+    ],
+    "translation_en": "The All-Hearing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَصِيرُ",
+    "arabic_plain": "البصير",
+    "translit": [
+      "al-baseer",
+      "al-basir",
+      "al-baSeer"
+    ],
+    "translation_en": "The All-Seeing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَكَمُ",
+    "arabic_plain": "الحكم",
+    "translit": [
+      "al-7akam",
+      "al-hakam"
+    ],
+    "translation_en": "The Impartial Judge",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱللَّطِيفُ",
+    "arabic_plain": "اللطيف",
+    "translit": [
+      "al-lateef",
+      "al-latif",
+      "al-laTeef"
+    ],
+    "translation_en": "The Subtle and Kind",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْخَبِيرُ",
+    "arabic_plain": "الخبير",
+    "translit": [
+      "al-khabeer",
+      "al-5abeer",
+      "al-khabir"
+    ],
+    "translation_en": "The All-Aware",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَلِيمُ",
+    "arabic_plain": "الحليم",
+    "translit": [
+      "al-7aleem",
+      "al-7alim",
+      "al-haleem"
+    ],
+    "translation_en": "The Forbearing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَظِيمُ",
+    "arabic_plain": "العظيم",
+    "translit": [
+      "al-3azeem",
+      "al-3azim",
+      "al-3aZeem"
+    ],
+    "translation_en": "The Magnificent / The Supreme",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْغَفُورُ",
+    "arabic_plain": "الغفور",
+    "translit": [
+      "al-ghafoor",
+      "al-ghafur",
+      "al-8afoor"
+    ],
+    "translation_en": "The All-Forgiving",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّكُورُ",
+    "arabic_plain": "الشكور",
+    "translit": [
+      "al-shakoor",
+      "ash-shakoor",
+      "al-shakur"
+    ],
+    "translation_en": "The Most Appreciative",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَلِيُّ",
+    "arabic_plain": "العلي",
+    "translit": [
+      "al-3aliyy",
+      "al-3ali",
+      "al-aliyy"
+    ],
+    "translation_en": "The Most High",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكَبِيرُ",
+    "arabic_plain": "الكبير",
+    "translit": [
+      "al-kabeer",
+      "al-kabir"
+    ],
+    "translation_en": "The Most Great",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَفِيظُ",
+    "arabic_plain": "الحفيظ",
+    "translit": [
+      "al-7afeez",
+      "al-7afiz",
+      "al-hafeez"
+    ],
+    "translation_en": "The Preserver and Protector",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُقِيتُ",
+    "arabic_plain": "المقيت",
+    "translit": [
+      "al-muqeet",
+      "al-muqit"
+    ],
+    "translation_en": "The Sustainer and Nourisher",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَسِيبُ",
+    "arabic_plain": "الحسيب",
+    "translit": [
+      "al-7aseeb",
+      "al-7asib",
+      "al-haseeb"
+    ],
+    "translation_en": "The Reckoner",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكَرِيمُ",
+    "arabic_plain": "الكريم",
+    "translit": [
+      "al-kareem",
+      "al-karim"
+    ],
+    "translation_en": "The Most Generous and Noble",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّقِيبُ",
+    "arabic_plain": "الرقيب",
+    "translit": [
+      "al-raqeeb",
+      "ar-raqeeb",
+      "al-raqib"
+    ],
+    "translation_en": "The Watchful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُجِيبُ",
+    "arabic_plain": "المجيب",
+    "translit": [
+      "al-mujeeb",
+      "al-mujib"
+    ],
+    "translation_en": "The Responsive",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَاسِعُ",
+    "arabic_plain": "الواسع",
+    "translit": [
+      "al-wasi3",
+      "al-waasi3"
+    ],
+    "translation_en": "The All-Encompassing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَكِيمُ",
+    "arabic_plain": "الحكيم",
+    "translit": [
+      "al-7akeem",
+      "al-7akim",
+      "al-hakeem"
+    ],
+    "translation_en": "The All-Wise",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَدُودُ",
+    "arabic_plain": "الودود",
+    "translit": [
+      "al-wadood",
+      "al-wadud"
+    ],
+    "translation_en": "The Most Loving",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَجِيدُ",
+    "arabic_plain": "المجيد",
+    "translit": [
+      "al-majeed",
+      "al-majid"
+    ],
+    "translation_en": "The Glorious",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّهِيدُ",
+    "arabic_plain": "الشهيد",
+    "translit": [
+      "al-shaheed",
+      "ash-shaheed",
+      "al-shahid"
+    ],
+    "translation_en": "The Witness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَقُّ",
+    "arabic_plain": "الحق",
+    "translit": [
+      "al-7aqq",
+      "al-7aq",
+      "al-haqq"
+    ],
+    "translation_en": "The Truth",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَكِيلُ",
+    "arabic_plain": "الوكيل",
+    "translit": [
+      "al-wakeel",
+      "al-wakil"
+    ],
+    "translation_en": "The Disposer of Affairs / The Trustee",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَوِيُّ",
+    "arabic_plain": "القوي",
+    "translit": [
+      "al-qawiyy",
+      "al-qawi",
+      "al-9awiyy"
+    ],
+    "translation_en": "The All-Strong",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَتِينُ",
+    "arabic_plain": "المتين",
+    "translit": [
+      "al-mateen",
+      "al-matin"
+    ],
+    "translation_en": "The Firm and Steadfast",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَلِيُّ",
+    "arabic_plain": "الولي",
+    "translit": [
+      "al-waliyy",
+      "al-wali"
+    ],
+    "translation_en": "The Protecting Friend",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَمِيدُ",
+    "arabic_plain": "الحميد",
+    "translit": [
+      "al-7ameed",
+      "al-7amid",
+      "al-hameed"
+    ],
+    "translation_en": "The Praiseworthy",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَيُّ",
+    "arabic_plain": "الحي",
+    "translit": [
+      "al-7ayy",
+      "al-7ay",
+      "al-hayy"
+    ],
+    "translation_en": "The Ever-Living",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَيُّومُ",
+    "arabic_plain": "القيوم",
+    "translit": [
+      "al-qayyoom",
+      "al-qayyum",
+      "al-9ayyoom"
+    ],
+    "translation_en": "The Sustainer of All Existence",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَاحِدُ",
+    "arabic_plain": "الواحد",
+    "translit": [
+      "al-wa7id",
+      "al-waa7id",
+      "al-wahid"
+    ],
+    "translation_en": "The One",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَحَدُ",
+    "arabic_plain": "الأحد",
+    "translit": [
+      "al-a7ad",
+      "al-2a7ad",
+      "al-ahad"
+    ],
+    "translation_en": "The Unique One",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّمَدُ",
+    "arabic_plain": "الصمد",
+    "translit": [
+      "al-samad",
+      "as-samad",
+      "al-Samad"
+    ],
+    "translation_en": "The Eternal Refuge",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَادِرُ",
+    "arabic_plain": "القادر",
+    "translit": [
+      "al-qadir",
+      "al-qaadir"
+    ],
+    "translation_en": "The All-Capable",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُقْتَدِرُ",
+    "arabic_plain": "المقتدر",
+    "translit": [
+      "al-muqtadir",
+      "al-muqtadiru"
+    ],
+    "translation_en": "The All-Determiner",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَوَّلُ",
+    "arabic_plain": "الأول",
+    "translit": [
+      "al-awwal",
+      "al-2awwal"
+    ],
+    "translation_en": "The First",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْآخِرُ",
+    "arabic_plain": "الآخر",
+    "translit": [
+      "al-akhir",
+      "al-2a5ir",
+      "al-aakhir"
+    ],
+    "translation_en": "The Last",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلظَّاهِرُ",
+    "arabic_plain": "الظاهر",
+    "translit": [
+      "al-zahir",
+      "az-zahir",
+      "al-Zahir"
+    ],
+    "translation_en": "The Manifest",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَاطِنُ",
+    "arabic_plain": "الباطن",
+    "translit": [
+      "al-batin",
+      "al-baatin",
+      "al-baTin"
+    ],
+    "translation_en": "The Hidden / The Unseen",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّوَّابُ",
+    "arabic_plain": "التواب",
+    "translit": [
+      "al-tawwab",
+      "at-tawwab",
+      "al-tawwaab"
+    ],
+    "translation_en": "The Acceptor of Repentance",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَفُوُّ",
+    "arabic_plain": "العفو",
+    "translit": [
+      "al-3afuww",
+      "al-3afuw",
+      "al-afuww"
+    ],
+    "translation_en": "The Pardoner",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّؤُوفُ",
+    "arabic_plain": "الرؤوف",
+    "translit": [
+      "al-ra2oof",
+      "ar-ra2oof",
+      "al-raouf"
+    ],
+    "translation_en": "The Most Compassionate",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَكْرَمُ",
+    "arabic_plain": "الأكرم",
+    "translit": [
+      "al-akram",
+      "al-2akram"
+    ],
+    "translation_en": "The Most Bountiful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَعْلَىٰ",
+    "arabic_plain": "الأعلى",
+    "translit": [
+      "al-a3la",
+      "al-2a3la"
+    ],
+    "translation_en": "The Most High",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقُرْآنُ",
+    "arabic_plain": "القرآن",
+    "translit": [
+      "al-qur2an",
+      "al-quran",
+      "al-9ur2an"
+    ],
+    "translation_en": "The Quran",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكِتَابُ",
+    "arabic_plain": "الكتاب",
+    "translit": [
+      "al-kitab",
+      "al-kitaab"
+    ],
+    "translation_en": "The Book / The Scripture",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفُرْقَانَ",
+    "arabic_plain": "الفرقان",
+    "translit": [
+      "al-furqan",
+      "al-furqaan"
+    ],
+    "translation_en": "The Criterion",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّوْرَاةَ",
+    "arabic_plain": "التوراة",
+    "translit": [
+      "al-tawrah",
+      "at-tawrah",
+      "al-tawraat"
+    ],
+    "translation_en": "The Torah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِنجِيلَ",
+    "arabic_plain": "الإنجيل",
+    "translit": [
+      "al-injeel",
+      "al-injil"
+    ],
+    "translation_en": "The Gospel",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلزَّبُورَ",
+    "arabic_plain": "الزبور",
+    "translit": [
+      "al-zaboor",
+      "az-zaboor",
+      "al-zabur"
+    ],
+    "translation_en": "The Psalms",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلذِّكْرِ",
+    "arabic_plain": "الذكر",
+    "translit": [
+      "al-dhikr",
+      "adh-dhikr",
+      "al-zikr"
+    ],
+    "translation_en": "The Reminder / Remembrance",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْآيَاتِ",
+    "arabic_plain": "الآيات",
+    "translit": [
+      "al-ayat",
+      "al-2ayat",
+      "al-aayaat"
+    ],
+    "translation_en": "the signs / the verses",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "آيَةٌ",
+    "arabic_plain": "آية",
+    "translit": [
+      "ayah",
+      "2ayah",
+      "aayah"
+    ],
+    "translation_en": "a sign / a verse",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُورَةٌ",
+    "arabic_plain": "سورة",
+    "translit": [
+      "soorah",
+      "surah",
+      "soora"
+    ],
+    "translation_en": "a chapter of the Quran",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَحْيِ",
+    "arabic_plain": "الوحي",
+    "translit": [
+      "al-wa7y",
+      "al-wahy"
+    ],
+    "translation_en": "the revelation",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْغَيْبِ",
+    "arabic_plain": "الغيب",
+    "translit": [
+      "al-ghayb",
+      "al-8ayb"
+    ],
+    "translation_en": "the unseen",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِيمَانِ",
+    "arabic_plain": "الإيمان",
+    "translit": [
+      "al-eeman",
+      "al-iman",
+      "al-2eeman"
+    ],
+    "translation_en": "faith / belief",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِسْلَامَ",
+    "arabic_plain": "الإسلام",
+    "translit": [
+      "al-islam",
+      "al-2islam",
+      "al-islaam"
+    ],
+    "translation_en": "Islam / submission to Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّقْوَىٰ",
+    "arabic_plain": "التقوى",
+    "translit": [
+      "al-taqwa",
+      "at-taqwa"
+    ],
+    "translation_en": "piety / God-consciousness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِحْسَانِ",
+    "arabic_plain": "الإحسان",
+    "translit": [
+      "al-i7san",
+      "al-e7san",
+      "al-ihsan"
+    ],
+    "translation_en": "excellence / perfection of faith",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّلَاةَ",
+    "arabic_plain": "الصلاة",
+    "translit": [
+      "al-salah",
+      "as-salah",
+      "al-salaat"
+    ],
+    "translation_en": "the prayer",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلزَّكَاةَ",
+    "arabic_plain": "الزكاة",
+    "translit": [
+      "al-zakah",
+      "az-zakah",
+      "al-zakaat"
+    ],
+    "translation_en": "the purifying charity",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصِّيَامُ",
+    "arabic_plain": "الصيام",
+    "translit": [
+      "al-siyam",
+      "as-siyam",
+      "al-Siyaam"
+    ],
+    "translation_en": "the fasting",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَجُّ",
+    "arabic_plain": "الحج",
+    "translit": [
+      "al-7ajj",
+      "al-hajj"
+    ],
+    "translation_en": "the pilgrimage",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسُّجُودِ",
+    "arabic_plain": "السجود",
+    "translit": [
+      "al-sujood",
+      "as-sujood",
+      "al-sujud"
+    ],
+    "translation_en": "prostration",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرُّكُوعِ",
+    "arabic_plain": "الركوع",
+    "translit": [
+      "al-rukoo3",
+      "ar-rukoo3",
+      "al-ruku3"
+    ],
+    "translation_en": "bowing in prayer",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلدُّعَاءِ",
+    "arabic_plain": "الدعاء",
+    "translit": [
+      "al-du3a2",
+      "ad-du3a2",
+      "al-duaa"
+    ],
+    "translation_en": "supplication / invocation",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّسْبِيحِ",
+    "arabic_plain": "التسبيح",
+    "translit": [
+      "al-tasbee7",
+      "at-tasbee7",
+      "al-tasbih"
+    ],
+    "translation_en": "glorification of Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْهُدَىٰ",
+    "arabic_plain": "الهدى",
+    "translit": [
+      "al-huda",
+      "al-hudaa"
+    ],
+    "translation_en": "the guidance",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنُّورِ",
+    "arabic_plain": "النور",
+    "translit": [
+      "al-noor",
+      "an-noor",
+      "al-nur"
+    ],
+    "translation_en": "the light",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلظُّلُمَاتِ",
+    "arabic_plain": "الظلمات",
+    "translit": [
+      "al-zulumat",
+      "az-zulumat",
+      "al-Zulumaat"
+    ],
+    "translation_en": "the darknesses",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَيِّنَاتِ",
+    "arabic_plain": "البينات",
+    "translit": [
+      "al-bayyinat",
+      "al-bayyinaat"
+    ],
+    "translation_en": "the clear proofs",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحِكْمَةَ",
+    "arabic_plain": "الحكمة",
+    "translit": [
+      "al-7ikmah",
+      "al-7ikma",
+      "al-hikmah"
+    ],
+    "translation_en": "the wisdom",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّحْمَةَ",
+    "arabic_plain": "الرحمة",
+    "translit": [
+      "al-ra7mah",
+      "ar-ra7mah",
+      "al-rahmah"
+    ],
+    "translation_en": "the mercy",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَغْفِرَةَ",
+    "arabic_plain": "المغفرة",
+    "translit": [
+      "al-maghfirah",
+      "al-ma8firah",
+      "al-maghfira"
+    ],
+    "translation_en": "the forgiveness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّوْبَةَ",
+    "arabic_plain": "التوبة",
+    "translit": [
+      "al-tawbah",
+      "at-tawbah",
+      "al-tawba"
+    ],
+    "translation_en": "the repentance",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّكِينَةَ",
+    "arabic_plain": "السكينة",
+    "translit": [
+      "al-sakeenah",
+      "as-sakeenah",
+      "al-sakinah"
+    ],
+    "translation_en": "the tranquility / peace of heart",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَرَكَاتِ",
+    "arabic_plain": "البركات",
+    "translit": [
+      "al-barakat",
+      "al-barakaat"
+    ],
+    "translation_en": "the blessings",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنِّعْمَةَ",
+    "arabic_plain": "النعمة",
+    "translit": [
+      "al-ni3mah",
+      "an-ni3mah",
+      "al-nimah"
+    ],
+    "translation_en": "the favor / grace",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَلَائِكَةُ",
+    "arabic_plain": "الملائكة",
+    "translit": [
+      "al-mala2ikah",
+      "al-mala2ika",
+      "al-malaikah"
+    ],
+    "translation_en": "the angels",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرُّوحُ",
+    "arabic_plain": "الروح",
+    "translit": [
+      "al-roo7",
+      "ar-roo7",
+      "al-ruh"
+    ],
+    "translation_en": "the Spirit (Angel Jibril)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "جِبْرِيلَ",
+    "arabic_plain": "جبريل",
+    "translit": [
+      "jibreel",
+      "jibril"
+    ],
+    "translation_en": "Angel Jibril (Gabriel)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّبِيِّينَ",
+    "arabic_plain": "النبيين",
+    "translit": [
+      "al-nabiyyeen",
+      "an-nabiyyeen",
+      "al-nabiyyin"
+    ],
+    "translation_en": "the prophets",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّبِيُّ",
+    "arabic_plain": "النبي",
+    "translit": [
+      "al-nabiyy",
+      "an-nabiyy",
+      "al-nabi"
+    ],
+    "translation_en": "the Prophet",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُرْسَلِينَ",
+    "arabic_plain": "المرسلين",
+    "translit": [
+      "al-mursaleen",
+      "al-mursalin"
+    ],
+    "translation_en": "the messengers",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّسُولُ",
+    "arabic_plain": "الرسول",
+    "translit": [
+      "al-rasool",
+      "ar-rasool",
+      "al-rasul"
+    ],
+    "translation_en": "the Messenger",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "آدَمَ",
+    "arabic_plain": "آدم",
+    "translit": [
+      "adam",
+      "2adam",
+      "aadam"
+    ],
+    "translation_en": "Adam",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "نُوحٍ",
+    "arabic_plain": "نوح",
+    "translit": [
+      "noo7",
+      "nuh",
+      "nou7"
+    ],
+    "translation_en": "Nuh (Noah)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِبْرَاهِيمَ",
+    "arabic_plain": "إبراهيم",
+    "translit": [
+      "ibraheem",
+      "ibrahim",
+      "2ibraheem"
+    ],
+    "translation_en": "Ibrahim (Abraham)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِسْمَاعِيلَ",
+    "arabic_plain": "إسماعيل",
+    "translit": [
+      "isma3eel",
+      "ismail",
+      "2isma3eel"
+    ],
+    "translation_en": "Isma'il (Ishmael)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِسْحَاقَ",
+    "arabic_plain": "إسحاق",
+    "translit": [
+      "is7aq",
+      "ishaq",
+      "2is7aq"
+    ],
+    "translation_en": "Ishaq (Isaac)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَعْقُوبَ",
+    "arabic_plain": "يعقوب",
+    "translit": [
+      "ya3qoob",
+      "ya3qub",
+      "yaqoob"
+    ],
+    "translation_en": "Ya'qub (Jacob)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يُوسُفَ",
+    "arabic_plain": "يوسف",
+    "translit": [
+      "yoosuf",
+      "yusuf"
+    ],
+    "translation_en": "Yusuf (Joseph)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُوسَىٰ",
+    "arabic_plain": "موسى",
+    "translit": [
+      "moosa",
+      "musa"
+    ],
+    "translation_en": "Musa (Moses)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "هَارُونَ",
+    "arabic_plain": "هارون",
+    "translit": [
+      "haroon",
+      "harun"
+    ],
+    "translation_en": "Harun (Aaron)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَاوُودَ",
+    "arabic_plain": "داوود",
+    "translit": [
+      "dawood",
+      "dawud"
+    ],
+    "translation_en": "Dawud (David)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُلَيْمَانَ",
+    "arabic_plain": "سليمان",
+    "translit": [
+      "sulayman",
+      "sulaiman"
+    ],
+    "translation_en": "Sulayman (Solomon)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَيُّوبَ",
+    "arabic_plain": "أيوب",
+    "translit": [
+      "ayyoob",
+      "ayyub",
+      "2ayyoob"
+    ],
+    "translation_en": "Ayyub (Job)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يُونُسَ",
+    "arabic_plain": "يونس",
+    "translit": [
+      "yoonus",
+      "yunus"
+    ],
+    "translation_en": "Yunus (Jonah)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "زَكَرِيَّا",
+    "arabic_plain": "زكريا",
+    "translit": [
+      "zakariyya",
+      "zakariya"
+    ],
+    "translation_en": "Zakariyya (Zechariah)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَحْيَىٰ",
+    "arabic_plain": "يحيى",
+    "translit": [
+      "ya7ya",
+      "yahya"
+    ],
+    "translation_en": "Yahya (John)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "عِيسَىٰ",
+    "arabic_plain": "عيسى",
+    "translit": [
+      "3eesa",
+      "3isa",
+      "eesa"
+    ],
+    "translation_en": "Isa (Jesus)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَرْيَمَ",
+    "arabic_plain": "مريم",
+    "translit": [
+      "maryam",
+      "mariam"
+    ],
+    "translation_en": "Maryam (Mary)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُحَمَّدٌ",
+    "arabic_plain": "محمد",
+    "translit": [
+      "mu7ammad",
+      "muhammad",
+      "mo7ammad"
+    ],
+    "translation_en": "Muhammad",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُؤْمِنُونَ",
+    "arabic_plain": "المؤمنون",
+    "translit": [
+      "al-mu2minoon",
+      "al-muminun",
+      "al-mu'minoon"
+    ],
+    "translation_en": "the believers",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُؤْمِنَاتِ",
+    "arabic_plain": "المؤمنات",
+    "translit": [
+      "al-mu2minat",
+      "al-muminat"
+    ],
+    "translation_en": "the believing women",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُسْلِمِينَ",
+    "arabic_plain": "المسلمين",
+    "translit": [
+      "al-muslimeen",
+      "al-muslimin"
+    ],
+    "translation_en": "the Muslims (those who submit)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُتَّقِينَ",
+    "arabic_plain": "المتقين",
+    "translit": [
+      "al-muttaqeen",
+      "al-muttaqin"
+    ],
+    "translation_en": "the righteous / the God-fearing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُحْسِنِينَ",
+    "arabic_plain": "المحسنين",
+    "translit": [
+      "al-mu7sineen",
+      "al-mu7sinin",
+      "al-muhsinin"
+    ],
+    "translation_en": "the doers of good",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّابِرِينَ",
+    "arabic_plain": "الصابرين",
+    "translit": [
+      "al-sabireen",
+      "as-sabireen",
+      "al-Saabireen"
+    ],
+    "translation_en": "the patient and steadfast",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّادِقِينَ",
+    "arabic_plain": "الصادقين",
+    "translit": [
+      "al-sadiqeen",
+      "as-sadiqeen",
+      "al-Saadiqeen"
+    ],
+    "translation_en": "the truthful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَانِتِينَ",
+    "arabic_plain": "القانتين",
+    "translit": [
+      "al-qaniteen",
+      "al-qaaniteen"
+    ],
+    "translation_en": "the devoutly obedient",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُنفِقِينَ",
+    "arabic_plain": "المنفقين",
+    "translit": [
+      "al-munfiqeen",
+      "al-munfiqin"
+    ],
+    "translation_en": "those who spend in charity",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُسْتَغْفِرِينَ",
+    "arabic_plain": "المستغفرين",
+    "translit": [
+      "al-mustaghfireen",
+      "al-musta8fireen"
+    ],
+    "translation_en": "those who seek forgiveness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّاكِرِينَ",
+    "arabic_plain": "الشاكرين",
+    "translit": [
+      "al-shakireen",
+      "ash-shakireen"
+    ],
+    "translation_en": "the grateful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلذَّاكِرِينَ",
+    "arabic_plain": "الذاكرين",
+    "translit": [
+      "al-dhakireen",
+      "adh-dhakireen"
+    ],
+    "translation_en": "those who remember Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْخَاشِعِينَ",
+    "arabic_plain": "الخاشعين",
+    "translit": [
+      "al-khashi3een",
+      "al-5ashi3een"
+    ],
+    "translation_en": "the humble in worship",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّوَّابِينَ",
+    "arabic_plain": "التوابين",
+    "translit": [
+      "al-tawwabeen",
+      "at-tawwabeen"
+    ],
+    "translation_en": "those who constantly repent",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُتَطَهِّرِينَ",
+    "arabic_plain": "المتطهرين",
+    "translit": [
+      "al-mutatahhireen",
+      "al-mutaTahhireen"
+    ],
+    "translation_en": "those who purify themselves",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَبْرَارَ",
+    "arabic_plain": "الأبرار",
+    "translit": [
+      "al-abrar",
+      "al-2abrar"
+    ],
+    "translation_en": "the righteous and virtuous",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُقَرَّبُونَ",
+    "arabic_plain": "المقربون",
+    "translit": [
+      "al-muqarraboon",
+      "al-muqarrabun"
+    ],
+    "translation_en": "those brought near to Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشُّهَدَاءِ",
+    "arabic_plain": "الشهداء",
+    "translit": [
+      "al-shuhada2",
+      "ash-shuhada2",
+      "al-shuhada"
+    ],
+    "translation_en": "the witnesses / the martyrs",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّالِحِينَ",
+    "arabic_plain": "الصالحين",
+    "translit": [
+      "al-sali7een",
+      "as-sali7een",
+      "al-salihin"
+    ],
+    "translation_en": "the righteous",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُصْلِحُونَ",
+    "arabic_plain": "المصلحون",
+    "translit": [
+      "al-musli7oon",
+      "al-muslihun"
+    ],
+    "translation_en": "the peacemakers / reformers",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُفْلِحُونَ",
+    "arabic_plain": "المفلحون",
+    "translit": [
+      "al-mufli7oon",
+      "al-muflihun"
+    ],
+    "translation_en": "the successful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعُلَمَاءُ",
+    "arabic_plain": "العلماء",
+    "translit": [
+      "al-3ulama2",
+      "al-ulama"
+    ],
+    "translation_en": "the scholars / those of knowledge",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أُولُو ٱلْأَلْبَابِ",
+    "arabic_plain": "أولو الألباب",
+    "translit": [
+      "ulul-albab",
+      "2olo al-albab",
+      "ulu al-albab"
+    ],
+    "translation_en": "people of understanding",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّاسِ",
+    "arabic_plain": "الناس",
+    "translit": [
+      "al-nas",
+      "an-nas",
+      "al-naas"
+    ],
+    "translation_en": "mankind / the people",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِنسَانَ",
+    "arabic_plain": "الإنسان",
+    "translit": [
+      "al-insan",
+      "al-2insan",
+      "al-insaan"
+    ],
+    "translation_en": "man / the human being",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْيَتِيمَ",
+    "arabic_plain": "اليتيم",
+    "translit": [
+      "al-yateem",
+      "al-yatim"
+    ],
+    "translation_en": "the orphan",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمِسْكِينَ",
+    "arabic_plain": "المسكين",
+    "translit": [
+      "al-miskeen",
+      "al-miskin"
+    ],
+    "translation_en": "the needy / the poor",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَالِدَيْنِ",
+    "arabic_plain": "الوالدين",
+    "translit": [
+      "al-walidayn",
+      "al-waalidayn"
+    ],
+    "translation_en": "the parents",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقُرْبَىٰ",
+    "arabic_plain": "القربى",
+    "translit": [
+      "al-qurba",
+      "al-9urba"
+    ],
+    "translation_en": "near relatives",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُنَافِقِينَ",
+    "arabic_plain": "المنافقين",
+    "translit": [
+      "al-munafiqeen",
+      "al-munafiqin"
+    ],
+    "translation_en": "the hypocrites",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلظَّالِمِينَ",
+    "arabic_plain": "الظالمين",
+    "translit": [
+      "al-zalimeen",
+      "az-zalimeen",
+      "al-Zalimeen"
+    ],
+    "translation_en": "the wrongdoers",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفَاسِقِينَ",
+    "arabic_plain": "الفاسقين",
+    "translit": [
+      "al-fasiqeen",
+      "al-fasiqin"
+    ],
+    "translation_en": "the defiantly disobedient",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْغَافِلِينَ",
+    "arabic_plain": "الغافلين",
+    "translit": [
+      "al-ghafileen",
+      "al-8afileen"
+    ],
+    "translation_en": "the heedless",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْخَاسِرِينَ",
+    "arabic_plain": "الخاسرين",
+    "translit": [
+      "al-khasireen",
+      "al-5asireen"
+    ],
+    "translation_en": "the losers",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّمَاوَاتِ",
+    "arabic_plain": "السماوات",
+    "translit": [
+      "al-samawat",
+      "as-samawat",
+      "al-samaawaat"
+    ],
+    "translation_en": "the heavens",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّمَاءِ",
+    "arabic_plain": "السماء",
+    "translit": [
+      "al-sama2",
+      "as-sama2",
+      "al-samaa"
+    ],
+    "translation_en": "the sky / heaven",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَرْضِ",
+    "arabic_plain": "الأرض",
+    "translit": [
+      "al-ard",
+      "al-2ard",
+      "al-arD"
+    ],
+    "translation_en": "the earth",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّمْسُ",
+    "arabic_plain": "الشمس",
+    "translit": [
+      "al-shams",
+      "ash-shams"
+    ],
+    "translation_en": "the sun",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَمَرُ",
+    "arabic_plain": "القمر",
+    "translit": [
+      "al-qamar",
+      "al-9amar"
+    ],
+    "translation_en": "the moon",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنُّجُومُ",
+    "arabic_plain": "النجوم",
+    "translit": [
+      "al-nujoom",
+      "an-nujoom",
+      "al-nujum"
+    ],
+    "translation_en": "the stars",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكَوَاكِبُ",
+    "arabic_plain": "الكواكب",
+    "translit": [
+      "al-kawakib",
+      "al-kawaakib"
+    ],
+    "translation_en": "the planets / stars",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱللَّيْلِ",
+    "arabic_plain": "الليل",
+    "translit": [
+      "al-layl",
+      "al-lail"
+    ],
+    "translation_en": "the night",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّهَارِ",
+    "arabic_plain": "النهار",
+    "translit": [
+      "al-nahar",
+      "an-nahar",
+      "al-nahaar"
+    ],
+    "translation_en": "the day",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفَجْرِ",
+    "arabic_plain": "الفجر",
+    "translit": [
+      "al-fajr",
+      "al-fajri"
+    ],
+    "translation_en": "the dawn",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصُّبْحِ",
+    "arabic_plain": "الصبح",
+    "translit": [
+      "al-sub7",
+      "as-sub7",
+      "al-Sub7"
+    ],
+    "translation_en": "the morning",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلضُّحَىٰ",
+    "arabic_plain": "الضحى",
+    "translit": [
+      "al-du7a",
+      "ad-du7a",
+      "al-Du7a"
+    ],
+    "translation_en": "the forenoon / morning brightness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَصْرِ",
+    "arabic_plain": "العصر",
+    "translit": [
+      "al-3asr",
+      "al-3aSr",
+      "al-asr"
+    ],
+    "translation_en": "the afternoon / time through the ages",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّفَقِ",
+    "arabic_plain": "الشفق",
+    "translit": [
+      "al-shafaq",
+      "ash-shafaq"
+    ],
+    "translation_en": "the twilight",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَرْشِ",
+    "arabic_plain": "العرش",
+    "translit": [
+      "al-3arsh",
+      "al-arsh"
+    ],
+    "translation_en": "the Throne",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكُرْسِيُّ",
+    "arabic_plain": "الكرسي",
+    "translit": [
+      "al-kursiyy",
+      "al-kursi"
+    ],
+    "translation_en": "the Footstool / Kursi",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَحْرِ",
+    "arabic_plain": "البحر",
+    "translit": [
+      "al-ba7r",
+      "al-bahr"
+    ],
+    "translation_en": "the sea",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَنْهَارُ",
+    "arabic_plain": "الأنهار",
+    "translit": [
+      "al-anhar",
+      "al-2anhar"
+    ],
+    "translation_en": "the rivers",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَاءِ",
+    "arabic_plain": "الماء",
+    "translit": [
+      "al-ma2",
+      "al-maa2",
+      "al-maa"
+    ],
+    "translation_en": "the water",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْجِبَالِ",
+    "arabic_plain": "الجبال",
+    "translit": [
+      "al-jibal",
+      "al-jibaal"
+    ],
+    "translation_en": "the mountains",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرِّيَاحَ",
+    "arabic_plain": "الرياح",
+    "translit": [
+      "al-riya7",
+      "ar-riya7",
+      "al-riyah"
+    ],
+    "translation_en": "the winds",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّحَابِ",
+    "arabic_plain": "السحاب",
+    "translit": [
+      "al-sa7ab",
+      "as-sa7ab",
+      "al-sahab"
+    ],
+    "translation_en": "the clouds",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُزْنِ",
+    "arabic_plain": "المزن",
+    "translit": [
+      "al-muzn",
+      "al-muzni"
+    ],
+    "translation_en": "the rainclouds",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَرْقُ",
+    "arabic_plain": "البرق",
+    "translit": [
+      "al-barq",
+      "al-barqu"
+    ],
+    "translation_en": "the lightning",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّعْدُ",
+    "arabic_plain": "الرعد",
+    "translit": [
+      "al-ra3d",
+      "ar-ra3d"
+    ],
+    "translation_en": "the thunder",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّجَرُ",
+    "arabic_plain": "الشجر",
+    "translit": [
+      "al-shajar",
+      "ash-shajar"
+    ],
+    "translation_en": "the trees",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلثَّمَرَاتِ",
+    "arabic_plain": "الثمرات",
+    "translit": [
+      "al-thamarat",
+      "ath-thamarat"
+    ],
+    "translation_en": "the fruits",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّخْلَ",
+    "arabic_plain": "النخل",
+    "translit": [
+      "al-nakhl",
+      "an-nakhl",
+      "al-na5l"
+    ],
+    "translation_en": "the date-palms",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَعْنَابِ",
+    "arabic_plain": "الأعناب",
+    "translit": [
+      "al-a3nab",
+      "al-2a3nab"
+    ],
+    "translation_en": "the grapevines",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلزَّيْتُونِ",
+    "arabic_plain": "الزيتون",
+    "translit": [
+      "al-zaytoon",
+      "az-zaytoon",
+      "al-zaytun"
+    ],
+    "translation_en": "the olive",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتِّينِ",
+    "arabic_plain": "التين",
+    "translit": [
+      "al-teen",
+      "at-teen",
+      "al-tin"
+    ],
+    "translation_en": "the fig",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرُّمَّانَ",
+    "arabic_plain": "الرمان",
+    "translit": [
+      "al-rumman",
+      "ar-rumman"
+    ],
+    "translation_en": "the pomegranate",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّحْلِ",
+    "arabic_plain": "النحل",
+    "translit": [
+      "al-na7l",
+      "an-na7l",
+      "al-nahl"
+    ],
+    "translation_en": "the bee",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّمْلُ",
+    "arabic_plain": "النمل",
+    "translit": [
+      "al-naml",
+      "an-naml"
+    ],
+    "translation_en": "the ants",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَنْعَامِ",
+    "arabic_plain": "الأنعام",
+    "translit": [
+      "al-an3am",
+      "al-2an3am"
+    ],
+    "translation_en": "the grazing livestock",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلطَّيْرِ",
+    "arabic_plain": "الطير",
+    "translit": [
+      "al-tayr",
+      "at-tayr",
+      "al-Tayr"
+    ],
+    "translation_en": "the birds",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْآخِرَةِ",
+    "arabic_plain": "الآخرة",
+    "translit": [
+      "al-akhirah",
+      "al-2a5irah",
+      "al-akhira"
+    ],
+    "translation_en": "the Hereafter",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلدُّنْيَا",
+    "arabic_plain": "الدنيا",
+    "translit": [
+      "al-dunya",
+      "ad-dunya"
+    ],
+    "translation_en": "the worldly life",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّاعَةُ",
+    "arabic_plain": "الساعة",
+    "translit": [
+      "al-sa3ah",
+      "as-sa3ah",
+      "al-saa3a"
+    ],
+    "translation_en": "the Hour (of Judgment)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقِيَامَةِ",
+    "arabic_plain": "القيامة",
+    "translit": [
+      "al-qiyamah",
+      "al-9iyamah",
+      "al-qiyama"
+    ],
+    "translation_en": "the Resurrection",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَعْثِ",
+    "arabic_plain": "البعث",
+    "translit": [
+      "al-ba3th",
+      "al-baath"
+    ],
+    "translation_en": "the Resurrection / raising up",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَشْرِ",
+    "arabic_plain": "الحشر",
+    "translit": [
+      "al-7ashr",
+      "al-hashr"
+    ],
+    "translation_en": "the Gathering",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحِسَابِ",
+    "arabic_plain": "الحساب",
+    "translit": [
+      "al-7isab",
+      "al-hisab"
+    ],
+    "translation_en": "the Reckoning",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمِيزَانَ",
+    "arabic_plain": "الميزان",
+    "translit": [
+      "al-meezan",
+      "al-mizan"
+    ],
+    "translation_en": "the Scale / Balance of justice",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقِسْطِ",
+    "arabic_plain": "القسط",
+    "translit": [
+      "al-qist",
+      "al-qisT"
+    ],
+    "translation_en": "justice / equity",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْجَزَاءِ",
+    "arabic_plain": "الجزاء",
+    "translit": [
+      "al-jaza2",
+      "al-jazaa"
+    ],
+    "translation_en": "the recompense / reward",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلثَّوَابِ",
+    "arabic_plain": "الثواب",
+    "translit": [
+      "al-thawab",
+      "ath-thawab"
+    ],
+    "translation_en": "the reward",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَذَابُ",
+    "arabic_plain": "العذاب",
+    "translit": [
+      "al-3adhab",
+      "al-adhab"
+    ],
+    "translation_en": "the punishment",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْجَنَّةَ",
+    "arabic_plain": "الجنة",
+    "translit": [
+      "al-jannah",
+      "al-janna"
+    ],
+    "translation_en": "Paradise / the Garden",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفِرْدَوْسِ",
+    "arabic_plain": "الفردوس",
+    "translit": [
+      "al-firdaws",
+      "al-firdaus"
+    ],
+    "translation_en": "Firdaws (the highest Garden of Paradise)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكَوْثَرَ",
+    "arabic_plain": "الكوثر",
+    "translit": [
+      "al-kawthar",
+      "al-kauthar"
+    ],
+    "translation_en": "Al-Kawthar (Abundance / River in Paradise)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّعِيمِ",
+    "arabic_plain": "النعيم",
+    "translit": [
+      "al-na3eem",
+      "an-na3eem",
+      "al-naim"
+    ],
+    "translation_en": "bliss / delight",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْخُلْدِ",
+    "arabic_plain": "الخلد",
+    "translit": [
+      "al-khuld",
+      "al-5uld"
+    ],
+    "translation_en": "eternity / immortality",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَلْسَبِيلًا",
+    "arabic_plain": "سلسبيلا",
+    "translit": [
+      "salsabeela",
+      "salsabila"
+    ],
+    "translation_en": "Salsabil (a spring in Paradise)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَسْنِيمٍ",
+    "arabic_plain": "تسنيم",
+    "translit": [
+      "tasneem",
+      "tasnim"
+    ],
+    "translation_en": "Tasnim (a lofty spring in Paradise)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّارَ",
+    "arabic_plain": "النار",
+    "translit": [
+      "al-nar",
+      "an-nar",
+      "al-naar"
+    ],
+    "translation_en": "the Fire",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَهَنَّمَ",
+    "arabic_plain": "جهنم",
+    "translit": [
+      "jahannam",
+      "jahannama"
+    ],
+    "translation_en": "Hellfire",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْجَحِيمِ",
+    "arabic_plain": "الجحيم",
+    "translit": [
+      "al-ja7eem",
+      "al-jahim"
+    ],
+    "translation_en": "the Blazing Fire",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّعِيرِ",
+    "arabic_plain": "السعير",
+    "translit": [
+      "al-sa3eer",
+      "as-sa3eer"
+    ],
+    "translation_en": "the Blaze",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَقَرَ",
+    "arabic_plain": "سقر",
+    "translit": [
+      "saqar",
+      "saqara"
+    ],
+    "translation_en": "Saqar (the scorching Fire)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحُطَمَةِ",
+    "arabic_plain": "الحطمة",
+    "translit": [
+      "al-7utamah",
+      "al-7uTamah",
+      "al-hutamah"
+    ],
+    "translation_en": "the Crusher",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْهَاوِيَةُ",
+    "arabic_plain": "الهاوية",
+    "translit": [
+      "al-hawiyah",
+      "al-haawiyah"
+    ],
+    "translation_en": "the Abyss",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلقَارِعَةُ",
+    "arabic_plain": "القارعة",
+    "translit": [
+      "al-qari3ah",
+      "al-9ari3ah",
+      "al-qaria"
+    ],
+    "translation_en": "the Striking Calamity",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَاقِعَةُ",
+    "arabic_plain": "الواقعة",
+    "translit": [
+      "al-waqi3ah",
+      "al-waa9i3ah",
+      "al-waqia"
+    ],
+    "translation_en": "the Inevitable Event",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلطَّامَّةُ",
+    "arabic_plain": "الطامة",
+    "translit": [
+      "al-tammah",
+      "at-tammah",
+      "al-Taammah"
+    ],
+    "translation_en": "the Overwhelming Calamity",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّاخَّةُ",
+    "arabic_plain": "الصاخة",
+    "translit": [
+      "al-sakhkhah",
+      "as-sakhkhah",
+      "al-Sa55ah"
+    ],
+    "translation_en": "the Deafening Blast",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْغَاشِيَةِ",
+    "arabic_plain": "الغاشية",
+    "translit": [
+      "al-ghashiyah",
+      "al-8ashiyah"
+    ],
+    "translation_en": "the Overwhelming",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلزَّلْزَلَةُ",
+    "arabic_plain": "الزلزلة",
+    "translit": [
+      "al-zalzalah",
+      "az-zalzalah"
+    ],
+    "translation_en": "the Earthquake",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَلْبُ",
+    "arabic_plain": "القلب",
+    "translit": [
+      "al-qalb",
+      "al-9alb"
+    ],
+    "translation_en": "the heart",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقُلُوبُ",
+    "arabic_plain": "القلوب",
+    "translit": [
+      "al-quloob",
+      "al-qulub"
+    ],
+    "translation_en": "the hearts",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصُّدُورِ",
+    "arabic_plain": "الصدور",
+    "translit": [
+      "al-sudoor",
+      "as-sudoor",
+      "al-Sudur"
+    ],
+    "translation_en": "the breasts / chests",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّفْسُ",
+    "arabic_plain": "النفس",
+    "translit": [
+      "al-nafs",
+      "an-nafs"
+    ],
+    "translation_en": "the soul / the self",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَنفُسِ",
+    "arabic_plain": "الأنفس",
+    "translit": [
+      "al-anfus",
+      "al-2anfus"
+    ],
+    "translation_en": "the souls / lives",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَقْلُ",
+    "arabic_plain": "العقل",
+    "translit": [
+      "al-3aql",
+      "al-aql"
+    ],
+    "translation_en": "the intellect / reason",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَصَرَ",
+    "arabic_plain": "البصر",
+    "translit": [
+      "al-basar",
+      "al-baSar"
+    ],
+    "translation_en": "the sight / vision",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَبْصَارُ",
+    "arabic_plain": "الأبصار",
+    "translit": [
+      "al-absar",
+      "al-2abSar"
+    ],
+    "translation_en": "the eyes / sights",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّمْعَ",
+    "arabic_plain": "السمع",
+    "translit": [
+      "al-sam3",
+      "as-sam3"
+    ],
+    "translation_en": "the hearing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَفْئِدَةَ",
+    "arabic_plain": "الأفئدة",
+    "translit": [
+      "al-af2idah",
+      "al-2af2ida"
+    ],
+    "translation_en": "the hearts and minds",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱللِّسَانِ",
+    "arabic_plain": "اللسان",
+    "translit": [
+      "al-lisan",
+      "al-lisaan"
+    ],
+    "translation_en": "the tongue / language",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَيَانَ",
+    "arabic_plain": "البيان",
+    "translit": [
+      "al-bayan",
+      "al-bayaan"
+    ],
+    "translation_en": "eloquent speech / expression",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْحَيَاةَ",
+    "arabic_plain": "الحياة",
+    "translit": [
+      "al-7ayah",
+      "al-7ayaat",
+      "al-hayah"
+    ],
+    "translation_en": "the life",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَوْتَ",
+    "arabic_plain": "الموت",
+    "translit": [
+      "al-mawt",
+      "al-mout"
+    ],
+    "translation_en": "the death",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرِّزْقَ",
+    "arabic_plain": "الرزق",
+    "translit": [
+      "al-rizq",
+      "ar-rizq"
+    ],
+    "translation_en": "the provision / sustenance",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفَضْلِ",
+    "arabic_plain": "الفضل",
+    "translit": [
+      "al-fadl",
+      "al-faDl"
+    ],
+    "translation_en": "the bounty / grace",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْخَيْرِ",
+    "arabic_plain": "الخير",
+    "translit": [
+      "al-khayr",
+      "al-5ayr",
+      "al-kheir"
+    ],
+    "translation_en": "the good / goodness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّرِّ",
+    "arabic_plain": "الشر",
+    "translit": [
+      "al-sharr",
+      "ash-sharr"
+    ],
+    "translation_en": "the evil / harm",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبِرَّ",
+    "arabic_plain": "البر",
+    "translit": [
+      "al-birr",
+      "al-birra"
+    ],
+    "translation_en": "righteousness / virtue",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِثْمِ",
+    "arabic_plain": "الإثم",
+    "translit": [
+      "al-ithm",
+      "al-2ithm"
+    ],
+    "translation_en": "sin / wrongdoing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَدْلِ",
+    "arabic_plain": "العدل",
+    "translit": [
+      "al-3adl",
+      "al-adl"
+    ],
+    "translation_en": "justice",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَعْرُوفِ",
+    "arabic_plain": "المعروف",
+    "translit": [
+      "al-ma3roof",
+      "al-ma3ruf"
+    ],
+    "translation_en": "what is right and honorable",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمُنكَرِ",
+    "arabic_plain": "المنكر",
+    "translit": [
+      "al-munkar",
+      "al-munkari"
+    ],
+    "translation_en": "what is wrong and forbidden",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّبْرِ",
+    "arabic_plain": "الصبر",
+    "translit": [
+      "al-sabr",
+      "as-sabr",
+      "al-Sabr"
+    ],
+    "translation_en": "patience / perseverance",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشُّكْرِ",
+    "arabic_plain": "الشكر",
+    "translit": [
+      "al-shukr",
+      "ash-shukr"
+    ],
+    "translation_en": "gratitude",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصِّدْقِ",
+    "arabic_plain": "الصدق",
+    "translit": [
+      "al-sidq",
+      "as-sidq",
+      "al-Sidq"
+    ],
+    "translation_en": "truthfulness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَمَانَاتِ",
+    "arabic_plain": "الأمانات",
+    "translit": [
+      "al-amanat",
+      "al-2amanat"
+    ],
+    "translation_en": "the trusts",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعَهْدَ",
+    "arabic_plain": "العهد",
+    "translit": [
+      "al-3ahd",
+      "al-ahd"
+    ],
+    "translation_en": "the covenant / promise",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمِيثَاقَ",
+    "arabic_plain": "الميثاق",
+    "translit": [
+      "al-meethaq",
+      "al-mithaq"
+    ],
+    "translation_en": "the solemn covenant",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفَوْزُ",
+    "arabic_plain": "الفوز",
+    "translit": [
+      "al-fawz",
+      "al-fouz"
+    ],
+    "translation_en": "the triumph / attainment",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفَتْحُ",
+    "arabic_plain": "الفتح",
+    "translit": [
+      "al-fat7",
+      "al-fath"
+    ],
+    "translation_en": "the victory / opening",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّصْرُ",
+    "arabic_plain": "النصر",
+    "translit": [
+      "al-nasr",
+      "an-nasr",
+      "al-naSr"
+    ],
+    "translation_en": "the help / victory",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْيُسْرَ",
+    "arabic_plain": "اليسر",
+    "translit": [
+      "al-yusr",
+      "al-yusra"
+    ],
+    "translation_en": "ease / relief",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعُسْرِ",
+    "arabic_plain": "العسر",
+    "translit": [
+      "al-3usr",
+      "al-usri"
+    ],
+    "translation_en": "hardship / difficulty",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفَلَقِ",
+    "arabic_plain": "الفلق",
+    "translit": [
+      "al-falaq",
+      "al-fala9"
+    ],
+    "translation_en": "the daybreak",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَلَقَ",
+    "arabic_plain": "خلق",
+    "translit": [
+      "khalaqa",
+      "5alaqa",
+      "khalaq"
+    ],
+    "translation_en": "He created",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "جَعَلَ",
+    "arabic_plain": "جعل",
+    "translit": [
+      "ja3ala",
+      "ja3al"
+    ],
+    "translation_en": "He made / appointed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَنزَلَ",
+    "arabic_plain": "أنزل",
+    "translit": [
+      "anzala",
+      "2anzala",
+      "anzal"
+    ],
+    "translation_en": "He sent down / revealed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَوْحَىٰ",
+    "arabic_plain": "أوحى",
+    "translit": [
+      "aw7a",
+      "2aw7a",
+      "awha"
+    ],
+    "translation_en": "He inspired / revealed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "هَدَىٰ",
+    "arabic_plain": "هدى",
+    "translit": [
+      "hada",
+      "hadaa"
+    ],
+    "translation_en": "He guided",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَلَّمَ",
+    "arabic_plain": "علم",
+    "translit": [
+      "3allama",
+      "allama",
+      "3allam"
+    ],
+    "translation_en": "He taught",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَزَقَ",
+    "arabic_plain": "رزق",
+    "translit": [
+      "razaqa",
+      "razaq"
+    ],
+    "translation_en": "He provided",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَفَرَ",
+    "arabic_plain": "غفر",
+    "translit": [
+      "ghafara",
+      "8afara",
+      "ghafar"
+    ],
+    "translation_en": "He forgave",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَابَ",
+    "arabic_plain": "تاب",
+    "translit": [
+      "taba",
+      "taaba",
+      "tab"
+    ],
+    "translation_en": "He repented / accepted repentance",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَحِمَ",
+    "arabic_plain": "رحم",
+    "translit": [
+      "ra7ima",
+      "rahima",
+      "ra7im"
+    ],
+    "translation_en": "He had mercy",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَصَرَ",
+    "arabic_plain": "نصر",
+    "translit": [
+      "nasara",
+      "naSara",
+      "nasar"
+    ],
+    "translation_en": "He helped / granted victory",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "فَتَحَ",
+    "arabic_plain": "فتح",
+    "translit": [
+      "fata7a",
+      "fataha",
+      "fata7"
+    ],
+    "translation_en": "He opened / granted victory",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَعَثَ",
+    "arabic_plain": "بعث",
+    "translit": [
+      "ba3atha",
+      "ba3ath"
+    ],
+    "translation_en": "He sent / resurrected",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَحْيَا",
+    "arabic_plain": "أحيا",
+    "translit": [
+      "a7ya",
+      "2a7ya",
+      "ahya"
+    ],
+    "translation_en": "He gave life",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَمَاتَ",
+    "arabic_plain": "أمات",
+    "translit": [
+      "amata",
+      "2amata",
+      "amaat"
+    ],
+    "translation_en": "He caused death",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَضَىٰ",
+    "arabic_plain": "قضى",
+    "translit": [
+      "qada",
+      "qaDa",
+      "9ada"
+    ],
+    "translation_en": "He decreed / ordained",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَكَمَ",
+    "arabic_plain": "حكم",
+    "translit": [
+      "7akama",
+      "hakama",
+      "7akam"
+    ],
+    "translation_en": "He judged",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَاءَ",
+    "arabic_plain": "شاء",
+    "translit": [
+      "sha2a",
+      "shaa2a",
+      "shaa"
+    ],
+    "translation_en": "He willed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَرَادَ",
+    "arabic_plain": "أراد",
+    "translit": [
+      "arada",
+      "2arada",
+      "araada"
+    ],
+    "translation_en": "He intended / willed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَمِعَ",
+    "arabic_plain": "سمع",
+    "translit": [
+      "sami3a",
+      "samia",
+      "sami3"
+    ],
+    "translation_en": "He heard",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَبْصَرَ",
+    "arabic_plain": "أبصر",
+    "translit": [
+      "absara",
+      "2abSara",
+      "absar"
+    ],
+    "translation_en": "he saw / perceived",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "آمَنَ",
+    "arabic_plain": "آمن",
+    "translit": [
+      "amana",
+      "2amana",
+      "aamana"
+    ],
+    "translation_en": "he believed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "آمَنُوا",
+    "arabic_plain": "آمنوا",
+    "translit": [
+      "amanoo",
+      "2amanoo",
+      "amanu"
+    ],
+    "translation_en": "they believed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَمِلُوا",
+    "arabic_plain": "عملوا",
+    "translit": [
+      "3amiloo",
+      "3amilu",
+      "amilu"
+    ],
+    "translation_en": "they did / worked",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّالِحَاتِ",
+    "arabic_plain": "الصالحات",
+    "translit": [
+      "al-sali7at",
+      "as-sali7at",
+      "al-saliha7t"
+    ],
+    "translation_en": "righteous deeds",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱتَّقَىٰ",
+    "arabic_plain": "اتقى",
+    "translit": [
+      "ittaqa",
+      "etta9a",
+      "ittaqaa"
+    ],
+    "translation_en": "he feared Allah / was righteous",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱتَّقُوا",
+    "arabic_plain": "اتقوا",
+    "translit": [
+      "ittaqoo",
+      "ittaqu",
+      "ettaqoo"
+    ],
+    "translation_en": "fear Allah! / be mindful of Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَفْلَحَ",
+    "arabic_plain": "أفلح",
+    "translit": [
+      "afla7a",
+      "2afla7a",
+      "afla7"
+    ],
+    "translation_en": "he succeeded / prospered",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَبَرَ",
+    "arabic_plain": "صبر",
+    "translit": [
+      "sabara",
+      "Sabara",
+      "sabar"
+    ],
+    "translation_en": "he was patient",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "صَبَرُوا",
+    "arabic_plain": "صبروا",
+    "translit": [
+      "sabaroo",
+      "sabaru",
+      "Sabaroo"
+    ],
+    "translation_en": "they were patient",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "شَكَرَ",
+    "arabic_plain": "شكر",
+    "translit": [
+      "shakara",
+      "shakar"
+    ],
+    "translation_en": "he was grateful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ذَكَرَ",
+    "arabic_plain": "ذكر",
+    "translit": [
+      "dhakara",
+      "zakara",
+      "dhakar"
+    ],
+    "translation_en": "he remembered / mentioned",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَبَّحَ",
+    "arabic_plain": "سبح",
+    "translit": [
+      "sabba7a",
+      "sabbaha",
+      "sabba7"
+    ],
+    "translation_en": "he glorified Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يُسَبِّحُ",
+    "arabic_plain": "يسبح",
+    "translit": [
+      "yusabbi7u",
+      "yusabbi7",
+      "yusabbihu"
+    ],
+    "translation_en": "glorifies / exalts",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَجَدَ",
+    "arabic_plain": "سجد",
+    "translit": [
+      "sajada",
+      "sajad"
+    ],
+    "translation_en": "he prostrated",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "دَعَا",
+    "arabic_plain": "دعا",
+    "translit": [
+      "da3a",
+      "da3aa"
+    ],
+    "translation_en": "he called upon / supplicated",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱسْتَغْفَرَ",
+    "arabic_plain": "استغفر",
+    "translit": [
+      "istaghfara",
+      "ista8fara",
+      "istaghfar"
+    ],
+    "translation_en": "he sought forgiveness",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَوَكَّلَ",
+    "arabic_plain": "توكل",
+    "translit": [
+      "tawakkala",
+      "tawakkal"
+    ],
+    "translation_en": "he relied / put his trust",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَطَاعَ",
+    "arabic_plain": "أطاع",
+    "translit": [
+      "ata3a",
+      "2aTa3a",
+      "ataa3a"
+    ],
+    "translation_en": "he obeyed",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَمَرَ",
+    "arabic_plain": "أمر",
+    "translit": [
+      "amara",
+      "2amara",
+      "amar"
+    ],
+    "translation_en": "He commanded",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "نَهَىٰ",
+    "arabic_plain": "نهى",
+    "translit": [
+      "naha",
+      "nahaa"
+    ],
+    "translation_en": "He forbade",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَشَّرَ",
+    "arabic_plain": "بشر",
+    "translit": [
+      "bashshara",
+      "bashshar"
+    ],
+    "translation_en": "he gave glad tidings",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَنذَرَ",
+    "arabic_plain": "أنذر",
+    "translit": [
+      "andhara",
+      "2andhara",
+      "andhar"
+    ],
+    "translation_en": "he warned",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَفَكَّرُونَ",
+    "arabic_plain": "تفكرون",
+    "translit": [
+      "tafakaroon",
+      "tafakkaron",
+      "tafakkarun"
+    ],
+    "translation_en": "you reflect / ponder",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَعْقِلُونَ",
+    "arabic_plain": "تعقلون",
+    "translit": [
+      "ta3qiloon",
+      "ta3qilun",
+      "ta9iloon"
+    ],
+    "translation_en": "you use reason / understand",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَذَكَّرُونَ",
+    "arabic_plain": "تذكرون",
+    "translit": [
+      "tadhakkaroon",
+      "tadhakkarun",
+      "tazakaroon"
+    ],
+    "translation_en": "you take heed / remember",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَشْكُرُونَ",
+    "arabic_plain": "تشكرون",
+    "translit": [
+      "tashkuroon",
+      "tashkurun"
+    ],
+    "translation_en": "you are grateful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تُؤْمِنُونَ",
+    "arabic_plain": "تؤمنون",
+    "translit": [
+      "tu2minoon",
+      "tuminun",
+      "tu'minoon"
+    ],
+    "translation_en": "you believe",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَعْلَمُونَ",
+    "arabic_plain": "تعلمون",
+    "translit": [
+      "ta3lamoon",
+      "ta3lamun"
+    ],
+    "translation_en": "you know",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَعْلَمُ",
+    "arabic_plain": "يعلم",
+    "translit": [
+      "ya3lamu",
+      "ya3lam"
+    ],
+    "translation_en": "He knows",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَهْدِي",
+    "arabic_plain": "يهدي",
+    "translit": [
+      "yahdee",
+      "yahdi"
+    ],
+    "translation_en": "He guides",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَرْزُقُ",
+    "arabic_plain": "يرزق",
+    "translit": [
+      "yarzuqu",
+      "yarzuq"
+    ],
+    "translation_en": "He provides",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَخْلُقُ",
+    "arabic_plain": "يخلق",
+    "translit": [
+      "yakhluqu",
+      "ya5luqu",
+      "yakhluq"
+    ],
+    "translation_en": "He creates",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَغْفِرُ",
+    "arabic_plain": "يغفر",
+    "translit": [
+      "yaghfiru",
+      "ya8firu",
+      "yaghfir"
+    ],
+    "translation_en": "He forgives",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يَرْحَمُ",
+    "arabic_plain": "يرحم",
+    "translit": [
+      "yar7amu",
+      "yarhamu",
+      "yar7am"
+    ],
+    "translation_en": "He has mercy",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "يُحِبُّ",
+    "arabic_plain": "يحب",
+    "translit": [
+      "yu7ibbu",
+      "yu7ibb",
+      "yuhibbu"
+    ],
+    "translation_en": "He loves",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَالَ",
+    "arabic_plain": "قال",
+    "translit": [
+      "qala",
+      "qaala",
+      "9ala"
+    ],
+    "translation_en": "He said",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَالُوا",
+    "arabic_plain": "قالوا",
+    "translit": [
+      "qaloo",
+      "qalu",
+      "qaaloo"
+    ],
+    "translation_en": "they said",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "قُلْ",
+    "arabic_plain": "قل",
+    "translit": [
+      "qul",
+      "9ul"
+    ],
+    "translation_en": "Say! (O Prophet)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "إِقْرَأْ",
+    "arabic_plain": "اقرأ",
+    "translit": [
+      "iqra2",
+      "iqra",
+      "2iqra2"
+    ],
+    "translation_en": "Read! / Recite!",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سُبْحَانَ",
+    "arabic_plain": "سبحان",
+    "translit": [
+      "sub7ana",
+      "sub7an",
+      "subhana"
+    ],
+    "translation_en": "Glory be to / Exalted is",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "تَبَارَكَ",
+    "arabic_plain": "تبارك",
+    "translit": [
+      "tabaraka",
+      "tabaarak",
+      "tabarak"
+    ],
+    "translation_en": "Blessed is",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَلَامٌ",
+    "arabic_plain": "سلام",
+    "translit": [
+      "salamun",
+      "salam",
+      "salaamun"
+    ],
+    "translation_en": "Peace",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَالِدِينَ",
+    "arabic_plain": "خالدين",
+    "translit": [
+      "khalideen",
+      "5alideen",
+      "khalidin"
+    ],
+    "translation_en": "abiding eternally",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "أَبَدًا",
+    "arabic_plain": "أبدا",
+    "translit": [
+      "abadan",
+      "2abadan"
+    ],
+    "translation_en": "forever / evermore",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَنِيفًا",
+    "arabic_plain": "حنيفا",
+    "translit": [
+      "7aneefan",
+      "7anifan",
+      "haneefan"
+    ],
+    "translation_en": "inclining toward truth / monotheist",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "صِرَاطٌ",
+    "arabic_plain": "صراط",
+    "translit": [
+      "siratun",
+      "sirat",
+      "Siraat"
+    ],
+    "translation_en": "a path / way",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُسْتَقِيمٌ",
+    "arabic_plain": "مستقيم",
+    "translit": [
+      "mustaqeemun",
+      "mustaqeem",
+      "mustaqim"
+    ],
+    "translation_en": "straight",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَظِيمٌ",
+    "arabic_plain": "عظيم",
+    "translit": [
+      "3azeemun",
+      "3azeem",
+      "3azim"
+    ],
+    "translation_en": "great / tremendous",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "كَرِيمٌ",
+    "arabic_plain": "كريم",
+    "translit": [
+      "kareemun",
+      "kareem",
+      "karim"
+    ],
+    "translation_en": "noble / generous",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "حَكِيمٌ",
+    "arabic_plain": "حكيم",
+    "translit": [
+      "7akeemun",
+      "7akeem",
+      "7akim"
+    ],
+    "translation_en": "all-wise",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَلِيمٌ",
+    "arabic_plain": "عليم",
+    "translit": [
+      "3aleemun",
+      "3aleem",
+      "3alim"
+    ],
+    "translation_en": "all-knowing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "قَدِيرٌ",
+    "arabic_plain": "قدير",
+    "translit": [
+      "qadeerun",
+      "qadeer",
+      "qadir"
+    ],
+    "translation_en": "all-powerful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "خَبِيرٌ",
+    "arabic_plain": "خبير",
+    "translit": [
+      "khabeerun",
+      "5abeer",
+      "khabeer"
+    ],
+    "translation_en": "all-aware",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَصِيرٌ",
+    "arabic_plain": "بصير",
+    "translit": [
+      "baseerun",
+      "baseer",
+      "basir"
+    ],
+    "translation_en": "all-seeing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "سَمِيعٌ",
+    "arabic_plain": "سميع",
+    "translit": [
+      "samee3un",
+      "samee3",
+      "sami3"
+    ],
+    "translation_en": "all-hearing",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "غَفُورٌ",
+    "arabic_plain": "غفور",
+    "translit": [
+      "ghafoorun",
+      "ghafoor",
+      "ghafur"
+    ],
+    "translation_en": "all-forgiving",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَحِيمٌ",
+    "arabic_plain": "رحيم",
+    "translit": [
+      "ra7eemun",
+      "ra7eem",
+      "rahim"
+    ],
+    "translation_en": "most merciful",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "مُبِينٌ",
+    "arabic_plain": "مبين",
+    "translit": [
+      "mubeenun",
+      "mubeen",
+      "mubin"
+    ],
+    "translation_en": "clear / manifest",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَشْرِقِ",
+    "arabic_plain": "المشرق",
+    "translit": [
+      "al-mashriq",
+      "al-mashriqi"
+    ],
+    "translation_en": "the East",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَغْرِبِ",
+    "arabic_plain": "المغرب",
+    "translit": [
+      "al-maghrib",
+      "al-ma8rib"
+    ],
+    "translation_en": "the West",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكَعْبَةَ",
+    "arabic_plain": "الكعبة",
+    "translit": [
+      "al-ka3bah",
+      "al-kabah"
+    ],
+    "translation_en": "the Ka'bah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَسْجِدِ",
+    "arabic_plain": "المسجد",
+    "translit": [
+      "al-masjid",
+      "al-masjidi"
+    ],
+    "translation_en": "the Mosque",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمِحْرَابَ",
+    "arabic_plain": "المحراب",
+    "translit": [
+      "al-mi7rab",
+      "al-mihrab"
+    ],
+    "translation_en": "the prayer niche / sanctuary",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَنَاسِكَ",
+    "arabic_plain": "المناسك",
+    "translit": [
+      "al-manasik",
+      "al-manaasik"
+    ],
+    "translation_en": "the rites of pilgrimage",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْهَدْيِ",
+    "arabic_plain": "الهدي",
+    "translit": [
+      "al-hady",
+      "al-hadyi"
+    ],
+    "translation_en": "the sacrificial offering",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّهْرُ",
+    "arabic_plain": "الشهر",
+    "translit": [
+      "al-shahr",
+      "ash-shahr"
+    ],
+    "translation_en": "the month",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "رَمَضَانَ",
+    "arabic_plain": "رمضان",
+    "translit": [
+      "ramadan",
+      "ramaDan"
+    ],
+    "translation_en": "Ramadan",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَهِلَّةِ",
+    "arabic_plain": "الأهلة",
+    "translit": [
+      "al-ahillah",
+      "al-2ahillah"
+    ],
+    "translation_en": "the new moons / crescents",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَدِينَةِ",
+    "arabic_plain": "المدينة",
+    "translit": [
+      "al-madeenah",
+      "al-madinah"
+    ],
+    "translation_en": "the City (Madinah)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَكَّةَ",
+    "arabic_plain": "مكة",
+    "translit": [
+      "makkah",
+      "makka"
+    ],
+    "translation_en": "Makkah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "بَكَّةَ",
+    "arabic_plain": "بكة",
+    "translit": [
+      "bakkah",
+      "bakka"
+    ],
+    "translation_en": "Bakkah (ancient name of Makkah)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَشْعَرِ",
+    "arabic_plain": "المشعر",
+    "translit": [
+      "al-mash3ar",
+      "al-mashar"
+    ],
+    "translation_en": "the Sacred Monument (Muzdalifah)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَرَفَاتٍ",
+    "arabic_plain": "عرفات",
+    "translit": [
+      "3arafat",
+      "arafat"
+    ],
+    "translation_en": "Mount Arafat",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّفَا",
+    "arabic_plain": "الصفا",
+    "translit": [
+      "al-safa",
+      "as-safa",
+      "al-Safa"
+    ],
+    "translation_en": "Mount As-Safa",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَرْوَةَ",
+    "arabic_plain": "المروة",
+    "translit": [
+      "al-marwah",
+      "al-marwa"
+    ],
+    "translation_en": "Mount Al-Marwah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَيْتِ",
+    "arabic_plain": "البيت",
+    "translit": [
+      "al-bayt",
+      "al-beit"
+    ],
+    "translation_en": "the Sacred House",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَقَامِ",
+    "arabic_plain": "المقام",
+    "translit": [
+      "al-maqam",
+      "al-ma9am"
+    ],
+    "translation_en": "the Standing Place (of Ibrahim)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلطُّورِ",
+    "arabic_plain": "الطور",
+    "translit": [
+      "al-toor",
+      "at-toor",
+      "al-Tur"
+    ],
+    "translation_en": "the Mount",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْوَادِ",
+    "arabic_plain": "الواد",
+    "translit": [
+      "al-wadi",
+      "al-waad"
+    ],
+    "translation_en": "the valley",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْكَهْفِ",
+    "arabic_plain": "الكهف",
+    "translit": [
+      "al-kahf",
+      "al-kahfi"
+    ],
+    "translation_en": "the Cave",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّقِيمِ",
+    "arabic_plain": "الرقيم",
+    "translit": [
+      "al-raqeem",
+      "ar-raqeem"
+    ],
+    "translation_en": "the Inscription",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفُلْكِ",
+    "arabic_plain": "الفلك",
+    "translit": [
+      "al-fulk",
+      "al-fulki"
+    ],
+    "translation_en": "the Ark / the ships",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَوْجُ",
+    "arabic_plain": "الموج",
+    "translit": [
+      "al-mawj",
+      "al-mouj"
+    ],
+    "translation_en": "the waves",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلطُّوفَانَ",
+    "arabic_plain": "الطوفان",
+    "translit": [
+      "al-toofan",
+      "at-toofan",
+      "al-Tufan"
+    ],
+    "translation_en": "the deluge / flood",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصَّيْحَةُ",
+    "arabic_plain": "الصيحة",
+    "translit": [
+      "al-say7ah",
+      "as-say7ah",
+      "al-Say7ah"
+    ],
+    "translation_en": "the mighty blast",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصُّورِ",
+    "arabic_plain": "الصور",
+    "translit": [
+      "al-soor",
+      "as-soor",
+      "al-Sur"
+    ],
+    "translation_en": "the Trumpet (of Resurrection)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱللَّوْحِ",
+    "arabic_plain": "اللوح",
+    "translit": [
+      "al-law7",
+      "al-lau7"
+    ],
+    "translation_en": "the Preserved Tablet",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَلَمِ",
+    "arabic_plain": "القلم",
+    "translit": [
+      "al-qalam",
+      "al-9alam"
+    ],
+    "translation_en": "the Pen",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمِدَادَ",
+    "arabic_plain": "المداد",
+    "translit": [
+      "al-midad",
+      "al-midaad"
+    ],
+    "translation_en": "the ink",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلصُّحُفِ",
+    "arabic_plain": "الصحف",
+    "translit": [
+      "al-su7uf",
+      "as-su7uf",
+      "al-Su7uf"
+    ],
+    "translation_en": "the scriptures / scrolls",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَلْوَاحِ",
+    "arabic_plain": "الألواح",
+    "translit": [
+      "al-alwa7",
+      "al-2alwa7"
+    ],
+    "translation_en": "the tablets",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْأَمْثَالَ",
+    "arabic_plain": "الأمثال",
+    "translit": [
+      "al-amthal",
+      "al-2amthal"
+    ],
+    "translation_en": "the parables / examples",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقَصَصِ",
+    "arabic_plain": "القصص",
+    "translit": [
+      "al-qasas",
+      "al-9aSaS"
+    ],
+    "translation_en": "the narratives / stories",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلنَّبَأِ",
+    "arabic_plain": "النبأ",
+    "translit": [
+      "al-naba2",
+      "an-naba2",
+      "al-naba"
+    ],
+    "translation_en": "the great news / tidings",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْعِبْرَةً",
+    "arabic_plain": "العبرة",
+    "translit": [
+      "al-3ibrah",
+      "al-ibrah"
+    ],
+    "translation_en": "the lesson / moral",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمَوْعِظَةُ",
+    "arabic_plain": "الموعظة",
+    "translit": [
+      "al-maw3izah",
+      "al-maw3iZah"
+    ],
+    "translation_en": "the admonition / instruction",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبُشْرَىٰ",
+    "arabic_plain": "البشرى",
+    "translit": [
+      "al-bushra",
+      "al-bushraa"
+    ],
+    "translation_en": "the glad tidings",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّذْكِرَةٌ",
+    "arabic_plain": "التذكرة",
+    "translit": [
+      "al-tadhkirah",
+      "at-tadhkirah"
+    ],
+    "translation_en": "the reminder",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْبَصَائِرُ",
+    "arabic_plain": "البصائر",
+    "translit": [
+      "al-basa2ir",
+      "al-baSa2ir"
+    ],
+    "translation_en": "enlightening insights",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْفِطْرَتَ",
+    "arabic_plain": "الفطرت",
+    "translit": [
+      "al-fitrah",
+      "al-fiTrah"
+    ],
+    "translation_en": "the innate nature (Fitrah)",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمِلَّةَ",
+    "arabic_plain": "الملة",
+    "translit": [
+      "al-millah",
+      "al-milla"
+    ],
+    "translation_en": "the religion / way of faith",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلشَّرِيعَةِ",
+    "arabic_plain": "الشريعة",
+    "translit": [
+      "al-sharee3ah",
+      "ash-shari3ah"
+    ],
+    "translation_en": "the ordained way / law",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْمِنْهَاجًا",
+    "arabic_plain": "المنهاجا",
+    "translit": [
+      "al-minhaja",
+      "al-minhaaj"
+    ],
+    "translation_en": "the clear methodology / path",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلسَّبِيلِ",
+    "arabic_plain": "السبيل",
+    "translit": [
+      "al-sabeel",
+      "as-sabeel",
+      "al-sabil"
+    ],
+    "translation_en": "the way / path",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرَّشَدِ",
+    "arabic_plain": "الرشد",
+    "translit": [
+      "al-rashad",
+      "ar-rashad"
+    ],
+    "translation_en": "right guidance / maturity",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْيَقِينُ",
+    "arabic_plain": "اليقين",
+    "translit": [
+      "al-yaqeen",
+      "al-yaqin"
+    ],
+    "translation_en": "certainty",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِخْلَاصِ",
+    "arabic_plain": "الإخلاص",
+    "translit": [
+      "al-ikhlas",
+      "al-i5laS"
+    ],
+    "translation_en": "sincerity / pure devotion",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْقُنُوتِ",
+    "arabic_plain": "القنوت",
+    "translit": [
+      "al-qunoot",
+      "al-qunut"
+    ],
+    "translation_en": "devout obedience",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْخُشُوعِ",
+    "arabic_plain": "الخشوع",
+    "translit": [
+      "al-khushoo3",
+      "al-5ushoo3"
+    ],
+    "translation_en": "humility in worship",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلْإِنَابَةِ",
+    "arabic_plain": "الإنابة",
+    "translit": [
+      "al-inabah",
+      "al-2inabah"
+    ],
+    "translation_en": "turning penitently to Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلتَّوَكُّلِ",
+    "arabic_plain": "التوكل",
+    "translit": [
+      "al-tawakkul",
+      "at-tawakkul"
+    ],
+    "translation_en": "reliance upon Allah",
+    "dialect": "Quranic",
+    "category": "Words"
+  },
+  {
+    "arabic": "ٱلرِّضْوَانٌ",
+    "arabic_plain": "الرضوان",
+    "translit": [
+      "al-ridwan",
+      "ar-riDwan"
+    ],
+    "translation_en": "Divine pleasure and approval",
+    "dialect": "Quranic",
+    "category": "Words"
+  }
+]

@@ -1,5 +1,63 @@
 [
   {
+    "arabic": "يَعْطِيك العَافْيِة",
+    "arabic_plain": "يعطيك العافية",
+    "translit": [
+      "ya3tik l3afye",
+      "ya3teek el 3afye",
+      "ya3tik el 3afieh",
+      "ya'tik l3afye"
+    ],
+    "translation_en": "may God give you strength / well done",
+    "dialect": "Levantine",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "شُو عَم تَعْمِل هَلَّق؟",
+    "arabic_plain": "شو عم تعمل هلق؟",
+    "translit": [
+      "shu 3am ta3mel halla2",
+      "chou 3am ta3mel halla2",
+      "sho 3am ta3mil halla'"
+    ],
+    "translation_en": "what are you doing right now?",
+    "dialect": "Levantine",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَم بَعْمِل قَهْوِة، بِدَّك فِنْجَان؟",
+    "arabic_plain": "عم بعمل قهوة، بدك فنجان؟",
+    "translit": [
+      "3am ba3mel 2ahwe baddak fenjan",
+      "3am ba3mil 'ahwe baddak finjan"
+    ],
+    "translation_en": "I am making coffee, do you want a cup?",
+    "dialect": "Levantine",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَاللهِ مَا بَعْرِف شُو بِدِّي أَعْمِل",
+    "arabic_plain": "والله ما بعرف شو بدي أعمل",
+    "translit": [
+      "wallah maba3ref shu baddi 2a3mel",
+      "wallah ma ba3ref chou baddi a3mel"
+    ],
+    "translation_en": "honestly I don't know what I want to do",
+    "dialect": "Levantine",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "كِيفَك اليُوم؟ شُو أَخْبَارَك؟",
+    "arabic_plain": "كيفك اليوم؟ شو أخبارك؟",
+    "translit": [
+      "kifak el yom shu akhbarak",
+      "keefak el youm chou a5barak"
+    ],
+    "translation_en": "how are you today? what's your news?",
+    "dialect": "Levantine",
+    "category": "Phrases"
+  },
+  {
     "arabic": "أَلْف مَبْرُوك",
     "arabic_plain": "ألف مبروك",
     "translit": [
@@ -8103,7 +8161,7 @@
   },
   {
     "arabic": "بَدَّك تَوْصِيَة مِن مُدِيرَك القَدِيم؟",
-    "arabic_plain": "بدك توصية من مديرك القديم?",
+    "arabic_plain": "بدك توصية من مديرك القديم؟",
     "translit": [
       "baddak tawsiyeh men mudeerak el 2adeem",
       "beddak tawsiye min moudirak el 2adim"
@@ -10666,18 +10724,6 @@
       "tlaqi el kher"
     ],
     "translation_en": "may you find good (goodnight response)",
-    "dialect": "Levantine",
-    "category": "Phrases"
-  },
-  {
-    "arabic": "يَعْطِيك الْعَافْيِة",
-    "arabic_plain": "يعطيك العافية",
-    "translit": [
-      "ya3teek el 3afye",
-      "yaateek el afyeh",
-      "ya3tik l3afye"
-    ],
-    "translation_en": "may God give you good health / great work (masc.)",
     "dialect": "Levantine",
     "category": "Phrases"
   },

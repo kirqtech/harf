@@ -7,8 +7,7 @@
     ],
     "translation_en": "how are you?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَنَا بِخَيْر.",
@@ -18,8 +17,7 @@
     ],
     "translation_en": "I'm fine.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "شُكْرًا جَزِيلًا.",
@@ -29,8 +27,7 @@
     ],
     "translation_en": "thank you very much.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مِنْ فَضْلِكَ.",
@@ -40,8 +37,7 @@
     ],
     "translation_en": "please.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "لَا أَعْرِف.",
@@ -51,8 +47,7 @@
     ],
     "translation_en": "I don't know.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَاذَا تَفْعَل؟",
@@ -62,8 +57,7 @@
     ],
     "translation_en": "what are you doing?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "عَفْوًا.",
@@ -73,8 +67,7 @@
     ],
     "translation_en": "you're welcome / excuse me.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "لَا بَأْسَ.",
@@ -84,8 +77,7 @@
     ],
     "translation_en": "no problem / not bad.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَعَ السَّلَامَة.",
@@ -95,8 +87,7 @@
     ],
     "translation_en": "goodbye.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَيْنَ الْحَمَّام؟",
@@ -106,8 +97,7 @@
     ],
     "translation_en": "where is the bathroom?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "كَمْ السَّاعَة؟",
@@ -117,8 +107,7 @@
     ],
     "translation_en": "what time is it?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "هَلْ أَنْتَ جَاهِز؟",
@@ -128,8 +117,7 @@
     ],
     "translation_en": "are you ready?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَا هَذَا؟",
@@ -139,8 +127,7 @@
     ],
     "translation_en": "what is this?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أُحِبُّ الْقِرَاءَة.",
@@ -150,8 +137,7 @@
     ],
     "translation_en": "I love reading.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "يَوْمٌ سَعِيد.",
@@ -161,8 +147,7 @@
     ],
     "translation_en": "happy day.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "عِيدٌ مُبَارَك.",
@@ -172,8 +157,7 @@
     ],
     "translation_en": "blessed Eid.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "رَمَضَان كَرِيم.",
@@ -183,8 +167,7 @@
     ],
     "translation_en": "Ramadan Kareem.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَنَا أَتَعَلَّمُ الْعَرَبِيَّة.",
@@ -194,8 +177,7 @@
     ],
     "translation_en": "I am learning Arabic.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَا مَعْنَى هَذَا؟",
@@ -205,8 +187,7 @@
     ],
     "translation_en": "what does this mean?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَيْنَ الْمَطْعَم؟",
@@ -216,8 +197,7 @@
     ],
     "translation_en": "where is the restaurant?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "كَمْ عُمْرُكَ؟",
@@ -227,8 +207,7 @@
     ],
     "translation_en": "how old are you?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مِنْ أَيْنَ أَنْتَ؟",
@@ -238,8 +217,7 @@
     ],
     "translation_en": "where are you from?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَنَا مِنْ أَمْرِيكَا.",
@@ -249,8 +227,7 @@
     ],
     "translation_en": "I am from America.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَرْحَبًا بِكَ.",
@@ -260,8 +237,7 @@
     ],
     "translation_en": "welcome.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَهْلًا وَسَهْلًا.",
@@ -271,8 +247,7 @@
     ],
     "translation_en": "welcome.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "لَيْلَة سَعِيدَة.",
@@ -282,8 +257,7 @@
     ],
     "translation_en": "good night.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَاذَا تَعْمَل؟",
@@ -293,8 +267,7 @@
     ],
     "translation_en": "what do you do?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "هَذَا يَوْم جَمِيل.",
@@ -304,8 +277,7 @@
     ],
     "translation_en": "this is a beautiful day.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَتَكَلَّمُ الْعَرَبِيَّة قَلِيلًا.",
@@ -315,8 +287,7 @@
     ],
     "translation_en": "I speak a little Arabic.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "صَبَاح الْخَيْر.",
@@ -326,8 +297,7 @@
     ],
     "translation_en": "good morning.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "طَابَ يَوْمُكَ.",
@@ -337,8 +307,7 @@
     ],
     "translation_en": "have a nice day.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَا اِسْمُكَ؟",
@@ -348,8 +317,7 @@
     ],
     "translation_en": "what is your name?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "هَلْ تَتَكَلَّمُ الْعَرَبِيَّة؟",
@@ -359,8 +327,7 @@
     ],
     "translation_en": "do you speak Arabic?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَيْنَ الْمَطَار؟",
@@ -370,8 +337,7 @@
     ],
     "translation_en": "where is the airport?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "الْمَطْعَم قَرِيب مِنْ هُنَا.",
@@ -381,8 +347,7 @@
     ],
     "translation_en": "the restaurant is near here.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "تُصْبِح عَلَى خَيْر.",
@@ -392,8 +357,7 @@
     ],
     "translation_en": "good night.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "شُكْرًا لَك.",
@@ -403,8 +367,7 @@
     ],
     "translation_en": "thank you.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَنْ أَنْتَ؟",
@@ -414,8 +377,7 @@
     ],
     "translation_en": "who are you?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَنَا طَالِب.",
@@ -425,8 +387,7 @@
     ],
     "translation_en": "I am a student.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَعَذِرَةً، لَمْ أَفْهَم.",
@@ -436,8 +397,7 @@
     ],
     "translation_en": "sorry, I didn't understand.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "هَلْ تَتَحَدَّثُ الْإِنْجِلِيزِيَّة؟",
@@ -447,8 +407,7 @@
     ],
     "translation_en": "do you speak English?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَيْنَ الْمِرْحَاض؟",
@@ -458,8 +417,7 @@
     ],
     "translation_en": "where is the toilet?",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "الْقَلْبُ مُطْمَئِنّ.",
@@ -469,8 +427,7 @@
     ],
     "translation_en": "the heart is at peace.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَنَا أُحِبُّ هَذَا الْكِتَاب.",
@@ -480,19 +437,7 @@
     ],
     "translation_en": "I love this book.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
-  },
-  {
-    "arabic": "صَبَاح الْخَيْر.",
-    "arabic_plain": "صباح الخير.",
-    "translit": [
-      "Sabaa7 alkhayr"
-    ],
-    "translation_en": "good morning.",
-    "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "صَبَاح النُّور.",
@@ -502,8 +447,7 @@
     ],
     "translation_en": "good morning (reply).",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَسَاء الْخَيْر.",
@@ -513,8 +457,7 @@
     ],
     "translation_en": "good evening.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "كِيفَك؟",
@@ -524,8 +467,7 @@
     ],
     "translation_en": "how are you? (to a male)",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "شُو أَخْبَارَك؟",
@@ -535,8 +477,7 @@
     ],
     "translation_en": "what's up? / how are you?",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "الْحَمْدُ لِلَّه.",
@@ -546,8 +487,7 @@
     ],
     "translation_en": "praise be to God.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "إِنْ شَاءَ اللَّه.",
@@ -557,8 +497,7 @@
     ],
     "translation_en": "God willing.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "يَلَّا بِنَا.",
@@ -568,8 +507,7 @@
     ],
     "translation_en": "let's go.",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "شُكْرًا كْتِير.",
@@ -579,8 +517,7 @@
     ],
     "translation_en": "thanks a lot.",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "مَا فِي مُشْكِلَة.",
@@ -590,8 +527,7 @@
     ],
     "translation_en": "no problem.",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "شُو اسْمَك؟",
@@ -601,8 +537,7 @@
     ],
     "translation_en": "what's your name?",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "وَيْن الْمَطْعَم؟",
@@ -612,8 +547,7 @@
     ],
     "translation_en": "where is the restaurant?",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "أَنَا جَوْعَان.",
@@ -623,8 +557,7 @@
     ],
     "translation_en": "I'm hungry.",
     "dialect": "Both",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   },
   {
     "arabic": "بِدِّي مَاء.",
@@ -634,7 +567,6 @@
     ],
     "translation_en": "I want water.",
     "dialect": "Levantine",
-    "category": "Phrases",
-    "notes": ""
+    "category": "Phrases"
   }
 ]
