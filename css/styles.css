@@ -2656,9 +2656,17 @@ dialog::backdrop {
   /* ------------------------------------------------------------------------
      Rule 2: Perfect Viewport & Stage Framing (100dvh, flex, space-between)
      ------------------------------------------------------------------------ */
+  :root {
+    --arabic-sample-size: clamp(2rem, 9vw, 3.2rem);
+  }
+
   html, body {
+    overscroll-behavior: none;
     height: 100%;
     min-height: 100dvh;
+    width: 100%;
+    position: fixed;
+    inset: 0;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -2982,14 +2990,17 @@ dialog::backdrop {
      Rule 3: Stage Polish (Arabic Word Scaling, Translation Chip, Up-Next Queue)
      ------------------------------------------------------------------------ */
   /* Dynamic font scaling so even multi-word phrases never wrap awkwardly or clip */
-  .prompt-arabic {
+  .prompt-arabic,
+  #displayWord,
+  .display-word {
     width: 100%;
     max-width: 100%;
-    font-size: clamp(2rem, 9vw, 3.2rem);
-    line-height: 1.6 !important;
+    font-size: var(--arabic-sample-size, clamp(2rem, 9vw, 3.2rem));
+    line-height: 1.65 !important;
     text-align: center;
     margin: 6px auto 4px;
-    padding: 4px 0;
+    padding: 0.14em 0;
+    overflow: visible;
     overflow-wrap: break-word;
     word-break: normal;
     text-wrap: balance;
@@ -2997,6 +3008,7 @@ dialog::backdrop {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     text-shadow: 0 0 32px rgba(245, 245, 247, 0.08);
+    transition: font-size 140ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms ease;
   }
 
   /* Input line & caret container */
@@ -3141,14 +3153,20 @@ dialog::backdrop {
      ------------------------------------------------------------------------ */
   .typing-input,
   #typingInput,
-  #inputField {
+  #inputField,
+  #mobileInput {
     font-size: 16px !important;
     position: fixed;
-    inset: auto auto 0 50%;
+    top: 30%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate(-50%, -50%);
     width: 1px;
     height: 1px;
     opacity: 0;
     pointer-events: none;
+    z-index: -1;
   }
 
   /* Completely remove any desktop focus prompts, shortcut bars, and instruction lines */
@@ -3171,9 +3189,11 @@ dialog::backdrop {
     padding: 2px 8px;
   }
 
-  body.keyboard-open .prompt-arabic {
+  body.keyboard-open .prompt-arabic,
+  body.keyboard-open #displayWord,
+  body.keyboard-open .display-word {
     margin: 2px auto 2px;
-    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    font-size: var(--arabic-sample-size, clamp(1.8rem, 8vw, 2.5rem));
   }
 
   body.keyboard-open .word-feedback {
@@ -3287,12 +3307,90 @@ dialog::backdrop {
     gap: 0.5rem;
   }
 
+  .drawer-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
   .drawer-section-label {
     font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--faint);
+  }
+
+  .drawer-section-value {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+  }
+
+  /* Drawer Font Size Slider */
+  .drawer-slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.25rem 0.2rem 0;
+    width: 100%;
+  }
+
+  .drawer-slider-bound {
+    font-family: var(--font-arabic);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--muted);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .drawer-slider-bound--large {
+    font-size: 1.45rem;
+    color: var(--text-soft);
+  }
+
+  .drawer-size-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    flex: 1;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    touch-action: pan-x;
+    cursor: pointer;
+  }
+
+  .drawer-size-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(16, 185, 129, 0.4);
+    cursor: pointer;
+    transition: transform 120ms ease;
+  }
+
+  .drawer-size-slider::-webkit-slider-thumb:active {
+    transform: scale(1.15);
+  }
+
+  .drawer-size-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(16, 185, 129, 0.4);
+    cursor: pointer;
+    transition: transform 120ms ease;
   }
 
   /* Drawer Font Options Grid */

@@ -28,6 +28,14 @@
         document.documentElement.classList.add(
           saved === 'classical' || saved === 'display' ? 'font-' + saved : 'font-modern'
         );
+        var savedSize = window.localStorage.getItem('nateq_arabic_size');
+        var sizeMap = { S: '2rem', M: '2.6rem', L: '3.2rem', XL: '3.8rem' };
+        if (savedSize) {
+          var resolvedSize = sizeMap[savedSize] || (/^\d+(\.\d+)?(rem|px|em)$/.test(savedSize) ? savedSize : '');
+          if (resolvedSize) {
+            document.documentElement.style.setProperty('--arabic-sample-size', resolvedSize);
+          }
+        }
       } catch (error) {
         document.documentElement.classList.add('font-modern');
       }
@@ -600,6 +608,34 @@
                 <span class="drawer-font-desc">Readex Pro</span>
               </span>
             </button>
+          </div>
+        </section>
+
+        <!-- Arabic Text Size -->
+        <section class="drawer-section" id="drawerArabicSizeSection">
+          <div class="drawer-section-header">
+            <span class="drawer-section-label">Arabic Text Size</span>
+            <span class="drawer-section-value" id="arabicSizeValueLabel">M (Default)</span>
+          </div>
+          <div class="drawer-segmented-track" role="group" aria-label="Arabic text size presets">
+            <button class="drawer-pill arabic-size-btn" type="button" data-arabic-size="S" aria-pressed="false">S</button>
+            <button class="drawer-pill arabic-size-btn is-active" type="button" data-arabic-size="M" aria-pressed="true">M (Default)</button>
+            <button class="drawer-pill arabic-size-btn" type="button" data-arabic-size="L" aria-pressed="false">L</button>
+            <button class="drawer-pill arabic-size-btn" type="button" data-arabic-size="XL" aria-pressed="false">XL</button>
+          </div>
+          <div class="drawer-slider-wrap">
+            <span class="drawer-slider-bound" aria-hidden="true" lang="ar">أ</span>
+            <input
+              type="range"
+              class="drawer-size-slider"
+              id="arabicSizeSlider"
+              min="1.8"
+              max="4.0"
+              step="0.1"
+              value="2.6"
+              aria-label="Arabic text size slider"
+            >
+            <span class="drawer-slider-bound drawer-slider-bound--large" aria-hidden="true" lang="ar">أ</span>
           </div>
         </section>
 
