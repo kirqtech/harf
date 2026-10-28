@@ -1,5 +1,5 @@
 /*!
- * Harf - Arabic transliteration engine
+ * Nateq - Arabic transliteration engine
  * Dependency-free. Builds token-level Latin alternatives for Arabic text
  * and parses typed input against those alternatives.
  */
@@ -31,6 +31,7 @@
 
   var DIACRITIC_RE = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF]/;
   var STRIP_DIACRITICS_RE = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF\u0640]/g;
+  var UTHMANIC_GLYPHS_RE = /[\u0615-\u061A\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF]/g;
   var ARABIC_RE = /[\u0621-\u064A\u066E-\u0674\u0679-\u06D3\u06FA-\u06FF]/;
 
   var SIMPLE_LETTERS = {
@@ -104,8 +105,8 @@
 
     if (typeof entry === 'string') {
       arabic = entry;
-      if (global && global.HarfData && typeof global.HarfData.lookupWord === 'function') {
-        var found = global.HarfData.lookupWord(arabic);
+      if (global && global.NateqData && typeof global.NateqData.lookupWord === 'function') {
+        var found = global.NateqData.lookupWord(arabic);
         if (found) {
           arabicPlain = found.arabic_plain || '';
           rawSolutions = found.translit || found.solutions || [];
@@ -126,8 +127,8 @@
       dialect = entry.dialect || '';
       notes = entry.notes || '';
 
-      if ((!translationEn || !arabicPlain) && global && global.HarfData && typeof global.HarfData.lookupWord === 'function') {
-        var meta = global.HarfData.lookupWord(arabic);
+      if ((!translationEn || !arabicPlain) && global && global.NateqData && typeof global.NateqData.lookupWord === 'function') {
+        var meta = global.NateqData.lookupWord(arabic);
         if (meta) {
           if (!rawSolutions.length) {
             rawSolutions = meta.translit || meta.solutions || [];
@@ -329,7 +330,7 @@
 
       if (Object.prototype.hasOwnProperty.call(SHORT_VOWELS, ch)) {
         // Long vowels already carry the vowel sound. Do not print it twice.
-        if (ch === '\u064E' && (next === '\u0627' || next === '\u0649' || next === '\u0671')) {
+        if (ch === '\u064E' && (next === '\u0627' || next === '\u0649' || next === '\u0671' || next === '\u0670')) {
           continue;
         }
         // The fatha on the letter before ta marbuta supplies the final "a".
@@ -357,9 +358,14 @@
       if (ch === SUKUN || ch === TATWEEL) continue;
 
       if (ch === '\u0621' || ch === '\u0623' || ch === '\u0625' || ch === '\u0624' || ch === '\u0626') {
-        // Hamza is often written as 2, left as a plain alif-like "a", or
+        // Hamza is often written as 2 or ', left as a plain alif-like "a", or
         // dropped entirely in casual texting (e.g. "2ana" / "ana" / "na").
-        pushLetter(makeToken(['2', 'a', ''], '2', ch));
+        pushLetter(makeToken(['2', "'", 'a', ''], '2', ch));
+        continue;
+      }
+
+      if (ch === '\u0670') { // ٰ (dagger alif)
+        pushLetter(makeToken(['a', 'aa'], 'a', ch));
         continue;
       }
 
@@ -406,7 +412,7 @@
       }
 
       if (ch === '\u063A') { // غ
-        pushLetter(makeToken(['gh', "3'"], s.gh, ch));
+        pushLetter(makeToken(['gh', "3'", '8'], s.gh, ch));
         continue;
       }
 
@@ -421,7 +427,12 @@
       }
 
       if (ch === '\u0642') { // ق
-        pushLetter(makeToken(['q', '9'], s.qaf, ch));
+        pushLetter(makeToken(['q', '9', '2', "'"], s.qaf, ch));
+        continue;
+      }
+
+      if (ch === '\u062C') { // ج
+        pushLetter(makeToken(['j', 'g'], 'j', ch));
         continue;
       }
 
@@ -500,7 +511,8 @@
       y: ['y', 'ee', 'i', 'ii'],
       H: ['H', '7'],
       '7': ['7', 'H'],
-      '2': ['2', 'a', '']
+      '2': ['2', 'a', ''],
+      '-': ['-', '']
     };
 
     function addTaaEndings(value) {
@@ -761,6 +773,10 @@
     return String(text || '').replace(STRIP_DIACRITICS_RE, '');
   }
 
+  function stripUthmanicGlyphs(text) {
+    return String(text || '').replace(UTHMANIC_GLYPHS_RE, '');
+  }
+
   /* ------------------------------------------------------------------------
      Arabic script mode
      Harakat are not part of the target. Letters are compared by base character
@@ -839,13 +855,18 @@
    * Each item holds the display letter, comparison key, and whether it joins
    * to the previous or next letter for connected cursive rendering.
    */
-  function arabicLetterUnits(text) {
-    var clusters = graphemes(text || '');
+  function arabicLetterUnits(text, options) {
+    var rawText = text || '';
+    if (options && options.stripUthmanicGlyphs) {
+      rawText = stripUthmanicGlyphs(rawText);
+    }
+    var clusters = graphemes(rawText);
     var units = [];
     var previous = null;
 
     clusters.forEach(function (cluster) {
       var letters = Array.from(cluster).filter(function (ch) {
+        if (options && options.stripUthmanicGlyphs && UTHMANIC_GLYPHS_RE.test(ch)) return false;
         return isArabic(ch);
       });
       if (!letters.length) {
@@ -874,20 +895,31 @@
     return units;
   }
 
-  function normalizeArabicKey(piece) {
-    var letters = Array.from(String(piece || '')).filter(function (ch) {
+  function normalizeArabicKey(piece, options) {
+    var raw = piece || '';
+    if (options && options.stripUthmanicGlyphs) {
+      raw = stripUthmanicGlyphs(raw);
+    }
+    var letters = Array.from(String(raw)).filter(function (ch) {
+      if (options && options.stripUthmanicGlyphs && UTHMANIC_GLYPHS_RE.test(ch)) return false;
       return isArabic(ch);
     });
     if (!letters.length) return '';
     return foldLetter(letters[0]);
   }
 
-  function isArabicTypable(text) {
+  function isArabicTypable(text, options) {
+    if (options && options.stripUthmanicGlyphs && UTHMANIC_GLYPHS_RE.test(text)) {
+      return false;
+    }
     return isArabic(text);
   }
 
   /** Harakat, tatweel and other combining marks: never typed in Arabic mode. */
-  function isArabicMark(piece) {
+  function isArabicMark(piece, options) {
+    if (options && options.stripUthmanicGlyphs && UTHMANIC_GLYPHS_RE.test(piece)) {
+      return true;
+    }
     return !!piece && (DIACRITIC_RE.test(piece) || piece === TATWEEL);
   }
 
@@ -896,10 +928,16 @@
    * mismatching letter, and a valid prefix means every typed letter so far
    * matches the target.
    */
-  function matchArabic(units, input) {
+  function matchArabic(units, input, options) {
     var list = units || [];
-    var typed = graphemes(input);
-    var keys = typed.map(normalizeArabicKey);
+    var rawInput = input == null ? '' : String(input);
+    if (options && options.stripUthmanicGlyphs) {
+      rawInput = stripUthmanicGlyphs(rawInput);
+    }
+    var typed = graphemes(rawInput);
+    var keys = typed.map(function (piece) {
+      return normalizeArabicKey(piece, options);
+    }).filter(function (k) { return k.length > 0; });
     var matched = 0;
 
     while (matched < keys.length && matched < list.length && keys[matched] === list[matched].key) {
@@ -940,7 +978,7 @@
     });
   }
 
-  global.HarfTranslit = {
+  global.NateqTranslit = {
     DEFAULT_SETTINGS: DEFAULT_SETTINGS,
     normalizeSettings: normalizeSettings,
     normalizeEntry: normalizeEntry,
@@ -954,6 +992,7 @@
     transliterate: transliterate,
     parseInput: parseInput,
     stripDiacritics: stripDiacritics,
+    stripUthmanicGlyphs: stripUthmanicGlyphs,
     hasArabic: hasArabic,
     splitWords: splitWords,
     splitWordsForMode: splitWordsForMode,

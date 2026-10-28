@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Harf - Arabic typing trainer
+   Nateq - Arabic typing trainer
    ========================================================================== */
 
 :root {
@@ -2860,6 +2860,365 @@ dialog::backdrop {
     width: 100%;
     min-height: 44px;
     border-radius: 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Dialect Selector Pill & Modals
+   -------------------------------------------------------------------------- */
+
+.dialect-selector {
+  display: flex;
+  align-items: center;
+  margin-right: 0.35rem;
+}
+
+.dialect-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.dialect-pill:hover {
+  color: var(--text);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+.dialect-pill:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.dialect-pill-icon {
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.dialect-pill-name {
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dialect-pill-shortcut {
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+}
+
+/* Dialect Search Dialog */
+.dialect-search-dialog {
+  width: min(92vw, 32rem);
+}
+
+.dialect-search-card {
+  padding: 1.5rem;
+}
+
+.dialect-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.9rem;
+  margin-bottom: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.dialect-search-bar:focus-within {
+  border-color: rgba(230, 185, 103, 0.55);
+  box-shadow: 0 0 0 3px rgba(230, 185, 103, 0.08);
+}
+
+.dialect-search-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.dialect-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.dialect-search-input::placeholder {
+  color: var(--faint);
+}
+
+.dialect-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-height: 18rem;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+  scrollbar-width: thin;
+}
+
+.dialect-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.015);
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.dialect-item:hover,
+.dialect-item.is-selected {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+
+.dialect-item.is-active {
+  border-color: rgba(230, 185, 103, 0.45);
+}
+
+.dialect-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.dialect-item-name {
+  color: var(--text);
+  font-size: 0.96rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.dialect-active-badge {
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dialect-item-desc {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.dialect-item-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.dialect-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.dialect-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--faint);
+  font-size: 0.72rem;
+}
+
+.dialect-hint kbd {
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+}
+
+/* First-Visit Onboarding Modal */
+.onboarding-dialog {
+  width: min(92vw, 36rem);
+}
+
+.onboarding-card {
+  padding: clamp(1.4rem, 4vw, 2.2rem);
+}
+
+.onboarding-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.onboarding-arabic {
+  display: block;
+  font-family: var(--font-arabic);
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.onboarding-header h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.onboarding-subtitle {
+  margin: 0 auto;
+  max-width: 28rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.onboarding-subtitle kbd {
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+.onboarding-dialects {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.onboarding-dialect-option {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.95rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.015);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.onboarding-dialect-option:hover {
+  background: rgba(255, 255, 255, 0.035);
+  border-color: var(--border-strong);
+}
+
+.onboarding-dialect-option.is-selected {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  box-shadow: 0 2px 10px rgba(230, 185, 103, 0.06);
+}
+
+.onboarding-dialect-option input[type="radio"] {
+  accent-color: var(--accent);
+  margin-top: 0.25rem;
+  cursor: pointer;
+}
+
+.onboarding-dialect-content {
+  flex: 1;
+}
+
+.onboarding-dialect-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.onboarding-dialect-name {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dialect-default-badge {
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.onboarding-dialect-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.onboarding-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 860px) {
+  .dialect-pill-shortcut {
+    display: none;
+  }
+
+  .dialect-pill-name {
+    max-width: 8rem;
+  }
+
+  .dialect-modal-footer {
+    display: none;
   }
 }
 

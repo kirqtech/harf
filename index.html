@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#17181c">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Harf">
+  <meta name="apple-mobile-web-app-title" content="Nateq">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="format-detection" content="telephone=no">
-  <meta name="description" content="Harf is a lightweight Arabic typing trainer for practicing Arabizi and Arabic script.">
-  <title>Harf - Arabic typing trainer</title>
+  <meta name="description" content="Nateq is a lightweight Arabic typing trainer for practicing Arabizi and Arabic script.">
+  <title>Nateq - Arabic typing trainer</title>
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +23,28 @@
 
   <div class="app-shell">
     <header class="site-header">
-      <div class="brand" aria-label="Harf, Arabic typing trainer">
-        <span class="brand-arabic" lang="ar" dir="rtl">حرف</span>
+      <div class="brand" aria-label="Nateq, Arabic typing trainer">
+        <span class="brand-arabic" lang="ar" dir="rtl">ناطق</span>
         <span class="brand-text">
-          <span class="brand-name">harf</span>
+          <span class="brand-name">nateq</span>
           <span class="brand-subtitle">arabic typing</span>
         </span>
       </div>
 
       <div class="header-actions">
+        <div class="dialect-selector" id="dialectSelectorWrap">
+          <button class="dialect-pill" id="dialectPill" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="dialectModal" title="Select dialect (Alt+D or Ctrl+K)">
+            <span class="dialect-pill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </span>
+            <span class="dialect-pill-name" id="dialectPillName">Dialect</span>
+            <span class="dialect-pill-shortcut" aria-hidden="true">Alt+D</span>
+          </button>
+        </div>
         <button class="icon-button icon-button--help" id="legendButton" type="button" title="Cheat sheet (F1)" aria-label="Open the transliteration cheat sheet" aria-haspopup="dialog" aria-controls="sheetDialog">
           <span class="hint-mark" aria-hidden="true">?</span>
         </button>
@@ -430,7 +443,62 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+  <!-- Dialect Picker Search Modal (Alt+D / Ctrl+K) -->
+  <dialog class="modal-dialog dialect-search-dialog" id="dialectModal" aria-labelledby="dialectSearchTitle">
+    <div class="modal-card dialect-search-card">
+      <div class="modal-heading">
+        <div>
+          <p class="eyebrow">Vocabulary Variety</p>
+          <h2 id="dialectSearchTitle">Select Dialect</h2>
+        </div>
+        <button class="icon-button" type="button" id="closeDialectModalButton" aria-label="Close dialect picker">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="dialect-search-bar">
+        <svg class="dialect-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="dialect-search-input" id="dialectSearchInput" placeholder="Search dialects (e.g. Levantine, Egyptian, Quranic)..." autocomplete="off" spellcheck="false" aria-label="Search dialects" aria-controls="dialectList">
+      </div>
+
+      <div class="dialect-list" id="dialectList" role="listbox" aria-label="Dialects list" tabindex="-1">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="dialect-modal-footer">
+        <span class="dialect-hint"><kbd>↑</kbd> <kbd>↓</kbd> navigate</span>
+        <span class="dialect-hint"><kbd>Enter</kbd> select</span>
+        <span class="dialect-hint"><kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- First-Visit Onboarding Modal -->
+  <dialog class="modal-dialog onboarding-dialog" id="onboardingModal" aria-labelledby="onboardingTitle">
+    <div class="modal-card onboarding-card">
+      <div class="onboarding-header">
+        <span class="onboarding-arabic" lang="ar" dir="rtl">أَهْلًا وَسَهْلًا</span>
+        <h2 id="onboardingTitle">Welcome to Nateq</h2>
+        <p class="onboarding-subtitle">Choose your starting Arabic variety. You can easily switch anytime using the dialect selector in the header or by pressing <kbd>Alt + D</kbd>.</p>
+      </div>
+
+      <div class="onboarding-dialects" id="onboardingDialects" role="radiogroup" aria-label="Starting dialect options">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="modal-actions onboarding-actions">
+        <button class="button button--primary" type="button" id="onboardingSubmitButton">Start Typing</button>
+      </div>
+    </div>
+  </dialog>
+
   <script src="js/translit.js"></script>
+  <script src="js/dialect-manager.js"></script>
   <script src="js/data-loader.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>

@@ -7,8 +7,7 @@
     ],
     "translation_en": "letter baa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ت",
@@ -18,8 +17,7 @@
     ],
     "translation_en": "letter taa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ث",
@@ -29,8 +27,7 @@
     ],
     "translation_en": "letter thaa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ج",
@@ -40,8 +37,7 @@
     ],
     "translation_en": "letter jeem",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ح",
@@ -51,8 +47,7 @@
     ],
     "translation_en": "letter haa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "خ",
@@ -62,8 +57,7 @@
     ],
     "translation_en": "letter khaa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "د",
@@ -73,8 +67,7 @@
     ],
     "translation_en": "letter daal",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ذ",
@@ -84,8 +77,7 @@
     ],
     "translation_en": "letter dhaal",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ر",
@@ -95,8 +87,7 @@
     ],
     "translation_en": "letter raa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ز",
@@ -106,8 +97,7 @@
     ],
     "translation_en": "letter zay",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "س",
@@ -117,8 +107,7 @@
     ],
     "translation_en": "letter seen",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ش",
@@ -128,8 +117,7 @@
     ],
     "translation_en": "letter sheen",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ص",
@@ -139,8 +127,7 @@
     ],
     "translation_en": "letter saad",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ض",
@@ -150,8 +137,7 @@
     ],
     "translation_en": "letter daad",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ط",
@@ -161,8 +147,7 @@
     ],
     "translation_en": "letter taa (emphatic)",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ظ",
@@ -172,8 +157,7 @@
     ],
     "translation_en": "letter zaa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ع",
@@ -183,8 +167,7 @@
     ],
     "translation_en": "letter ayn",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "غ",
@@ -194,8 +177,7 @@
     ],
     "translation_en": "letter ghayn",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ف",
@@ -205,8 +187,7 @@
     ],
     "translation_en": "letter faa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ق",
@@ -216,8 +197,7 @@
     ],
     "translation_en": "letter qaf",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ك",
@@ -227,8 +207,7 @@
     ],
     "translation_en": "letter kaaf",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ل",
@@ -238,8 +217,7 @@
     ],
     "translation_en": "letter laam",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "م",
@@ -249,8 +227,7 @@
     ],
     "translation_en": "letter meem",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ن",
@@ -260,8 +237,7 @@
     ],
     "translation_en": "letter noon",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ه",
@@ -271,8 +247,7 @@
     ],
     "translation_en": "letter haa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "و",
@@ -282,8 +257,7 @@
     ],
     "translation_en": "letter waw",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ي",
@@ -293,8 +267,7 @@
     ],
     "translation_en": "letter yaa",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   },
   {
     "arabic": "ء",
@@ -304,7 +277,6 @@
     ],
     "translation_en": "letter hamza",
     "dialect": "Both",
-    "category": "Letters",
-    "notes": ""
+    "category": "Letters"
   }
 ]

@@ -1,17 +1,23 @@
 /*!
- * Harf - application UI and typing loop
+ * Nateq - application UI and typing loop
  * No build step, no backend, no dependencies.
  */
 (function () {
   'use strict';
 
-  var T = window.HarfTranslit;
-  var D = window.HarfData;
-  var Loader = window.HarfDataLoader;
+  var T = window.NateqTranslit;
+  var D = window.NateqData;
+  var Loader = window.NateqDataLoader;
+  var Dialects = window.NateqDialectManager;
 
-  var STORAGE_SETTINGS = 'harf.settings.v1';
-  var STORAGE_CUSTOM = 'harf.custom.v1';
-  var STORAGE_SCRIPT = 'harf.script.v1';
+  var STORAGE_SETTINGS = 'nateq.settings.v1';
+  var STORAGE_CUSTOM = 'nateq.custom.v1';
+  var STORAGE_SCRIPT = 'nateq.script.v1';
+  var LEGACY_STORAGE_KEYS = {
+    'nateq.settings.v1': 'harf.settings.v1',
+    'nateq.custom.v1': 'harf.custom.v1',
+    'nateq.script.v1': 'harf.script.v1'
+  };
   var MAX_CUSTOM_WORDS = 400;
   var TAB_CHORD_MS = 1200;
 
@@ -98,6 +104,12 @@
   function readStorage(key, fallback) {
     try {
       var value = window.localStorage.getItem(key);
+      if (value == null && LEGACY_STORAGE_KEYS[key]) {
+        value = window.localStorage.getItem(LEGACY_STORAGE_KEYS[key]);
+        if (value != null) {
+          window.localStorage.setItem(key, value);
+        }
+      }
       return value == null ? fallback : value;
     } catch (error) {
       return fallback;
@@ -157,9 +169,18 @@
     return Math.min(999, Math.round((test.correctKeystrokes / 5) / minutes));
   }
 
+  function isUthmanicStripped() {
+    var activeDialect = (Dialects && typeof Dialects.getActiveDialect === 'function')
+      ? Dialects.getActiveDialect()
+      : null;
+    return !!(activeDialect && activeDialect.stripUthmanicGlyphs);
+  }
+
   function isTypable(character) {
-    if (state.script === 'arabic') return T.isArabicTypable(character);
-    return /^[A-Za-z0-9']$/.test(character);
+    if (state.script === 'arabic') {
+      return T.isArabicTypable(character, { stripUthmanicGlyphs: isUthmanicStripped() });
+    }
+    return /^[A-Za-z0-9'-]$/.test(character);
   }
 
   function copy() {
@@ -176,14 +197,16 @@
    */
   function parseWord(word) {
     if (!word) return null;
-    if (isArabicScript()) return T.matchArabic(word.units, word.input);
+    if (isArabicScript()) {
+      return T.matchArabic(word.units, word.input, { stripUthmanicGlyphs: isUthmanicStripped() });
+    }
     return T.parseInput(word.tokens, word.input, word.solutions);
   }
 
   function hintTextFor(word) {
     if (!word) return '';
     if (isArabicScript()) {
-      var parse = T.matchArabic(word.units, word.input);
+      var parse = T.matchArabic(word.units, word.input, { stripUthmanicGlyphs: isUthmanicStripped() });
       if (parse.complete) return '';
       return word.units.slice(parse.typed.length).map(function (unit) {
         return unit.letter;
@@ -441,18 +464,25 @@
     var built = T.buildWord(entry, state.settings);
     if (!built.tokens.length) return null;
 
+    var activeDialect = (Dialects && typeof Dialects.getActiveDialect === 'function')
+      ? Dialects.getActiveDialect()
+      : null;
+    var stripUthmanic = !!(activeDialect && activeDialect.stripUthmanicGlyphs);
+
     return {
       entry: entry,
       raw: built.arabic,
       display: displayForMode(built.arabic, mode),
       // Matching uses the normalized Arabic form; display keeps vocalization.
-      units: isArabicScript() ? T.arabicLetterUnits(built.arabic_plain || built.arabic) : [],
+      units: isArabicScript()
+        ? T.arabicLetterUnits(built.arabic_plain || built.arabic, { stripUthmanicGlyphs: stripUthmanic })
+        : [],
       tokens: built.tokens,
       solutions: built.solutions,
       translit: built.translit || built.solutions,
       canonical: built.canonical,
       translation_en: built.translation_en || (entry && entry.translation_en) || '',
-      dialect: built.dialect || (entry && entry.dialect) || '',
+      dialect: built.dialect || (entry && entry.dialect) || (activeDialect ? activeDialect.name : ''),
       notes: built.notes || (entry && entry.notes) || '',
       input: '',
       committed: false,
@@ -506,8 +536,20 @@
       var phrase = D.pickPhrase(state.lastPhrase);
       if (!phrase) return null;
       var phraseArabic = phrase.arabic || phrase.arabic_plain || '';
+      var phrasePlain = phrase.arabic_plain || '';
       state.lastPhrase = phraseArabic;
-      return makeTest('phrases', T.splitWords(phraseArabic), phraseArabic);
+      var arWords = T.splitWords(phraseArabic);
+      var plainWords = T.splitWords(phrasePlain);
+      var phraseEntries = arWords.map(function (w, idx) {
+        var found = D.lookupWord(w) || (plainWords[idx] ? D.lookupWord(plainWords[idx]) : null);
+        if (found) return found;
+        return {
+          arabic: w,
+          arabic_plain: plainWords.length === arWords.length ? plainWords[idx] : '',
+          dialect: phrase.dialect || ''
+        };
+      });
+      return makeTest('phrases', phraseEntries, phraseArabic);
     }
 
     if (mode === 'custom') {
@@ -627,7 +669,7 @@
    * letters light up, wrong letters turn red, and extra letters appear at the end.
    */
   function renderArabicInput(word) {
-    var parse = T.matchArabic(word.units, word.input);
+    var parse = T.matchArabic(word.units, word.input, { stripUthmanicGlyphs: isUthmanicStripped() });
     var fragment = document.createDocumentFragment();
     var extra = parse.typed.slice(word.units.length);
     var isLong = word.units.length > 8;
@@ -1549,6 +1591,18 @@
   }
 
   function onKeyDown(event) {
+    // Dialect Picker shortcut: Alt+D or Ctrl+K / Cmd+K
+    if ((event.altKey && (event.key === 'd' || event.key === 'D' || event.code === 'KeyD')) ||
+        ((event.ctrlKey || event.metaKey) && (event.key === 'k' || event.key === 'K' || event.code === 'KeyK'))) {
+      event.preventDefault();
+      if (els.dialectModal && els.dialectModal.open) {
+        closeDialectModal();
+      } else {
+        openDialectModal();
+      }
+      return;
+    }
+
     if (event.key === 'F1') {
       event.preventDefault();
       if (els.sheetDialog.open) {
@@ -1746,6 +1800,296 @@
     if (els.customDialog.open) els.customDialog.close();
   }
 
+  /* ------------------------------------------------------------------------
+     Dialect UI and Modal Management
+     ------------------------------------------------------------------------ */
+
+  var dialectState = {
+    searchQuery: '',
+    selectedIndex: 0,
+    filteredDialects: []
+  };
+
+  function updateDialectPill() {
+    if (!els.dialectPillName || !Dialects) return;
+    var active = Dialects.getActiveDialect();
+    if (active) {
+      els.dialectPillName.textContent = active.name;
+    }
+  }
+
+  function renderDialectList() {
+    if (!els.dialectList || !Dialects) return;
+    var all = Dialects.getDialects();
+    var query = dialectState.searchQuery.trim().toLowerCase();
+
+    dialectState.filteredDialects = all.filter(function (d) {
+      if (!query) return true;
+      return (d.name && d.name.toLowerCase().indexOf(query) !== -1) ||
+             (d.id && d.id.toLowerCase().indexOf(query) !== -1) ||
+             (d.description && d.description.toLowerCase().indexOf(query) !== -1);
+    });
+
+    if (dialectState.selectedIndex >= dialectState.filteredDialects.length) {
+      dialectState.selectedIndex = Math.max(0, dialectState.filteredDialects.length - 1);
+    }
+
+    var active = Dialects.getActiveDialect();
+    var fragment = document.createDocumentFragment();
+
+    if (dialectState.filteredDialects.length === 0) {
+      var emptyEl = document.createElement('div');
+      emptyEl.className = 'dialect-item-empty';
+      emptyEl.textContent = 'No matching dialects found.';
+      fragment.appendChild(emptyEl);
+    } else {
+      dialectState.filteredDialects.forEach(function (dialect, index) {
+        var isCurrent = active && active.id === dialect.id;
+        var isSelected = index === dialectState.selectedIndex;
+
+        var item = document.createElement('div');
+        item.className = 'dialect-item' + (isSelected ? ' is-selected' : '') + (isCurrent ? ' is-active' : '');
+        item.setAttribute('role', 'option');
+        item.setAttribute('aria-selected', String(isSelected));
+        item.dataset.dialectId = dialect.id;
+        item.dataset.index = String(index);
+
+        var top = document.createElement('div');
+        top.className = 'dialect-item-top';
+
+        var title = document.createElement('span');
+        title.className = 'dialect-item-name';
+        title.textContent = dialect.name;
+        top.appendChild(title);
+
+        if (isCurrent) {
+          var badge = document.createElement('span');
+          badge.className = 'dialect-active-badge';
+          badge.textContent = 'Active';
+          top.appendChild(badge);
+        }
+
+        var desc = document.createElement('div');
+        desc.className = 'dialect-item-desc';
+        desc.textContent = dialect.description || '';
+
+        item.appendChild(top);
+        item.appendChild(desc);
+
+        item.addEventListener('click', function () {
+          selectDialectAndStart(dialect.id);
+        });
+
+        item.addEventListener('mouseenter', function () {
+          dialectState.selectedIndex = index;
+          updateDialectListSelection();
+        });
+
+        fragment.appendChild(item);
+      });
+    }
+
+    els.dialectList.replaceChildren(fragment);
+    scrollSelectedDialectIntoView();
+  }
+
+  function updateDialectListSelection() {
+    if (!els.dialectList) return;
+    var items = els.dialectList.querySelectorAll('.dialect-item');
+    items.forEach(function (item, idx) {
+      var isSelected = idx === dialectState.selectedIndex;
+      item.classList.toggle('is-selected', isSelected);
+      item.setAttribute('aria-selected', String(isSelected));
+    });
+    scrollSelectedDialectIntoView();
+  }
+
+  function scrollSelectedDialectIntoView() {
+    if (!els.dialectList) return;
+    var selected = els.dialectList.querySelector('.dialect-item.is-selected');
+    if (selected && typeof selected.scrollIntoView === 'function') {
+      selected.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function openDialectModal() {
+    if (!els.dialectModal || !Dialects) return;
+    if (isDialogOpen() && !els.dialectModal.open) return;
+
+    dialectState.searchQuery = '';
+    var active = Dialects.getActiveDialect();
+    var all = Dialects.getDialects();
+    var activeIdx = all.findIndex(function (d) { return active && d.id === active.id; });
+    dialectState.selectedIndex = activeIdx >= 0 ? activeIdx : 0;
+
+    if (els.dialectSearchInput) {
+      els.dialectSearchInput.value = '';
+    }
+
+    renderDialectList();
+
+    if (!els.dialectModal.open) {
+      els.dialectModal.showModal();
+    }
+    syncFocusUI();
+
+    window.setTimeout(function () {
+      if (els.dialectSearchInput) {
+        els.dialectSearchInput.focus();
+      }
+    }, 10);
+  }
+
+  function closeDialectModal() {
+    if (els.dialectModal && els.dialectModal.open) {
+      els.dialectModal.close();
+      syncFocusUI();
+      if (state.test) focusTyping();
+    }
+  }
+
+  function selectDialectAndStart(id) {
+    if (!Dialects) return;
+    closeDialectModal();
+    var changed = Dialects.setDialect(id);
+    updateDialectPill();
+    if (changed) {
+      // Re-render and load test session with the new dialect
+      withData(state.mode, function () {
+        startNewTest({ mode: state.mode, focus: true });
+        showToast('Switched to ' + (Dialects.getActiveDialect() ? Dialects.getActiveDialect().name : id));
+      });
+    }
+  }
+
+  function onDialectSearchKeyDown(event) {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      if (dialectState.filteredDialects.length > 0) {
+        dialectState.selectedIndex = (dialectState.selectedIndex + 1) % dialectState.filteredDialects.length;
+        updateDialectListSelection();
+      }
+      return;
+    }
+
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (dialectState.filteredDialects.length > 0) {
+        dialectState.selectedIndex = (dialectState.selectedIndex - 1 + dialectState.filteredDialects.length) % dialectState.filteredDialects.length;
+        updateDialectListSelection();
+      }
+      return;
+    }
+
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      if (dialectState.filteredDialects.length > 0 && dialectState.selectedIndex >= 0) {
+        var chosen = dialectState.filteredDialects[dialectState.selectedIndex];
+        if (chosen) {
+          selectDialectAndStart(chosen.id);
+        }
+      }
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeDialectModal();
+      return;
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     First-Visit Onboarding Modal
+     ------------------------------------------------------------------------ */
+
+  function checkFirstVisitOnboarding() {
+    if (!Dialects || !els.onboardingModal) return;
+    if (Dialects.hasUserChosenDialect()) {
+      return;
+    }
+
+    // Display first-visit onboarding modal
+    renderOnboardingModal();
+    els.onboardingModal.showModal();
+    syncFocusUI();
+  }
+
+  function renderOnboardingModal() {
+    if (!els.onboardingDialects || !Dialects) return;
+    var all = Dialects.getDialects();
+    var active = Dialects.getActiveDialect();
+    var fragment = document.createDocumentFragment();
+
+    all.forEach(function (dialect) {
+      var isDefault = active ? (active.id === dialect.id) : !!dialect.default;
+
+      var label = document.createElement('label');
+      label.className = 'onboarding-dialect-option' + (isDefault ? ' is-selected' : '');
+
+      var radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'onboardingDialect';
+      radio.value = dialect.id;
+      radio.checked = isDefault;
+
+      var content = document.createElement('div');
+      content.className = 'onboarding-dialect-content';
+
+      var top = document.createElement('div');
+      top.className = 'onboarding-dialect-top';
+
+      var name = document.createElement('span');
+      name.className = 'onboarding-dialect-name';
+      name.textContent = dialect.name;
+      top.appendChild(name);
+
+      if (dialect.default) {
+        var badge = document.createElement('span');
+        badge.className = 'dialect-default-badge';
+        badge.textContent = 'Recommended';
+        top.appendChild(badge);
+      }
+
+      var desc = document.createElement('p');
+      desc.className = 'onboarding-dialect-desc';
+      desc.textContent = dialect.description || '';
+
+      content.appendChild(top);
+      content.appendChild(desc);
+
+      label.appendChild(radio);
+      label.appendChild(content);
+
+      label.addEventListener('click', function () {
+        var allOptions = els.onboardingDialects.querySelectorAll('.onboarding-dialect-option');
+        allOptions.forEach(function (opt) { opt.classList.remove('is-selected'); });
+        label.classList.add('is-selected');
+        radio.checked = true;
+      });
+
+      fragment.appendChild(label);
+    });
+
+    els.onboardingDialects.replaceChildren(fragment);
+  }
+
+  function completeOnboarding() {
+    if (!els.onboardingModal || !Dialects) return;
+    var selectedRadio = els.onboardingModal.querySelector('input[name="onboardingDialect"]:checked');
+    var dialectId = selectedRadio ? selectedRadio.value : (Dialects.getActiveDialect() ? Dialects.getActiveDialect().id : 'levantine');
+
+    Dialects.setDialect(dialectId);
+    updateDialectPill();
+    els.onboardingModal.close();
+    syncFocusUI();
+
+    // Start session with chosen dialect
+    withData(state.mode, function () {
+      startNewTest({ mode: state.mode, focus: true });
+    });
+  }
+
   function updateSettingsForm() {
     els.settingGhayn.value = state.settings.gh;
     els.settingKha.value = state.settings.kh;
@@ -1867,6 +2211,17 @@
     els.settingHaa = $('settingHaa');
     els.settingScript = $('settingScript');
     els.resetSettingsButton = $('resetSettingsButton');
+
+    // Dialect Picker and Onboarding UI
+    els.dialectPill = $('dialectPill');
+    els.dialectPillName = $('dialectPillName');
+    els.dialectModal = $('dialectModal');
+    els.closeDialectModalButton = $('closeDialectModalButton');
+    els.dialectSearchInput = $('dialectSearchInput');
+    els.dialectList = $('dialectList');
+    els.onboardingModal = $('onboardingModal');
+    els.onboardingDialects = $('onboardingDialects');
+    els.onboardingSubmitButton = $('onboardingSubmitButton');
   }
 
   function bindEvents() {
@@ -2065,8 +2420,9 @@
 
         if (isArabicScript()) {
           // Harakat and tatweel are never part of the target.
-          if (T.isArabicMark(character)) return;
-          if (!T.isArabicTypable(character)) return;
+          var uthOpt = { stripUthmanicGlyphs: isUthmanicStripped() };
+          if (T.isArabicMark(character, uthOpt)) return;
+          if (!T.isArabicTypable(character, uthOpt)) return;
           handleCharacter(character);
           return;
         }
@@ -2146,6 +2502,54 @@
     }
 
     initMobileViewport();
+
+    // Dialect Picker and Modal Events
+    if (els.dialectPill) {
+      els.dialectPill.addEventListener('click', function () {
+        openDialectModal();
+      });
+    }
+
+    if (els.closeDialectModalButton) {
+      els.closeDialectModalButton.addEventListener('click', function () {
+        closeDialectModal();
+      });
+    }
+
+    if (els.dialectModal) {
+      els.dialectModal.addEventListener('click', function (event) {
+        if (event.target === els.dialectModal) {
+          closeDialectModal();
+        }
+      });
+      els.dialectModal.addEventListener('close', function () {
+        syncFocusUI();
+        if (state.test) focusTyping();
+      });
+    }
+
+    if (els.dialectSearchInput) {
+      els.dialectSearchInput.addEventListener('input', function () {
+        dialectState.searchQuery = els.dialectSearchInput.value;
+        dialectState.selectedIndex = 0;
+        renderDialectList();
+      });
+      els.dialectSearchInput.addEventListener('keydown', onDialectSearchKeyDown);
+    }
+
+    if (els.onboardingSubmitButton) {
+      els.onboardingSubmitButton.addEventListener('click', function () {
+        completeOnboarding();
+      });
+    }
+
+    if (els.onboardingModal) {
+      els.onboardingModal.addEventListener('cancel', function (event) {
+        // Prevent dismissal via Esc on onboarding unless a dialect is chosen
+        event.preventDefault();
+        completeOnboarding();
+      });
+    }
   }
 
   function loadPreferences() {
@@ -2175,7 +2579,23 @@
     bindDataRecoveryEvents();
 
     state.mode = 'words';
-    bootWithMode('words');
+
+    if (Dialects && typeof Dialects.init === 'function') {
+      Dialects.init().then(function (active) {
+        updateDialectPill();
+        // Subscribe to dialect changes
+        Dialects.onDialectChange(function (dialect) {
+          updateDialectPill();
+        });
+        bootWithMode('words');
+        checkFirstVisitOnboarding();
+      }).catch(function (err) {
+        console.warn('Dialect initialization fallback:', err);
+        bootWithMode('words');
+      });
+    } else {
+      bootWithMode('words');
+    }
   }
 
   if (document.readyState === 'loading') {

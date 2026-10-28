@@ -1,32 +1,82 @@
 [
   {
-    "arabic": "كِيفِك",
-    "arabic_plain": "كيفك",
+    "arabic": "هَلَّق",
+    "arabic_plain": "هلق",
     "translit": [
-      "keefik",
-      "kifik",
-      "kiifik",
-      "kefik",
-      "keefek"
+      "halla2",
+      "halla'",
+      "hala2",
+      "hallaq"
     ],
-    "translation_en": "how are you (to female)",
+    "translation_en": "now / right now",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Quintessential Levantine daily greeting for a female (MSA كيف حالكِ)."
+    "category": "Words"
   },
   {
     "arabic": "شُو",
     "arabic_plain": "شو",
     "translit": [
       "shu",
+      "chou",
       "shoo",
-      "shuu",
-      "shou"
+      "shou",
+      "shuu"
     ],
     "translation_en": "what",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Universal Levantine question word, equivalent to MSA ماذا or ما."
+    "category": "Words"
+  },
+  {
+    "arabic": "بِدِّي",
+    "arabic_plain": "بدي",
+    "translit": [
+      "baddi",
+      "beddi",
+      "badi",
+      "biddi"
+    ],
+    "translation_en": "I want / I need",
+    "dialect": "Levantine",
+    "category": "Words"
+  },
+  {
+    "arabic": "كِيفَك",
+    "arabic_plain": "كيفك",
+    "translit": [
+      "kifak",
+      "kifik",
+      "keefak",
+      "keefik",
+      "kefak"
+    ],
+    "translation_en": "how are you (m/f)",
+    "dialect": "Levantine",
+    "category": "Words"
+  },
+  {
+    "arabic": "مَا بَعْرِف",
+    "arabic_plain": "ما بعرف",
+    "translit": [
+      "maba3ref",
+      "ma ba3ref",
+      "maba3rif",
+      "ma ba'ref"
+    ],
+    "translation_en": "I don't know",
+    "dialect": "Levantine",
+    "category": "Words"
+  },
+  {
+    "arabic": "عَم بَعْمِل",
+    "arabic_plain": "عم بعمل",
+    "translit": [
+      "3am ba3mel",
+      "3am ba3mil",
+      "am ba3mel"
+    ],
+    "translation_en": "I am doing / making",
+    "dialect": "Levantine",
+    "category": "Words"
   },
   {
     "arabic": "لَيْش",
@@ -40,8 +90,7 @@
     ],
     "translation_en": "why",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Universal Levantine question word for why, equivalent to MSA لماذا."
+    "category": "Words"
   },
   {
     "arabic": "وِين",
@@ -55,8 +104,7 @@
     ],
     "translation_en": "where",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Universal Levantine question word for where, equivalent to MSA أين."
+    "category": "Words"
   },
   {
     "arabic": "إِيمْتَى",
@@ -70,8 +118,7 @@
     ],
     "translation_en": "when",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Universal Levantine question word for when, equivalent to MSA متى."
+    "category": "Words"
   },
   {
     "arabic": "كِيف",
@@ -84,8 +131,7 @@
     ],
     "translation_en": "how",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Levantine question word for how, equivalent to MSA كيف."
+    "category": "Words"
   },
   {
     "arabic": "مِين",
@@ -98,8 +144,7 @@
     ],
     "translation_en": "who",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Universal Levantine question word for who, equivalent to MSA مَن."
+    "category": "Words"
   },
   {
     "arabic": "مَاشِي",
@@ -113,8 +158,7 @@
     ],
     "translation_en": "okay / agreed",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Colloquial agreement marker, literally \"walking / in motion\"."
+    "category": "Words"
   },
   {
     "arabic": "مَرَة",
@@ -127,8 +171,7 @@
     ],
     "translation_en": "woman / wife",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Spoken Levantine term for woman or wife, from classical امرأة (imra2a)."
+    "category": "Words"
   },
   {
     "arabic": "زَلَمَة",
@@ -141,8 +184,7 @@
     ],
     "translation_en": "man / guy",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Signature Levantine colloquial term for a man, equivalent to MSA رجل."
+    "category": "Words"
   },
   {
     "arabic": "مِي",
@@ -158,8 +200,7 @@
     ],
     "translation_en": "water",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Spoken Levantine form of MSA مَاء (maa2)."
+    "category": "Words"
   },
   {
     "arabic": "مَصَارِي",
@@ -173,8 +214,7 @@
     ],
     "translation_en": "money",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Quintessential Levantine word for money/cash (from Ottoman Egyptian piastres)."
+    "category": "Words"
   },
   {
     "arabic": "بَنَدُورَة",
@@ -188,8 +228,7 @@
     ],
     "translation_en": "tomatoes",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Tomatoes in Levantine Arabic (from Italian pomodoro); MSA uses طماطم."
+    "category": "Words"
   },
   {
     "arabic": "كْبِير",
@@ -202,8 +241,7 @@
     ],
     "translation_en": "big / large",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Levantine pronunciation with initial consonant cluster of MSA كَبِير."
+    "category": "Words"
   },
   {
     "arabic": "زْغِير",
@@ -213,12 +251,15 @@
       "zghiir",
       "zghir",
       "zagher",
-      "zgeer"
+      "zgeer",
+      "z8eer",
+      "z8iir",
+      "z8ir",
+      "za8er"
     ],
     "translation_en": "small / little",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Levantine pronunciation with initial consonant cluster of MSA صَغِير."
+    "category": "Words"
   },
   {
     "arabic": "مْنِيح",
@@ -233,8 +274,7 @@
     ],
     "translation_en": "good / well",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Quintessential Levantine adjective for good or doing well, equivalent to MSA جَيِّد."
+    "category": "Words"
   },
   {
     "arabic": "زَعْلَان",
@@ -248,8 +288,7 @@
     ],
     "translation_en": "upset / annoyed",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Everyday Levantine for upset, sad, or hurt, equivalent to MSA حزين / غاضب."
+    "category": "Words"
   },
   {
     "arabic": "مَبْسُوط",
@@ -263,8 +302,7 @@
     ],
     "translation_en": "happy / pleased",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Quintessential Levantine expression for happy or content, equivalent to MSA سعيد."
+    "category": "Words"
   },
   {
     "arabic": "كْتِير",
@@ -277,8 +315,7 @@
     ],
     "translation_en": "very / a lot",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Everyday Levantine intensifier and quantity word, equivalent to MSA كثير."
+    "category": "Words"
   },
   {
     "arabic": "شْوَيْ",
@@ -292,8 +329,7 @@
     ],
     "translation_en": "a little / a bit",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Spoken Levantine diminutive for a small amount or \"just a moment\"."
+    "category": "Words"
   },
   {
     "arabic": "إِجَا",
@@ -308,8 +344,7 @@
     ],
     "translation_en": "came / arrived",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Levantine past tense verb for he came, equivalent to MSA جَاءَ."
+    "category": "Words"
   },
   {
     "arabic": "شَاف",
@@ -322,8 +357,7 @@
     ],
     "translation_en": "saw / looked",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Universal spoken Levantine verb for he saw, equivalent to MSA رَأَى."
+    "category": "Words"
   },
   {
     "arabic": "عِمِل",
@@ -338,8 +372,7 @@
     ],
     "translation_en": "did / made",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Spoken Levantine past tense verb for he did or made (MSA عَمِلَ)."
+    "category": "Words"
   },
   {
     "arabic": "حَكَى",
@@ -354,8 +387,7 @@
     ],
     "translation_en": "spoke / told",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Common Levantine verb for speaking or chatting, equivalent to MSA تَكَلَّمَ."
+    "category": "Words"
   },
   {
     "arabic": "بَدُّو",
@@ -370,25 +402,7 @@
     ],
     "translation_en": "he wants",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Levantine expression for he wants / he needs (b-d-d stem)."
-  },
-  {
-    "arabic": "بَدِّي",
-    "arabic_plain": "بدي",
-    "translit": [
-      "baddi",
-      "badi",
-      "biddi",
-      "bidi",
-      "baddii",
-      "beddi",
-      "badde"
-    ],
-    "translation_en": "I want / I need",
-    "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Spoken Levantine staple, equivalent to MSA أريد."
+    "category": "Words"
   },
   {
     "arabic": "عِنْدُو",
@@ -402,8 +416,7 @@
     ],
     "translation_en": "he has",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Levantine spoken expression of possession (\"he has / with him\")."
+    "category": "Words"
   },
   {
     "arabic": "بِحِبّ",
@@ -419,8 +432,7 @@
     ],
     "translation_en": "I love / like",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Spoken Levantine present tense with the b-prefix (بـ), equivalent to MSA أُحِبّ."
+    "category": "Words"
   },
   {
     "arabic": "سَكَّر",
@@ -435,8 +447,7 @@
     ],
     "translation_en": "closed / shut",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Everyday spoken Levantine verb for closing a door or window (MSA أغلق)."
+    "category": "Words"
   },
   {
     "arabic": "جَاب",
@@ -448,8 +459,7 @@
     ],
     "translation_en": "brought / fetched",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Universal spoken Levantine verb for he brought or fetched, equivalent to MSA أَحْضَرَ."
+    "category": "Words"
   },
   {
     "arabic": "بُكْرَة",
@@ -464,8 +474,7 @@
     ],
     "translation_en": "tomorrow",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Everyday Levantine for tomorrow, equivalent to MSA غَدًا."
+    "category": "Words"
   },
   {
     "arabic": "مْبَارِح",
@@ -482,22 +491,7 @@
     ],
     "translation_en": "yesterday",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Spoken Levantine for yesterday, equivalent to MSA أَمْس."
-  },
-  {
-    "arabic": "هَلَّق",
-    "arabic_plain": "هلق",
-    "translit": [
-      "halla2",
-      "halla",
-      "hallaq",
-      "halla9"
-    ],
-    "translation_en": "now / right now",
-    "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Signature Levantine (Lebanese/Syrian) word for right now, equivalent to MSA الآن."
+    "category": "Words"
   },
   {
     "arabic": "هَيْك",
@@ -510,8 +504,7 @@
     ],
     "translation_en": "like this / this way",
     "dialect": "Levantine",
-    "category": "Words",
-    "notes": "Signature Levantine adverb meaning \"like this\", \"so\", or \"just because\"."
+    "category": "Words"
   },
   {
     "arabic": "أَبّ",
@@ -1507,7 +1500,8 @@
     "arabic_plain": "غيبوبة",
     "translit": [
       "ghayboobeh",
-      "5aybooba"
+      "5aybooba",
+      "8ayboobeh"
     ],
     "translation_en": "coma",
     "dialect": "Levantine",
@@ -2106,7 +2100,8 @@
     "arabic_plain": "غدا",
     "translit": [
       "ghada",
-      "5ada"
+      "5ada",
+      "8ada"
     ],
     "translation_en": "lunch",
     "dialect": "Levantine",
@@ -2458,7 +2453,9 @@
     "arabic_plain": "أغنية",
     "translit": [
       "oghniyeh",
-      "eghniyeh"
+      "eghniyeh",
+      "o8niyeh",
+      "e8niyeh"
     ],
     "translation_en": "song",
     "dialect": "Levantine",
@@ -2469,7 +2466,8 @@
     "arabic_plain": "زغروتة",
     "translit": [
       "zaghroota",
-      "za5roota"
+      "za5roota",
+      "za8roota"
     ],
     "translation_en": "ululation of joy (zaghrouta)",
     "dialect": "Levantine",
@@ -2551,7 +2549,8 @@
     "translit": [
       "baba ghannouj",
       "baba ghanouj",
-      "baba 8annouj"
+      "baba 8annouj",
+      "baba 8anouj"
     ],
     "translation_en": "baba ghanoush (eggplant salad)",
     "dialect": "Levantine",
@@ -3130,7 +3129,9 @@
     "translit": [
       "ghazl al-banat",
       "8azl el banat",
-      "ghazel el baneit"
+      "ghazel el baneit",
+      "8azl al-banat",
+      "8azel el baneit"
     ],
     "translation_en": "halva floss / cotton candy",
     "dialect": "Levantine",
@@ -3190,7 +3191,8 @@
       "argileh",
       "arghileh",
       "2argileh",
-      "shisha"
+      "shisha",
+      "ar8ileh"
     ],
     "translation_en": "hookah / water pipe",
     "dialect": "Levantine",
@@ -5863,7 +5865,9 @@
     "translit": [
       "dughri",
       "doghri",
-      "dugri"
+      "dugri",
+      "du8ri",
+      "do8ri"
     ],
     "translation_en": "straight ahead",
     "dialect": "Levantine",
@@ -6649,7 +6653,8 @@
     "arabic_plain": "غماز",
     "translit": [
       "ghammaz",
-      "3'ammaz"
+      "3'ammaz",
+      "8ammaz"
     ],
     "translation_en": "turn signal / indicator blinker",
     "dialect": "Levantine",
@@ -7301,7 +7306,10 @@
     "translit": [
       "shoghol",
       "shughul",
-      "sheghel"
+      "sheghel",
+      "sho8ol",
+      "shu8ul",
+      "she8el"
     ],
     "translation_en": "work / job",
     "dialect": "Levantine",
@@ -8688,7 +8696,9 @@
       "group",
       "groop",
       "ghroub",
-      "ghroob"
+      "ghroob",
+      "8roub",
+      "8roob"
     ],
     "translation_en": "group chat / team",
     "dialect": "Levantine",
@@ -9417,7 +9427,9 @@
     "arabic_plain": "دوغري",
     "translit": [
       "doghri",
-      "doughri"
+      "doughri",
+      "do8ri",
+      "dou8ri"
     ],
     "translation_en": "straight away / immediately",
     "dialect": "Levantine",
@@ -9762,7 +9774,9 @@
     "arabic_plain": "مغرب",
     "translit": [
       "maghreb",
-      "maghrib"
+      "maghrib",
+      "ma8reb",
+      "ma8rib"
     ],
     "translation_en": "sunset / dusk",
     "dialect": "Levantine",
@@ -10150,7 +10164,9 @@
     "arabic_plain": "مغيم",
     "translit": [
       "mghayyim",
-      "mgheyem"
+      "mgheyem",
+      "m8ayyim",
+      "m8eyem"
     ],
     "translation_en": "cloudy / overcast",
     "dialect": "Levantine",
@@ -10240,7 +10256,10 @@
     "translit": [
       "ghwbra",
       "ghobreh",
-      "ghobara"
+      "ghobara",
+      "8wbra",
+      "8obreh",
+      "8obara"
     ],
     "translation_en": "dust",
     "dialect": "Levantine",
@@ -10512,7 +10531,9 @@
     "arabic_plain": "غيمة",
     "translit": [
       "gheyme",
-      "ghaymeh"
+      "ghaymeh",
+      "8eyme",
+      "8aymeh"
     ],
     "translation_en": "cloud",
     "dialect": "Levantine",
@@ -10523,7 +10544,9 @@
     "arabic_plain": "غيوم",
     "translit": [
       "ghyoum",
-      "ghyoom"
+      "ghyoom",
+      "8youm",
+      "8yoom"
     ],
     "translation_en": "clouds",
     "dialect": "Levantine",
@@ -10677,7 +10700,9 @@
     "arabic_plain": "غابة",
     "translit": [
       "ghabe",
-      "ghaabeh"
+      "ghaabeh",
+      "8abe",
+      "8aabeh"
     ],
     "translation_en": "forest / woods",
     "dialect": "Levantine",
@@ -10833,7 +10858,9 @@
     "arabic_plain": "مغارة",
     "translit": [
       "mghara",
-      "maghara"
+      "maghara",
+      "m8ara",
+      "ma8ara"
     ],
     "translation_en": "cave / cavern",
     "dialect": "Levantine",
@@ -10921,7 +10948,9 @@
     "arabic_plain": "غصن",
     "translit": [
       "ghesen",
-      "ghosn"
+      "ghosn",
+      "8esen",
+      "8osn"
     ],
     "translation_en": "branch / twig",
     "dialect": "Levantine",
@@ -11550,7 +11579,9 @@
     "translit": [
       "ghali",
       "3'ali",
-      "ghaali"
+      "ghaali",
+      "8ali",
+      "8aali"
     ],
     "translation_en": "dear / precious (masc.)",
     "dialect": "Levantine",
@@ -11564,7 +11595,11 @@
       "ghalieh",
       "3'alyeh",
       "ghalyeh",
-      "ghalya"
+      "ghalya",
+      "8alye",
+      "8alieh",
+      "8alyeh",
+      "8alya"
     ],
     "translation_en": "dear / precious (fem.)",
     "dialect": "Levantine",
@@ -11575,7 +11610,8 @@
     "arabic_plain": "غوالي",
     "translit": [
       "ghawali",
-      "3'awali"
+      "3'awali",
+      "8awali"
     ],
     "translation_en": "dear ones / precious ones",
     "dialect": "Levantine",
@@ -11869,7 +11905,8 @@
     "arabic_plain": "غنوج",
     "translit": [
       "ghannouj",
-      "3'annouj"
+      "3'annouj",
+      "8annouj"
     ],
     "translation_en": "pampered / coquettish / sweet",
     "dialect": "Levantine",
@@ -11880,7 +11917,8 @@
     "arabic_plain": "غنوجة",
     "translit": [
       "ghannoujeh",
-      "3'annouja"
+      "3'annouja",
+      "8annoujeh"
     ],
     "translation_en": "pampered / spoiled with love (fem.)",
     "dialect": "Levantine",
@@ -12516,7 +12554,8 @@
     "arabic_plain": "مغفور",
     "translit": [
       "maghfoor",
-      "ma3'four"
+      "ma3'four",
+      "ma8foor"
     ],
     "translation_en": "forgiven (of sins)",
     "dialect": "Levantine",
@@ -13624,7 +13663,9 @@
     "arabic_plain": "غلبة",
     "translit": [
       "ghalabeh",
-      "ghalaba"
+      "ghalaba",
+      "8alabeh",
+      "8alaba"
     ],
     "translation_en": "nuisance / trouble / hassle",
     "dialect": "Levantine",
@@ -13668,7 +13709,9 @@
     "arabic_plain": "غلط",
     "translit": [
       "ghalat",
-      "gholat"
+      "gholat",
+      "8alat",
+      "8olat"
     ],
     "translation_en": "mistake / wrong / error",
     "dialect": "Levantine",
@@ -13679,7 +13722,9 @@
     "arabic_plain": "غلطان",
     "translit": [
       "ghaltan",
-      "ghaltaan"
+      "ghaltaan",
+      "8altan",
+      "8altaan"
     ],
     "translation_en": "mistaken / in the wrong (m)",
     "dialect": "Levantine",
@@ -13690,7 +13735,9 @@
     "arabic_plain": "غلطانة",
     "translit": [
       "ghaltaneh",
-      "ghaltana"
+      "ghaltana",
+      "8altaneh",
+      "8altana"
     ],
     "translation_en": "mistaken / in the wrong (f)",
     "dialect": "Levantine",
@@ -13857,7 +13904,9 @@
     "arabic_plain": "غيرة",
     "translit": [
       "gheereh",
-      "ghira"
+      "ghira",
+      "8eereh",
+      "8ira"
     ],
     "translation_en": "jealousy",
     "dialect": "Levantine",

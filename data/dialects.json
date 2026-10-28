@@ -1,0 +1,27 @@
+[
+  {
+    "id": "levantine",
+    "name": "Levantine (Shami)",
+    "description": "Everyday spoken Arabic across Lebanon, Syria, Jordan, and Palestine",
+    "path": "data/levantine/",
+    "files": ["words.json", "phrases.json"],
+    "default": true
+  },
+  {
+    "id": "egyptian",
+    "name": "Egyptian (Masri)",
+    "description": "Cairene and Egyptian spoken vernacular",
+    "path": "data/egyptian/",
+    "files": ["words.json", "phrases.json"],
+    "default": false
+  },
+  {
+    "id": "quranic",
+    "name": "Quranic / Classical",
+    "description": "Uthmanic and classical script vocabulary",
+    "path": "data/quranic/",
+    "files": ["words.json", "phrases.json"],
+    "stripUthmanicGlyphs": true,
+    "default": false
+  }
+]

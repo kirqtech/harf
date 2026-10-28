@@ -1,0 +1,2126 @@
+[
+  {
+    "arabic": "إِيه دَه",
+    "arabic_plain": "ايه ده",
+    "translit": [
+      "eh da",
+      "eih da",
+      "2eh da",
+      "eh dah"
+    ],
+    "translation_en": "what is this?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَامِل إِيه",
+    "arabic_plain": "عامل ايه",
+    "translit": [
+      "3amel eh",
+      "3amel eih",
+      "amel eh",
+      "aamel eh"
+    ],
+    "translation_en": "how are you doing? (to male)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَامْلَة إِيه",
+    "arabic_plain": "عاملة ايه",
+    "translit": [
+      "3amla eh",
+      "3amla eih",
+      "amla eh"
+    ],
+    "translation_en": "how are you doing? (to female)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَامْلِين إِيه",
+    "arabic_plain": "عاملين ايه",
+    "translit": [
+      "3amleen eh",
+      "3amlin eh",
+      "amleen eh"
+    ],
+    "translation_en": "how are you all doing?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِزَّيَّك يَا صَاحْبِي",
+    "arabic_plain": "ازيك يا صاحبي",
+    "translit": [
+      "ezzayak ya sa7bi",
+      "ezayak ya sa7bi",
+      "ezzayak ya sahbi"
+    ],
+    "translation_en": "how are you, my friend?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِزَّيِّك يَا قَمَر",
+    "arabic_plain": "ازيك يا قمر",
+    "translit": [
+      "ezzayek ya 2amar",
+      "ezayek ya 2amar",
+      "ezzayek ya amar"
+    ],
+    "translation_en": "how are you, gorgeous?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِيه الأَخْبَار",
+    "arabic_plain": "ايه الأخبار",
+    "translit": [
+      "eh el-akhbar",
+      "eh el akhbar",
+      "eh el a5bar",
+      "eih el akhbar"
+    ],
+    "translation_en": "what's the news? / how's it going?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَخْبَارَك إِيه",
+    "arabic_plain": "أخبارك ايه",
+    "translit": [
+      "2akhbarak eh",
+      "akhbarak eh",
+      "a5barak eh"
+    ],
+    "translation_en": "how are things with you? (to male)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "كُلُّه تَمَام",
+    "arabic_plain": "كله تمام",
+    "translit": [
+      "kolloh tamam",
+      "kollo tamam",
+      "kullu tamam"
+    ],
+    "translation_en": "everything is great",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الحَمْدُ لِلَّه كُوَيِّس",
+    "arabic_plain": "الحمد لله كويس",
+    "translit": [
+      "el-7amdulillah kwayyes",
+      "el7amdulillah kwayyes",
+      "alhamdulillah kwayes"
+    ],
+    "translation_en": "praise be to God, I'm doing well",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَفِيش مُشْكِلَة",
+    "arabic_plain": "مفيش مشكلة",
+    "translit": [
+      "mafish moshkela",
+      "mafeesh moshkela",
+      "mafish mushkila"
+    ],
+    "translation_en": "no problem at all",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَا فِيش أَيّ مُشْكِلَة",
+    "arabic_plain": "ما فيش أي مشكلة",
+    "translit": [
+      "mafish 2ayy moshkela",
+      "mafeesh ay moshkela"
+    ],
+    "translation_en": "there is no problem whatsoever",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "صَبَاح الخِير",
+    "arabic_plain": "صباح الخير",
+    "translit": [
+      "saba7 el-kher",
+      "sabah el kher",
+      "saba7 el kheir"
+    ],
+    "translation_en": "good morning",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "صَبَاح الفُلّ",
+    "arabic_plain": "صباح الفل",
+    "translit": [
+      "saba7 el-foll",
+      "saba7 el fol",
+      "sabah el fol"
+    ],
+    "translation_en": "morning of jasmine (warm Egyptian reply)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "صَبَاح اليَاسْمِين",
+    "arabic_plain": "صباح الياسمين",
+    "translit": [
+      "saba7 el-yasmeen",
+      "saba7 el yasmin",
+      "sabah el yasmeen"
+    ],
+    "translation_en": "morning of jasmine",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "صَبَاح القِشْطَة",
+    "arabic_plain": "صباح القشطة",
+    "translit": [
+      "saba7 el-2eshta",
+      "saba7 el 2eshta",
+      "sabah el eshta"
+    ],
+    "translation_en": "morning of cream (cheerful Masri greeting)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَسَاء الخِير",
+    "arabic_plain": "مساء الخير",
+    "translit": [
+      "masa2 el-kher",
+      "masaa el kher",
+      "masa el kher"
+    ],
+    "translation_en": "good evening",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَسَاء النُّور",
+    "arabic_plain": "مساء النور",
+    "translit": [
+      "masa2 el-noor",
+      "masaa el noor",
+      "masa el nour"
+    ],
+    "translation_en": "evening of light (reply)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تِصْبَح عَلَى خِير",
+    "arabic_plain": "تصبح على خير",
+    "translit": [
+      "tesba7 3ala kher",
+      "tisba7 3ala kheir",
+      "tesbah ala kher"
+    ],
+    "translation_en": "good night (to male)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَإِنْتَ مِن أَهْل الخِير",
+    "arabic_plain": "وانت من أهل الخير",
+    "translit": [
+      "wenta men 2ahl el-kher",
+      "wenta min ahl el kher"
+    ],
+    "translation_en": "and may you be among the people of goodness (reply)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "كُلّ سَنَة وَإِنْتَ طَيِّب",
+    "arabic_plain": "كل سنة وانت طيب",
+    "translit": [
+      "koll sana wenta tayyeb",
+      "kol sana wenta tayeb"
+    ],
+    "translation_en": "may you be well every year (happy birthday / holiday)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَإِنْتَ طَيِّب وَبِصِحَّة وَسَلَامَة",
+    "arabic_plain": "وانت طيب وبصحة وسلامة",
+    "translit": [
+      "wenta tayyeb we bese77a we salama",
+      "wenta tayeb we bise7a we salama"
+    ],
+    "translation_en": "and may you be well and in health and peace",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "نَوَّرْت مَصْر",
+    "arabic_plain": "نورت مصر",
+    "translit": [
+      "nawwart masr",
+      "nawart masr",
+      "nawwart maSr"
+    ],
+    "translation_en": "you have lit up Egypt (welcome)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الْبِيت بِيتَك",
+    "arabic_plain": "البيت بيتك",
+    "translit": [
+      "el-beet beetak",
+      "el beet betak",
+      "elbeit beitak"
+    ],
+    "translation_en": "make yourself at home (the house is your house)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "دَه نُورَك يَا بَاشَا",
+    "arabic_plain": "ده نورك يا باشا",
+    "translit": [
+      "da noorak ya basha",
+      "dah nourak ya basha"
+    ],
+    "translation_en": "that is your own light, boss (polite reply)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تِسْلَم إِيدَك",
+    "arabic_plain": "تسلم إيدك",
+    "translit": [
+      "teslam 2eedak",
+      "tislam eedak",
+      "teslam idak"
+    ],
+    "translation_en": "bless your hands (thank you for food/work)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تِسْلَم يَا غَالِي",
+    "arabic_plain": "تسلم يا غالي",
+    "translit": [
+      "teslam ya ghali",
+      "tislam ya 8ali",
+      "teslam ya ghaali"
+    ],
+    "translation_en": "bless you, my dear friend",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّنَا يِخَلِّيك",
+    "arabic_plain": "ربنا يخليك",
+    "translit": [
+      "rabbena yekhalleek",
+      "rabbina y5allik",
+      "rabbena yekhallik"
+    ],
+    "translation_en": "may God preserve you (thank you)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّنَا يِكْرِمَك",
+    "arabic_plain": "ربنا يكرمك",
+    "translit": [
+      "rabbena yekremak",
+      "rabbina yikrimak"
+    ],
+    "translation_en": "may God honor you",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّنَا يِسْتُر طَرِيقَك",
+    "arabic_plain": "ربنا يستر طريقك",
+    "translit": [
+      "rabbena yestor taree2ak",
+      "rabbina yustur tari2ak"
+    ],
+    "translation_en": "may God protect your path",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عُقْبَال عِنْدَكُو",
+    "arabic_plain": "عقبال عندكو",
+    "translit": [
+      "3o2bal 3andoko",
+      "3o'bal 3andoko",
+      "o2bal andoko"
+    ],
+    "translation_en": "may the same happy occasion happen for you",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَلْف مَبْرُوك يَا عَرِيس",
+    "arabic_plain": "ألف مبروك يا عريس",
+    "translit": [
+      "2alf mabrook ya 3arees",
+      "alf mabrouk ya 3aris"
+    ],
+    "translation_en": "a thousand congratulations, groom",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَايِز قَهْوَة مَظْبُوط",
+    "arabic_plain": "عايز قهوة مظبوط",
+    "translit": [
+      "3ayez 2ahwa mazboot",
+      "3ayiz 'ahwa mazbut",
+      "ayez ahwa mazboot"
+    ],
+    "translation_en": "I want a medium-sugar Turkish coffee",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَايْزَة شَاي بِالنَّعْنَاع",
+    "arabic_plain": "عايزة شاي بالنعناع",
+    "translit": [
+      "3ayza shay bel-na3na3",
+      "3ayza shay bin-na3na3",
+      "ayza shay bel na3na3"
+    ],
+    "translation_en": "I want mint tea (f)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "هَات لِي كُبَّايَة مَيَّة سَاقْعَة",
+    "arabic_plain": "هات لي كباية مية ساقعة",
+    "translit": [
+      "hat li kobbayet mayya sa23a",
+      "haat lee kobbayet maya sa23a"
+    ],
+    "translation_en": "bring me a glass of cold water",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الحِسَاب لَوْ سَمَحْت",
+    "arabic_plain": "الحساب لو سمحت",
+    "translit": [
+      "el-7esab law sama7t",
+      "el 7esab law sama7t",
+      "el hesab law samaht"
+    ],
+    "translation_en": "the bill, please",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "بِكَام دَه لَوْ سَمَحْت",
+    "arabic_plain": "بكام ده لو سمحت",
+    "translit": [
+      "bekam da law sama7t",
+      "bikam dah law sama7t"
+    ],
+    "translation_en": "how much is this, please?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "غَالِي أَوِي كِدَة",
+    "arabic_plain": "غالي أوي كدة",
+    "translit": [
+      "ghali 2awi keda",
+      "8ali 2awi keda",
+      "ghali awi kida"
+    ],
+    "translation_en": "it's way too expensive like this",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مُمْكِن تِخَفِّض السِّعْر شْوَيَّة",
+    "arabic_plain": "ممكن تخفض السعر شوية",
+    "translit": [
+      "momken tekhaffed el-se3r shwayya",
+      "mumkin t5affid el se3r shwaya"
+    ],
+    "translation_en": "can you lower the price a bit?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "آخِر كَلَام كَام",
+    "arabic_plain": "آخر كلام كام",
+    "translit": [
+      "2akher kalam kam",
+      "akher kalam kaam",
+      "2a5er kalam kam"
+    ],
+    "translation_en": "what is your final price?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "خَلِّي البَاقِي عَلَشَانَك",
+    "arabic_plain": "خلي الباقي علشانك",
+    "translit": [
+      "khalli el-ba2i 3alashanak",
+      "5alli el ba2i 3ashanak"
+    ],
+    "translation_en": "keep the change for yourself",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَعَايَا فَكَّة",
+    "arabic_plain": "معايا فكة",
+    "translit": [
+      "ma3aya fakka",
+      "ma3aaya fakka",
+      "maaya fakka"
+    ],
+    "translation_en": "I have small change",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَعِيش فَكَّة خَالِص",
+    "arabic_plain": "معيش فكة خالص",
+    "translit": [
+      "ma3eesh fakka khalis",
+      "ma3ish fakka 5ales"
+    ],
+    "translation_en": "I don't have any small change at all",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الأَكْل طَعْمُه جَامِد أَوِي",
+    "arabic_plain": "الأكل طعمه جامد أوي",
+    "translit": [
+      "el-2akl ta3moh gamed 2awi",
+      "el akl ta3mo gamed awi"
+    ],
+    "translation_en": "the food tastes really awesome",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا جَعَان جِدًّا",
+    "arabic_plain": "أنا جعان جدا",
+    "translit": [
+      "2ana ga3an geddan",
+      "ana ga3an giddan"
+    ],
+    "translation_en": "I am very hungry",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَلَّا نَاكُل كُشَرِي النَّهَارْدَة",
+    "arabic_plain": "يلا ناكل كشري النهاردة",
+    "translit": [
+      "yalla nakol koshari el-naharda",
+      "yalla nakul koshary ennaharda"
+    ],
+    "translation_en": "let's eat koshary today",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الفِطَار جَاهِز عَلَى التَّرَابِيزَة",
+    "arabic_plain": "الفطار جاهز على الترابيزة",
+    "translit": [
+      "el-fetar gahez 3ala el-tarabeza",
+      "el fitar gahez 3ala el tarabeeza"
+    ],
+    "translation_en": "breakfast is ready on the table",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تَعَالَى نُقْعُد عَلَى القَهْوَة",
+    "arabic_plain": "تعالى نقعد على القهوة",
+    "translit": [
+      "ta3ala no23od 3ala el-2ahwa",
+      "ta3ala no'3od 3ala el ahwa"
+    ],
+    "translation_en": "come let's sit at the coffeehouse",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَايِز أَطْلُب عَصِير قَصَب",
+    "arabic_plain": "عايز أطلب عصير قصب",
+    "translit": [
+      "3ayez 2atlob 3aseer 2asab",
+      "3ayiz atlub 3asir 2asab"
+    ],
+    "translation_en": "I want to order sugarcane juice",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فِين أَقْرَب مَحَطَّة مِتْرُو",
+    "arabic_plain": "فين أقرب محطة مترو",
+    "translit": [
+      "feen 2a2rab ma7attet metro",
+      "fen a2rab ma7atet metro"
+    ],
+    "translation_en": "where is the nearest metro station?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَرُوح إِزَّاي مِيدَان التَّحْرِير",
+    "arabic_plain": "أروح ازاي ميدان التحرير",
+    "translit": [
+      "2aroo7 ezzay meedan el-ta7reer",
+      "arooh ezay midan el tahrir"
+    ],
+    "translation_en": "how do I get to Tahrir Square?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِمْشِي عَلَى طُول وَبَعْدِين حَوِّد يَمِين",
+    "arabic_plain": "امشي على طول وبعدين حود يمين",
+    "translit": [
+      "emshi 3ala tool we ba3deen 7awwed yameen",
+      "imshi 3ala tul w ba3den 7awed yamin"
+    ],
+    "translation_en": "walk straight ahead and then turn right",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَلَى إِيدَك الشِّمَال جَنْب الكُوبْرِي",
+    "arabic_plain": "على إيدك الشمال جنب الكوبري",
+    "translit": [
+      "3ala 2eedak el-shemal gamb el-kobri",
+      "3ala eedak el shimal gamb el kubri"
+    ],
+    "translation_en": "on your left hand side next to the bridge",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "نَزِّلْنِي هِنَا عَلَى جَنْب يَا أُسْطَى",
+    "arabic_plain": "نزلني هنا على جنب يا أسطى",
+    "translit": [
+      "nazzelni hena 3ala gamb ya 2osta",
+      "nazzilni hina 3ala gamb ya osta"
+    ],
+    "translation_en": "drop me off here on the side, driver",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَلَى جَنْب يَا أُسْطَى لَوْ سَمَحْت",
+    "arabic_plain": "على جنب يا أسطى لو سمحت",
+    "translit": [
+      "3ala gamb ya 2osta law sama7t",
+      "3ala ganb ya osta law sama7t"
+    ],
+    "translation_en": "pull over to the side please, driver",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الدُّنْيَا زَحْمَة أَوِي فِي الشَّارِع",
+    "arabic_plain": "الدنيا زحمة أوي في الشارع",
+    "translit": [
+      "el-donya za7ma 2awi fi el-share3",
+      "ed-dunya za7ma awi fel share3"
+    ],
+    "translation_en": "it is super crowded/jammed in the street",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الكُوبْرِي وَاقِف خَالِص دِلْوَقْتِي",
+    "arabic_plain": "الكوبري واقف خالص دلوقتي",
+    "translit": [
+      "el-kobri wa2ef khalis delwa2ti",
+      "el kubri wa2ef 5ales delwa2ti"
+    ],
+    "translation_en": "the bridge traffic is completely at a standstill right now",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا جَايّ فِي السِّكَّة أَهُو",
+    "arabic_plain": "أنا جاي في السكة أهو",
+    "translit": [
+      "2ana gay fi el-sekka 2aho",
+      "ana gayy fel sikka aho"
+    ],
+    "translation_en": "I am on my way right now",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَاضِل لِي خَمَس دَقَايِق وَأَوْصَل",
+    "arabic_plain": "فاضل لي خمس دقايق وأوصل",
+    "translit": [
+      "fadel li khamas da2aye2 we 2awsal",
+      "fadil li 5amas da2ay2 w awsal"
+    ],
+    "translation_en": "I have five minutes left and I'll arrive",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "العَرَبِيَّة عِطْلِت فِي نُصّ الطَّرِيق",
+    "arabic_plain": "العربية عطلت في نص الطريق",
+    "translit": [
+      "el-3arabeyya 3etlet fi noss el-taree2",
+      "el 3arabeya 3itlet fi nos el tari2"
+    ],
+    "translation_en": "the car broke down in the middle of the road",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنْتَ رَايِح فِين دِلْوَقْتِي",
+    "arabic_plain": "انت رايح فين دلوقتي",
+    "translit": [
+      "enta raye7 feen delwa2ti",
+      "inta rayeh fen delwa2ti"
+    ],
+    "translation_en": "where are you going right now?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا رَاجِع البِيت بَعْد الشُّغْل",
+    "arabic_plain": "أنا راجع البيت بعد الشغل",
+    "translit": [
+      "2ana rage3 el-beet ba3d el-shoghl",
+      "ana ragi3 el beit ba3d el shughl"
+    ],
+    "translation_en": "I am heading back home after work",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِسْتَنَّانِي قُدَّام البَاب",
+    "arabic_plain": "استناني قدام الباب",
+    "translit": [
+      "estannani 2oddam el-bab",
+      "istannani 'oddam el baab"
+    ],
+    "translation_en": "wait for me in front of the door",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا وَاقِف تَحْت العِمَارَة",
+    "arabic_plain": "أنا واقف تحت العمارة",
+    "translit": [
+      "2ana wa2ef ta7t el-3emara",
+      "ana wa2ef ta7t el 3imara"
+    ],
+    "translation_en": "I am standing downstairs by the building",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِطْلَع فِي الأَسَانْسِير لِلدُّور الرَّابِع",
+    "arabic_plain": "اطلع في الأسانسير للدور الرابع",
+    "translit": [
+      "etla3 fi el-2asanseer lel-door el-rabe3",
+      "itla3 fel asanseer lel dor el rabe3"
+    ],
+    "translation_en": "come up in the elevator to the fourth floor",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "بَأَقُولَّك إِيه يَا صَاحْبِي",
+    "arabic_plain": "بأقولك ايه يا صاحبي",
+    "translit": [
+      "ba2ollak eh ya sa7bi",
+      "ba'ollak eh ya sa7bi",
+      "ba2olak eih ya sahbi"
+    ],
+    "translation_en": "tell you what, my friend / listen up",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "بِتِتْكَلِّم جَدّ وَلَّا بِتْهَزَّر",
+    "arabic_plain": "بتتكلم جد ولا بتهزر",
+    "translit": [
+      "betetkallem gadd walla bethazzar",
+      "bititkallim gad wala bithazzar"
+    ],
+    "translation_en": "are you speaking seriously or joking?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَاللهِ مَا بَأَهَزَّر مَعَاك",
+    "arabic_plain": "والله ما بأهزر معاك",
+    "translit": [
+      "wallahi ma bahazzar ma3ak",
+      "wallahy ma bahazar ma3ak"
+    ],
+    "translation_en": "I swear I'm not joking with you",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "دَمَّك خَفِيف أَوِي",
+    "arabic_plain": "دمك خفيف أوي",
+    "translit": [
+      "dammak khafeef 2awi",
+      "damak 5afeef awi"
+    ],
+    "translation_en": "you are very funny / charming",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "بَطَّل كَلَام فَاضِي بَقَى",
+    "arabic_plain": "بطل كلام فاضي بقى",
+    "translit": [
+      "battal kalam fadi ba2a",
+      "baTTal kalam fady ba'a"
+    ],
+    "translation_en": "stop talking nonsense now",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِيه الكَلَام الفَاضِي دَه",
+    "arabic_plain": "ايه الكلام الفاضي ده",
+    "translit": [
+      "eh el-kalam el-fadi da",
+      "eih el kalam el fady dah"
+    ],
+    "translation_en": "what is this nonsense?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَا تِزْعَلْش مِنِّي حَقَّك عَلَيَّا",
+    "arabic_plain": "ما تزعلش مني حقك عليا",
+    "translit": [
+      "ma tez3alsh menni 7a22ak 3alayya",
+      "ma tiz3alsh minni 7a2ak 3alaya"
+    ],
+    "translation_en": "don't be upset with me, my bad",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَفِيش زَعَل بِين الإِخْوَات",
+    "arabic_plain": "مفيش زعل بين الإخوات",
+    "translit": [
+      "mafish za3al been el-2ekhwat",
+      "mafeesh za3al bein el ekhwat"
+    ],
+    "translation_en": "there are no hard feelings between brothers",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَحَشْتِنِي أَوِي يَا غَالِي",
+    "arabic_plain": "وحشتني أوي يا غالي",
+    "translit": [
+      "wa7ashteni 2awi ya ghali",
+      "wa7ashtini awi ya 8ali"
+    ],
+    "translation_en": "I missed you so much, my dear",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنْتَ كَمَان وَحَشْتِنِي جِدًّا",
+    "arabic_plain": "انت كمان وحشتني جدا",
+    "translit": [
+      "enta kaman wa7ashteni geddan",
+      "inta kaman wa7ashtini giddan"
+    ],
+    "translation_en": "I missed you very much too",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَا شُفْنَاكَش مِن زَمَان",
+    "arabic_plain": "ما شفناكش من زمان",
+    "translit": [
+      "ma shofnaksh men zaman",
+      "ma shufnaksh min zamaan"
+    ],
+    "translation_en": "we haven't seen you in a long time",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فِينَك يَا عَمّ مِش بَايِن لِيه",
+    "arabic_plain": "فينك يا عم مش باين ليه",
+    "translit": [
+      "feenak ya 3amm mesh bayen leh",
+      "fenak ya 3am mish bayin leeh"
+    ],
+    "translation_en": "where have you been, man, why haven't you been around?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "كُنْت مَشْغُول فِي الشُّغْل طُول الأُسْبُوع",
+    "arabic_plain": "كنت مشغول في الشغل طول الأسبوع",
+    "translit": [
+      "kont mashghool fi el-shoghl tool el-2osboo3",
+      "kunt mash8ool fel shughl tul el osboo3"
+    ],
+    "translation_en": "I was busy at work all week",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَايْزِين نِتْقَابِل قُرَيِّب",
+    "arabic_plain": "عايزين نتقابل قريب",
+    "translit": [
+      "3ayzeen net2abel 2orayyeb",
+      "3ayzin nit2abil 'orayyeb"
+    ],
+    "translation_en": "we want to meet up soon",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِيه رَأْيَك نُخْرُج الجُمْعَة الجَايَّة",
+    "arabic_plain": "ايه رأيك نخرج الجمعة الجاية",
+    "translit": [
+      "eh ra2yak nokhrog el-gom3a el-gayya",
+      "eih ra'yak no5rog el gom3a el gaya"
+    ],
+    "translation_en": "what do you think about going out next Friday?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فِكْرَة جَامْدَة جِدًّا يَلَّا بِينَا",
+    "arabic_plain": "فكرة جامدة جدا يلا بينا",
+    "translit": [
+      "fekra gamda geddan yalla beena",
+      "fikra gamda giddan yalla bina"
+    ],
+    "translation_en": "awesome idea, let's go!",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَلَّا بِينَا عَشَان مَا نِتْأَخَّرْش",
+    "arabic_plain": "يلا بينا عشان ما نتأخرش",
+    "translit": [
+      "yalla beena 3ashan ma net2akhkharsh",
+      "yalla bina ashan ma nit2a5arsh"
+    ],
+    "translation_en": "let's go so we don't get late",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَالنَّبِي مَا تِتْأَخَّرْش عَلَيَّا",
+    "arabic_plain": "والنبي ما تتأخرش عليا",
+    "translit": [
+      "wel-nabi ma tet2akhkharsh 3alayya",
+      "wennabi ma tit2a5arsh 3alaya"
+    ],
+    "translation_en": "please don't be late for me",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "خَلِّي بَالَك مِن نَفْسَك",
+    "arabic_plain": "خلي بالك من نفسك",
+    "translit": [
+      "khalli balak men nafsak",
+      "5alli balak min nafsak"
+    ],
+    "translation_en": "take care of yourself (to male)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "كَلِّمْنِي لَمَّا تِوْصَل البِيت",
+    "arabic_plain": "كلمني لما توصل البيت",
+    "translit": [
+      "kallemni lamma tewsal el-beet",
+      "kallimni lamma tiwsal el beit"
+    ],
+    "translation_en": "call me when you get home",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "المُوبَايْل فَصَل شَحْن",
+    "arabic_plain": "الموبايل فصل شحن",
+    "translit": [
+      "el-mobayl fasal sha7n",
+      "el mobile fasal sha7n"
+    ],
+    "translation_en": "the phone battery died",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَعَاك شَاحِن تِلِيفُون",
+    "arabic_plain": "معاك شاحن تليفون",
+    "translit": [
+      "ma3ak sha7en telifon",
+      "ma3aak sha7en telefoon"
+    ],
+    "translation_en": "do you have a phone charger?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "النِّتّ ضَعِيف أَوِي النَّهَارْدَة",
+    "arabic_plain": "النت ضعيف أوي النهاردة",
+    "translit": [
+      "el-nett da3eef 2awi el-naharda",
+      "el net da3if awi ennaharda"
+    ],
+    "translation_en": "the internet is very weak today",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِبْعَت لِي العُنْوَان عَلَى الوَاتْس",
+    "arabic_plain": "ابعت لي العنوان على الواتس",
+    "translit": [
+      "eb3at li el-3onwan 3ala el-wats",
+      "ib3at lee el 3unwan 3ala el whatsapp"
+    ],
+    "translation_en": "send me the address on WhatsApp",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الجَوّ حَرّ أَوِي النَّهَارْدَة",
+    "arabic_plain": "الجو حر أوي النهاردة",
+    "translit": [
+      "el-gaww 7arr 2awi el-naharda",
+      "el gaw 7ar awi ennaharda"
+    ],
+    "translation_en": "the weather is very hot today",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الجَوّ بَرْد بِاللِّيل",
+    "arabic_plain": "الجو برد بالليل",
+    "translit": [
+      "el-gaww bard bel-leel",
+      "el gaw bard billeel"
+    ],
+    "translation_en": "the weather is cold at night",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "شَغَّل التَّكْيِيف لَوْ سَمَحْت",
+    "arabic_plain": "شغل التكييف لو سمحت",
+    "translit": [
+      "shaghghal el-takyeef law sama7t",
+      "sha88al el takyif law sama7t"
+    ],
+    "translation_en": "turn on the air conditioner, please",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِفْتَح الشُّبَّاك يِدْخُل هَوَا",
+    "arabic_plain": "افتح الشباك يدخل هوا",
+    "translit": [
+      "efta7 el-shebbak yedkhol hawa",
+      "ifta7 el shibbak yid5ol hawa"
+    ],
+    "translation_en": "open the window to let some air in",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِقْفِل البَاب وَرَاك",
+    "arabic_plain": "اقفل الباب وراك",
+    "translit": [
+      "e2fel el-bab warak",
+      "i'fil el baab waraak"
+    ],
+    "translation_en": "close the door behind you",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "النُّور قَطَع فِي الشَّارِع كُلُّه",
+    "arabic_plain": "النور قطع في الشارع كله",
+    "translit": [
+      "el-noor 2ata3 fi el-share3 kolloh",
+      "en-noor 'ata3 fel share3 kollo"
+    ],
+    "translation_en": "the power went out in the whole street",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الحَمْدُ لِلَّه النُّور جِه أَخِيرًا",
+    "arabic_plain": "الحمد لله النور جه أخيرا",
+    "translit": [
+      "el-7amdulillah el-noor geh 2akheeran",
+      "el7amdulillah en-noor ge a5eeran"
+    ],
+    "translation_en": "thank God the power finally came back",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا تَعْبَان وَعَايِز أَنَام",
+    "arabic_plain": "أنا تعبان وعايز أنام",
+    "translit": [
+      "2ana ta3ban we 3ayez 2anam",
+      "ana ta3ban w 3ayiz anam"
+    ],
+    "translation_en": "I am tired and want to sleep",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَنْدِي صُدَاع جَامِد مِن الصُّبْح",
+    "arabic_plain": "عندي صداع جامد من الصبح",
+    "translit": [
+      "3andi soda3 gamed men el-sob7",
+      "3andy suda3 gamed min el sub7"
+    ],
+    "translation_en": "I've had a bad headache since morning",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَلْف سَلَامَة عَلِيك",
+    "arabic_plain": "ألف سلامة عليك",
+    "translit": [
+      "2alf salama 3aleek",
+      "alf salama 3alek"
+    ],
+    "translation_en": "wishing you a thousand mercies / get well soon",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الله يِسَلِّمَك يَا حَبِيبِي",
+    "arabic_plain": "الله يسلمك يا حبيبي",
+    "translit": [
+      "allah yesallemak ya 7abeebi",
+      "allah yisallimak ya 7abibi"
+    ],
+    "translation_en": "may God keep you safe, my dear",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنْتَ فَاهِم قَصْدِي إِيه",
+    "arabic_plain": "انت فاهم قصدي ايه",
+    "translit": [
+      "enta fahem 2asdi eh",
+      "inta fahim 'asdi eih"
+    ],
+    "translation_en": "do you understand what I mean?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَيْوَة فَاهْمَك كُوَيِّس أَوِي",
+    "arabic_plain": "أيوة فاهمك كويس أوي",
+    "translit": [
+      "2aywa fahmak kwayyes 2awi",
+      "aywa fahmak kwayes awi"
+    ],
+    "translation_en": "yes, I understand you very well",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَا وَاللهِ مَا أَعْرَفْش حَاجَة عَن المَوْضُوع دَه",
+    "arabic_plain": "لا والله ما أعرفش حاجة عن الموضوع ده",
+    "translit": [
+      "la wallahi ma 2a3rafsh 7aga 3an el-mawdoo3 da",
+      "la wallahy ma a3rafsh 7aga 3an el mawdu3 dah"
+    ],
+    "translation_en": "no, honestly I don't know anything about this matter",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَا تِشْغِلْش بَالَك كُلُّه هَيِبْقَى تَمَام",
+    "arabic_plain": "ما تشغلش بالك كله هيبقى تمام",
+    "translit": [
+      "ma teshghelsh balak kolloh hayeb2a tamam",
+      "ma tish8ilsh balak kollo hayib2a tamam"
+    ],
+    "translation_en": "don't worry your mind, everything will be fine",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "سِيبْهَا عَلَى الله",
+    "arabic_plain": "سيبها على الله",
+    "translit": [
+      "seebha 3ala allah",
+      "sibha 3ala allah"
+    ],
+    "translation_en": "leave it to God",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَاللهِ زَمَان يَا مَصْر",
+    "arabic_plain": "والله زمان يا مصر",
+    "translit": [
+      "wallahi zaman ya masr",
+      "wallahy zamaan ya maSr"
+    ],
+    "translation_en": "it has truly been a long time, O Egypt",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "قَاعْدَة عَ النِّيل بِاللِّيل مَتِتْعَوَّضْش",
+    "arabic_plain": "قاعدة ع النيل بالليل متتعوضش",
+    "translit": [
+      "2a3da 3al-neel bel-leel matet3awwadsh",
+      "a3da 3al neil billeel matit3awadsh"
+    ],
+    "translation_en": "sitting by the Nile at night is irreplaceable",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَا خَبَر أَبْيَض عَلَى الجَمَال",
+    "arabic_plain": "يا خبر أبيض على الجمال",
+    "translit": [
+      "ya khabar 2abyad 3ala el-gamal",
+      "ya 5abar abyad 3ala el gamal"
+    ],
+    "translation_en": "goodness gracious, what beauty!",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِيه الحَلَاوَة دِي كُلَّهَا",
+    "arabic_plain": "ايه الحلاوة دي كلها",
+    "translit": [
+      "eh el-7alawa di kollaha",
+      "eih el 7alawa dee kullaha"
+    ],
+    "translation_en": "what is all this sweetness/elegance?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنْتَ إِنْسَان جَدَع وَإِبْن أُصُول",
+    "arabic_plain": "انت إنسان جدع وابن أصول",
+    "translit": [
+      "enta 2ensan gada3 we ebn 2osool",
+      "inta insan gada3 w ibn usul"
+    ],
+    "translation_en": "you are a stand-up person from a good family",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَاتْش الكُورَة النَّهَارْدَة كَان حَمَاسِي جِدًّا",
+    "arabic_plain": "ماتش الكورة النهاردة كان حماسي جدا",
+    "translit": [
+      "matsh el-koora el-naharda kan 7amasi geddan",
+      "match el kora ennaharda kan 7amasy giddan"
+    ],
+    "translation_en": "today's football match was very exciting",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "جَاب جُون جَامِد فِي آخِر دَقِيقَة",
+    "arabic_plain": "جاب جون جامد في آخر دقيقة",
+    "translit": [
+      "gab goon gamed fi 2akher da2ee2a",
+      "gaab gon gamed fi a5er da2i2a"
+    ],
+    "translation_en": "he scored an awesome goal in the last minute",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الشَّقَّة الجِدِيدَة وَاسْعَة وَمْنَوَّرَة",
+    "arabic_plain": "الشقة الجديدة واسعة ومنورة",
+    "translit": [
+      "el-sha22a el-gedeeda was3a we mnawwara",
+      "el sha2a el gedida was3a w mnawara"
+    ],
+    "translation_en": "the new apartment is spacious and bright",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "حُطّ الحَاجَات جُوَّة التَّلَّاجَة",
+    "arabic_plain": "حط الحاجات جوة التلاجة",
+    "translit": [
+      "7ott el-7agat gowa el-tallaga",
+      "7ot el 7agat gowwa el talaga"
+    ],
+    "translation_en": "put the things inside the refrigerator",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مِين اللِّي بِيخَبَّط عَلَى البَاب",
+    "arabic_plain": "مين اللي بيخبط على الباب",
+    "translit": [
+      "meen elli beykhabbat 3ala el-bab",
+      "min elly bi5abbat 3ala el baab"
+    ],
+    "translation_en": "who is knocking on the door?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِتْفَضَّل أُدْخُل مَا تِتْكِسِفْش",
+    "arabic_plain": "اتفضل ادخل ما تتكسفش",
+    "translit": [
+      "etfaddal 2odkhol ma tetkesefsh",
+      "itfaddal od5ol ma titkisifsh"
+    ],
+    "translation_en": "please come in, don't be shy",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِشْرَب حَاجَة سَاقْعَة الأَوِّل",
+    "arabic_plain": "اشرب حاجة ساقعة الأول",
+    "translit": [
+      "eshrab 7aga sa23a el-2awwel",
+      "ishrab 7aga sa23a el awwel"
+    ],
+    "translation_en": "drink a cold beverage first",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا لِسَّة صَاحِي مِن النُّوم دِلْوَقْتِي",
+    "arabic_plain": "أنا لسة صاحي من النوم دلوقتي",
+    "translit": [
+      "2ana lessa sa7i men el-noom delwa2ti",
+      "ana lissa sa7y min el nom delwa2ti"
+    ],
+    "translation_en": "I just woke up from sleep right now",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَازِم أَصْحَى بَدْرِي بُكْرَة الصُّبْح",
+    "arabic_plain": "لازم أصحى بدري بكرة الصبح",
+    "translit": [
+      "lazem 2as7a badri bokra el-sob7",
+      "lazim as7a badry bukra el sub7"
+    ],
+    "translation_en": "I have to wake up early tomorrow morning",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِفْتَكَرْت إِنَّك سَافِرْت إِسْكَنْدَرِيَّة",
+    "arabic_plain": "افتكرت إنك سافرت إسكندرية",
+    "translit": [
+      "eftakart 2ennak safert eskendereyya",
+      "iftakart innak safirt eskenderiya"
+    ],
+    "translation_en": "I thought you had traveled to Alexandria",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَا لِسَّة هَسَافِر الأُسْبُوع الجَايّ",
+    "arabic_plain": "لا لسة هسافر الأسبوع الجاي",
+    "translit": [
+      "la lessa hasafer el-2osboo3 el-gay",
+      "la lissa hasafir el osboo3 el gayy"
+    ],
+    "translation_en": "no, I will travel next week",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تْرُوح وَتِرْجَع بِالسَّلَامَة إِن شَاء الله",
+    "arabic_plain": "تروح وترجع بالسلامة إن شاء الله",
+    "translit": [
+      "teroo7 we terga3 bel-salama en sha2 allah",
+      "tiroo7 w tirga3 bissalama insha2allah"
+    ],
+    "translation_en": "may you go and return safely, God willing",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "سَلِّم لِي عَلَى أَهْل البِيت كُلُّهُم",
+    "arabic_plain": "سلم لي على أهل البيت كلهم",
+    "translit": [
+      "sallem li 3ala 2ahl el-beet kollohom",
+      "sallim lee 3ala ahl el beit kulluhum"
+    ],
+    "translation_en": "give my regards to everyone in the family",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يِوْصَل إِن شَاء الله يَا حَبِيب قَلْبِي",
+    "arabic_plain": "يوصل إن شاء الله يا حبيب قلبي",
+    "translit": [
+      "yewsal en sha2 allah ya 7abeeb 2albi",
+      "yiwsal insha2allah ya 7abib 'albi"
+    ],
+    "translation_en": "it will be conveyed God willing, my sweetheart",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنْتَ عَايِز تِقُول إِيه بِالظَّبْط",
+    "arabic_plain": "انت عايز تقول ايه بالظبط",
+    "translit": [
+      "enta 3ayez te2ool eh bel-zabt",
+      "inta 3ayiz ti2ool eih bizzabt"
+    ],
+    "translation_en": "what exactly do you want to say?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَايِز أَقُولَّك إِنِّي مَبْسُوط بْمَعْرِفْتَك",
+    "arabic_plain": "عايز أقولك إني مبسوط بمعرفتك",
+    "translit": [
+      "3ayez 2a2ollak 2enni mabsoot bema3reftak",
+      "3ayiz a2olak inni mabsut bima3riftak"
+    ],
+    "translation_en": "I want to tell you that I'm happy to know you",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الشَّرَف لِيَّا أَنَا يَا بَاشَا",
+    "arabic_plain": "الشرف ليا أنا يا باشا",
+    "translit": [
+      "el-sharaf leyya 2ana ya basha",
+      "el sharaf liyya ana ya basha"
+    ],
+    "translation_en": "the honor is mine, boss",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَا تِنْسَاش تِجِيب عِيش سُخْن وَإِنْتَ جَايّ",
+    "arabic_plain": "ما تنساش تجيب عيش سخن وانت جاي",
+    "translit": [
+      "ma tensash tegeeb 3eesh sokhn wenta gay",
+      "ma tinsash tigib 3ish so5n wenta gayy"
+    ],
+    "translation_en": "don't forget to bring hot bread on your way back",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "حَاضِر مِن عِينَيَّا الإِتْنِين",
+    "arabic_plain": "حاضر من عينيا الإتنين",
+    "translit": [
+      "7ader men 3enayya el-2etneen",
+      "7aader min 3inayya el itnein"
+    ],
+    "translation_en": "gladly, with my two eyes (at your service)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تِسْلَم عِينِيك يَا غَالِي",
+    "arabic_plain": "تسلم عينيك يا غالي",
+    "translit": [
+      "teslam 3eneek ya ghali",
+      "tislam 3ineik ya 8ali"
+    ],
+    "translation_en": "bless your eyes, my dear",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِزَّيَّك يَا بَاشَا عَامِل إِيه",
+    "arabic_plain": "ازيك يا باشا عامل ايه",
+    "translit": [
+      "ezzayak ya basha 3amel eh",
+      "ezayak ya basha 3amel eih"
+    ],
+    "translation_en": "how are you boss, how are you doing?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا عَايِز أَرُوح وَسَط البَلَد",
+    "arabic_plain": "أنا عايز أروح وسط البلد",
+    "translit": [
+      "2ana 3ayez 2aroo7 wast el-balad",
+      "ana 3ayiz arooh wast el balad"
+    ],
+    "translation_en": "I want to go to downtown Cairo",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فِين مَحَطَّة رَمْسِيس لَوْ سَمَحْت",
+    "arabic_plain": "فين محطة رمسيس لو سمحت",
+    "translit": [
+      "feen ma7attet ramsees law sama7t",
+      "fen ma7atet ramsis law sama7t"
+    ],
+    "translation_en": "where is Ramses Station, please?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "خُد المِتْرُو أَسْرَع مِن التَّاكْسِي",
+    "arabic_plain": "خد المترو أسرع من التاكسي",
+    "translit": [
+      "khod el-metro 2asra3 men el-taksi",
+      "5od el metro asra3 min el taxi"
+    ],
+    "translation_en": "take the metro, it's faster than a taxi",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الأُجْرَة كَام لِحَدّ مَصْر الجِدِيدَة",
+    "arabic_plain": "الأجرة كام لحد مصر الجديدة",
+    "translit": [
+      "el-2ogra kam le7add masr el-gedeeda",
+      "el ogra kaam li7ad masr el gedida"
+    ],
+    "translation_en": "how much is the fare to Heliopolis?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِفْتَح العَدَّاد لَوْ سَمَحْت يَا أُسْطَى",
+    "arabic_plain": "افتح العداد لو سمحت يا أسطى",
+    "translit": [
+      "efta7 el-3addad law sama7t ya 2osta",
+      "ifta7 el 3addad law sama7t ya osta"
+    ],
+    "translation_en": "turn on the meter please, driver",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لِسَّة بَدْرِي خَلِّيك قَاعِد مَعَانَا شْوَيَّة",
+    "arabic_plain": "لسة بدري خليك قاعد معانا شوية",
+    "translit": [
+      "lessa badri khalleek 2a3ed ma3ana shwayya",
+      "lissa badry 5allik 'a3ed ma3ana shwaya"
+    ],
+    "translation_en": "it's still early, stay sitting with us a bit",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَاللهِ وَرَايَا شُغْل بَدْرِي بُكْرَة",
+    "arabic_plain": "والله ورايا شغل بدري بكرة",
+    "translit": [
+      "wallahi waraya shoghl badri bokra",
+      "wallahy waraya shughl badry bukra"
+    ],
+    "translation_en": "honestly I have work early tomorrow",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تَعَالَى نِتْغَدَّى سَوَا بُكْرَة بَعْد الشُّغْل",
+    "arabic_plain": "تعالى نتغدى سوا بكرة بعد الشغل",
+    "translit": [
+      "ta3ala netghadda sawa bokra ba3d el-shoghl",
+      "ta3ala nit8adda sawa bukra ba3d el shughl"
+    ],
+    "translation_en": "come let's have lunch together tomorrow after work",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "خَلَاص إِتَّفَقْنَا هَسْتَنَّاك السَّاعَة خَمْسَة",
+    "arabic_plain": "خلاص اتفقنا هستناك الساعة خمسة",
+    "translit": [
+      "khallas ettafa2na hastannak el-sa3a khamsa",
+      "5alas ittafa2na hastannak el sa3a 5amsa"
+    ],
+    "translation_en": "alright we agreed, I'll wait for you at five o'clock",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَا تِتْأَخَّرْش عَشَان المَطْعَم بِيِزْحَم",
+    "arabic_plain": "ما تتأخرش عشان المطعم بيزحم",
+    "translit": [
+      "ma tet2akhkharsh 3ashan el-mat3am beyez7am",
+      "ma tit2a5arsh ashan el mat3am biyiz7am"
+    ],
+    "translation_en": "don't be late because the restaurant gets crowded",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَايْزِين نِفْطَر فُول وَطَعْمِيَّة سُخْنَة",
+    "arabic_plain": "عايزين نفطر فول وطعمية سخنة",
+    "translit": [
+      "3ayzeen neftar fool we ta3meyya sokhna",
+      "3ayzin niftar ful w ta3meya so5na"
+    ],
+    "translation_en": "we want to have hot fava beans and falafel for breakfast",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الشَّاي دَه مَظْبُوط عَلَى مِزَاجِي",
+    "arabic_plain": "الشاي ده مظبوط على مزاجي",
+    "translit": [
+      "el-shay da mazboot 3ala mezagi",
+      "el shaay dah mazbut 3ala mizagi"
+    ],
+    "translation_en": "this tea is made just to my liking",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "القَهْوَة دِي وِشَّهَا تَقِيل وَجَامِد",
+    "arabic_plain": "القهوة دي وشها تقيل وجامد",
+    "translit": [
+      "el-2ahwa di weshshaha te2eel we gamed",
+      "el ahwa dee wishaha ti2eel w gamed"
+    ],
+    "translation_en": "this coffee has a thick and awesome crema",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تِشْرَب إِيه يَا بَاشَا قَهْوَة وَلَّا شَاي",
+    "arabic_plain": "تشرب ايه يا باشا قهوة ولا شاي",
+    "translit": [
+      "teshrab eh ya basha 2ahwa walla shay",
+      "tishrab eih ya basha ahwa wala shaay"
+    ],
+    "translation_en": "what would you like to drink boss, coffee or tea?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "كُبَّايَة عَصِير مَانْجَة سَاقْعَة لَوْ سَمَحْت",
+    "arabic_plain": "كباية عصير مانجة ساقعة لو سمحت",
+    "translit": [
+      "kobbayet 3aseer manga sa23a law sama7t",
+      "kubayet 3asir manga sa'3a law sama7t"
+    ],
+    "translation_en": "a cold glass of mango juice, please",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "المُلُوخِيَّة دِي رِيحِتْهَا تِفْتَح النِّفْس",
+    "arabic_plain": "الملوخية دي ريحتها تفتح النفس",
+    "translit": [
+      "el-molokheyya di ree7etha tefta7 el-nefs",
+      "el molokhiya dee ri7itha tifta7 en-nifs"
+    ],
+    "translation_en": "this molokhia smells appetizing",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تِسْلَم إِيدِك يَا سِتّ الكُلّ عَلَى الأَكْل الحِلْو دَه",
+    "arabic_plain": "تسلم إيدك يا ست الكل على الأكل الحلو ده",
+    "translit": [
+      "teslam 2eedek ya sett el-koll 3ala el-2akl el-7elw da",
+      "tislam eedik ya sitt el kol 3ala el akl el 7ilw dah"
+    ],
+    "translation_en": "bless your hands, lady of all, for this delicious food",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "بِالهَنَا وَالشِّفَا عَلَى قَلْبَك",
+    "arabic_plain": "بالهنا والشفا على قلبك",
+    "translit": [
+      "bel-hana wel-shefa 3ala 2albak",
+      "bilhana wel shifa 3ala 'albak"
+    ],
+    "translation_en": "bon appetit to your heart",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الله يِهَنِّيك يَا رَبّ",
+    "arabic_plain": "الله يهنيك يا رب",
+    "translit": [
+      "allah yehanneek ya rabb",
+      "allah yihannik ya rab"
+    ],
+    "translation_en": "may God grant you joy, O Lord",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا شَبْعَان خَالِص مِش قَادِر آكُل تَانِي",
+    "arabic_plain": "أنا شبعان خالص مش قادر آكل تاني",
+    "translit": [
+      "2ana shab3an khalis mesh 2ader 2akol tani",
+      "ana shab3an 5ales mish 'ader akul tany"
+    ],
+    "translation_en": "I am completely full, I can't eat any more",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنْتَ شَخْص مُحْتَرَم وَكُلُّك ذُوق",
+    "arabic_plain": "انت شخص محترم وكلك ذوق",
+    "translit": [
+      "enta shakhs mo7taram we kollak zoo2",
+      "inta sha5s mu7taram w kullak zo2"
+    ],
+    "translation_en": "you are a respectable person and full of courtesy",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "دَه مِن ذُوقَك يَا فَنْدِم",
+    "arabic_plain": "ده من ذوقك يا فندم",
+    "translit": [
+      "da men zoo2ak ya fandem",
+      "dah min zo2ak ya fandim"
+    ],
+    "translation_en": "that is very kind of you, sir/ma'am",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "حَضْرِتَك تُؤْمُر بِأَيّ خِدْمَة تَانْيَة",
+    "arabic_plain": "حضرتك تؤمر بأي خدمة تانية",
+    "translit": [
+      "7adretak to2mor be 2ayy khedma tanya",
+      "7adritak tu2mur bi ay 5edma tanya"
+    ],
+    "translation_en": "may I help you with any other service?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "شُكْرًا جَزِيلًا كِفَايَة كِدَة",
+    "arabic_plain": "شكرا جزيلا كفاية كدة",
+    "translit": [
+      "shokran gazeelan kefaya keda",
+      "shukran gazilan kifaya kida"
+    ],
+    "translation_en": "thank you very much, that is enough",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "العَفْو عَلَى إِيه إِحْنَا فِي الخِدْمَة",
+    "arabic_plain": "العفو على ايه احنا في الخدمة",
+    "translit": [
+      "el-3afw 3ala eh e7na fi el-khedma",
+      "el 3afw 3ala eih i7na fel 5edma"
+    ],
+    "translation_en": "you're welcome, don't mention it, we are at your service",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الفِيلْم الجِدِيد دَه قِصِّتُه حِلْوَة أَوِي",
+    "arabic_plain": "الفيلم الجديد ده قصته حلوة أوي",
+    "translit": [
+      "el-felm el-gedeed da 2essetoh 7elwa 2awi",
+      "el film el gedid dah 'isseto 7ilwa awi"
+    ],
+    "translation_en": "this new movie has a very nice story",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تَعَالَى نِرُوح السِّينِمَا يُوم الخَمِيس",
+    "arabic_plain": "تعالى نروح السينما يوم الخميس",
+    "translit": [
+      "ta3ala neroo7 el-seenema yoom el-khamees",
+      "ta3ala niroo7 el sinima yom el 5amis"
+    ],
+    "translation_en": "come let's go to the cinema on Thursday",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "حَجَزْت التَّذَاكِر عَلَى النِّتّ",
+    "arabic_plain": "حجزت التذاكر على النت",
+    "translit": [
+      "7agazt el-tazaker 3ala el-nett",
+      "7agazt el tazakir 3ala el net"
+    ],
+    "translation_en": "I booked the tickets online",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "القَعْدَة مَعَاكُو مَا يِتْشِبِعْش مِنْهَا",
+    "arabic_plain": "القعدة معاكو ما يتشبعش منها",
+    "translit": [
+      "el-2a3da ma3ako ma yetshebe3sh menha",
+      "el 'a3da ma3ako ma yitshibi3sh minha"
+    ],
+    "translation_en": "hanging out with you all is something one never gets tired of",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الضِّحْك مِن القَلْب بِيطَوِّل العُمْر",
+    "arabic_plain": "الضحك من القلب بيطول العمر",
+    "translit": [
+      "el-de7k men el-2alb beytawwel el-3omr",
+      "ed-di7k min el 'alb bitawwil el 3umr"
+    ],
+    "translation_en": "laughing from the heart lengthens life",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "النُّكْتَة دِي موتِتْنِي مِن الضِّحْك",
+    "arabic_plain": "النكتة دي موتتني من الضحك",
+    "translit": [
+      "el-nokta di mawwetetni men el-de7k",
+      "en-nukta dee mawititni min ed-di7k"
+    ],
+    "translation_en": "this joke made me die laughing",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنْتَ بْتِتْكَلِّم مَصْرِي أَحْسَن مِن المَصْرِيِّين",
+    "arabic_plain": "انت بتتكلم مصري أحسن من المصريين",
+    "translit": [
+      "enta btetkallem masri 2a7san men el-masreyyeen",
+      "inta btitkallim masry a7san min el masriyyin"
+    ],
+    "translation_en": "you speak Egyptian Arabic better than Egyptians!",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا بَأَحِبّ اللَّهْجَة المَصْرِيَّة جِدًّا",
+    "arabic_plain": "أنا بأحب اللهجة المصرية جدا",
+    "translit": [
+      "2ana ba7ebb el-lahga el-masreyya geddan",
+      "ana ba7eb el lahga el masreya giddan"
+    ],
+    "translation_en": "I love the Egyptian dialect very much",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "اللَّهْجَة المَصْرِيَّة سَهْلَة وَدَمَّهَا خَفِيف",
+    "arabic_plain": "اللهجة المصرية سهلة ودمها خفيف",
+    "translit": [
+      "el-lahga el-masreyya sahla we dammaha khafeef",
+      "el lahga el masreya sahla w damaha 5afeef"
+    ],
+    "translation_en": "the Egyptian dialect is easy and lighthearted",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَصْر أُمّ الدُّنْيَا وَنَاسْهَا طَيِّبِين",
+    "arabic_plain": "مصر أم الدنيا وناسها طيبين",
+    "translit": [
+      "masr 2omm el-donya we nasha tayyebeen",
+      "maSr om el dunya w nasha tayebin"
+    ],
+    "translation_en": "Egypt is the mother of the world and its people are kind",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الهَوَا عَلَى كُورْنِيش إِسْكَنْدَرِيَّة يِرُدّ الرُّوح",
+    "arabic_plain": "الهوا على كورنيش إسكندرية يرد الروح",
+    "translit": [
+      "el-hawa 3ala korneesh eskendereyya yerodd el-roo7",
+      "el hawa 3ala kornish eskenderiya yirod el rooh"
+    ],
+    "translation_en": "the breeze on the Alexandria Corniche revives the soul",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الشَّمْس طَالْعَة وَالجَوّ جَمِيل النَّهَارْدَة",
+    "arabic_plain": "الشمس طالعة والجو جميل النهاردة",
+    "translit": [
+      "el-shams tal3a wel-gaww gameel el-naharda",
+      "esh-shams tal3a wel gaw gamil ennaharda"
+    ],
+    "translation_en": "the sun is out and the weather is beautiful today",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "المَطَر بِيِنْزِل فِي الشِّتَا فِي إِسْكَنْدَرِيَّة",
+    "arabic_plain": "المطر بينزل في الشتا في إسكندرية",
+    "translit": [
+      "el-matar beyenzel fi el-sheta fi eskendereyya",
+      "el matar biyinzil fel shita fi eskenderiya"
+    ],
+    "translation_en": "the rain falls in winter in Alexandria",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "خُد مَعَاك جَاكِيت عَشَان الجَوّ هَيِبْرَد",
+    "arabic_plain": "خد معاك جاكيت عشان الجو هيبرد",
+    "translit": [
+      "khod ma3ak gaket 3ashan el-gaww hayebrad",
+      "5od ma3ak gaket ashan el gaw hayibrad"
+    ],
+    "translation_en": "take a jacket with you because the weather will get cold",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فِين حَطِّيت مَفَاتِيح العَرَبِيَّة",
+    "arabic_plain": "فين حطيت مفاتيح العربية",
+    "translit": [
+      "feen 7atteet mafatee7 el-3arabeyya",
+      "fen 7attet mafati7 el 3arabeya"
+    ],
+    "translation_en": "where did you put the car keys?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "المَفَاتِيح عَلَى التَّرَابِيزَة جُوَّة الأُوضَة",
+    "arabic_plain": "المفاتيح على الترابيزة جوة الأوضة",
+    "translit": [
+      "el-mafatee7 3ala el-tarabeza gowa el-2ooda",
+      "el mafati7 3ala el tarabeeza gowwa el ooda"
+    ],
+    "translation_en": "the keys are on the table inside the room",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "دَوَّرْت عَلِيهَا فِي كُلّ حِتَّة مَش لَاقِيهَا",
+    "arabic_plain": "دورت عليها في كل حتة مش لاقيها",
+    "translit": [
+      "dawwart 3aleeha fi koll 7etta mesh la2eeha",
+      "dawart 3aliha fi kol 7itta mish la'iha"
+    ],
+    "translation_en": "I looked for it everywhere and can't find it",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَهِيه لَقِيتْهَا كَانِت تَحْت المِخَدَّة",
+    "arabic_plain": "أهيه لقيتها كانت تحت المخدة",
+    "translit": [
+      "2aheeh la2eetha kanet ta7t el-mekhadda",
+      "aheh la'itha kanit ta7t el mi5adda"
+    ],
+    "translation_en": "there it is, I found it, it was under the pillow",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "الحَمْدُ لِلَّه إِنَّك لَقِيتْهَا قَبْل مَا نِنْزِل",
+    "arabic_plain": "الحمد لله إنك لقيتها قبل ما ننزل",
+    "translit": [
+      "el-7amdulillah 2ennak la2eetha 2abl ma nenzel",
+      "el7amdulillah innak la'itha 'abl ma ninzil"
+    ],
+    "translation_en": "thank God you found it before we went downstairs",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "بِالرَّاحَة وَإِنْتَ سَايِق الطَّرِيق زَحْمَة",
+    "arabic_plain": "بالراحة وانت سايق الطريق زحمة",
+    "translit": [
+      "bel-ra7a wenta saye2 el-taree2 za7ma",
+      "berra7a wenta saye' el tari2 za7ma"
+    ],
+    "translation_en": "take it easy while driving, the road is crowded",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِرْبِط حِزَام الأَمَان يَا بَاشَا",
+    "arabic_plain": "اربط حزام الأمان يا باشا",
+    "translit": [
+      "erbet 7ezam el-2aman ya basha",
+      "irbit 7izam el aman ya basha"
+    ],
+    "translation_en": "fasten your seatbelt, boss",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "العَرَبِيَّة عَايْزَة تِتْغِسِل وَتِتْمِسِح",
+    "arabic_plain": "العربية عايزة تتغسل وتتمسح",
+    "translit": [
+      "el-3arabeyya 3ayza tetghesel we tetmese7",
+      "el 3arabeya 3ayza tit8isil w titmisi7"
+    ],
+    "translation_en": "the car needs to be washed and wiped down",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "هَفَوِّل بَنْزِين مِن المَحَطَّة الجَايَّة",
+    "arabic_plain": "هفول بنزين من المحطة الجاية",
+    "translit": [
+      "hafawwel banzeen men el-ma7atta el-gayya",
+      "hafawil banzin min el ma7ata el gaya"
+    ],
+    "translation_en": "I'll fill up the tank with gas at the next station",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِيه رَأْيَك فِي القَمِيص الجِدِيد دَه",
+    "arabic_plain": "ايه رأيك في القميص الجديد ده",
+    "translit": [
+      "eh ra2yak fi el-2amees el-gedeed da",
+      "eih ra'yak fel 'amis el gedid dah"
+    ],
+    "translation_en": "what do you think of this new shirt?",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "شِيك أَوِي وَلُونُه لَايِق عَلِيك",
+    "arabic_plain": "شيك أوي ولونه لايق عليك",
+    "translit": [
+      "sheek 2awi we loonoh laye2 3aleek",
+      "shik awi w lono laye' 3alek"
+    ],
+    "translation_en": "very stylish and its color suits you",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَبْرُوك عَلِيك تِدَوِّبُه فِي عَرَق العَافْيَة",
+    "arabic_plain": "مبروك عليك تذوبه في عرق العافية",
+    "translit": [
+      "mabrook 3aleek tedawwoboh fi 3ara2 el-3afya",
+      "mabrouk 3alek tidawibo fi 3ara' el 3afya"
+    ],
+    "translation_en": "congratulations, may you wear it in good health",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَنَا بَأَذَاكِر عَشَان عَنْدِي إِمْتِحَان بُكْرَة",
+    "arabic_plain": "أنا بأذاكر عشان عندي امتحان بكرة",
+    "translit": [
+      "2ana bazaker 3ashan 3andi emte7an bokra",
+      "ana bazakir ashan 3andy imti7an bukra"
+    ],
+    "translation_en": "I am studying because I have an exam tomorrow",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّنَا يِوَفَّقَك وَتِنْجَح بِأَعْلَى الدَّرَجَات",
+    "arabic_plain": "ربنا يوفقك وتنجح بأعلى الدرجات",
+    "translit": [
+      "rabbena yewaffa2ak we tenga7 be 2a3la el-daragat",
+      "rabbina yiwaffa'ak w tinga7 bi a3la ed-daragat"
+    ],
+    "translation_en": "may God grant you success and top grades",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "دَعَوَاتَك مَعَايَا يَا غَالِي",
+    "arabic_plain": "دعواتك معايا يا غالي",
+    "translit": [
+      "da3awatak ma3aya ya ghali",
+      "da3awatak ma3aya ya 8ali"
+    ],
+    "translation_en": "keep me in your prayers, my dear",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِن شَاء الله خِير مَا تِقْلَقْش خَالِص",
+    "arabic_plain": "إن شاء الله خير ما تقلقش خالص",
+    "translit": [
+      "en sha2 allah kheer ma te2la2sh khalis",
+      "insha2allah kher ma ti'la'sh 5ales"
+    ],
+    "translation_en": "God willing all will be well, don't worry at all",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "اللِّي فِيه الخِير يِقَدِّمُه رَبِّنَا",
+    "arabic_plain": "اللي فيه الخير يقدمه ربنا",
+    "translit": [
+      "elli feeh el-kheer ye2addemoh rabbena",
+      "elly fih el kher yi2addimo rabbina"
+    ],
+    "translation_en": "whatever holds goodness, may our Lord bring it forth",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَنِعْمَ بِالله كُلّ شَيْء بِنَصِيب",
+    "arabic_plain": "ونعم بالله كل شيء بنصيب",
+    "translit": [
+      "we ne3ma bellah koll shee2 benaseeb",
+      "w ni3ma billah kol she2 binaseeb"
+    ],
+    "translation_en": "indeed we trust in God, everything is by destiny",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَلَّا أَشُوف وَشَّك عَلَى خِير",
+    "arabic_plain": "يلا أشوف وشك على خير",
+    "translit": [
+      "yalla 2ashoof weshshak 3ala kheer",
+      "yalla ashuf wishak 3ala kher"
+    ],
+    "translation_en": "alright, see you in goodness (goodbye)",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَعَ السَّلَامَة خَلِّي بَالَك مِن الطَّرِيق",
+    "arabic_plain": "مع السلامة خلي بالك من الطريق",
+    "translit": [
+      "ma3a el-salama khalli balak men el-taree2",
+      "ma3a es-salama 5alli balak min el tari2"
+    ],
+    "translation_en": "goodbye, watch the road carefully",
+    "dialect": "Egyptian",
+    "category": "Phrases"
+  }
+]

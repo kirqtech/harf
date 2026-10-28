@@ -1,6 +1,6 @@
 /*!
- * Harf - practice content helpers
- * Vocabulary lives in data/*.json and is supplied by HarfDataLoader. This file
+ * Nateq - practice content helpers
+ * Vocabulary lives in data/*.json and is supplied by NateqDataLoader. This file
  * only normalizes loaded items and provides the drilling/picking utilities.
  */
 (function (global) {
@@ -205,8 +205,8 @@
     return selected;
   }
 
-  global.HarfData = {
-    // Dataset lifecycle: the app calls these after HarfDataLoader resolves.
+  global.NateqData = {
+    // Dataset lifecycle: the app calls these after NateqDataLoader resolves.
     setWords: function (items) {
       state.words = coerceList(items);
       rebuildWordIndex();

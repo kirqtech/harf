@@ -1,0 +1,1788 @@
+[
+  {
+    "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+    "arabic_plain": "بسم الله الرحمن الرحيم",
+    "translit": [
+      "bismillahi al-ra7mani al-ra7eem",
+      "bismillah al-ra7man al-ra7eem",
+      "bismillah ir-rahman ir-raheem"
+    ],
+    "translation_en": "In the Name of Allah, the Entirely Merciful, the Especially Merciful",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+    "arabic_plain": "الحمد لله رب العالمين",
+    "translit": [
+      "al-7amdulillahi rabbi al-3alameen",
+      "al-7amdulillah rabb al-3alameen",
+      "alhamdulillahi rabbil 3alameen"
+    ],
+    "translation_en": "All praise is due to Allah, Lord of the worlds",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+    "arabic_plain": "الرحمن الرحيم",
+    "translit": [
+      "al-ra7mani al-ra7eem",
+      "ar-ra7man ar-ra7eem",
+      "al-rahman al-raheem"
+    ],
+    "translation_en": "The Entirely Merciful, the Especially Merciful",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَٰلِكِ يَوْمِ ٱلدِّينِ",
+    "arabic_plain": "مالك يوم الدين",
+    "translit": [
+      "maliki yawmi al-deen",
+      "maaliki yawm ad-deen",
+      "maliki yawmid-deen"
+    ],
+    "translation_en": "Sovereign of the Day of Recompense",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+    "arabic_plain": "إياك نعبد وإياك نستعين",
+    "translit": [
+      "iyyaka na3budu wa iyyaka nasta3een",
+      "2iyyaka na3budu wa 2iyyaka nasta3in"
+    ],
+    "translation_en": "It is You we worship and You we ask for help",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+    "arabic_plain": "اهدنا الصراط المستقيم",
+    "translit": [
+      "ihdina al-sirata al-mustaqeem",
+      "ihdinas-siratal-mustaqeem"
+    ],
+    "translation_en": "Guide us to the straight path",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
+    "arabic_plain": "صراط الذين أنعمت عليهم",
+    "translit": [
+      "sirata alladheena an3amta 3alayhim",
+      "siratal-ladhina an3amta 3alayhim"
+    ],
+    "translation_en": "The path of those upon whom You have bestowed favor",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّالِّينَ",
+    "arabic_plain": "غير المغضوب عليهم ولا الضالين",
+    "translit": [
+      "ghayri al-maghdoobi 3alayhim wala al-dalleen",
+      "ghayril-maghdubi 3alayhim walad-dalleen"
+    ],
+    "translation_en": "Not of those who have evoked anger or of those who are astray",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+    "arabic_plain": "قل هو الله أحد",
+    "translit": [
+      "qul huwa allahu a7ad",
+      "qul huwallahu a7ad"
+    ],
+    "translation_en": "Say, He is Allah, the One",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱللَّهُ ٱلصَّمَدُ",
+    "arabic_plain": "الله الصمد",
+    "translit": [
+      "allahu al-samad",
+      "allahus-samad"
+    ],
+    "translation_en": "Allah, the Eternal Refuge",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+    "arabic_plain": "لم يلد ولم يولد",
+    "translit": [
+      "lam yalid wa lam yoolad",
+      "lam yalid walam yulad"
+    ],
+    "translation_en": "He neither begets nor is born",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+    "arabic_plain": "ولم يكن له كفوا أحد",
+    "translit": [
+      "wa lam yakun lahu kufuwan a7ad",
+      "walam yakullahu kufuwan a7ad"
+    ],
+    "translation_en": "Nor is there to Him any equivalent",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+    "arabic_plain": "قل أعوذ برب الفلق",
+    "translit": [
+      "qul a3oodhu birabbi al-falaq",
+      "qul a3udhu birabbil-falaq"
+    ],
+    "translation_en": "Say, I seek refuge in the Lord of daybreak",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مِن شَرِّ مَا خَلَقَ",
+    "arabic_plain": "من شر ما خلق",
+    "translit": [
+      "min sharri ma khalaq",
+      "min sharri maa 5alaq"
+    ],
+    "translation_en": "From the evil of that which He created",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+    "arabic_plain": "ومن شر غاسق إذا وقب",
+    "translit": [
+      "wa min sharri ghasiqin idha waqab",
+      "wamin sharri 8asiqin idha waqab"
+    ],
+    "translation_en": "And from the evil of darkness when it settles",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَمِن شَرِّ ٱلنَّفَّاثَاتِ فِي ٱلْعُقَدِ",
+    "arabic_plain": "ومن شر النفاثات في العقد",
+    "translit": [
+      "wa min sharri al-naffathati fi al-3uqad",
+      "wamin sharrin-naffathati fil-3uqad"
+    ],
+    "translation_en": "And from the evil of the blowers in knots",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+    "arabic_plain": "ومن شر حاسد إذا حسد",
+    "translit": [
+      "wa min sharri 7asidin idha 7asad",
+      "wamin sharri hasidin idha hasad"
+    ],
+    "translation_en": "And from the evil of an envier when he envies",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+    "arabic_plain": "قل أعوذ برب الناس",
+    "translit": [
+      "qul a3oodhu birabbi al-nas",
+      "qul a3udhu birabbin-nas"
+    ],
+    "translation_en": "Say, I seek refuge in the Lord of mankind",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَلِكِ ٱلنَّاسِ",
+    "arabic_plain": "ملك الناس",
+    "translit": [
+      "maliki al-nas",
+      "malikin-nas"
+    ],
+    "translation_en": "The Sovereign of mankind",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِلَٰهِ ٱلنَّاسِ",
+    "arabic_plain": "إله الناس",
+    "translit": [
+      "ilahi al-nas",
+      "ilahin-nas"
+    ],
+    "translation_en": "The God of mankind",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+    "arabic_plain": "من شر الوسواس الخناس",
+    "translit": [
+      "min sharri al-waswasi al-khannas",
+      "min sharril-waswasil-5annas"
+    ],
+    "translation_en": "From the evil of the retreating whisperer",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱلَّذِي يُوَسْوِسُ فِي صُدُورِ ٱلنَّاسِ",
+    "arabic_plain": "الذي يوسوس في صدور الناس",
+    "translit": [
+      "alladhee yuwaswisu fi sudoori al-nas",
+      "alladhi yuwaswisu fi sudurin-nas"
+    ],
+    "translation_en": "Who whispers into the breasts of mankind",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+    "arabic_plain": "من الجنة والناس",
+    "translit": [
+      "mina al-jinnati wa al-nas",
+      "minal-jinnati wan-nas"
+    ],
+    "translation_en": "From among the jinn and mankind",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّا أَعْطَيْنَاكَ ٱلْكَوْثَرَ",
+    "arabic_plain": "إنا أعطيناك الكوثر",
+    "translit": [
+      "inna a3taynaka al-kawthar",
+      "2inna a3Taynakal-kawthar"
+    ],
+    "translation_en": "Indeed, We have granted you Al-Kawthar",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+    "arabic_plain": "فصل لربك وانحر",
+    "translit": [
+      "fasalli lirabbika wan7ar",
+      "faSalli lirabbika wa in7ar"
+    ],
+    "translation_en": "So pray to your Lord and sacrifice",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+    "arabic_plain": "إن شانئك هو الأبتر",
+    "translit": [
+      "inna shani2aka huwa al-abtar",
+      "inna shani'aka huwal-abtar"
+    ],
+    "translation_en": "Indeed, your enemy is the one cut off",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱلْعَصْرِ",
+    "arabic_plain": "والعصر",
+    "translit": [
+      "wal-3asr",
+      "wa al-3asr"
+    ],
+    "translation_en": "By time",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ ٱلْإِنسَانَ لَفِي خُسْرٍ",
+    "arabic_plain": "إن الإنسان لفي خسر",
+    "translit": [
+      "inna al-insana lafee khusr",
+      "innal-insana lafi 5usr"
+    ],
+    "translation_en": "Indeed, mankind is in loss",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَتَوَاصَوْا بِٱلْحَقِّ وَتَوَاصَوْا بِٱلصَّبْرِ",
+    "arabic_plain": "وتواصوا بالحق وتواصوا بالصبر",
+    "translit": [
+      "wa tawasaw bil-7aqqi wa tawasaw bil-sabr",
+      "watawasaw bil-7aqqi watawasaw bis-sabr"
+    ],
+    "translation_en": "And advised each other to truth and advised each other to patience",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِذَا جَاءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+    "arabic_plain": "إذا جاء نصر الله والفتح",
+    "translit": [
+      "idha ja2a nasru allahi wal-fat7",
+      "idha jaa'a nasrullahi wal-fath"
+    ],
+    "translation_en": "When the victory of Allah has come and the conquest",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ",
+    "arabic_plain": "فسبح بحمد ربك واستغفره",
+    "translit": [
+      "fasabbi7 bi7amdi rabbika wastaghfirh",
+      "fa sabbi7 bi7amdi rabbika wa istaghfirhu"
+    ],
+    "translation_en": "Then exalt Him with praise of your Lord and ask forgiveness of Him",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّهُ كَانَ تَوَّابًا",
+    "arabic_plain": "إنه كان توابا",
+    "translit": [
+      "innahu kana tawwaba",
+      "innahu kaana tawwaban"
+    ],
+    "translation_en": "Indeed, He is ever Accepting of repentance",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+    "arabic_plain": "ألم نشرح لك صدرك",
+    "translit": [
+      "alam nashra7 laka sadrak",
+      "2alam nashra7 laka Sadraka"
+    ],
+    "translation_en": "Did We not expand for you your breast?",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+    "arabic_plain": "ووضعنا عنك وزرك",
+    "translit": [
+      "wa wada3na 3anka wizrak",
+      "wawada3na 3anka wizraka"
+    ],
+    "translation_en": "And We removed from you your burden",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+    "arabic_plain": "ورفعنا لك ذكرك",
+    "translit": [
+      "wa rafa3na laka dhikrak",
+      "warafa3na laka dhikraka"
+    ],
+    "translation_en": "And raised high for you your repute",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+    "arabic_plain": "فإن مع العسر يسرا",
+    "translit": [
+      "fa-inna ma3a al-3usri yusra",
+      "fa inna ma3al-3usri yusran"
+    ],
+    "translation_en": "For indeed, with hardship comes ease",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+    "arabic_plain": "إن مع العسر يسرا",
+    "translit": [
+      "inna ma3a al-3usri yusra",
+      "inna ma3al-3usri yusran"
+    ],
+    "translation_en": "Indeed, with hardship comes ease",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+    "arabic_plain": "فإذا فرغت فانصب",
+    "translit": [
+      "fa-idha faraghta fansab",
+      "fa idha fara8ta fanSab"
+    ],
+    "translation_en": "So when you have finished your duties, then stand up for worship",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+    "arabic_plain": "وإلى ربك فارغب",
+    "translit": [
+      "wa ila rabbika farghab",
+      "wa ilaa rabbika far8ab"
+    ],
+    "translation_en": "And to your Lord direct your longing",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱلضُّحَىٰ",
+    "arabic_plain": "والضحى",
+    "translit": [
+      "wal-du7a",
+      "wad-du7a"
+    ],
+    "translation_en": "By the morning brightness",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱللَّيْلِ إِذَا سَجَىٰ",
+    "arabic_plain": "والليل إذا سجى",
+    "translit": [
+      "wal-layli idha saja",
+      "wallayli idha sajaa"
+    ],
+    "translation_en": "And by the night when it covers with darkness",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+    "arabic_plain": "ما ودعك ربك وما قلى",
+    "translit": [
+      "ma wadda3aka rabbuka wa ma qala",
+      "maa wadda3aka rabbuka wamaa qalaa"
+    ],
+    "translation_en": "Your Lord has not taken leave of you, nor has He detested you",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ",
+    "arabic_plain": "وللآخرة خير لك من الأولى",
+    "translit": [
+      "wa lal-akhiratu khayrun laka mina al-oola",
+      "walal-2a5iratu 5ayrun laka minal-ula"
+    ],
+    "translation_en": "And the Hereafter is better for you than the first life",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
+    "arabic_plain": "ولسوف يعطيك ربك فترضى",
+    "translit": [
+      "wa lasawfa yu3teeka rabbuka fatarda",
+      "walasawfa yu3tika rabbuka fatarDa"
+    ],
+    "translation_en": "And your Lord is going to give you, and you will be satisfied",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ",
+    "arabic_plain": "ألم يجدك يتيما فآوى",
+    "translit": [
+      "alam yajidka yateeman fa-awa",
+      "alam yajidka yatiman fa2awa"
+    ],
+    "translation_en": "Did He not find you an orphan and give shelter?",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَوَجَدَكَ ضَالًّا فَهَدَىٰ",
+    "arabic_plain": "ووجدك ضالا فهدى",
+    "translit": [
+      "wa wajadaka dallan fahada",
+      "wawajadaka Daallan fahadaa"
+    ],
+    "translation_en": "And He found you lost and guided you",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَوَجَدَكَ عَائِلًا فَأَغْنَىٰ",
+    "arabic_plain": "ووجدك عائلا فأغنى",
+    "translit": [
+      "wa wajadaka 3a2ilan fa-aghna",
+      "wawajadaka 3a'ilan fa-a8na"
+    ],
+    "translation_en": "And He found you poor and made you self-sufficient",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ",
+    "arabic_plain": "فأما اليتيم فلا تقهر",
+    "translit": [
+      "fa-amma al-yateema fala taqhar",
+      "fa ammal-yatima fala taqhar"
+    ],
+    "translation_en": "So as for the orphan, do not oppress him",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَأَمَّا ٱلسَّائِلَ فَلَا تَنْهَرْ",
+    "arabic_plain": "وأما السائل فلا تنهر",
+    "translit": [
+      "wa amma al-sa2ila fala tanhar",
+      "wa ammas-sa'ila fala tanhar"
+    ],
+    "translation_en": "And as for the petitioner, do not repel him",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+    "arabic_plain": "وأما بنعمة ربك فحدث",
+    "translit": [
+      "wa amma bini3mati rabbika fa7addith",
+      "wa amma bini3mati rabbika fahaddith"
+    ],
+    "translation_en": "But as for the favor of your Lord, report it",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ ٱلْقَدْرِ",
+    "arabic_plain": "إنا أنزلناه في ليلة القدر",
+    "translit": [
+      "inna anzalnahu fi laylati al-qadr",
+      "inna anzalnahu fi laylatil-qadr"
+    ],
+    "translation_en": "Indeed, We sent the Quran down during the Night of Decree",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَمَا أَدْرَاكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+    "arabic_plain": "وما أدراك ما ليلة القدر",
+    "translit": [
+      "wa ma adraka ma laylatu al-qadr",
+      "wama adraka ma laylatul-qadr"
+    ],
+    "translation_en": "And what can make you know what is the Night of Decree?",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+    "arabic_plain": "ليلة القدر خير من ألف شهر",
+    "translit": [
+      "laylatu al-qadri khayrun min alfi shahr",
+      "laylatul-qadri 5ayrun min alfi shahr"
+    ],
+    "translation_en": "The Night of Decree is better than a thousand months",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تَنَزَّلُ ٱلْمَلَائِكَةُ وَٱلرُّوحُ فِيهَا",
+    "arabic_plain": "تنزل الملائكة والروح فيها",
+    "translit": [
+      "tanazzalu al-mala2ikatu wal-roo7u feeha",
+      "tanazzalul-mala'ikatu war-ru7u fiha"
+    ],
+    "translation_en": "The angels and the Spirit descend therein",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+    "arabic_plain": "سلام هي حتى مطلع الفجر",
+    "translit": [
+      "salamun hiya 7atta matla3i al-fajr",
+      "salamun hiya hatta maTla3il-fajr"
+    ],
+    "translation_en": "Peace it is until the emergence of dawn",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِي خَلَقَ",
+    "arabic_plain": "اقرأ باسم ربك الذي خلق",
+    "translit": [
+      "iqra2 bismi rabbika alladhee khalaq",
+      "iqra bismi rabbikal-ladhi 5alaq"
+    ],
+    "translation_en": "Recite in the name of your Lord who created",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "خَلَقَ ٱلْإِنسَانَ مِنْ عَلَقٍ",
+    "arabic_plain": "خلق الإنسان من علق",
+    "translit": [
+      "khalaqa al-insana min 3alaq",
+      "5alaqal-insana min 3alaq"
+    ],
+    "translation_en": "Created man from a clinging substance",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
+    "arabic_plain": "اقرأ وربك الأكرم",
+    "translit": [
+      "iqra2 wa rabbuka al-akram",
+      "iqra warabbukal-akram"
+    ],
+    "translation_en": "Recite, and your Lord is the Most Generous",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱلَّذِي عَلَّمَ بِٱلْقَلَمِ",
+    "arabic_plain": "الذي علم بالقلم",
+    "translit": [
+      "alladhee 3allama bil-qalam",
+      "alladhi 3allama bil-9alam"
+    ],
+    "translation_en": "Who taught by the pen",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَلَّمَ ٱلْإِنسَانَ مَا لَمْ يَعْلَمْ",
+    "arabic_plain": "علم الإنسان ما لم يعلم",
+    "translit": [
+      "3allama al-insana ma lam ya3lam",
+      "3allamal-insana maa lam ya3lam"
+    ],
+    "translation_en": "Taught man that which he knew not",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱلتِّينِ وَٱلزَّيْتُونِ",
+    "arabic_plain": "والتين والزيتون",
+    "translit": [
+      "wal-teeni wal-zaytoon",
+      "wat-tini waz-zaytun"
+    ],
+    "translation_en": "By the fig and the olive",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَطُورِ سِينِينَ",
+    "arabic_plain": "وطور سينين",
+    "translit": [
+      "wa toori seeneen",
+      "wa Turi sinin"
+    ],
+    "translation_en": "And Mount Sinai",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَهَٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
+    "arabic_plain": "وهذا البلد الأمين",
+    "translit": [
+      "wa hadha al-baladi al-ameen",
+      "wahadhal-baladil-amin"
+    ],
+    "translation_en": "And this secure city (Makkah)",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَقَدْ خَلَقْنَا ٱلْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ",
+    "arabic_plain": "لقد خلقنا الإنسان في أحسن تقويم",
+    "translit": [
+      "laqad khalaqna al-insana fi a7sani taqweem",
+      "laqad 5alaqnal-insana fi a7sani taqwim"
+    ],
+    "translation_en": "We have certainly created man in the best of stature",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَاكِمِينَ",
+    "arabic_plain": "أليس الله بأحكم الحاكمين",
+    "translit": [
+      "alaysa allahu bi-a7kami al-7akimeen",
+      "alaysallahu bi-a7kamil-7akimin"
+    ],
+    "translation_en": "Is not Allah the most just of judges?",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
+    "arabic_plain": "سبح اسم ربك الأعلى",
+    "translit": [
+      "sabbi7i isma rabbika al-a3la",
+      "sabbi7isma rabbikal-a3la"
+    ],
+    "translation_en": "Exalt the name of your Lord, the Most High",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱلَّذِي خَلَقَ فَسَوَّىٰ",
+    "arabic_plain": "الذي خلق فسوى",
+    "translit": [
+      "alladhee khalaqa fasawwa",
+      "alladhi 5alaqa fasawwaa"
+    ],
+    "translation_en": "Who created and proportioned",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱلَّذِي قَدَّرَ فَهَدَىٰ",
+    "arabic_plain": "والذي قدر فهدى",
+    "translit": [
+      "walladhee qaddara fahada",
+      "walladhi qaddara fahadaa"
+    ],
+    "translation_en": "And Who destined and then guided",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+    "arabic_plain": "قد أفلح من تزكى",
+    "translit": [
+      "qad afla7a man tazakka",
+      "qad aflaha man tazakkaa"
+    ],
+    "translation_en": "He has certainly succeeded who purifies himself",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَذَكَرَ ٱسْمَ رَبِّهِ فَصَلَّىٰ",
+    "arabic_plain": "وذكر اسم ربه فصلى",
+    "translit": [
+      "wa dhakara isma rabbihi fasalla",
+      "wadhakara isma rabbihi faSalla"
+    ],
+    "translation_en": "And mentions the name of his Lord and prays",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ذَٰلِكَ ٱلْكِتَابُ لَا رَيْبَ فِيهِ",
+    "arabic_plain": "ذلك الكتاب لا ريب فيه",
+    "translit": [
+      "dhalika al-kitabu la rayba feeh",
+      "dhalikal-kitabu la rayba fih"
+    ],
+    "translation_en": "This is the Book about which there is no doubt",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "هُدًى لِّلْمُتَّقِينَ",
+    "arabic_plain": "هدى للمتقين",
+    "translit": [
+      "hudan lil-muttaqeen",
+      "hudan lilmuttaqin"
+    ],
+    "translation_en": "A guidance for those conscious of Allah",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ٱلْحَيُّ ٱلْقَيُّومُ",
+    "arabic_plain": "الله لا إله إلا هو الحي القيوم",
+    "translit": [
+      "allahu la ilaha illa huwa al-7ayyu al-qayyoom",
+      "allahu la ilaha illa huwal-7ayyul-qayyum"
+    ],
+    "translation_en": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of all existence",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ",
+    "arabic_plain": "لا تأخذه سنة ولا نوم",
+    "translit": [
+      "la ta2khudhuhu sinatun wa la nawm",
+      "la ta'khudhuhu sinatun wala nawm"
+    ],
+    "translation_en": "Neither drowsiness overtakes Him nor sleep",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَّهُ مَا فِي ٱلسَّمَاوَاتِ وَمَا فِي ٱلْأَرْضِ",
+    "arabic_plain": "له ما في السماوات وما في الأرض",
+    "translit": [
+      "lahu ma fi al-samawati wa ma fi al-ard",
+      "lahu ma fis-samawati wama fil-ard"
+    ],
+    "translation_en": "To Him belongs whatever is in the heavens and whatever is on the earth",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَسِعَ كُرْسِيُّهُ ٱلسَّمَاوَاتِ وَٱلْأَرْضَ",
+    "arabic_plain": "وسع كرسيه السماوات والأرض",
+    "translit": [
+      "wasi3a kursiyyuhu al-samawati wal-ard",
+      "wasi3a kursiyyuhus-samawati wal-ard"
+    ],
+    "translation_en": "His Kursi extends over the heavens and the earth",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَلَا يَؤُودُهُ حِفْظُهُمَا وَهُوَ ٱلْعَلِيُّ ٱلْعَظِيمُ",
+    "arabic_plain": "ولا يؤوده حفظهما وهو العلي العظيم",
+    "translit": [
+      "wa la ya2ooduhu 7ifzuhuma wa huwa al-3aliyyu al-3azeem",
+      "wala ya'uduhu 7ifzuhuma wahuwal-3aliyyul-3azim"
+    ],
+    "translation_en": "And their preservation tires Him not, and He is the Most High, the Most Great",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَا إِكْرَاهَ فِي ٱلدِّينِ",
+    "arabic_plain": "لا إكراه في الدين",
+    "translit": [
+      "la ikraha fi al-deen",
+      "la ikraha fid-deen"
+    ],
+    "translation_en": "There shall be no compulsion in religion",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "قَد تَّبَيَّنَ ٱلرُّشْدُ مِنَ ٱلْغَيِّ",
+    "arabic_plain": "قد تبين الرشد من الغي",
+    "translit": [
+      "qad tabayyana al-rushdu mina al-ghayy",
+      "qad tabayyanar-rushdu minal-8ayy"
+    ],
+    "translation_en": "The right course has become clear from the wrong",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱللَّهُ وَلِيُّ ٱلَّذِينَ آمَنُوا",
+    "arabic_plain": "الله ولي الذين آمنوا",
+    "translit": [
+      "allahu waliyyu alladheena amanoo",
+      "allahu waliyyul-ladhina amanu"
+    ],
+    "translation_en": "Allah is the Ally of those who believe",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يُخْرِجُهُم مِّنَ ٱلظُّلُمَاتِ إِلَى ٱلنُّورِ",
+    "arabic_plain": "يخرجهم من الظلمات إلى النور",
+    "translit": [
+      "yukhrijuhum mina al-zulumati ila al-noor",
+      "yu5rijuhum minaz-zulumati ilan-nur"
+    ],
+    "translation_en": "He brings them out from darknesses into the light",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+    "arabic_plain": "لا يكلف الله نفسا إلا وسعها",
+    "translit": [
+      "la yukallifu allahu nafsan illa wus3aha",
+      "la yukallifullahu nafsan illa wus3aha"
+    ],
+    "translation_en": "Allah does not charge a soul except with that within its capacity",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا",
+    "arabic_plain": "ربنا لا تؤاخذنا إن نسينا أو أخطأنا",
+    "translit": [
+      "rabbana la tu2akhidhna in naseena aw akhta2na",
+      "rabbana la tu'akhidhna in nasina aw a5ta2na"
+    ],
+    "translation_en": "Our Lord, do not impose blame upon us if we have forgotten or erred",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَا",
+    "arabic_plain": "واعف عنا واغفر لنا وارحمنا",
+    "translit": [
+      "wa3fu 3anna waghfir lana war7amna",
+      "wa a3fu 3anna wa ighfir lana wa ir7amna"
+    ],
+    "translation_en": "And pardon us; and forgive us; and have mercy upon us",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبَّنَا آتِنَا فِي ٱلدُّنْيَا حَسَنَةً",
+    "arabic_plain": "ربنا آتنا في الدنيا حسنة",
+    "translit": [
+      "rabbana atina fi al-dunya 7asanah",
+      "rabbana aatina fid-dunya hasanah"
+    ],
+    "translation_en": "Our Lord, give us in this world that which is good",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَفِي ٱلْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ",
+    "arabic_plain": "وفي الآخرة حسنة وقنا عذاب النار",
+    "translit": [
+      "wa fi al-akhirati 7asanatan wa qina 3adhaba al-nar",
+      "wafil-akhirati 7asanatan waqina 3adhaban-nar"
+    ],
+    "translation_en": "And in the Hereafter that which is good and protect us from the punishment of the Fire",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",
+    "arabic_plain": "ربنا لا تزغ قلوبنا بعد إذ هديتنا",
+    "translit": [
+      "rabbana la tuzigh quloobana ba3da idh hadaytana",
+      "rabbana la tuzi8 qulubana ba3da idh hadaytana"
+    ],
+    "translation_en": "Our Lord, let not our hearts deviate after You have guided us",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ ٱلْوَهَّابُ",
+    "arabic_plain": "وهب لنا من لدنك رحمة إنك أنت الوهاب",
+    "translit": [
+      "wa hab lana min ladunka ra7matan innaka anta al-wahhab",
+      "wahab lana min ladunka ra7matan innaka antal-wahhab"
+    ],
+    "translation_en": "And grant us from Yourself mercy. Indeed, You are the Bestower",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ",
+    "arabic_plain": "حسبنا الله ونعم الوكيل",
+    "translit": [
+      "7asbuna allahu wa ni3ma al-wakeel",
+      "hasbunallahu wani3mal-wakil"
+    ],
+    "translation_en": "Sufficient for us is Allah, and He is the best Disposer of affairs",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّ زِدْنِي عِلْمًا",
+    "arabic_plain": "رب زدني علما",
+    "translit": [
+      "rabbi zidnee 3ilma",
+      "rabbi zidni 3ilman"
+    ],
+    "translation_en": "My Lord, increase me in knowledge",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّ ٱشْرَحْ لِي صَدْرِي",
+    "arabic_plain": "رب اشرح لي صدري",
+    "translit": [
+      "rabbi ishra7 lee sadree",
+      "rabbish-ra7 li Sadri"
+    ],
+    "translation_en": "My Lord, expand for me my breast",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَيَسِّرْ لِي أَمْرِي",
+    "arabic_plain": "ويسر لي أمري",
+    "translit": [
+      "wa yassir lee amree",
+      "wayassir li 2amri"
+    ],
+    "translation_en": "And ease for me my task",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱحْلُلْ عُقْدَةً مِّن لِّسَانِي",
+    "arabic_plain": "واحلل عقدة من لساني",
+    "translit": [
+      "wa7lul 3uqdatan min lisanee",
+      "wa u7lul 3uqdatan min lisani"
+    ],
+    "translation_en": "And untie the knot from my tongue",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَفْقَهُوا قَوْلِي",
+    "arabic_plain": "يفقهوا قولي",
+    "translit": [
+      "yafqahoo qawlee",
+      "yafqahu qawli"
+    ],
+    "translation_en": "That they may understand my speech",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ ٱلظَّالِمِينَ",
+    "arabic_plain": "لا إله إلا أنت سبحانك إني كنت من الظالمين",
+    "translit": [
+      "la ilaha illa anta sub7anaka innee kuntu mina al-zalimeen",
+      "la ilaha illa anta subhanaka inni kuntu minaz-zalimin"
+    ],
+    "translation_en": "There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً",
+    "arabic_plain": "ربنا آتنا من لدنك رحمة",
+    "translit": [
+      "rabbana atina min ladunka ra7mah",
+      "rabbana aatina min ladunka rahmah"
+    ],
+    "translation_en": "Our Lord, grant us from Yourself mercy",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا",
+    "arabic_plain": "وهيئ لنا من أمرنا رشدا",
+    "translit": [
+      "wa hayyi2 lana min amrina rashada",
+      "wahayyi' lana min amrina rashadan"
+    ],
+    "translation_en": "And prepare for us from our affair right guidance",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱلْقُرْآنِ ٱلْحَكِيمِ",
+    "arabic_plain": "والقرآن الحكيم",
+    "translit": [
+      "wal-qur2ani al-7akeem",
+      "wal-quranil-7akim"
+    ],
+    "translation_en": "By the wise Quran",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّكَ لَمِنَ ٱلْمُرْسَلِينَ",
+    "arabic_plain": "إنك لمن المرسلين",
+    "translit": [
+      "innaka lamina al-mursaleen",
+      "innaka laminal-mursalin"
+    ],
+    "translation_en": "Indeed you, O Muhammad, are from among the messengers",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ",
+    "arabic_plain": "على صراط مستقيم",
+    "translit": [
+      "3ala siratin mustaqeem",
+      "3ala SiraTin mustaqim"
+    ],
+    "translation_en": "Upon a straight path",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "سَلَامٌ قَوْلًا مِّن رَّبٍّ رَّحِيمٍ",
+    "arabic_plain": "سلام قولا من رب رحيم",
+    "translit": [
+      "salamun qawlan min rabbin ra7eem",
+      "salamun qawlan mir-rabbir-ra7im"
+    ],
+    "translation_en": "Peace - a word from a Merciful Lord",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَن يَقُولَ لَهُ كُن فَيَكُونُ",
+    "arabic_plain": "إنما أمره إذا أراد شيئا أن يقول له كن فيكون",
+    "translit": [
+      "innama amruhu idha arada shay2an an yaqoola lahu kun fayakoon",
+      "innama amruhu idha arada shay'an an yaqula lahu kun fayakun"
+    ],
+    "translation_en": "His command is only when He intends a thing that He says to it, Be, and it is",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَسُبْحَانَ ٱلَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ وَإِلَيْهِ تُرْجَعُونَ",
+    "arabic_plain": "فسبحان الذي بيده ملكوت كل شيء وإليه ترجعون",
+    "translit": [
+      "fasub7ana alladhee biyadihi malakootu kulli shay2in wa ilayhi turja3oon",
+      "fasub7anal-ladhi biyadihi malakutu kulli shay'in wa ilayhi turja3un"
+    ],
+    "translation_en": "So exalted is He in whose hand is the realm of all things, and to Him you will be returned",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱلرَّحْمَٰنُ عَلَّمَ ٱلْقُرْآنَ",
+    "arabic_plain": "الرحمن علم القرآن",
+    "translit": [
+      "al-ra7manu 3allama al-qur2an",
+      "ar-ra7manu 3allamal-quran"
+    ],
+    "translation_en": "The Most Merciful taught the Quran",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "خَلَقَ ٱلْإِنسَانَ عَلَّمَهُ ٱلْبَيَانَ",
+    "arabic_plain": "خلق الإنسان علمه البيان",
+    "translit": [
+      "khalaqa al-insana 3allamahu al-bayan",
+      "5alaqal-insana 3allamahul-bayan"
+    ],
+    "translation_en": "Created man, taught him eloquent expression",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ",
+    "arabic_plain": "فبأي آلاء ربكما تكذبان",
+    "translit": [
+      "fabi-ayyi ala2i rabbikuma tukadhdhiban",
+      "fabi'ayyi aala'i rabbikuma tukadhdhiban"
+    ],
+    "translation_en": "So which of the favors of your Lord would you deny?",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "هَلْ جَزَاءُ ٱلْإِحْسَانِ إِلَّا ٱلْإِحْسَانُ",
+    "arabic_plain": "هل جزاء الإحسان إلا الإحسان",
+    "translit": [
+      "hal jaza2u al-i7sani illa al-i7san",
+      "hal jaza'ul-i7sani illal-i7san"
+    ],
+    "translation_en": "Is the reward for good anything but good?",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تَبَارَكَ ٱسْمُ رَبِّكَ ذِي ٱلْجَلَالِ وَٱلْإِكْرَامِ",
+    "arabic_plain": "تبارك اسم ربك ذي الجلال والإكرام",
+    "translit": [
+      "tabaraka ismu rabbika dhee al-jalali wal-ikram",
+      "tabarakasmu rabbika dhil-jalali wal-ikram"
+    ],
+    "translation_en": "Blessed is the name of your Lord, Owner of Majesty and Honor",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "تَبَارَكَ ٱلَّذِي بِيَدِهِ ٱلْمُلْكُ",
+    "arabic_plain": "تبارك الذي بيده الملك",
+    "translit": [
+      "tabaraka alladhee biyadihi al-mulk",
+      "tabarakal-ladhi biyadihil-mulk"
+    ],
+    "translation_en": "Blessed is He in whose hand is dominion",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+    "arabic_plain": "وهو على كل شيء قدير",
+    "translit": [
+      "wa huwa 3ala kulli shay2in qadeer",
+      "wahuwa 3ala kulli shay'in qadir"
+    ],
+    "translation_en": "And He is over all things competent",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱلَّذِي خَلَقَ ٱلْمَوْتَ وَٱلْحَيَاةَ لِيَبْلُوَكُمْ أَيُّكُمْ أَحْسَنُ عَمَلًا",
+    "arabic_plain": "الذي خلق الموت والحياة ليبلوكم أيكم أحسن عملا",
+    "translit": [
+      "alladhee khalaqa al-mawta wal-7ayata liyabluwakum ayyukum a7sanu 3amala",
+      "alladhi 5alaqal-mawta wal-7ayata liyabluwakum ayyukum a7sanu 3amalan"
+    ],
+    "translation_en": "He who created death and life to test you as to which of you is best in deed",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+    "arabic_plain": "ألا بذكر الله تطمئن القلوب",
+    "translit": [
+      "ala bidhikri allahi tatma2innu al-quloob",
+      "ala bidhikrillahi taTma'innul-qulub"
+    ],
+    "translation_en": "Unquestionably, by the remembrance of Allah hearts are assured",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ ٱللَّهَ مَعَ ٱلصَّابِرِينَ",
+    "arabic_plain": "إن الله مع الصابرين",
+    "translit": [
+      "inna allaha ma3a al-sabireen",
+      "innallaha ma3as-sabirin"
+    ],
+    "translation_en": "Indeed, Allah is with the patient",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُحْسِنِينَ",
+    "arabic_plain": "إن الله يحب المحسنين",
+    "translit": [
+      "inna allaha yu7ibbu al-mu7sineen",
+      "innallaha yuhibbul-muhsinin"
+    ],
+    "translation_en": "Indeed, Allah loves the doers of good",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ ٱللَّهَ يُحِبُّ ٱلتَّوَّابِينَ وَيُحِبُّ ٱلْمُتَطَهِّرِينَ",
+    "arabic_plain": "إن الله يحب التوابين ويحب المتطهرين",
+    "translit": [
+      "inna allaha yu7ibbu al-tawwabeena wa yu7ibbu al-mutatahhireen",
+      "innallaha yu7ibbut-tawwabina wayu7ibbul-mutaTahhirin"
+    ],
+    "translation_en": "Indeed, Allah loves those who are constantly repentant and loves those who purify themselves",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُ مَخْرَجًا",
+    "arabic_plain": "ومن يتق الله يجعل له مخرجا",
+    "translit": [
+      "wa man yattaqi allaha yaj3al lahu makhraja",
+      "waman yattaqillaha yaj3al lahu ma5rajan"
+    ],
+    "translation_en": "And whoever fears Allah - He will make for him a way out",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ",
+    "arabic_plain": "ويرزقه من حيث لا يحتسب",
+    "translit": [
+      "wa yarzuqhu min 7aythu la ya7tasib",
+      "wayarzuqhu min haythu la yahtasib"
+    ],
+    "translation_en": "And will provide for him from where he does not expect",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُ",
+    "arabic_plain": "ومن يتوكل على الله فهو حسبه",
+    "translit": [
+      "wa man yatawakkal 3ala allahi fahuwa 7asbuh",
+      "waman yatawakkal 3alallahi fahuwa 7asbuhu"
+    ],
+    "translation_en": "And whoever relies upon Allah - then He is sufficient for him",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ٱللَّهُ نُورُ ٱلسَّمَاوَاتِ وَٱلْأَرْضِ",
+    "arabic_plain": "الله نور السماوات والأرض",
+    "translit": [
+      "allahu nooru al-samawati wal-ard",
+      "allahu nurus-samawati wal-ard"
+    ],
+    "translation_en": "Allah is the Light of the heavens and the earth",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ",
+    "arabic_plain": "وإنك لعلى خلق عظيم",
+    "translit": [
+      "wa innaka la3ala khuluqin 3azeem",
+      "wa innaka la3ala 5uluqin 3azim"
+    ],
+    "translation_en": "And indeed, you are of a great moral character",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَٰلَمِينَ",
+    "arabic_plain": "وما أرسلناك إلا رحمة للعالمين",
+    "translit": [
+      "wa ma arsalnaka illa ra7matan lil-3alameen",
+      "wama arsalnaka illa ra7matan lil3alamin"
+    ],
+    "translation_en": "And We have not sent you, O Muhammad, except as a mercy to the worlds",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ رَحْمَتَ ٱللَّهِ قَرِيبٌ مِّنَ ٱلْمُحْسِنِينَ",
+    "arabic_plain": "إن رحمت الله قريب من المحسنين",
+    "translit": [
+      "inna ra7mata allahi qareebun mina al-mu7sineen",
+      "inna ra7matallahi qaribun minal-mu7sinin"
+    ],
+    "translation_en": "Indeed, the mercy of Allah is near to the doers of good",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "ادْعُونِي أَسْتَجِبْ لَكُمْ",
+    "arabic_plain": "ادعوني أستجب لكم",
+    "translit": [
+      "ud3oonee astajib lakum",
+      "ud3uni astajib lakum"
+    ],
+    "translation_en": "Call upon Me; I will respond to you",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَٱذْكُرُونِي أَذْكُرْكُمْ وَٱشْكُرُوا لِي وَلَا تَكْفُرُونِ",
+    "arabic_plain": "فاذكروني أذكركم واشكروا لي ولا تكفرون",
+    "translit": [
+      "fadhkuroonee adhkurkum washkuroo lee wa la takfuroon",
+      "fadhkuruni adhkurkum washkuru li wala takfurun"
+    ],
+    "translation_en": "So remember Me; I will remember you. And be grateful to Me and do not deny Me",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",
+    "arabic_plain": "لئن شكرتم لأزيدنكم",
+    "translit": [
+      "la2in shakartum la-azeedannakum",
+      "la'in shakartum la2azidannakum"
+    ],
+    "translation_en": "If you are grateful, I will surely increase you in favor",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَقُل رَّبِّ ٱرْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+    "arabic_plain": "وقل رب ارحمهما كما ربياني صغيرا",
+    "translit": [
+      "wa qul rabbi ir7amhuma kama rabbayanee sagheera",
+      "waqul rabbir-7amhuma kama rabbayani Sa8ira"
+    ],
+    "translation_en": "And say, My Lord, have mercy upon them as they brought me up when I was small",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّمَا ٱلْمُؤْمِنُونَ إِخْوَةٌ",
+    "arabic_plain": "إنما المؤمنون إخوة",
+    "translit": [
+      "innama al-mu2minoona ikhwah",
+      "innamal-muminuna i5wah"
+    ],
+    "translation_en": "The believers are but brothers",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَاكُمْ",
+    "arabic_plain": "إن أكرمكم عند الله أتقاكم",
+    "translit": [
+      "inna akramakum 3inda allahi atqakum",
+      "inna akramakum 3indallahi atqakum"
+    ],
+    "translation_en": "Indeed, the most noble of you in the sight of Allah is the most righteous of you",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَتَعَاوَنُوا عَلَى ٱلْبِرِّ وَٱلتَّقْوَىٰ",
+    "arabic_plain": "وتعاونوا على البر والتقوى",
+    "translit": [
+      "wa ta3awanoo 3ala al-birri wal-taqwa",
+      "wata3awanu 3alal-birri wat-taqwa"
+    ],
+    "translation_en": "And cooperate in righteousness and piety",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَقُولُوا لِلنَّاسِ حُسْنًا",
+    "arabic_plain": "وقولوا للناس حسنا",
+    "translit": [
+      "wa qooloo lil-nasi 7usna",
+      "waqulu linnasi 7usnan"
+    ],
+    "translation_en": "And speak to people good words",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ",
+    "arabic_plain": "واصبر وما صبرك إلا بالله",
+    "translit": [
+      "wasbir wa ma sabruka illa billah",
+      "waSbir wama Sabruka illa billah"
+    ],
+    "translation_en": "And be patient, and your patience is not but through Allah",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ",
+    "arabic_plain": "إن الله لا يضيع أجر المحسنين",
+    "translit": [
+      "inna allaha la yudee3u ajra al-mu7sineen",
+      "innallaha la yuDi3u ajral-mu7sinin"
+    ],
+    "translation_en": "Indeed, Allah does not allow to be lost the reward of those who do good",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ",
+    "arabic_plain": "وإذا سألك عبادي عني فإني قريب",
+    "translit": [
+      "wa idha sa2alaka 3ibadee 3annee fa-innee qareeb",
+      "wa idha sa'alaka 3ibadi 3anni fa inni qarib"
+    ],
+    "translation_en": "And when My servants ask you concerning Me - indeed I am near",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "أُجِيبُ دَعْوَةَ ٱلدَّاعِ إِذَا دَعَانِ",
+    "arabic_plain": "أجيب دعوة الداع إذا دعان",
+    "translit": [
+      "ujeebu da3wata al-da3i idha da3an",
+      "ujibu da3watad-da3i idha da3ani"
+    ],
+    "translation_en": "I respond to the invocation of the supplicant when he calls upon Me",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "فَلْيَسْتَجِيبُوا لِي وَلْيُؤْمِنُوا بِي لَعَلَّهُمْ يَرْشُدُونَ",
+    "arabic_plain": "فليستجيبوا لي وليؤمنوا بي لعلهم يرشدون",
+    "translit": [
+      "falyastajeeboo lee walyu2minoo bee la3allahum yarshudoon",
+      "falyastajibu li walyuminu bi la3allahum yarshudun"
+    ],
+    "translation_en": "So let them respond to Me and believe in Me that they may be rightly guided",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "قُلْ يَا عِبَادِيَ ٱلَّذِينَ أَسْرَفُوا عَلَىٰ أَنفُسِهِمْ لَا تَقْنَطُوا مِن رَّحْمَةِ ٱللَّهِ",
+    "arabic_plain": "قل يا عبادي الذين أسرفوا على أنفسهم لا تقنطوا من رحمة الله",
+    "translit": [
+      "qul ya 3ibadiya alladheena asrafoo 3ala anfusihim la taqnatoo min ra7mati allah",
+      "qul ya 3ibadiyal-ladhina asrafu 3ala anfusihim la taqnaTu min ra7matillah"
+    ],
+    "translation_en": "Say, O My servants who have transgressed against themselves, despair not of the mercy of Allah",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا",
+    "arabic_plain": "إن الله يغفر الذنوب جميعا",
+    "translit": [
+      "inna allaha yaghfiru al-dhunooba jamee3a",
+      "innallaha ya8firudh-dhunuba jami3an"
+    ],
+    "translation_en": "Indeed, Allah forgives all sins",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّهُ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+    "arabic_plain": "إنه هو الغفور الرحيم",
+    "translit": [
+      "innahu huwa al-ghafooru al-ra7eem",
+      "innahu huwal-ghafurur-rahim"
+    ],
+    "translation_en": "Indeed, it is He who is the Forgiving, the Merciful",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱلَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا",
+    "arabic_plain": "والذين جاهدوا فينا لنهدينهم سبلنا",
+    "translit": [
+      "walladheena jahadoo feena lanahdiyannahum subulana",
+      "walladhina jahadu fina lanahdiyannahum subulana"
+    ],
+    "translation_en": "And those who strive for Us - We will surely guide them to Our ways",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَإِنَّ ٱللَّهَ لَمَعَ ٱلْمُحْسِنِينَ",
+    "arabic_plain": "وإن الله لمع المحسنين",
+    "translit": [
+      "wa inna allaha lama3a al-mu7sineen",
+      "wa innallaha lama3al-muhsinin"
+    ],
+    "translation_en": "And indeed, Allah is with the doers of good",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "مَنْ عَمِلَ صَالِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُ حَيَاةً طَيِّبَةً",
+    "arabic_plain": "من عمل صالحا من ذكر أو أنثى وهو مؤمن فلنحيينه حياة طيبة",
+    "translit": [
+      "man 3amila sali7an min dhakarin aw untha wa huwa mu2minun falanu7yiyannahu 7ayatan tayyibah",
+      "man 3amila Salihan min dhakarin aw untha wahuwa muminun falanu7yiyannahu 7ayatan Tayyibah"
+    ],
+    "translation_en": "Whoever does righteousness, whether male or female, while a believer - We will surely cause him to live a good life",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَلَنَجْزِيَنَّهُمْ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا يَعْمَلُونَ",
+    "arabic_plain": "ولنجزينهم أجرهم بأحسن ما كانوا يعملون",
+    "translit": [
+      "wa lanajziyannahum ajrahum bi-a7sani ma kanoo ya3maloon",
+      "walanajziyannahum ajrahum bi-a7sani ma kanu ya3malun"
+    ],
+    "translation_en": "And We will surely give them their reward according to the best of what they used to do",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَا أَيُّهَا ٱلَّذِينَ آمَنُوا ٱسْتَعِينُوا بِٱلصَّبْرِ وَٱلصَّلَاةِ",
+    "arabic_plain": "يا أيها الذين آمنوا استعينوا بالصبر والصلاة",
+    "translit": [
+      "ya ayyuha alladheena amanoo ista3eenoo bil-sabri wal-salah",
+      "ya ayyuhal-ladhina amanu ista3inu bis-Sabri was-salah"
+    ],
+    "translation_en": "O you who have believed, seek help through patience and prayer",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَا أَيُّهَا ٱلَّذِينَ آمَنُوا ٱذْكُرُوا ٱللَّهَ ذِكْرًا كَثِيرًا",
+    "arabic_plain": "يا أيها الذين آمنوا اذكروا الله ذكرا كثيرا",
+    "translit": [
+      "ya ayyuha alladheena amanoo udhkuroo allaha dhikran katheera",
+      "ya ayyuhal-ladhina amanu udhkurullaha dhikran kathiran"
+    ],
+    "translation_en": "O you who have believed, remember Allah with much remembrance",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا",
+    "arabic_plain": "وسبحوه بكرة وأصيلا",
+    "translit": [
+      "wa sabbi7oohu bukratan wa aseela",
+      "wasabbihuhu bukratan wa aSila"
+    ],
+    "translation_en": "And exalt Him morning and afternoon",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "هُوَ ٱلَّذِي يُصَلِّي عَلَيْكُمْ وَمَلَائِكَتُهُ لِيُخْرِجَكُم مِّنَ ٱلظُّلُمَاتِ إِلَى ٱلنُّورِ",
+    "arabic_plain": "هو الذي يصلي عليكم وملائكته ليخرجكم من الظلمات إلى النور",
+    "translit": [
+      "huwa alladhee yusallee 3alaykum wa mala2ikatuhu liyukhrijakum mina al-zulumati ila al-noor",
+      "huwal-ladhi yuSalli 3alaykum wamala'ikatuhu liyu5rijakum minaz-zulumati ilan-nur"
+    ],
+    "translation_en": "It is He who confers blessing upon you, and His angels ask for His forgiveness for you, that He may bring you out from darknesses into the light",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَكَانَ بِٱلْمُؤْمِنِينَ رَحِيمًا",
+    "arabic_plain": "وكان بالمؤمنين رحيما",
+    "translit": [
+      "wa kana bil-mu2mineena ra7eema",
+      "wakana bil-muminina rahiman"
+    ],
+    "translation_en": "And ever is He, to the believers, Merciful",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِنَّ ٱللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى ٱلنَّبِيِّ",
+    "arabic_plain": "إن الله وملائكته يصلون على النبي",
+    "translit": [
+      "inna allaha wa mala2ikatahu yusalloona 3ala al-nabiyy",
+      "innallaha wamala'ikatahu yuSalluna 3alan-nabiyy"
+    ],
+    "translation_en": "Indeed, Allah confers blessing upon the Prophet, and His angels ask Him to do so",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَا أَيُّهَا ٱلَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا",
+    "arabic_plain": "يا أيها الذين آمنوا صلوا عليه وسلموا تسليما",
+    "translit": [
+      "ya ayyuha alladheena amanoo salloo 3alayhi wa sallimoo tasleema",
+      "ya ayyuhal-ladhina amanu Sallu 3alayhi wasallimu tasliman"
+    ],
+    "translation_en": "O you who have believed, ask Allah to confer blessing upon him and ask Allah to grant him peace",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيمُ",
+    "arabic_plain": "ربنا تقبل منا إنك أنت السميع العليم",
+    "translit": [
+      "rabbana taqabbal minna innaka anta al-samee3u al-3aleem",
+      "rabbana taqabbal minna innaka antas-sami3ul-3alim"
+    ],
+    "translation_en": "Our Lord, accept this from us. Indeed You are the Hearing, the Knowing",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَتُبْ عَلَيْنَا إِنَّكَ أَنتَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
+    "arabic_plain": "وتب علينا إنك أنت التواب الرحيم",
+    "translit": [
+      "wa tub 3alayna innaka anta al-tawwabu al-ra7eem",
+      "watub 3alayna innaka antat-tawwabur-rahim"
+    ],
+    "translation_en": "And accept our repentance. Indeed, You are the Accepting of repentance, the Merciful",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّ ٱجْعَلْنِي مُقِيمَ ٱلصَّلَاةِ وَمِن ذُرِّيَّتِي",
+    "arabic_plain": "رب اجعلني مقيم الصلاة ومن ذريتي",
+    "translit": [
+      "rabbi ij3alnee muqeema al-salati wa min dhurriyyatee",
+      "rabbij-3alni muqimas-salati wamin dhurriyyati"
+    ],
+    "translation_en": "My Lord, make me an establisher of prayer, and from my descendants",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبَّنَا وَتَقَبَّلْ دُعَاءِ",
+    "arabic_plain": "ربنا وتقبل دعاء",
+    "translit": [
+      "rabbana wa taqabbal du3a2",
+      "rabbana wataqabbal du3a'"
+    ],
+    "translation_en": "Our Lord, and accept my supplication",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبَّنَا ٱغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ",
+    "arabic_plain": "ربنا اغفر لي ولوالدي وللمؤمنين يوم يقوم الحساب",
+    "translit": [
+      "rabbana ighfir lee wa liwalidayya wa lil-mu2mineena yawma yaqoomu al-7isab",
+      "rabbanagh-fir li waliwalidayya walil-muminina yawma yaqumul-7isab"
+    ],
+    "translation_en": "Our Lord, forgive me and my parents and the believers the Day the account is established",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "رَبِّ هَبْ لِي حُكْمًا وَأَلْحِقْنِي بِٱلصَّالِحِينَ",
+    "arabic_plain": "رب هب لي حكما وألحقني بالصالحين",
+    "translit": [
+      "rabbi hab lee 7ukman wa al7iqnee bil-sali7een",
+      "rabbi hab li 7ukman wa al7iqni bis-salihin"
+    ],
+    "translation_en": "My Lord, grant me wisdom and join me with the righteous",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱجْعَل لِّي لِسَانَ صِدْقٍ فِي ٱلْآخِرِينَ",
+    "arabic_plain": "واجعل لي لسان صدق في الآخرين",
+    "translit": [
+      "waj3al lee lisana sidqin fi al-akhireen",
+      "waj3al li lisana Sidqin fil-a5irin"
+    ],
+    "translation_en": "And grant me a reputation of honor among later generations",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "وَٱجْعَلْنِي مِن وَرَثَةِ جَنَّةِ ٱلنَّعِيمِ",
+    "arabic_plain": "واجعلني من ورثة جنة النعيم",
+    "translit": [
+      "waj3alnee min warathati jannati al-na3eem",
+      "waj3alni min warathati jannatin-na3im"
+    ],
+    "translation_en": "And place me among the inheritors of the Garden of Pleasure",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يَوْمَ لَا يَنفَعُ مَالٌ وَلَا بَنُونَ",
+    "arabic_plain": "يوم لا ينفع مال ولا بنون",
+    "translit": [
+      "yawma la yanfa3u malun wa la banoon",
+      "yawma la yanfa3u malun wala banun"
+    ],
+    "translation_en": "The Day when neither wealth nor children will be of any benefit",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "إِلَّا مَنْ أَتَى ٱللَّهَ بِقَلْبٍ سَلِيمٍ",
+    "arabic_plain": "إلا من أتى الله بقلب سليم",
+    "translit": [
+      "illa man ata allaha biqalbin saleem",
+      "illa man atallaha biqalbin salim"
+    ],
+    "translation_en": "Except he who comes to Allah with a sound heart",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "هُوَ ٱللَّهُ ٱلَّذِي لَا إِلَٰهَ إِلَّا هُوَ عَالِمُ ٱلْغَيْبِ وَٱلشَّهَادَةِ",
+    "arabic_plain": "هو الله الذي لا إله إلا هو عالم الغيب والشهادة",
+    "translit": [
+      "huwa allahu alladhee la ilaha illa huwa 3alimu al-ghaybi wal-shahadah",
+      "huwallahul-ladhi la ilaha illa huwa 3alimul-8aybi wash-shahadah"
+    ],
+    "translation_en": "He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "هُوَ ٱللَّهُ ٱلْخَالِقُ ٱلْبَارِئُ ٱلْمُصَوِّرُ لَهُ ٱلْأَسْمَاءُ ٱلْحُسْنَىٰ",
+    "arabic_plain": "هو الله الخالق البارئ المصور له الأسماء الحسنى",
+    "translit": [
+      "huwa allahu al-khaliqu al-bari2u al-musawwiru lahu al-asma2u al-7usna",
+      "huwallahul-5aliqul-bari'ul-muSawwiru lahul-asma'ul-7usna"
+    ],
+    "translation_en": "He is Allah, the Creator, the Inventor, the Fashioner; to Him belong the best names",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  },
+  {
+    "arabic": "يُسَبِّحُ لَهُ مَا فِي ٱلسَّمَاوَاتِ وَٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+    "arabic_plain": "يسبح له ما في السماوات والأرض وهو العزيز الحكيم",
+    "translit": [
+      "yusabbi7u lahu ma fi al-samawati wal-ardi wa huwa al-3azeezu al-7akeem",
+      "yusabbi7u lahu ma fis-samawati wal-ardi wahuwal-3azizul-7akim"
+    ],
+    "translation_en": "Whatever is in the heavens and earth exalts Him, and He is the Exalted in Might, the Wise",
+    "dialect": "Quranic",
+    "category": "Phrases"
+  }
+]

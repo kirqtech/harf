@@ -1,5 +1,5 @@
 /*!
- * Harf - vocabulary data loader
+ * Nateq - vocabulary data loader
  * Fetches JSON datasets, normalizes their shape, and caches them in memory so
  * switching practice categories never repeats a network request.
  */
@@ -13,8 +13,8 @@
   // so future reading-only data can be added without touching app code.
   var CATEGORY_FILES = {
     letters: ['letters.json'],
-    words: ['words_default.json', 'words_levantine.json'],
-    phrases: ['phrases.json']
+    words: ['levantine/words.json'],
+    phrases: ['levantine/phrases.json']
   };
 
   var CATEGORY_LABELS = {
@@ -145,10 +145,16 @@
    * Load every file for a category and merge the normalized items. Concurrent
    * calls share one in-flight promise, and successful results stay cached until
    * the page is reloaded or the category is explicitly invalidated.
+   * If NateqDialectManager is present, delegates category loading to NateqDialectManager.
    */
-  function load(category) {
+  function load(category, options) {
     var key = normalizeCategory(category);
     if (!key) return Promise.resolve([]);
+
+    if (global.NateqDialectManager && typeof global.NateqDialectManager.loadCategoryData === 'function') {
+      var dialectId = options && options.dialectId ? options.dialectId : null;
+      return global.NateqDialectManager.loadCategoryData(dialectId, key);
+    }
 
     if (categoryData[key]) return Promise.resolve(categoryData[key]);
     if (categoryPromises[key]) return categoryPromises[key];
@@ -176,15 +182,27 @@
     return request;
   }
 
-  function getCached(category) {
+  function getCached(category, options) {
     var key = normalizeCategory(category);
-    return key && categoryData[key] ? categoryData[key] : null;
+    if (!key) return null;
+
+    if (global.NateqDialectManager && typeof global.NateqDialectManager.getCachedCategoryData === 'function') {
+      var dialectId = options && options.dialectId ? options.dialectId : null;
+      return global.NateqDialectManager.getCachedCategoryData(dialectId, key);
+    }
+
+    return categoryData[key] ? categoryData[key] : null;
   }
 
   /** Drop every cached asset for a category so retry performs real requests. */
-  function invalidate(category) {
+  function invalidate(category, options) {
     var key = normalizeCategory(category);
     if (!key) return;
+
+    if (global.NateqDialectManager && typeof global.NateqDialectManager.invalidateCache === 'function') {
+      var dialectId = options && options.dialectId ? options.dialectId : null;
+      global.NateqDialectManager.invalidateCache(dialectId, key);
+    }
 
     delete categoryData[key];
     delete categoryPromises[key];
@@ -195,7 +213,7 @@
 
   function describeError(error, category) {
     var label = categoryLabel(normalizeCategory(category));
-    var base = 'Harf could not load the ' + label.toLowerCase() + ' vocabulary.';
+    var base = 'Nateq could not load the ' + label.toLowerCase() + ' vocabulary.';
 
     if (global.location && global.location.protocol === 'file:') {
       return base + ' This page was opened from a file, where browsers block data loading. Start a local server (for example npx serve or python3 -m http.server) and open the site through it.';
@@ -208,7 +226,7 @@
     return base + ' Check your connection and try again.';
   }
 
-  global.HarfDataLoader = {
+  global.NateqDataLoader = {
     categoryForMode: categoryForMode,
     categoryLabel: categoryLabel,
     load: load,
