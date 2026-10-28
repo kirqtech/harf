@@ -14,6 +14,14 @@
   var STORAGE_CUSTOM = 'nateq.custom.v1';
   var STORAGE_SCRIPT = 'nateq.script.v1';
   var STORAGE_FONT = 'nateq_arabic_font';
+  var STORAGE_ARABIC_SIZE = 'nateq_arabic_size';
+
+  var ARABIC_SIZE_PRESETS = {
+    S: { key: 'S', label: 'S', value: '2rem', rem: 2.0 },
+    M: { key: 'M', label: 'M (Default)', value: '2.6rem', rem: 2.6 },
+    L: { key: 'L', label: 'L', value: '3.2rem', rem: 3.2 },
+    XL: { key: 'XL', label: 'XL', value: '3.8rem', rem: 3.8 }
+  };
 
   var FONT_STYLES = {
     modern: {
@@ -88,6 +96,7 @@
     mode: 'words',
     script: 'latin',
     fontStyle: 'modern',
+    arabicSize: 'M',
     count: 20,
     settings: T.normalizeSettings(T.DEFAULT_SETTINGS),
     customText: '',
@@ -864,8 +873,28 @@
     element.classList.toggle('has-value', value !== '-');
   }
 
+  function isMobileViewport() {
+    return !!(window.matchMedia && window.matchMedia('(max-width: 768px)').matches);
+  }
+
+  function lockMobileScroll() {
+    if (!isMobileViewport()) return;
+    if (window.scrollY !== 0 || window.scrollX !== 0 || document.documentElement.scrollTop !== 0 || document.body.scrollTop !== 0) {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+  }
+
   function ensureActiveVisible() {
     if (!els.prompt) return;
+
+    // On mobile viewports, the stage is fixed and fitted to visualViewport;
+    // calling scrollIntoView causes virtual keyboard jump/jitter.
+    if (isMobileViewport()) {
+      lockMobileScroll();
+      return;
+    }
 
     window.requestAnimationFrame(function () {
       var rect = els.prompt.getBoundingClientRect();
@@ -1526,6 +1555,7 @@
 
     renderActiveWord();
     updateStats();
+    lockMobileScroll();
 
     if (autoHint) showHint(true);
 
@@ -1802,6 +1832,7 @@
       els.typingInput.focus();
     }
     els.typingInput.value = '';
+    lockMobileScroll();
     syncFocusUI();
   }
 
@@ -2094,6 +2125,51 @@
      Mobile Drawer Management
      ------------------------------------------------------------------------ */
 
+  function parseArabicSizeRem(size) {
+    if (!size) return ARABIC_SIZE_PRESETS.M.rem;
+    if (ARABIC_SIZE_PRESETS[size]) return ARABIC_SIZE_PRESETS[size].rem;
+    var parsed = parseFloat(String(size));
+    if (isNaN(parsed)) return ARABIC_SIZE_PRESETS.M.rem;
+    return Math.max(1.8, Math.min(4.0, Math.round(parsed * 10) / 10));
+  }
+
+  function resolveArabicSizePreset(rem) {
+    var keys = Object.keys(ARABIC_SIZE_PRESETS);
+    for (var i = 0; i < keys.length; i += 1) {
+      var k = keys[i];
+      if (Math.abs(ARABIC_SIZE_PRESETS[k].rem - rem) < 0.05) {
+        return k;
+      }
+    }
+    return '';
+  }
+
+  function applyArabicSize(size, options) {
+    var rem = parseArabicSizeRem(size);
+    var presetKey = ARABIC_SIZE_PRESETS[size] ? size : resolveArabicSizePreset(rem);
+    var cssValue = presetKey ? ARABIC_SIZE_PRESETS[presetKey].value : (rem + 'rem');
+    var storedValue = presetKey || cssValue;
+
+    state.arabicSize = storedValue;
+    document.documentElement.style.setProperty('--arabic-sample-size', cssValue);
+    if (els.testStage) {
+      els.testStage.style.setProperty('--arabic-sample-size', cssValue);
+    }
+    if (els.promptArabic) {
+      els.promptArabic.style.setProperty('--arabic-sample-size', cssValue);
+    }
+
+    if (!options || options.persist !== false) {
+      writeStorage(STORAGE_ARABIC_SIZE, storedValue);
+    }
+
+    syncDrawerUI();
+
+    if (els.promptHint && !els.promptHint.hidden) {
+      window.requestAnimationFrame(positionHint);
+    }
+  }
+
   function syncDrawerUI() {
     if (els.drawerFontButtons) {
       els.drawerFontButtons.forEach(function (btn) {
@@ -2101,6 +2177,26 @@
         btn.classList.toggle('is-active', active);
         btn.setAttribute('aria-pressed', String(active));
       });
+    }
+    if (els.drawerArabicSizeButtons || els.arabicSizeSlider || els.arabicSizeValueLabel) {
+      var rem = parseArabicSizeRem(state.arabicSize);
+      var presetKey = ARABIC_SIZE_PRESETS[state.arabicSize] ? state.arabicSize : resolveArabicSizePreset(rem);
+
+      if (els.drawerArabicSizeButtons) {
+        els.drawerArabicSizeButtons.forEach(function (btn) {
+          var active = btn.dataset.arabicSize === presetKey;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-pressed', String(active));
+        });
+      }
+      if (els.arabicSizeSlider) {
+        els.arabicSizeSlider.value = String(rem);
+      }
+      if (els.arabicSizeValueLabel) {
+        els.arabicSizeValueLabel.textContent = presetKey
+          ? ARABIC_SIZE_PRESETS[presetKey].label
+          : (rem.toFixed(1) + 'rem');
+      }
     }
     if (els.drawerCountSection) {
       var visible = state.mode === 'words' || state.mode === 'reading';
@@ -2693,6 +2789,9 @@
     els.drawerCheatSheetBtn = $('drawerCheatSheetBtn');
     els.drawerRestartBtn = $('drawerRestartBtn');
     els.drawerFontButtons = Array.from(document.querySelectorAll('[data-drawer-font]'));
+    els.drawerArabicSizeButtons = Array.from(document.querySelectorAll('[data-arabic-size]'));
+    els.arabicSizeSlider = $('arabicSizeSlider');
+    els.arabicSizeValueLabel = $('arabicSizeValueLabel');
   }
 
   function bindEvents() {
@@ -2948,13 +3047,15 @@
       if (typeof window === 'undefined') return;
 
       function updateViewport() {
-        var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+        var isMobile = isMobileViewport();
         if (!isMobile) {
           document.documentElement.style.removeProperty('--vvh');
           document.documentElement.style.removeProperty('--keyboard-inset');
           document.body.classList.remove('keyboard-open');
           return;
         }
+
+        lockMobileScroll();
 
         if (window.visualViewport) {
           var vv = window.visualViewport;
@@ -2978,6 +3079,11 @@
         window.visualViewport.addEventListener('resize', updateViewport);
         window.visualViewport.addEventListener('scroll', updateViewport);
       }
+      window.addEventListener('scroll', function () {
+        if (isMobileViewport() && !isDialogOpen()) {
+          lockMobileScroll();
+        }
+      }, { passive: true });
       window.addEventListener('resize', updateViewport);
       window.addEventListener('orientationchange', function () {
         setTimeout(updateViewport, 150);
@@ -3096,6 +3202,23 @@
       });
     }
 
+    if (els.drawerArabicSizeButtons) {
+      els.drawerArabicSizeButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var sizeKey = btn.dataset.arabicSize;
+          if (sizeKey) {
+            applyArabicSize(sizeKey);
+          }
+        });
+      });
+    }
+
+    if (els.arabicSizeSlider) {
+      els.arabicSizeSlider.addEventListener('input', function () {
+        applyArabicSize(els.arabicSizeSlider.value);
+      });
+    }
+
     if (els.drawerCheatSheetBtn) {
       els.drawerCheatSheetBtn.addEventListener('click', function () {
         closeMobileDrawer();
@@ -3128,12 +3251,16 @@
 
     var storedFont = readStorage(STORAGE_FONT, 'modern');
     state.fontStyle = FONT_STYLES[storedFont] ? storedFont : 'modern';
+
+    var storedSize = readStorage(STORAGE_ARABIC_SIZE, 'M');
+    state.arabicSize = storedSize || 'M';
   }
 
   function init() {
     cacheElements();
     loadPreferences();
     applyFontStyle(state.fontStyle, { persist: false });
+    applyArabicSize(state.arabicSize, { persist: false });
     updateSettingsForm();
     applyScriptCopy();
     updateModePill(state.mode, false);
