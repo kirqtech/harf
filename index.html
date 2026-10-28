@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#17181c">
+  <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Nateq">
@@ -15,8 +15,20 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      try {
+        var saved = window.localStorage.getItem('nateq_arabic_font');
+        document.documentElement.classList.add(
+          saved === 'classical' || saved === 'display' ? 'font-' + saved : 'font-modern'
+        );
+      } catch (error) {
+        document.documentElement.classList.add('font-modern');
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#testStage">Skip to typing test</a>
@@ -43,6 +55,15 @@
             </span>
             <span class="dialect-pill-name" id="dialectPillName">Dialect</span>
             <span class="dialect-pill-shortcut" aria-hidden="true">Alt+D</span>
+          </button>
+        </div>
+        <div class="font-selector">
+          <button class="font-pill" id="fontPill" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="fontModal" aria-label="Choose Arabic typeface. Current: Modern" title="Choose Arabic typeface">
+            <span class="font-pill-mark" aria-hidden="true">Aa</span>
+            <span class="font-pill-name" id="fontPillName">Modern</span>
+            <svg class="font-pill-chevron" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+              <path d="M3 4.5 6 7.5 9 4.5"></path>
+            </svg>
           </button>
         </div>
         <button class="icon-button icon-button--help" id="legendButton" type="button" title="Cheat sheet (F1)" aria-label="Open the transliteration cheat sheet" aria-haspopup="dialog" aria-controls="sheetDialog">
@@ -226,21 +247,21 @@
         <span class="results-unit">wpm</span>
       </div>
       <div class="results-grid">
-        <div>
+        <div class="stat-badge">
           <span class="result-label">accuracy</span>
           <strong id="resultAccuracy">0%</strong>
         </div>
-        <div>
+        <div class="stat-badge">
+          <span class="result-label">consistency</span>
+          <strong id="resultConsistency">0%</strong>
+        </div>
+        <div class="stat-badge">
           <span class="result-label">total time</span>
           <strong id="resultTime">0s</strong>
         </div>
-        <div>
+        <div class="stat-badge">
           <span class="result-label">best streak</span>
           <strong id="resultStreak">0</strong>
-        </div>
-        <div>
-          <span class="result-label">correct words</span>
-          <strong id="resultWords">0 / 0</strong>
         </div>
       </div>
       <div class="results-review" id="resultsReview" hidden>
@@ -262,9 +283,10 @@
       </div>
       <div class="results-actions">
         <button class="button button--primary" id="nextTestButton" type="button">new round <kbd>enter</kbd></button>
-        <button class="button button--ghost" id="repeatButton" type="button">repeat words</button>
+        <button class="button button--accent" id="repeatMissedButton" type="button" hidden>repeat missed <kbd>tab</kbd>+<kbd>enter</kbd></button>
+        <button class="button button--ghost" id="repeatButton" type="button">repeat all</button>
       </div>
-      <p class="results-hint"><kbd>enter</kbd> or <kbd>space</kbd> starts a new round</p>
+      <p class="results-hint" id="resultsHint"><kbd>enter</kbd> new round · <kbd>tab</kbd>+<kbd>enter</kbd> repeat missed</p>
     </div>
   </dialog>
 
@@ -474,6 +496,33 @@
         <span class="dialect-hint"><kbd>↑</kbd> <kbd>↓</kbd> navigate</span>
         <span class="dialect-hint"><kbd>Enter</kbd> select</span>
         <span class="dialect-hint"><kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Arabic Typeface Switcher -->
+  <dialog class="modal-dialog font-dialog" id="fontModal" aria-labelledby="fontTitle">
+    <div class="modal-card font-card">
+      <div class="modal-heading">
+        <div>
+          <p class="eyebrow">Arabic typography</p>
+          <h2 id="fontTitle">Choose a typeface</h2>
+        </div>
+        <button class="icon-button" type="button" id="closeFontModalButton" aria-label="Close typeface picker">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+
+      <p class="font-intro">Each typeface is tuned for tashkeel clarity and quick reading. The change applies instantly and is remembered on this device.</p>
+
+      <div class="font-options" id="fontOptions" role="radiogroup" aria-label="Arabic typeface options">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="font-modal-footer">
+        <span class="font-footer-note"><span class="font-footer-dot" aria-hidden="true"></span>Live preview updates the typing stage</span>
       </div>
     </div>
   </dialog>

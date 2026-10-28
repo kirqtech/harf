@@ -441,6 +441,13 @@
         continue;
       }
 
+      if (ch === ' ') {
+        tokens.push(makeToken([' '], ' ', ' '));
+        lastLetterToken = null;
+        lastLetterIndex = -1;
+        continue;
+      }
+
       if (Object.prototype.hasOwnProperty.call(SIMPLE_LETTERS, ch) && SIMPLE_LETTERS[ch]) {
         var simple = SIMPLE_LETTERS[ch];
         pushLetter(makeToken([simple], simple, ch));
@@ -611,25 +618,42 @@
     return i;
   }
 
+  function normalizeSpaces(str) {
+    if (str == null) return '';
+    return String(str).replace(/^[ \t]+/, '').replace(/[ \t]+/g, ' ');
+  }
+
   /**
    * Match one typed string against the full solutions array. The typed string
    * is a valid prefix while it prefixes at least one accepted spelling.
+   * Multi-word Arabizi inputs match smoothly regardless of whether single or
+   * multiple spaces are entered between words.
    */
   function matchSolutions(solutions, input) {
-    var list = Array.isArray(solutions) ? solutions.filter(Boolean) : [];
+    var rawList = Array.isArray(solutions) ? solutions.filter(Boolean) : [];
+    var list = rawList.map(function (s) {
+      return normalizeSpaces(s).trim();
+    }).filter(function (s) {
+      return s.length > 0;
+    });
+
     var typed = input == null ? '' : String(input);
+    var normTyped = normalizeSpaces(typed);
     var exact = null;
     var prefixMatches = [];
     var best = null;
 
     list.forEach(function (solution, index) {
-      if (solution === typed) exact = exact || solution;
+      var normSol = solution;
+      if (normSol === normTyped || normSol === normTyped.trim()) {
+        exact = exact || solution;
+      }
 
-      if (solution.indexOf(typed) === 0) {
+      if (normSol.indexOf(normTyped) === 0) {
         prefixMatches.push(solution);
       }
 
-      var matched = commonPrefixLength(solution, typed);
+      var matched = commonPrefixLength(normSol, normTyped);
       var candidate = {
         solution: solution,
         index: index,
@@ -644,8 +668,8 @@
     });
 
     var target = exact || prefixMatches[0] || (best && best.solution) || list[0] || '';
-    var isPrefix = typed === '' || prefixMatches.length > 0;
-    var matchedLength = isPrefix ? typed.length : commonPrefixLength(target, typed);
+    var isPrefix = typed === '' || prefixMatches.length > 0 || !!exact;
+    var matchedLength = isPrefix ? typed.length : commonPrefixLength(target, normTyped);
 
     return {
       input: typed,
@@ -658,14 +682,16 @@
       prefixMatches: prefixMatches,
       matched: matchedLength,
       leftover: isPrefix ? '' : typed.slice(matchedLength),
-      remaining: isPrefix ? target.slice(typed.length) : target.slice(matchedLength)
+      remaining: isPrefix ? target.slice(normTyped.length) : target.slice(matchedLength)
     };
   }
 
   function isAccepted(solutions, input) {
-    var typed = input == null ? '' : String(input);
+    var typed = normalizeSpaces(input);
+    var trimmed = typed.trim();
     return (Array.isArray(solutions) ? solutions : []).some(function (solution) {
-      return solution === typed;
+      var norm = normalizeSpaces(solution).trim();
+      return norm === typed || norm === trimmed;
     });
   }
 
@@ -865,6 +891,14 @@
     var previous = null;
 
     clusters.forEach(function (cluster) {
+      if (/^\s+$/.test(cluster)) {
+        if (units.length > 0 && !units[units.length - 1].isSpace) {
+          units.push({ letter: ' ', key: ' ', isSpace: true, joinPrev: false, joinNext: false });
+        }
+        previous = { key: ' ', letters: ' ' };
+        return;
+      }
+
       var letters = Array.from(cluster).filter(function (ch) {
         if (options && options.stripUthmanicGlyphs && UTHMANIC_GLYPHS_RE.test(ch)) return false;
         return isArabic(ch);
@@ -886,8 +920,13 @@
     });
 
     for (var i = 0; i < units.length; i += 1) {
-      var prev = i > 0 ? units[i - 1].letter : '';
-      var next = i < units.length - 1 ? units[i + 1].letter : '';
+      if (units[i].isSpace) {
+        units[i].joinPrev = false;
+        units[i].joinNext = false;
+        continue;
+      }
+      var prev = i > 0 && !units[i - 1].isSpace ? units[i - 1].letter : '';
+      var next = i < units.length - 1 && !units[i + 1].isSpace ? units[i + 1].letter : '';
       units[i].joinPrev = prev ? canJoinArabic(prev, units[i].letter) : false;
       units[i].joinNext = next ? canJoinArabic(units[i].letter, next) : false;
     }
@@ -896,6 +935,7 @@
   }
 
   function normalizeArabicKey(piece, options) {
+    if (piece === ' ' || piece === '\u00A0') return ' ';
     var raw = piece || '';
     if (options && options.stripUthmanicGlyphs) {
       raw = stripUthmanicGlyphs(raw);
@@ -909,6 +949,7 @@
   }
 
   function isArabicTypable(text, options) {
+    if (text === ' ' || text === '\u00A0') return true;
     if (options && options.stripUthmanicGlyphs && UTHMANIC_GLYPHS_RE.test(text)) {
       return false;
     }
@@ -926,7 +967,7 @@
   /**
    * Parse typed Arabic against the target letters. The caret sits on the first
    * mismatching letter, and a valid prefix means every typed letter so far
-   * matches the target.
+   * matches the target. Consecutive whitespace is normalized.
    */
   function matchArabic(units, input, options) {
     var list = units || [];
@@ -934,6 +975,9 @@
     if (options && options.stripUthmanicGlyphs) {
       rawInput = stripUthmanicGlyphs(rawInput);
     }
+    // Normalize consecutive whitespace so typing multiple spaces matches smoothly
+    rawInput = rawInput.replace(/^[ \t]+/, '').replace(/[ \t]+/g, ' ');
+
     var typed = graphemes(rawInput);
     var keys = typed.map(function (piece) {
       return normalizeArabicKey(piece, options);
@@ -944,7 +988,8 @@
       matched += 1;
     }
 
-    var complete = keys.length === list.length && matched === keys.length;
+    var complete = (keys.length === list.length && matched === keys.length) ||
+      (keys.length === list.length + 1 && keys[keys.length - 1] === ' ' && matched === list.length);
 
     return {
       mode: 'arabic',
@@ -955,8 +1000,8 @@
       matched: matched,
       targetLength: list.length,
       complete: complete,
-      validPrefix: matched === keys.length,
-      extra: matched < keys.length,
+      validPrefix: matched === keys.length || complete,
+      extra: matched < keys.length && !complete,
       target: list.map(function (unit) { return unit.letter; }).join('')
     };
   }
