@@ -1,0 +1,530 @@
+[
+  {
+    "arabic": "كِيفَك",
+    "arabic_plain": "كيفك",
+    "translit": [
+      "keefak",
+      "kifak",
+      "kiifak",
+      "kefak",
+      "keefek"
+    ],
+    "translation_en": "how are you (to male)",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Quintessential Levantine daily greeting for a male (MSA كيف حالك)."
+  },
+  {
+    "arabic": "كِيفِك",
+    "arabic_plain": "كيفك",
+    "translit": [
+      "keefik",
+      "kifik",
+      "kiifik",
+      "kefik",
+      "keefek"
+    ],
+    "translation_en": "how are you (to female)",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Quintessential Levantine daily greeting for a female (MSA كيف حالكِ)."
+  },
+  {
+    "arabic": "شُو",
+    "arabic_plain": "شو",
+    "translit": [
+      "shu",
+      "shoo",
+      "shuu",
+      "shou"
+    ],
+    "translation_en": "what",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Universal Levantine question word, equivalent to MSA ماذا or ما."
+  },
+  {
+    "arabic": "لَيْش",
+    "arabic_plain": "ليش",
+    "translit": [
+      "laysh",
+      "leesh",
+      "lesh",
+      "liish",
+      "lees"
+    ],
+    "translation_en": "why",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Universal Levantine question word for why, equivalent to MSA لماذا."
+  },
+  {
+    "arabic": "وِين",
+    "arabic_plain": "وين",
+    "translit": [
+      "ween",
+      "wayn",
+      "wain",
+      "win",
+      "wen"
+    ],
+    "translation_en": "where",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Universal Levantine question word for where, equivalent to MSA أين."
+  },
+  {
+    "arabic": "إِيمْتَى",
+    "arabic_plain": "إيمتى",
+    "translit": [
+      "eemta",
+      "imta",
+      "emta",
+      "eemtaa",
+      "iimta"
+    ],
+    "translation_en": "when",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Universal Levantine question word for when, equivalent to MSA متى."
+  },
+  {
+    "arabic": "كِيف",
+    "arabic_plain": "كيف",
+    "translit": [
+      "keef",
+      "kif",
+      "kiif",
+      "kef"
+    ],
+    "translation_en": "how",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Levantine question word for how, equivalent to MSA كيف."
+  },
+  {
+    "arabic": "مِين",
+    "arabic_plain": "مين",
+    "translit": [
+      "meen",
+      "min",
+      "miin",
+      "men"
+    ],
+    "translation_en": "who",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Universal Levantine question word for who, equivalent to MSA مَن."
+  },
+  {
+    "arabic": "مَاشِي",
+    "arabic_plain": "ماشي",
+    "translit": [
+      "maashi",
+      "mashi",
+      "maashy",
+      "mashy",
+      "mashii"
+    ],
+    "translation_en": "okay / agreed",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Colloquial agreement marker, literally \"walking / in motion\"."
+  },
+  {
+    "arabic": "مَرَة",
+    "arabic_plain": "مرة",
+    "translit": [
+      "mara",
+      "marah",
+      "maraa",
+      "mra"
+    ],
+    "translation_en": "woman / wife",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine term for woman or wife, from classical امرأة (imra2a)."
+  },
+  {
+    "arabic": "زَلَمَة",
+    "arabic_plain": "زلمة",
+    "translit": [
+      "zalameh",
+      "zalemeh",
+      "zalame",
+      "zalami"
+    ],
+    "translation_en": "man / guy",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Signature Levantine colloquial term for a man, equivalent to MSA رجل."
+  },
+  {
+    "arabic": "مِي",
+    "arabic_plain": "مي",
+    "translit": [
+      "mai",
+      "may",
+      "moy",
+      "moye",
+      "maii"
+    ],
+    "translation_en": "water",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine form of MSA مَاء (maa2)."
+  },
+  {
+    "arabic": "مَصَارِي",
+    "arabic_plain": "مصاري",
+    "translit": [
+      "maSaari",
+      "masari",
+      "maSaary",
+      "masary",
+      "maSari"
+    ],
+    "translation_en": "money",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Quintessential Levantine word for money/cash (from Ottoman Egyptian piastres)."
+  },
+  {
+    "arabic": "بَنَدُورَة",
+    "arabic_plain": "بندورة",
+    "translit": [
+      "banadoora",
+      "bandoora",
+      "banadoura",
+      "banadoreh"
+    ],
+    "translation_en": "tomatoes",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Tomatoes in Levantine Arabic (from Italian pomodoro); MSA uses طماطم."
+  },
+  {
+    "arabic": "كْبِير",
+    "arabic_plain": "كبير",
+    "translit": [
+      "kbeer",
+      "kbiir",
+      "kabir",
+      "kabeer"
+    ],
+    "translation_en": "big / large",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Levantine pronunciation with initial consonant cluster of MSA كَبِير."
+  },
+  {
+    "arabic": "زْغِير",
+    "arabic_plain": "زغير",
+    "translit": [
+      "zgheer",
+      "zghiir",
+      "zghir",
+      "zagher",
+      "zgeer"
+    ],
+    "translation_en": "small / little",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Levantine pronunciation with initial consonant cluster of MSA صَغِير."
+  },
+  {
+    "arabic": "مْنِيح",
+    "arabic_plain": "منيح",
+    "translit": [
+      "mnee7",
+      "mneeH",
+      "mnii7",
+      "mniiH",
+      "mni7",
+      "mniH"
+    ],
+    "translation_en": "good / well",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Quintessential Levantine adjective for good or doing well, equivalent to MSA جَيِّد."
+  },
+  {
+    "arabic": "زَعْلَان",
+    "arabic_plain": "زعلان",
+    "translit": [
+      "za3laan",
+      "za3lan",
+      "za3leen",
+      "za3lane"
+    ],
+    "translation_en": "upset / annoyed",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Everyday Levantine for upset, sad, or hurt, equivalent to MSA حزين / غاضب."
+  },
+  {
+    "arabic": "مَبْسُوط",
+    "arabic_plain": "مبسوط",
+    "translit": [
+      "mabSooT",
+      "mabsut",
+      "mabsoot",
+      "mabSout",
+      "mabsout"
+    ],
+    "translation_en": "happy / pleased",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Quintessential Levantine expression for happy or content, equivalent to MSA سعيد."
+  },
+  {
+    "arabic": "كْتِير",
+    "arabic_plain": "كتير",
+    "translit": [
+      "kteer",
+      "ktiir",
+      "kter",
+      "kateer"
+    ],
+    "translation_en": "very / a lot",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Everyday Levantine intensifier and quantity word, equivalent to MSA كثير."
+  },
+  {
+    "arabic": "شْوَيْ",
+    "arabic_plain": "شوي",
+    "translit": [
+      "shway",
+      "shwayy",
+      "shwai",
+      "shwaya",
+      "shwoy"
+    ],
+    "translation_en": "a little / a bit",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine diminutive for a small amount or \"just a moment\"."
+  },
+  {
+    "arabic": "إِجَا",
+    "arabic_plain": "إجا",
+    "translit": [
+      "ija",
+      "eja",
+      "2ija",
+      "2eja",
+      "aja",
+      "ijaa"
+    ],
+    "translation_en": "came / arrived",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Levantine past tense verb for he came, equivalent to MSA جَاءَ."
+  },
+  {
+    "arabic": "شَاف",
+    "arabic_plain": "شاف",
+    "translit": [
+      "shaaf",
+      "shaf",
+      "shoof",
+      "shouf"
+    ],
+    "translation_en": "saw / looked",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Universal spoken Levantine verb for he saw, equivalent to MSA رَأَى."
+  },
+  {
+    "arabic": "عِمِل",
+    "arabic_plain": "عمل",
+    "translit": [
+      "3imil",
+      "3emel",
+      "3mil",
+      "3mel",
+      "3amal"
+    ],
+    "translation_en": "did / made",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine past tense verb for he did or made (MSA عَمِلَ)."
+  },
+  {
+    "arabic": "حَكَى",
+    "arabic_plain": "حكى",
+    "translit": [
+      "Haka",
+      "7aka",
+      "Hakaa",
+      "7akaa",
+      "Hake"
+    ],
+    "translation_en": "spoke / told",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Common Levantine verb for speaking or chatting, equivalent to MSA تَكَلَّمَ."
+  },
+  {
+    "arabic": "بَدُّو",
+    "arabic_plain": "بدو",
+    "translit": [
+      "baddo",
+      "bado",
+      "biddo",
+      "bido",
+      "baddoo"
+    ],
+    "translation_en": "he wants",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Levantine expression for he wants / he needs (b-d-d stem)."
+  },
+  {
+    "arabic": "بدي",
+    "arabic_plain": "بدي",
+    "translit": [
+      "baddi",
+      "beddi",
+      "badi",
+      "biddi",
+      "bidi"
+    ],
+    "translation_en": "I want / I need",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine staple, equivalent to MSA أريد"
+  },
+  {
+    "arabic": "بَدِّي",
+    "arabic_plain": "بدي",
+    "translit": [
+      "baddi",
+      "badi",
+      "biddi",
+      "bidi",
+      "baddii",
+      "beddi"
+    ],
+    "translation_en": "I want / I need",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine staple, equivalent to MSA أريد."
+  },
+  {
+    "arabic": "عِنْدُو",
+    "arabic_plain": "عندو",
+    "translit": [
+      "3indo",
+      "3endu",
+      "3ndo",
+      "3ndu",
+      "3indoo"
+    ],
+    "translation_en": "he has",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Levantine spoken expression of possession (\"he has / with him\")."
+  },
+  {
+    "arabic": "بِحِبّ",
+    "arabic_plain": "بحب",
+    "translit": [
+      "bHibb",
+      "b7ibb",
+      "baHibb",
+      "ba7ibb",
+      "bHebb",
+      "b7ebb"
+    ],
+    "translation_en": "I love / like",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine present tense with the b-prefix (بـ), equivalent to MSA أُحِبّ."
+  },
+  {
+    "arabic": "سَكَّر",
+    "arabic_plain": "سكر",
+    "translit": [
+      "sakkar",
+      "sakker",
+      "sakar"
+    ],
+    "translation_en": "closed / shut",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Everyday spoken Levantine verb for closing a door or window (MSA أغلق)."
+  },
+  {
+    "arabic": "جَاب",
+    "arabic_plain": "جاب",
+    "translit": [
+      "jaab",
+      "jab",
+      "jeb"
+    ],
+    "translation_en": "brought / fetched",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Universal spoken Levantine verb for he brought or fetched, equivalent to MSA أَحْضَرَ."
+  },
+  {
+    "arabic": "بُكْرَة",
+    "arabic_plain": "بكرة",
+    "translit": [
+      "bukra",
+      "bokra",
+      "bukrah",
+      "bokrah",
+      "bukraa"
+    ],
+    "translation_en": "tomorrow",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Everyday Levantine for tomorrow, equivalent to MSA غَدًا."
+  },
+  {
+    "arabic": "مْبَارِح",
+    "arabic_plain": "مبارح",
+    "translit": [
+      "mbaariH",
+      "mbare7",
+      "mbariH",
+      "mbar7",
+      "mbareH"
+    ],
+    "translation_en": "yesterday",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Spoken Levantine for yesterday, equivalent to MSA أَمْس."
+  },
+  {
+    "arabic": "هَلَّق",
+    "arabic_plain": "هلق",
+    "translit": [
+      "halla2",
+      "halla",
+      "hallaq",
+      "halla9"
+    ],
+    "translation_en": "now / right now",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Signature Levantine (Lebanese/Syrian) word for right now, equivalent to MSA الآن."
+  },
+  {
+    "arabic": "هَيْك",
+    "arabic_plain": "هيك",
+    "translit": [
+      "hayk",
+      "heik",
+      "haik",
+      "hayek"
+    ],
+    "translation_en": "like this / this way",
+    "dialect": "Levantine",
+    "category": "Words",
+    "notes": "Signature Levantine adverb meaning \"like this\", \"so\", or \"just because\"."
+  }
+]

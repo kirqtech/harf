@@ -503,6 +503,141 @@ kbd {
 }
 
 /* --------------------------------------------------------------------------
+   Data loading and recovery
+   -------------------------------------------------------------------------- */
+
+.data-error-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.9rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(239, 116, 132, 0.3);
+  border-radius: var(--radius-md);
+  background: rgba(239, 116, 132, 0.07);
+  animation: fade-up 180ms ease both;
+}
+
+.data-error-copy {
+  min-width: 0;
+}
+
+.data-error-copy strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.data-error-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.data-error-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.data-error-switch {
+  color: var(--faint);
+  font-size: 0.72rem;
+}
+
+.data-error-select {
+  min-height: 2.15rem;
+  padding: 0.35rem 1.7rem 0.35rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--panel);
+  color: var(--text-soft);
+  font-size: 0.76rem;
+}
+
+.typing-skeleton {
+  display: flex;
+  width: 100%;
+  min-height: clamp(10rem, 24vh, 15rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.skeleton-line,
+.skeleton-arabic {
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.045) 20%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0.045) 60%
+    );
+  background-size: 240% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-line--meta {
+  width: 9rem;
+  height: 0.55rem;
+  opacity: 0.7;
+}
+
+.skeleton-arabic {
+  width: min(48%, 15rem);
+  height: clamp(2.2rem, 5vw, 3rem);
+  border-radius: 0.7rem;
+}
+
+.skeleton-line--input {
+  width: min(38%, 11rem);
+  height: 1.15rem;
+}
+
+.skeleton-caption {
+  margin: 0.15rem 0 0;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 120% 0;
+  }
+  100% {
+    background-position: -120% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-line,
+  .skeleton-arabic {
+    animation: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .data-error-banner {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .data-error-actions {
+    flex-wrap: wrap;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Test stage and words
    -------------------------------------------------------------------------- */
 

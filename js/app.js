@@ -7,6 +7,7 @@
 
   var T = window.HarfTranslit;
   var D = window.HarfData;
+  var Loader = window.HarfDataLoader;
 
   var STORAGE_SETTINGS = 'harf.settings.v1';
   var STORAGE_CUSTOM = 'harf.custom.v1';
@@ -75,7 +76,13 @@
     tabPressedAt: 0,
     lastPhrase: '',
     focused: false,
-    sheetTab: 'legend'
+    sheetTab: 'legend',
+    dataReady: false,
+    dataCategory: '',
+    eventsBound: false,
+    requestToken: 0,
+    failedMode: '',
+    loading: false
   };
 
   var els = {};
@@ -259,6 +266,174 @@
   }
 
   /* ------------------------------------------------------------------------
+     Data loading and recovery
+     ------------------------------------------------------------------------ */
+
+  function applyDataset(category, items) {
+    if (!category) return;
+
+    if (category === 'words') {
+      D.setWords(items);
+    } else if (category === 'letters') {
+      D.setLetters(items);
+    } else if (category === 'phrases') {
+      D.setPhrases(items);
+    }
+
+    state.dataCategory = category;
+  }
+
+  function showLoadingState() {
+    state.loading = true;
+    if (els.loadingState) els.loadingState.hidden = false;
+    if (els.prompt) els.prompt.hidden = true;
+    if (els.queueWrap) els.queueWrap.hidden = true;
+    if (els.reviewLine) els.reviewLine.hidden = true;
+    if (els.focusBadge) els.focusBadge.hidden = true;
+    if (els.typingInput) els.typingInput.disabled = true;
+    if (els.testStage) els.testStage.classList.add('is-loading', 'is-paused');
+  }
+
+  function hideLoadingState() {
+    state.loading = false;
+    if (els.loadingState) els.loadingState.hidden = true;
+    if (els.typingInput) els.typingInput.disabled = false;
+    if (els.testStage) els.testStage.classList.remove('is-loading');
+  }
+
+  function showDataError(error, mode) {
+    hideLoadingState();
+    state.failedMode = mode;
+
+    // Keep an existing round visible when a later category switch fails.
+    if (state.test) {
+      if (els.prompt) els.prompt.hidden = false;
+      if (els.queueWrap) els.queueWrap.hidden = false;
+    } else {
+      if (els.prompt) els.prompt.hidden = true;
+      if (els.queueWrap) els.queueWrap.hidden = true;
+    }
+
+    setText(els.dataErrorMessage, Loader.describeError(error, Loader.categoryForMode(mode)));
+    if (els.dataErrorBanner) els.dataErrorBanner.hidden = false;
+    if (els.dataCategorySelect) els.dataCategorySelect.value = mode;
+    syncFocusUI();
+  }
+
+  function hideDataError() {
+    if (els.dataErrorBanner) els.dataErrorBanner.hidden = true;
+  }
+
+  /**
+   * Resolve the dataset needed by a mode before running the callback. Cached
+   * categories return synchronously, which keeps category switching instant.
+   */
+  function withData(mode, onReady) {
+    var category = Loader.categoryForMode(mode);
+    var token = state.requestToken + 1;
+    state.requestToken = token;
+
+    if (!category) {
+      onReady(token);
+      return;
+    }
+
+    var cached = Loader.getCached(category);
+    if (cached) {
+      // A cached switch can overtake an in-flight request for another category.
+      hideLoadingState();
+      hideDataError();
+      applyDataset(category, cached);
+      onReady(token);
+      return;
+    }
+
+    showLoadingState();
+    hideDataError();
+
+    Loader.load(category).then(function (items) {
+      if (token !== state.requestToken) return;
+      applyDataset(category, items);
+      hideLoadingState();
+      hideDataError();
+      onReady(token);
+    }).catch(function (error) {
+      if (token !== state.requestToken) return;
+      showDataError(error, mode);
+    });
+  }
+
+  function bootWithMode(mode) {
+    showLoadingState();
+    hideDataError();
+
+    withData(mode, function () {
+      var firstBoot = !state.dataReady;
+      state.dataReady = true;
+      hideLoadingState();
+      hideDataError();
+
+      if (!state.eventsBound) {
+        bindEvents();
+        state.eventsBound = true;
+      }
+
+      state.mode = mode;
+      startNewTest({ mode: mode, focus: false });
+
+      if (firstBoot) focusOnFirstBoot();
+    });
+  }
+
+  function retryDataLoad() {
+    var mode = state.failedMode || state.mode || 'words';
+    var category = Loader.categoryForMode(mode);
+    if (category) Loader.invalidate(category);
+
+    hideDataError();
+    if (state.dataReady) {
+      startNewTest({ mode: mode, focus: true });
+    } else {
+      bootWithMode(mode);
+    }
+  }
+
+  function changeDataCategory() {
+    if (!els.dataCategorySelect) return;
+
+    var mode = els.dataCategorySelect.value || 'words';
+    hideDataError();
+
+    if (state.dataReady) {
+      startNewTest({ mode: mode, focus: true });
+    } else {
+      bootWithMode(mode);
+    }
+  }
+
+  function bindDataRecoveryEvents() {
+    if (els.dataRetryButton) {
+      els.dataRetryButton.addEventListener('click', retryDataLoad);
+    }
+    if (els.dataCategorySelect) {
+      els.dataCategorySelect.addEventListener('change', changeDataCategory);
+    }
+  }
+
+  function focusOnFirstBoot() {
+    var finePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+    if (finePointer) {
+      window.setTimeout(function () {
+        if (document.activeElement === document.body || document.activeElement === document.documentElement) {
+          focusTyping();
+        }
+      }, 30);
+    } else {
+      syncFocusUI();
+    }
+  }
+
+  /* ------------------------------------------------------------------------
      Test construction
      ------------------------------------------------------------------------ */
 
@@ -270,7 +445,8 @@
       entry: entry,
       raw: built.arabic,
       display: displayForMode(built.arabic, mode),
-      units: isArabicScript() ? T.arabicLetterUnits(built.arabic) : [],
+      // Matching uses the normalized Arabic form; display keeps vocalization.
+      units: isArabicScript() ? T.arabicLetterUnits(built.arabic_plain || built.arabic) : [],
       tokens: built.tokens,
       solutions: built.solutions,
       translit: built.translit || built.solutions,
@@ -328,8 +504,10 @@
 
     if (mode === 'phrases') {
       var phrase = D.pickPhrase(state.lastPhrase);
-      state.lastPhrase = phrase;
-      return makeTest('phrases', T.splitWords(phrase), phrase);
+      if (!phrase) return null;
+      var phraseArabic = phrase.arabic || phrase.arabic_plain || '';
+      state.lastPhrase = phraseArabic;
+      return makeTest('phrases', T.splitWords(phraseArabic), phraseArabic);
     }
 
     if (mode === 'custom') {
@@ -607,15 +785,17 @@
       return;
     }
 
-    var test = newTestForMode(mode);
-    if (!test) {
-      showToast('That text did not contain any Arabic letters.');
-      return;
-    }
+    withData(mode, function () {
+      var test = newTestForMode(mode);
+      if (!test) {
+        showToast('That text did not contain any Arabic letters.');
+        return;
+      }
 
-    state.mode = mode;
-    if (mode !== 'custom') hideToast();
-    startTest(test, { focus: opts.focus !== false });
+      state.mode = mode;
+      if (mode !== 'custom') hideToast();
+      startTest(test, { focus: opts.focus !== false });
+    });
   }
 
   function repeatTest() {
@@ -1330,7 +1510,7 @@
      ------------------------------------------------------------------------ */
 
   function focusTyping() {
-    if (isDialogOpen()) return;
+    if (!state.dataReady || state.loading || isDialogOpen()) return;
     try {
       els.typingInput.focus({ preventScroll: true });
     } catch (error) {
@@ -1342,19 +1522,20 @@
 
   function syncFocusUI() {
     if (!els.testStage) return;
-    var inputFocused = document.activeElement === els.typingInput;
+    var ready = state.dataReady && !state.loading;
+    var inputFocused = ready && document.activeElement === els.typingInput;
     var dialogOpen = isDialogOpen();
     var finished = state.test && state.test.status === 'finished';
 
     state.focused = inputFocused;
-    els.testStage.classList.toggle('is-paused', !inputFocused && !dialogOpen);
+    els.testStage.classList.toggle('is-paused', !ready || (!inputFocused && !dialogOpen));
     if (els.focusBadge) {
-      els.focusBadge.hidden = inputFocused || dialogOpen || finished || !state.test;
+      els.focusBadge.hidden = !ready || inputFocused || dialogOpen || finished || !state.test;
     }
 
     var isMobile = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
     if (isMobile) {
-      if (inputFocused && !dialogOpen && !finished) {
+      if (ready && inputFocused && !dialogOpen && !finished) {
         document.body.classList.add('keyboard-open');
       } else {
         document.body.classList.remove('keyboard-open');
@@ -1379,6 +1560,7 @@
     }
 
     if (isDialogOpen()) return;
+    if (!state.dataReady || state.loading) return;
     if (event.ctrlKey || event.metaKey || event.altKey) return;
     if (event.key === 'Shift' || event.key === 'Control' || event.key === 'Alt' || event.key === 'Meta') return;
     if (isInteractiveTarget(event.target)) return;
@@ -1613,6 +1795,12 @@
     els.typingInput = $('typingInput');
     els.toast = $('toast');
 
+    els.loadingState = $('loadingState');
+    els.dataErrorBanner = $('dataErrorBanner');
+    els.dataErrorMessage = $('dataErrorMessage');
+    els.dataRetryButton = $('dataRetryButton');
+    els.dataCategorySelect = $('dataCategorySelect');
+
     els.statWpm = $('statWpm');
     els.statAccuracy = $('statAccuracy');
     els.statStreak = $('statStreak');
@@ -1682,6 +1870,8 @@
   }
 
   function bindEvents() {
+    if (state.eventsBound) return;
+
     els.modeTabs.forEach(function (tab) {
       tab.addEventListener('click', function () {
         var mode = tab.dataset.mode;
@@ -1979,21 +2169,13 @@
     loadPreferences();
     updateSettingsForm();
     applyScriptCopy();
-    bindEvents();
+
+    // Recovery controls are available before the app is booted; every typing
+    // listener is registered by bindEvents only after the first dataset loads.
+    bindDataRecoveryEvents();
 
     state.mode = 'words';
-    startNewTest({ mode: 'words', focus: false });
-
-    var finePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
-    if (finePointer) {
-      window.setTimeout(function () {
-        if (document.activeElement === document.body || document.activeElement === document.documentElement) {
-          focusTyping();
-        }
-      }, 30);
-    } else {
-      syncFocusUI();
-    }
+    bootWithMode('words');
   }
 
   if (document.readyState === 'loading') {

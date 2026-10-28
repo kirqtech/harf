@@ -96,6 +96,7 @@
    */
   function normalizeEntry(entry) {
     var arabic = '';
+    var arabicPlain = '';
     var rawSolutions = [];
     var translationEn = '';
     var dialect = '';
@@ -106,6 +107,7 @@
       if (global && global.HarfData && typeof global.HarfData.lookupWord === 'function') {
         var found = global.HarfData.lookupWord(arabic);
         if (found) {
+          arabicPlain = found.arabic_plain || '';
           rawSolutions = found.translit || found.solutions || [];
           translationEn = found.translation_en || '';
           dialect = found.dialect || '';
@@ -113,23 +115,33 @@
         }
       }
     } else if (entry && typeof entry === 'object') {
-      arabic = entry.arabic || entry.word || '';
-      rawSolutions = entry.translit || entry.solutions || entry.solution || [];
+      // `arabic` is the display form (often vocalized); `arabic_plain` is the
+      // normalized form used for matching and lookup.
+      arabic = entry.arabic || entry.arabic_plain || entry.word || '';
+      arabicPlain = entry.arabic_plain || '';
+      rawSolutions = (Array.isArray(entry.translit) && entry.translit.length)
+        ? entry.translit
+        : (entry.solutions || entry.solution || entry.translit || []);
       translationEn = entry.translation_en || entry.translation || '';
       dialect = entry.dialect || '';
       notes = entry.notes || '';
 
-      if (!translationEn && global && global.HarfData && typeof global.HarfData.lookupWord === 'function') {
+      if ((!translationEn || !arabicPlain) && global && global.HarfData && typeof global.HarfData.lookupWord === 'function') {
         var meta = global.HarfData.lookupWord(arabic);
         if (meta) {
           if (!rawSolutions.length) {
             rawSolutions = meta.translit || meta.solutions || [];
           }
-          translationEn = meta.translation_en || '';
+          arabicPlain = arabicPlain || meta.arabic_plain || '';
+          translationEn = translationEn || meta.translation_en || '';
           dialect = dialect || meta.dialect || '';
           notes = notes || meta.notes || '';
         }
       }
+    }
+
+    if (!arabicPlain) {
+      arabicPlain = String(arabic || '').replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF\u0640]/g, '');
     }
 
     if (!Array.isArray(rawSolutions)) {
@@ -144,6 +156,7 @@
 
     return {
       arabic: String(arabic || ''),
+      arabic_plain: String(arabicPlain || ''),
       solutions: solutions,
       translit: solutions,
       translation_en: translationEn,
@@ -567,6 +580,7 @@
 
     return {
       arabic: normalized.arabic,
+      arabic_plain: normalized.arabic_plain,
       tokens: tokens,
       solutions: solutions,
       translit: solutions,

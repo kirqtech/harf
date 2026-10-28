@@ -103,8 +103,32 @@
         </div>
       </section>
 
+      <div class="data-error-banner" id="dataErrorBanner" role="alert" hidden>
+        <div class="data-error-copy">
+          <strong>Vocabulary unavailable</strong>
+          <p id="dataErrorMessage"></p>
+        </div>
+        <div class="data-error-actions">
+          <button class="button button--primary button--small" id="dataRetryButton" type="button">retry</button>
+          <label class="data-error-switch" for="dataCategorySelect">or switch category</label>
+          <select class="data-error-select" id="dataCategorySelect">
+            <option value="words">Words</option>
+            <option value="reading">Reading</option>
+            <option value="phrases">Phrases</option>
+            <option value="letters">Letters</option>
+          </select>
+        </div>
+      </div>
+
       <section class="test-stage" id="testStage" aria-label="Arabic typing test">
-        <div class="prompt" id="prompt">
+        <div class="typing-skeleton" id="loadingState" role="status" aria-live="polite" hidden>
+          <div class="skeleton-line skeleton-line--meta"></div>
+          <div class="skeleton-arabic"></div>
+          <div class="skeleton-line skeleton-line--input"></div>
+          <p class="skeleton-caption">loading vocabulary…</p>
+        </div>
+
+        <div class="prompt" id="prompt" hidden>
           <div class="prompt-head">
             <span class="prompt-counter" id="promptCounter">1 / 20</span>
             <span class="prompt-mode" id="promptModeTag">vocalized</span>
@@ -407,6 +431,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="js/translit.js"></script>
+  <script src="js/data-loader.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </body>

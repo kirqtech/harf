@@ -14,9 +14,10 @@ Serve the folder with any static file server:
 ```bash
 cd arabic_monkeytype
 python3 -m http.server 8000
+# or: npx serve .
 ```
 
-Then open <http://localhost:8000>, or open `index.html` directly in a browser. The app runs entirely in the browser and only loads Google Fonts (with system fallbacks if offline).
+Then open <http://localhost:8000>. Vocabulary is loaded with `fetch()` from `data/*.json`, so the app must be served over HTTP rather than opened from `file://`. If loading fails, Harf shows a friendly banner with retry and category-switch controls. The app runs entirely in the browser and only loads Google Fonts (with system fallbacks if offline).
 
 ## Choosing a script
 
@@ -33,9 +34,10 @@ Use the **abc / عربي** toggle in the control bar, or **Settings -> Script**.
 ## Features
 
 - **Letters**: 20 random single letters, short syllables, and long-vowel drills.
-- **Words**: 260+ common Levantine and MSA words with multiple accepted Arabizi spellings.
-- **Reading**: common vocabulary shown without harakat.
+- **Words**: 264 common Levantine and MSA words with multiple accepted Arabizi spellings.
+- **Reading**: the same vocabulary pool shown without harakat.
 - **Phrases**: short Arabic expressions and everyday greetings.
+- **External data**: all vocabulary is loaded from JSON and cached in memory, so category switches are instant after the first visit.
 - **Custom**: paste your own Arabic text and practice word by word.
 - **Two scripts**: switch between Arabizi transliteration and Arabic keyboard input.
 - **Hints**: the answer stays hidden until you press `?` or miss three times on the same word.
@@ -92,13 +94,19 @@ These rules apply to the Latin transliteration script (`abc`). Mappings are case
 
 ```text
 .
-├── index.html          # Markup and dialogs
+├── index.html              # Markup and dialogs
 ├── css/
-│   └── styles.css      # Styles and responsive layout
+│   └── styles.css          # Styles, loading skeleton, responsive layout
+├── data/
+│   ├── letters.json        # Arabic letter drill base set
+│   ├── words_default.json  # MSA and shared vocabulary
+│   ├── words_levantine.json # Levantine-specific vocabulary
+│   └── phrases.json        # Greetings and everyday phrases
 ├── js/
-│   ├── translit.js     # Tokenizer and input matchers
-│   ├── data.js         # Words, phrases, and drill generators
-│   └── app.js          # UI state, typing loop, stats, settings
+│   ├── translit.js         # Tokenizer and input matchers
+│   ├── data-loader.js      # Async fetch + in-memory dataset cache
+│   ├── data.js             # Normalization, drills, picking utilities
+│   └── app.js              # UI state, typing loop, stats, settings
 ├── assets/
 │   └── favicon.svg
 └── README.md
@@ -106,29 +114,35 @@ These rules apply to the Latin transliteration script (`abc`). Mappings are case
 
 ## Adding words or phrases
 
-Edit `js/data.js`. Word entries support transliterations, English translations, dialect tags (`Levantine`, `MSA`, `Both`), and linguistic notes:
+Edit the JSON files in `data/`. Every item uses the same shape:
 
-```js
-var WORDS = [
-  {
-    arabic: 'بدي',
-    translit: ['baddi', 'beddi'],
-    translation_en: 'I want / I need',
-    dialect: 'Levantine',
-    notes: 'Spoken Levantine staple, equivalent to MSA أريد'
-  },
-  {
-    arabic: 'حبيبي',
-    translit: ['7abeebi', '7abibi', 'Habeebi', 'Habibi'],
-    translation_en: 'my love / darling',
-    dialect: 'Both',
-    notes: 'Universal term of affection used among friends and family.'
-  }
-];
-
-var PHRASES = [
-  'كَيْفَ حَالُكَ؟'
-];
+```json
+{
+  "arabic": "بِدِّي",
+  "arabic_plain": "بدي",
+  "translit": ["baddi", "beddi", "badi"],
+  "translation_en": "I want / I need",
+  "dialect": "Levantine",
+  "category": "Words",
+  "notes": "Spoken Levantine staple, equivalent to MSA أريد."
+}
 ```
 
-Entries are backwards-compatible with plain strings (`'كتاب'`) and legacy `{ arabic, solutions }` objects.
+- `arabic` is the display form and may include harakat.
+- `arabic_plain` is the matching/lookup form with diacritics removed.
+- `translit` lists accepted Arabizi spellings; the engine still expands common variants at runtime.
+- Put Levantine-only words in `words_levantine.json`; shared and MSA words go in `words_default.json`.
+- `category` is `Words`, `Phrases`, or `Letters`, matching the practice area.
+
+Reading mode intentionally reuses the word pool and strips harakat for display. The loader is backwards-compatible with plain strings and legacy `{ arabic, solutions }` objects, but the JSON object format is recommended.
+
+## Data loading
+
+`js/data-loader.js` owns all network access:
+
+- Fetches each dataset once and caches parsed items in memory per category.
+- Deduplicates concurrent requests and merges `words_default.json` with `words_levantine.json` for Words/Reading.
+- Removes failed files from the cache so **retry** performs a real request.
+- Rejects gracefully on `file://` restrictions and network errors; the UI then shows a banner with retry and category-switch controls.
+
+Typing listeners, keyboard capture, and timers start only after the first Words payload resolves. While it loads, a subtle skeleton is shown in the typing area.

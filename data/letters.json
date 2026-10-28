@@ -1,0 +1,310 @@
+[
+  {
+    "arabic": "ب",
+    "arabic_plain": "ب",
+    "translit": [
+      "b"
+    ],
+    "translation_en": "letter baa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ت",
+    "arabic_plain": "ت",
+    "translit": [
+      "t"
+    ],
+    "translation_en": "letter taa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ث",
+    "arabic_plain": "ث",
+    "translit": [
+      "th"
+    ],
+    "translation_en": "letter thaa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ج",
+    "arabic_plain": "ج",
+    "translit": [
+      "j"
+    ],
+    "translation_en": "letter jeem",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ح",
+    "arabic_plain": "ح",
+    "translit": [
+      "H"
+    ],
+    "translation_en": "letter haa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "خ",
+    "arabic_plain": "خ",
+    "translit": [
+      "kh"
+    ],
+    "translation_en": "letter khaa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "د",
+    "arabic_plain": "د",
+    "translit": [
+      "d"
+    ],
+    "translation_en": "letter daal",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ذ",
+    "arabic_plain": "ذ",
+    "translit": [
+      "dh"
+    ],
+    "translation_en": "letter dhaal",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ر",
+    "arabic_plain": "ر",
+    "translit": [
+      "r"
+    ],
+    "translation_en": "letter raa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ز",
+    "arabic_plain": "ز",
+    "translit": [
+      "z"
+    ],
+    "translation_en": "letter zay",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "س",
+    "arabic_plain": "س",
+    "translit": [
+      "s"
+    ],
+    "translation_en": "letter seen",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ش",
+    "arabic_plain": "ش",
+    "translit": [
+      "sh"
+    ],
+    "translation_en": "letter sheen",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ص",
+    "arabic_plain": "ص",
+    "translit": [
+      "S"
+    ],
+    "translation_en": "letter saad",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ض",
+    "arabic_plain": "ض",
+    "translit": [
+      "D"
+    ],
+    "translation_en": "letter daad",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ط",
+    "arabic_plain": "ط",
+    "translit": [
+      "T"
+    ],
+    "translation_en": "letter taa (emphatic)",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ظ",
+    "arabic_plain": "ظ",
+    "translit": [
+      "Z"
+    ],
+    "translation_en": "letter zaa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ع",
+    "arabic_plain": "ع",
+    "translit": [
+      "3"
+    ],
+    "translation_en": "letter ayn",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "غ",
+    "arabic_plain": "غ",
+    "translit": [
+      "gh"
+    ],
+    "translation_en": "letter ghayn",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ف",
+    "arabic_plain": "ف",
+    "translit": [
+      "f"
+    ],
+    "translation_en": "letter faa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ق",
+    "arabic_plain": "ق",
+    "translit": [
+      "q"
+    ],
+    "translation_en": "letter qaf",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ك",
+    "arabic_plain": "ك",
+    "translit": [
+      "k"
+    ],
+    "translation_en": "letter kaaf",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ل",
+    "arabic_plain": "ل",
+    "translit": [
+      "l"
+    ],
+    "translation_en": "letter laam",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "م",
+    "arabic_plain": "م",
+    "translit": [
+      "m"
+    ],
+    "translation_en": "letter meem",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ن",
+    "arabic_plain": "ن",
+    "translit": [
+      "n"
+    ],
+    "translation_en": "letter noon",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ه",
+    "arabic_plain": "ه",
+    "translit": [
+      "h"
+    ],
+    "translation_en": "letter haa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "و",
+    "arabic_plain": "و",
+    "translit": [
+      "w"
+    ],
+    "translation_en": "letter waw",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ي",
+    "arabic_plain": "ي",
+    "translit": [
+      "y"
+    ],
+    "translation_en": "letter yaa",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  },
+  {
+    "arabic": "ء",
+    "arabic_plain": "ء",
+    "translit": [
+      "2"
+    ],
+    "translation_en": "letter hamza",
+    "dialect": "Both",
+    "category": "Letters",
+    "notes": ""
+  }
+]
