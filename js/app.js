@@ -30,7 +30,7 @@
     },
     display: {
       label: 'Display',
-      optionLabel: 'Display (Readex Pro)',
+      optionLabel: 'Display',
       className: 'font-display',
       preview: 'ناطق',
       description: 'Fluid variable rhythm engineered for ultra-fast visual scanning.'
