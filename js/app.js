@@ -30,9 +30,10 @@
     },
     display: {
       label: 'Display',
+      optionLabel: 'Display (Readex Pro)',
       className: 'font-display',
       preview: 'ناطق',
-      description: 'Soft, open apertures built for effortless scanning.'
+      description: 'Fluid variable rhythm engineered for ultra-fast visual scanning.'
     }
   };
   var FONT_ORDER = ['modern', 'classical', 'display'];
@@ -113,7 +114,9 @@
     eventsBound: false,
     requestToken: 0,
     failedMode: '',
-    loading: false
+    loading: false,
+    renderedWordIndex: -1,
+    wordMotionTimer: null
   };
 
   var els = {};
@@ -694,6 +697,8 @@
     var word = currentWord();
     if (!test || !word || test.status === 'finished') return;
 
+    var wordChanged = state.renderedWordIndex !== test.index;
+
     setText(els.promptArabic, word.display);
     setText(els.promptCounter, (test.index + 1) + ' / ' + test.words.length);
     setText(els.promptModeTag, MODE_TAGS[test.mode] || MODE_TAGS.words);
@@ -707,6 +712,30 @@
     if (els.clearButton) els.clearButton.disabled = !word.input.length;
     updateActiveSubtitle(word);
     updateInstruction(parseWord(word));
+
+    if (wordChanged) {
+      state.renderedWordIndex = test.index;
+      playWordChange();
+    }
+  }
+
+  /** Swift blur-and-fade crossfade whenever the active word advances. */
+  function playWordChange() {
+    if (els.promptArabic) {
+      els.promptArabic.classList.remove('is-word-switch');
+      void els.promptArabic.offsetWidth;
+      els.promptArabic.classList.add('is-word-switch');
+    }
+    if (els.wordFeedback) {
+      els.wordFeedback.classList.remove('is-word-change');
+      void els.wordFeedback.offsetWidth;
+      els.wordFeedback.classList.add('is-word-change');
+    }
+    window.clearTimeout(state.wordMotionTimer);
+    state.wordMotionTimer = window.setTimeout(function () {
+      if (els.promptArabic) els.promptArabic.classList.remove('is-word-switch');
+      if (els.wordFeedback) els.wordFeedback.classList.remove('is-word-change');
+    }, 160);
   }
 
   function renderLatinInput(word) {
@@ -861,6 +890,7 @@
     clearHint();
     hideReview();
     state.test = test;
+    state.renderedWordIndex = -1;
     state.tabPressedAt = 0;
     state.focused = false;
     state.errorToken = -1;
@@ -982,6 +1012,8 @@
     state.hintHideTimer = null;
     window.clearTimeout(state.reviewTimer);
     state.reviewTimer = null;
+    window.clearTimeout(state.wordMotionTimer);
+    state.wordMotionTimer = null;
     clearWordFeedback();
   }
 
@@ -1907,6 +1939,52 @@
       tab.classList.toggle('is-active', active);
       tab.setAttribute('aria-pressed', String(active));
     });
+    updateModePill(mode, true);
+  }
+
+  /**
+   * Park the shared sliding pill under the active tab. Measuring offsetLeft
+   * and offsetWidth keeps the pill exact at any viewport width without
+   * duplicating layout rules for every label length.
+   */
+  function updateModePill(mode, animate) {
+    var track = els.modeTrack;
+    var pill = els.modeSlidingPill;
+    if (!track || !pill) return;
+
+    var active = null;
+    els.modeTabs.forEach(function (tab) {
+      if (tab.dataset.mode === mode) active = tab;
+    });
+    if (!active) return;
+
+    if (!animate) pill.classList.add('is-instant');
+
+    var trackRect = track.getBoundingClientRect();
+    var tabRect = active.getBoundingClientRect();
+    var left = tabRect.left - trackRect.left - track.clientLeft + track.scrollLeft;
+
+    pill.style.width = tabRect.width + 'px';
+    pill.style.transform = 'translate3d(' + left + 'px, 0, 0)';
+
+    if (!animate) {
+      // Commit the un-animated position before restoring the spring.
+      void pill.offsetWidth;
+      window.requestAnimationFrame(function () {
+        pill.classList.remove('is-instant');
+        pill.classList.add('is-ready');
+      });
+    } else {
+      pill.classList.add('is-ready');
+    }
+
+    // Keep a scrolled, overflowing track centred on the active tab.
+    var padding = 3;
+    if (left < track.scrollLeft + padding) {
+      track.scrollLeft = Math.max(0, left - padding);
+    } else if (left + tabRect.width > track.scrollLeft + track.clientWidth - padding) {
+      track.scrollLeft = left + tabRect.width - track.clientWidth + padding;
+    }
   }
 
   /** Re-label every piece of static UI that depends on the active script. */
@@ -2102,7 +2180,7 @@
 
       var name = document.createElement('span');
       name.className = 'font-option-name';
-      name.textContent = config.label;
+      name.textContent = config.optionLabel || config.label;
 
       var desc = document.createElement('span');
       desc.className = 'font-option-desc';
@@ -2513,6 +2591,8 @@
     els.reviewToggleNotesLabel = $('reviewToggleNotesLabel');
 
     els.modeTabs = Array.from(document.querySelectorAll('.mode-tab'));
+    els.modeTrack = document.querySelector('.mode-segmented-track');
+    els.modeSlidingPill = document.querySelector('.mode-sliding-pill');
     els.countControl = $('countControl');
     els.countButtons = Array.from(document.querySelectorAll('.count-button'));
 
@@ -2579,6 +2659,8 @@
           openCustomDialog();
           return;
         }
+        // Slide the indicator immediately; the test resets underneath it.
+        setModeUI(mode);
         startNewTest({ mode: mode, focus: true });
       });
     });
@@ -2806,6 +2888,7 @@
     window.addEventListener('blur', syncFocusUI);
     window.addEventListener('focus', syncFocusUI);
     window.addEventListener('resize', function () {
+      updateModePill(state.mode, false);
       if (els.promptHint && !els.promptHint.hidden) positionHint();
     });
 
@@ -2952,6 +3035,13 @@
     applyFontStyle(state.fontStyle, { persist: false });
     updateSettingsForm();
     applyScriptCopy();
+    updateModePill(state.mode, false);
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () {
+        updateModePill(state.mode, false);
+      });
+    }
 
     // Recovery controls are available before the app is booted; every typing
     // listener is registered by bindEvents only after the first dataset loads.
