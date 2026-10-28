@@ -1818,7 +1818,7 @@
       els.focusBadge.hidden = !ready || inputFocused || dialogOpen || finished || !state.test;
     }
 
-    var isMobile = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
+    var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
     if (isMobile) {
       if (ready && inputFocused && !dialogOpen && !finished) {
         document.body.classList.add('keyboard-open');
@@ -2041,6 +2041,7 @@
   function updateCountUI() {
     var visible = state.mode === 'words' || state.mode === 'reading';
     els.countControl.hidden = !visible;
+    if (els.drawerCountSection) els.drawerCountSection.hidden = !visible;
 
     els.countButtons.forEach(function (button) {
       var active = Number(button.dataset.count) === state.count;
@@ -2090,6 +2091,41 @@
   }
 
   /* ------------------------------------------------------------------------
+     Mobile Drawer Management
+     ------------------------------------------------------------------------ */
+
+  function syncDrawerUI() {
+    if (els.drawerFontButtons) {
+      els.drawerFontButtons.forEach(function (btn) {
+        var active = btn.dataset.drawerFont === state.fontStyle;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      });
+    }
+    if (els.drawerCountSection) {
+      var visible = state.mode === 'words' || state.mode === 'reading';
+      els.drawerCountSection.hidden = !visible;
+    }
+  }
+
+  function openMobileDrawer() {
+    if (!els.mobileDrawer || isDialogOpen()) return;
+    syncDrawerUI();
+    els.mobileDrawer.showModal();
+    if (els.mobileMenuBtn) els.mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    syncFocusUI();
+  }
+
+  function closeMobileDrawer() {
+    if (els.mobileDrawer && els.mobileDrawer.open) {
+      els.mobileDrawer.close();
+    }
+    if (els.mobileMenuBtn) els.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    syncFocusUI();
+    if (state.test) focusTyping();
+  }
+
+  /* ------------------------------------------------------------------------
      Dialect UI and Modal Management
      ------------------------------------------------------------------------ */
 
@@ -2118,6 +2154,7 @@
 
     updateFontPill();
     updateFontOptionSelection();
+    syncDrawerUI();
 
     // The hint bubble is positioned from the caret. Re-measure after the
     // new font metrics settle without touching the typing surface.
@@ -2647,6 +2684,15 @@
     els.onboardingModal = $('onboardingModal');
     els.onboardingDialects = $('onboardingDialects');
     els.onboardingSubmitButton = $('onboardingSubmitButton');
+
+    // Mobile Drawer UI
+    els.mobileMenuBtn = $('mobileMenuBtn');
+    els.mobileDrawer = $('mobileDrawer');
+    els.closeMobileDrawerButton = $('closeMobileDrawerButton');
+    els.drawerCountSection = $('drawerCountSection');
+    els.drawerCheatSheetBtn = $('drawerCheatSheetBtn');
+    els.drawerRestartBtn = $('drawerRestartBtn');
+    els.drawerFontButtons = Array.from(document.querySelectorAll('[data-drawer-font]'));
   }
 
   function bindEvents() {
@@ -2883,6 +2929,11 @@
       focusTyping();
     });
 
+    els.testStage.addEventListener('touchend', function (event) {
+      if (isInteractiveTarget(event.target)) return;
+      focusTyping();
+    });
+
     document.addEventListener('keydown', onKeyDown);
 
     window.addEventListener('blur', syncFocusUI);
@@ -2897,7 +2948,7 @@
       if (typeof window === 'undefined') return;
 
       function updateViewport() {
-        var isMobile = window.matchMedia && window.matchMedia('(max-width: 860px)').matches;
+        var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
         if (!isMobile) {
           document.documentElement.style.removeProperty('--vvh');
           document.documentElement.style.removeProperty('--keyboard-inset');
@@ -3008,6 +3059,56 @@
         completeOnboarding();
       });
     }
+
+    // Mobile Drawer Events
+    if (els.mobileMenuBtn) {
+      els.mobileMenuBtn.addEventListener('click', function () {
+        openMobileDrawer();
+      });
+    }
+
+    if (els.closeMobileDrawerButton) {
+      els.closeMobileDrawerButton.addEventListener('click', function () {
+        closeMobileDrawer();
+      });
+    }
+
+    if (els.mobileDrawer) {
+      els.mobileDrawer.addEventListener('click', function (event) {
+        if (event.target === els.mobileDrawer) closeMobileDrawer();
+      });
+      els.mobileDrawer.addEventListener('close', function () {
+        if (els.mobileMenuBtn) els.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        syncFocusUI();
+        if (state.test) focusTyping();
+      });
+    }
+
+    if (els.drawerFontButtons) {
+      els.drawerFontButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var fontKey = btn.dataset.drawerFont;
+          if (fontKey) {
+            applyFontStyle(fontKey);
+            syncDrawerUI();
+          }
+        });
+      });
+    }
+
+    if (els.drawerCheatSheetBtn) {
+      els.drawerCheatSheetBtn.addEventListener('click', function () {
+        closeMobileDrawer();
+        openSheet('legend');
+      });
+    }
+
+    if (els.drawerRestartBtn) {
+      els.drawerRestartBtn.addEventListener('click', function () {
+        closeMobileDrawer();
+        startNewTest({ mode: state.mode, focus: true });
+      });
+    }
   }
 
   function loadPreferences() {
@@ -3058,6 +3159,10 @@
         });
         bootWithMode('words');
         checkFirstVisitOnboarding();
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('drawer')) {
+          window.setTimeout(openMobileDrawer, 150);
+        }
       }).catch(function (err) {
         console.warn('Dialect initialization fallback:', err);
         bootWithMode('words');
